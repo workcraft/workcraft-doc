@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Workcraft - help:property_editor_panel</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="date" content="2014-06-16T13:00:37+0000"/>
+<meta name="keywords" content="help,property_editor_panel"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
+<link rel="start" href="property_editor_panel.html"/>
+<link rel="contents" href="property_editor_panel.html" title="Sitemap"/>
+<link rel="alternate" type="application/rss+xml" title="Changes" />
+<link rel="alternate" type="application/rss+xml" title="Current namespace" />
+<link rel="alternate" type="text/html" title="Plain HTML" href="_export/xhtml/help/property_editor_panel.xhtml"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/property_editor_panel.raw"/>
+<link rel="canonical" href="http://www.workcraft.org/help/property_editor_panel"/>
+<link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var JSINFO = {"id":"help:property_editor_panel","namespace":"help"};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.vnd.microsoft.icon" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export     ">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+        <h1><a href="start.html"  title="Workcraft start page"><img src="logo.png" width="327" height="57" alt="" /></a></h1>
+    
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="property_editor_panel.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SEARCH TOOLS -->
+        <div id="dokuwiki__searchtools">
+            <h3 class="a11y"></h3>
+            <form action="start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        </div>
+
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+                            <div class="mobileTools">
+                    <li><a href="property_editor_panel.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </div>
+                <ul>
+                                    </ul>
+                    </div>
+    </div>
+
+    <!-- BREADCRUMBS -->
+    
+    
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                <div class="pageId"><span>help:property_editor_panel</span></div>
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    
+<h1 class="sectionedit1" id="helpproperty_editor">Help: Property editor</h1>
+<div class="level1">
+
+<p>
+The Property editor panel enables displaying and modifying the attributes of a model and its elements. It has three distinctive modes of operation:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <strong>Element properties.</strong> When a single element is selected its properties are displayed and are available for editing.
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Combined properties.</strong> When a group of elements is selected a “combined” list of their properties is displayed. Those properties which have the same name and class are combined under one editor item and its modification will propagate too all selected components of relevant class. If the initial value of the combined property cannot be agreed between the selected components an empty grey box is shown.
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Model properties.</strong> When no elements is selected the model-specific properties are displayed. This can be seen in the Policy Net plugin where a list of bundles is shown with a possibility to edit their names, colours and the list of bundled transitions.
+</div></li>
+</ul>
+
+
+<p>
+The base list of properties depends on the element type but may be extended by the plugins implementing a particular interpreted graph model. The elements available in all the models are <em>nodes</em>, <em>connections</em>, <em>groups</em> and <em>text notes</em>.
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="node_properties">Node properties</h2>
+<div class="level2">
+
+<p>
+<img src="property_editor-node.png" class="mediacenter" title="Property editor for a node" alt="Property editor for a node" />
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <strong>X</strong> and <strong>Y</strong> - coordinates of the node relative to its container (a group or a root of the model)
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Foreground color</strong> - color of the node borders
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Fill color</strong> - color of the node background
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Label</strong> - text of the node label
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Label positioning</strong> - location of the label text relative to the node 
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Label color</strong> - color of the label text
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Name positioning</strong> - location of the unique ID relative to the node
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Name color</strong> - color of the unique ID text
+</div></li>
+</ul>
+
+
+<p>
+<strong>Note 1:</strong> There is a difference between the <em>label</em> and <em>name</em> of a node.  The name is a unique ID of a node, often automatically generated by the tool and used for cross-referencing the model elements. The label is an arbitrary textual note associated with the node.
+</p>
+
+<p>
+<strong>Note 2:</strong> The available positioning of node label and name are <em>top</em>, <em>bottom</em>, <em>left</em>, <em>right</em>, <em>center</em>, <em>top-left</em>, <em>top-right</em>, <em>bottom-left</em>, <em>bottom-right</em>.
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="connection_properties">Connection properties</h2>
+<div class="level2">
+
+<p>
+<img src="property_editor-connection.png" class="mediacenter" title="Property editor for a connection" alt="Property editor for a connection" />
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <strong>Line width</strong> - weight of the connection line
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Arrow width</strong> - width of the arrow head
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Arrow length</strong> - length of the connection arrow (none, small medium, large)
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Connection type</strong> - type of connection line (Polyline or Bezier curve)
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Scale mode</strong> - the way of scaling connection line when its adjacent nodes are moved (lock anchors, bind to components, proportional, stretched, adaptive)
+</div></li>
+</ul>
+
+
+</div>
+
+<h2 class="sectionedit4" id="text_note_properties">Text note properties</h2>
+<div class="level2">
+
+<p>
+<img src="property_editor-text_note.png" class="mediacenter" title="Property editor for a text note" alt="Property editor for a text note" />
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <strong>X</strong> and <strong>Y</strong> - coordinates of the node relative to its container (a group or a root of the model)
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Foreground color</strong> - color of the note borders
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Fill color</strong> - color of the note background
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Label</strong> - text of the note
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Label color</strong> - color of the text
+</div></li>
+</ul>
+
+
+</div>
+
+<h2 class="sectionedit5" id="group_properties">Group properties</h2>
+<div class="level2">
+
+<p>
+<img src="property_editor-group.png" class="mediacenter" title="Property editor for a group" alt="Property editor for a group" />
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <strong>X</strong> and <strong>Y</strong> - coordinates of the group relative to its container (a parent group or the graph root)
+</div></li>
+</ul>
+
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                        </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    
+    <div class="buttons">
+                <a href="http://www.dokuwiki.org/donate" title="Donate" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="http://www.php.net" title="Powered by PHP" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+    </div>
+
+    <div class="userInfo">
+            </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img  width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+</body>
+</html>

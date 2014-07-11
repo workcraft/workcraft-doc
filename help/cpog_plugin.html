@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Workcraft - help:cpog_plugin</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="date" content="2014-07-11T16:17:54+0000"/>
+<meta name="keywords" content="help,cpog_plugin"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
+<link rel="start" href="cpog_plugin.html"/>
+<link rel="contents" href="cpog_plugin.html" title="Sitemap"/>
+<link rel="alternate" type="application/rss+xml" title="Changes" />
+<link rel="alternate" type="application/rss+xml" title="Current namespace" />
+<link rel="alternate" type="text/html" title="Plain HTML" href="_export/xhtml/help/cpog_plugin.xhtml"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/cpog_plugin.raw"/>
+<link rel="canonical" href="http://www.workcraft.org/help/cpog_plugin"/>
+<link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var JSINFO = {"id":"help:cpog_plugin","namespace":"help"};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.vnd.microsoft.icon" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export     ">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+        <h1><a href="start.html"  title="Workcraft start page"><img src="logo.png" width="327" height="57" alt="" /></a></h1>
+    
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="cpog_plugin.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SEARCH TOOLS -->
+        <div id="dokuwiki__searchtools">
+            <h3 class="a11y"></h3>
+            <form action="start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        </div>
+
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+                            <div class="mobileTools">
+                    <li><a href="cpog_plugin.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </div>
+                <ul>
+                                    </ul>
+                    </div>
+    </div>
+
+    <!-- BREADCRUMBS -->
+    
+    
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                <div class="pageId"><span>help:cpog_plugin</span></div>
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#getting_started">Getting started</a></div></li>
+<li class="level1"><div class="li"><a href="#specification_of_scenarios">Specification of scenarios</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#drawing_scenarios">Drawing scenarios</a></div></li>
+<li class="level2"><div class="li"><a href="#algebraic_scenario_specification">Algebraic scenario specification</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="#optimal_encoding">Optimal encoding</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#encoding_settings">Encoding settings</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="scenco_plugin">SCENCO plugin</h1>
+<div class="level1">
+
+<p>
+This page describes the SCENCO plugin that is provided as a part of the standard Workcraft distribution. The plugin allows to specify a collection of behavioural scenarios, e.g., microprocessor instructions, and then combine them into a compact graph representation using the optimal encoding techniques<sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup>. Hence the name SCENCO, that is SCENario ENCOder.
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="getting_started">Getting started</h2>
+<div class="level2">
+
+<p>
+The SCENCO plugin is currently only available for documents using the Conditional Partial Order Graph model. To create a new document of this kind click File → Create work… then select Conditional Partial Order Graph in the opened window and click OK. You can also give name to the created file as shown below.
+</p>
+
+<p>
+<img src="new_work-cpog.png" class="mediacenter" alt="" />
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="specification_of_scenarios">Specification of scenarios</h2>
+<div class="level2">
+
+<p>
+There are two different ways of creating scenarios: by drawing their graphical representations and by entering their algebraic descriptions. In practice a combination of both works best.
+</p>
+
+</div>
+
+<h3 class="sectionedit4" id="drawing_scenarios">Drawing scenarios</h3>
+<div class="level3">
+
+<p>
+To create a scenario, first add the events (vertices) by activating the <strong>Vertex</strong> tool <img src="editor_tools-vertex.png" class="media" title="Vertex tool icon" alt="Vertex tool icon" /> and clicking on the places where you want to place them. Then add the dependencies (arcs) between the events using the <strong>Connection</strong> tool <img src="editor_tools-connect.png" class="media" title="Connection tool icon" alt="Connection tool icon" />. You can move the elements of the graph and edit their properties using the <strong>Selection</strong> tool <img src="editor_tools-select.png" class="media" title="Selection tool icon" alt="Selection tool icon" />. Finally, select the graph representing the scenario and click <img src="tool_controls-select-group.png" class="media" title="Group icon" alt="Group icon" /> to create a box (group) encapsulating the vertices and arcs of the scenario inside. You will then be able to label the scenario. If you wish to edit the scenario later click <img src="tool_controls-select-level_down.png" class="media" title="Level down icon" alt="Level down icon" /> and <img src="tool_controls-select-level_up.png" class="media" title="Level up icon" alt="Level up icon" /> to go inside/outside the group.
+</p>
+
+<p>
+Repeat the above steps to add more scenarios into the document.
+</p>
+
+</div>
+
+<h3 class="sectionedit5" id="algebraic_scenario_specification">Algebraic scenario specification</h3>
+<div class="level3">
+
+<p>
+Drawing scenarios graphically may be a tedious process, so we implemented an alternative way to create them. The <strong>Selection</strong> tool has a text box which can be used for specifying an algebraic representation of a graph<sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup>, which can then be added into the document by clicking the Insert button below it, as shown on this screenshot:
+</p>
+
+<p>
+<img src="cpog-tool_controls-select.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+The following examples show simple algebraic expressions and describe the corresponding graphs:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <strong><code>a + b + c</code></strong> – this will insert a graph with three vertices labelled &#039;a&#039;, &#039;b&#039; and &#039;c&#039; and no arcs.
+</div></li>
+<li class="level1"><div class="li">
+ <strong><code>a -<strong></strong>&gt; b + c</code></strong> – this will insert a graph with three vertices a, b and c and an arc going from vertex a to vertex b.
+</div></li>
+<li class="level1"><div class="li">
+ <strong><code>a + (b + c) -<strong></strong>&gt; d</code></strong> – this will insert a graph with four vertices a, b, c and d and two arcs going from vertices b and c to vertex d.
+</div></li>
+<li class="level1"><div class="li">
+ Note that the <strong>+</strong> operator can be omitted for clarity, hence inserting the expression shown in the above screenshot will produce the following graph (after manual layout):
+</div></li>
+</ul>
+
+
+<p>
+<img src="cpog-inserted_graph.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+We plan to implement more sophisticated automated graph layout options in future versions of the plugin.
+</p>
+
+</div>
+
+<h2 class="sectionedit6" id="optimal_encoding">Optimal encoding</h2>
+<div class="level2">
+
+<p>
+Once you have created all the scenarios it is possible to use the SCENCO plugin to automatically generate an optimal encoding for them and combine the scenarios into a Conditional Partial Order Graph. To do this, go to Tools → Encoding → CPOG Encoding. This will create a new group with the synthesised Conditional Partial Order Graph and will show the computed encodings below each scenario.
+</p>
+
+</div>
+
+<h3 class="sectionedit7" id="encoding_settings">Encoding settings</h3>
+<div class="level3">
+
+<p>
+It is important to tune the encoding tool in order to produce results of desired quality. This can be done by navigating to the settings page (Edit → Preferences…) and locating the section related to the SCENCO plugin. You will be able to set the following parameters:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Paths to supported SAT solvers; currently <strong>minisat</strong><sup><a href="#fn__3" id="fnt__3" class="fn_top">3)</a></sup> and <strong>clasp</strong><sup><a href="#fn__4" id="fnt__4" class="fn_top">4)</a></sup> are supported. One of them needs to be installed.
+</div></li>
+<li class="level1"><div class="li">
+ The preferred SAT solver.
+</div></li>
+<li class="level1"><div class="li">
+ The number of encoding variables (note that you need at least log<sub>2</sub>(N) variables to encode N scenarios).
+</div></li>
+<li class="level1"><div class="li">
+ The maximum number of 2-input gates in the combinational circuit computing all the conditions in the resulting Conditional Partial Order Graph.
+</div></li>
+</ul>
+
+
+</div>
+<div class="footnotes">
+<div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+See the following two papers for more details:<ul>
+<li class="level1"><div class="li">
+ A. Mokhov, A. Yakovlev. <em>“Conditional Partial Order Graphs: Model, Synthesis and Application”</em>, IEEE Transactions on Computers, 2010, vol. 59, no. 11, pp. 1480-1493.
+</div></li>
+<li class="level1"><div class="li">
+ A. Mokhov, A. Alekseyev, A. Yakovlev. <em>“Encoding of Processor Instruction Sets with Explicit Concurrency Control”</em>, Special Issue on Best Papers from ACSD&#039;2010 conference, IET Computers &amp; Digital Techniques, 2011, vol. 5, no. 6, pp. 427-439.
+</div></li>
+</ul>
+
+</div>
+<div class="fn"><sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
+See the following paper for more details: A. Mokhov, V. Khomenko, A. Alekseyev, A. Yakovlev. <em>“Algebra of Parameterised Graphs”</em>, International Conference on Application of Concurrency to System Design (ACSD’12), nominated for Best Paper Award, p. 22-31, June 2012.</div>
+<div class="fn"><sup><a href="#fnt__3" id="fn__3" class="fn_bot">3)</a></sup> 
+Can be downloaded from <a href="http://minisat.se/" class="urlextern" title="http://minisat.se/"  rel="nofollow">http://minisat.se/</a></div>
+<div class="fn"><sup><a href="#fnt__4" id="fn__4" class="fn_bot">4)</a></sup> 
+Can be downloaded from <a href="http://www.cs.uni-potsdam.de/clasp/" class="urlextern" title="http://www.cs.uni-potsdam.de/clasp/"  rel="nofollow">http://www.cs.uni-potsdam.de/clasp/</a></div>
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                        </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    
+    <div class="buttons">
+                <a href="http://www.dokuwiki.org/donate" title="Donate" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="http://www.php.net" title="Powered by PHP" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+    </div>
+
+    <div class="userInfo">
+            </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img  width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+</body>
+</html>
