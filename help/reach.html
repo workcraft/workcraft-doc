@@ -1,195 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Workcraft - help:reach</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="date" content="2014-06-16T12:10:48+0000"/>
+<meta name="keywords" content="help,reach"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
+<link rel="start" href="reach.html"/>
+<link rel="contents" href="reach.html" title="Sitemap"/>
+<link rel="alternate" type="application/rss+xml" title="Changes" />
+<link rel="alternate" type="application/rss+xml" title="Current namespace" />
+<link rel="alternate" type="text/html" title="Plain HTML" href="_export/xhtml/help/reach.xhtml"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/reach.raw"/>
+<link rel="canonical" href="http://www.workcraft.org/help/reach"/>
+<link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var JSINFO = {"id":"help:reach","namespace":"help"};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.vnd.microsoft.icon" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    </head>
 
-<!-- saved from url=(0063)http://workcraft.org/wiki/doku.php?id=reach&do=export_xhtmlbody -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css"></style></head><body><h1 class="sectionedit1"><a name="reach_language" id="reach_language">REACH language</a></h1>
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export     ">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+        <h1><a href="start.html"  title="Workcraft start page"><img src="logo.png" width="327" height="57" alt="" /></a></h1>
+    
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="reach.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SEARCH TOOLS -->
+        <div id="dokuwiki__searchtools">
+            <h3 class="a11y"></h3>
+            <form action="start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        </div>
+
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+                            <div class="mobileTools">
+                    <li><a href="reach.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </div>
+                <ul>
+                                    </ul>
+                    </div>
+    </div>
+
+    <!-- BREADCRUMBS -->
+    
+    
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                <div class="pageId"><span>help:reach</span></div>
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#constants">Constants</a></div></li>
+<li class="level1"><div class="li"><a href="#variables">Variables</a></div></li>
+<li class="level1"><div class="li"><a href="#unary_operators">Unary operators</a></div></li>
+<li class="level1"><div class="li"><a href="#binary_operators">Binary operators</a></div></li>
+<li class="level1"><div class="li"><a href="#ternary_operators">Ternary operators</a></div></li>
+<li class="level1"><div class="li"><a href="#multi-operand_operators">Multi-operand operators</a></div></li>
+<li class="level1"><div class="li"><a href="#iterators">Iterators</a></div></li>
+<li class="level1"><div class="li"><a href="#name_declaration">Name declaration</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="reach_language">REACH language</h1>
 <div class="level1">
 
 <p>
 The language REACH is used for specifying reachability properties. This approach has the following advantages:
 </p>
 <ul>
-<li class="level1"><div class="li"> Custom properties can be easily and concisely speciﬁed</div>
-</li>
-<li class="level1"><div class="li"> The user does not have to modify the model in any way, in particular the model does not have to be translated into an input language of some model checker.</div>
-</li>
-<li class="level1"><div class="li"> Almost any reachability analyser can be used as the back-end.</div>
-</li>
+<li class="level1"><div class="li">
+ Custom properties can be easily and concisely speciﬁed
+</div></li>
+<li class="level1"><div class="li">
+ The user does not have to modify the model in any way, in particular the model does not have to be translated into an input language of some model checker.
+</div></li>
+<li class="level1"><div class="li">
+ Almost any reachability analyser can be used as the back-end.
+</div></li>
 </ul>
 
+
 </div>
-<!-- EDIT1 SECTION "REACH language" [1-427] -->
-<h2 class="sectionedit2"><a name="constants" id="constants">Constants</a></h2>
+
+<h2 class="sectionedit2" id="constants">Constants</h2>
 <div class="level2">
 <ul>
-<li class="level1"><div class="li"> <strong>true</strong>, <strong>false</strong></div>
-</li>
-<li class="level1"><div class="li"> integers</div>
-</li>
-<li class="level1"><div class="li"> strings (e.g. “Hello”)</div>
-</li>
-<li class="level1"><div class="li"> events, conditions, places, transitions, signals – cannot be directly specified, but returned by some operators, like C, E, P, T, S, etc.</div>
-</li>
+<li class="level1"><div class="li">
+ <strong>true</strong>, <strong>false</strong>
+</div></li>
+<li class="level1"><div class="li">
+ integers
+</div></li>
+<li class="level1"><div class="li">
+ strings (e.g. “Hello”)
+</div></li>
+<li class="level1"><div class="li">
+ events, conditions, places, transitions, signals – cannot be directly specified, but returned by some operators, like C, E, P, T, S, etc.
+</div></li>
 </ul>
 
+
 </div>
-<!-- EDIT2 SECTION "Constants" [428-656] -->
-<h2 class="sectionedit3"><a name="variables" id="variables">Variables</a></h2>
+
+<h2 class="sectionedit3" id="variables">Variables</h2>
 <div class="level2">
 
 <p>
-Built of English letters, digits and '_', not starting with a digit, case sensitive.
+Built of English letters, digits and &#039;_&#039;, not starting with a digit, case sensitive.
 </p>
 
 </div>
-<!-- EDIT3 SECTION "Variables" [657-763] -->
-<h2 class="sectionedit4"><a name="unary_operators" id="unary_operators">Unary operators</a></h2>
+
+<h2 class="sectionedit4" id="unary_operators">Unary operators</h2>
 <div class="level2">
 <ul>
-<li class="level1"><div class="li"> <strong>fail</strong> string – creates a special failure expression to report errors; has a complicated semantics</div>
-</li>
-<li class="level1"><div class="li"> <strong>$</strong> event or <strong>$</strong> condition or <strong>$</strong> place or <strong>$</strong> signal – Interpreted on the configuration C to be reached: returns true iff the event is in C, or the condition is in Cut(C), or the place is in Mark(C), or the signal is 1 in Code(C)</div>
-</li>
-<li class="level1"><div class="li"> <strong>@</strong> event or <strong>@</strong> transition or <strong>@</strong> signal – Interpreted on the configuration C to be reached: returns true iff C enables event/transition/signal</div>
-</li>
-<li class="level1"><div class="li"> signal <strong>'</strong> – Interpreted on the configuration C to be reached: returns true iff the next state of signal is high in the final state of C; equivalent to ($ signal ^ @ signal)</div>
-</li>
-<li class="level1"><div class="li"> <strong>C</strong> number – Finds a condition by number</div>
-</li>
-<li class="level1"><div class="li"> <strong>E</strong> number – Finds an event by number</div>
-</li>
-<li class="level1"><div class="li"> <strong>P</strong> name or P number – Finds a place by name or number</div>
-</li>
-<li class="level1"><div class="li"> <strong>T</strong> name or T number – Finds a transition by name or number</div>
-</li>
-<li class="level1"><div class="li"> <strong>S</strong> name or S number – Finds a signal by name or number</div>
-</li>
-<li class="level1"><div class="li"> <strong>PP</strong> regular_expression – Finds a set of places whose names match the given regular expression</div>
-</li>
-<li class="level1"><div class="li"> <strong>TT</strong> regular_expression – Finds a set of transitions whose names match the given regular expression</div>
-</li>
-<li class="level1"><div class="li"> <strong>SS</strong> regular_expression – Finds a set of signals whose names match the given regular expression</div>
-</li>
-<li class="level1"><div class="li"> <strong>#</strong> event or <strong>#</strong> condition or <strong>#</strong> place or <strong>#</strong> transition or <strong>#</strong> signal – Returns the number of a condition, event, place, transition or signal</div>
-</li>
-<li class="level1"><div class="li"> <strong>name</strong> place or <strong>name</strong> transition or <strong>name</strong> signal – Returns the name of a place, transition or signal</div>
-</li>
-<li class="level1"><div class="li"> <strong>string</strong> expression – Returns a string representation of the argument</div>
-</li>
-<li class="level1"><div class="li"> <strong>downclose</strong> event or <strong>downclose</strong> set_of_events – Downcloses an event or a set thereof, returning a set of events</div>
-</li>
-<li class="level1"><div class="li"> <strong>trig</strong> event – Computes the set of triggers of an event, returning a set of events</div>
-</li>
-<li class="level1"><div class="li"> <strong>is_init</strong> event or is_init condition or is_init place or is_init transition or is_init signal – Checks if a condition/place is initially marked, or an event/transition/signal is initially enabled</div>
-</li>
-<li class="level1"><div class="li"> <strong>is_cutoff</strong> event – Checks if an event is cut-off</div>
-</li>
-<li class="level1"><div class="li"> <strong>is_input</strong> signal – Checks if a signal is an input</div>
-</li>
-<li class="level1"><div class="li"> <strong>is_output</strong> signal – Checks if a signal is an output</div>
-</li>
-<li class="level1"><div class="li"> <strong>is_internal</strong> signal – Checks if a signal is internal</div>
-</li>
-<li class="level1"><div class="li"> <strong>is_dummy</strong> signal – Checks if a signal is dummy</div>
-</li>
-<li class="level1"><div class="li"> <strong>is_local</strong> signal – Checks if a signal is local</div>
-</li>
-<li class="level1"><div class="li"> <strong>is_plus</strong> event or is_plus transition – Checks if an STG event or transition has a sign '+'</div>
-</li>
-<li class="level1"><div class="li"> <strong>is_minus</strong> event or is_minus transition – Checks if an STG event or transition has a sign '-'</div>
-</li>
-<li class="level1"><div class="li"> <strong>~</strong> bool – Boolean negation</div>
-</li>
-<li class="level1"><div class="li"> <strong>-</strong> number – Unary minus</div>
-</li>
-<li class="level1"><div class="li"> <strong>pre</strong> event or <strong>pre</strong> condition or <strong>pre</strong> place or <strong>pre</strong> transition or <strong>pre</strong> set_of_events or <strong>pre</strong> set_of_conditions or <strong>pre</strong> set_of_places or <strong>pre</strong> set_of_transitions – Preset of a node or set of nodes</div>
-</li>
-<li class="level1"><div class="li"> <strong>post</strong> event or <strong>post</strong> condition or <strong>post</strong> place or <strong>post</strong> transition or <strong>post</strong> set_of_events or <strong>post</strong> set_of_conditions or <strong>post</strong> set_of_places or <strong>post</strong> set_of_transitions – Postset of a node or set of nodes</div>
-</li>
-<li class="level1"><div class="li"> <strong>cond</strong> place or <strong>cond</strong> set_of_places – Set of conditions corresponding to a place or a place set</div>
-</li>
-<li class="level1"><div class="li"> <strong>evs</strong> transition or <strong>evs</strong> signal or <strong>evs</strong> set_of_transitions or <strong>evs</strong> set_of_signals – Set of events corresponding to a transition, a signal, a transition set or a signal set</div>
-</li>
-<li class="level1"><div class="li"> <strong>pls</strong> condition or <strong>pls</strong> set_of_conditions – Place corresponding to a condition, or place set corresponding to a condition set</div>
-</li>
-<li class="level1"><div class="li"> <strong>tran</strong> event or <strong>tran</strong> set_of_events or <strong>tran</strong> signal or <strong>tran</strong> set_of_signals – Transition corresponding to an event, or transition set corresponding to an event set, a signal or a signal set</div>
-</li>
-<li class="level1"><div class="li"> <strong>sig</strong> event or <strong>sig</strong> transition or <strong>sig</strong> set_of_events or <strong>sig</strong> set_of_ transitions – Signal corresponding to an event or a transition, or signal set corresponding to event set or an transition set</div>
-</li>
-<li class="level1"><div class="li"> <strong>card</strong> set – Set cardinality</div>
-</li>
+<li class="level1"><div class="li">
+ <strong>fail</strong> string – creates a special failure expression to report errors; has a complicated semantics
+</div></li>
+<li class="level1"><div class="li">
+ <strong>$</strong> event or <strong>$</strong> condition or <strong>$</strong> place or <strong>$</strong> signal – Interpreted on the configuration C to be reached: returns true iff the event is in C, or the condition is in Cut(C), or the place is in Mark(C), or the signal is 1 in Code(C)
+</div></li>
+<li class="level1"><div class="li">
+ <strong>@</strong> event or <strong>@</strong> transition or <strong>@</strong> signal – Interpreted on the configuration C to be reached: returns true iff C enables event/transition/signal
+</div></li>
+<li class="level1"><div class="li">
+ signal <strong>&#039;</strong> – Interpreted on the configuration C to be reached: returns true iff the next state of signal is high in the final state of C; equivalent to ($ signal ^ @ signal)
+</div></li>
+<li class="level1"><div class="li">
+ <strong>C</strong> number – Finds a condition by number
+</div></li>
+<li class="level1"><div class="li">
+ <strong>E</strong> number – Finds an event by number
+</div></li>
+<li class="level1"><div class="li">
+ <strong>P</strong> name or P number – Finds a place by name or number
+</div></li>
+<li class="level1"><div class="li">
+ <strong>T</strong> name or T number – Finds a transition by name or number
+</div></li>
+<li class="level1"><div class="li">
+ <strong>S</strong> name or S number – Finds a signal by name or number
+</div></li>
+<li class="level1"><div class="li">
+ <strong>PP</strong> regular_expression – Finds a set of places whose names match the given regular expression
+</div></li>
+<li class="level1"><div class="li">
+ <strong>TT</strong> regular_expression – Finds a set of transitions whose names match the given regular expression
+</div></li>
+<li class="level1"><div class="li">
+ <strong>SS</strong> regular_expression – Finds a set of signals whose names match the given regular expression
+</div></li>
+<li class="level1"><div class="li">
+ <strong>#</strong> event or <strong>#</strong> condition or <strong>#</strong> place or <strong>#</strong> transition or <strong>#</strong> signal – Returns the number of a condition, event, place, transition or signal
+</div></li>
+<li class="level1"><div class="li">
+ <strong>name</strong> place or <strong>name</strong> transition or <strong>name</strong> signal – Returns the name of a place, transition or signal
+</div></li>
+<li class="level1"><div class="li">
+ <strong>string</strong> expression – Returns a string representation of the argument
+</div></li>
+<li class="level1"><div class="li">
+ <strong>downclose</strong> event or <strong>downclose</strong> set_of_events – Downcloses an event or a set thereof, returning a set of events
+</div></li>
+<li class="level1"><div class="li">
+ <strong>trig</strong> event – Computes the set of triggers of an event, returning a set of events
+</div></li>
+<li class="level1"><div class="li">
+ <strong>is_init</strong> event or is_init condition or is_init place or is_init transition or is_init signal – Checks if a condition/place is initially marked, or an event/transition/signal is initially enabled
+</div></li>
+<li class="level1"><div class="li">
+ <strong>is_cutoff</strong> event – Checks if an event is cut-off
+</div></li>
+<li class="level1"><div class="li">
+ <strong>is_input</strong> signal – Checks if a signal is an input
+</div></li>
+<li class="level1"><div class="li">
+ <strong>is_output</strong> signal – Checks if a signal is an output
+</div></li>
+<li class="level1"><div class="li">
+ <strong>is_internal</strong> signal – Checks if a signal is internal
+</div></li>
+<li class="level1"><div class="li">
+ <strong>is_dummy</strong> signal – Checks if a signal is dummy
+</div></li>
+<li class="level1"><div class="li">
+ <strong>is_local</strong> signal – Checks if a signal is local
+</div></li>
+<li class="level1"><div class="li">
+ <strong>is_plus</strong> event or is_plus transition – Checks if an STG event or transition has a sign &#039;+&#039;
+</div></li>
+<li class="level1"><div class="li">
+ <strong>is_minus</strong> event or is_minus transition – Checks if an STG event or transition has a sign &#039;-&#039;
+</div></li>
+<li class="level1"><div class="li">
+ <strong>~</strong> bool – Boolean negation
+</div></li>
+<li class="level1"><div class="li">
+ <strong>-</strong> number – Unary minus
+</div></li>
+<li class="level1"><div class="li">
+ <strong>pre</strong> event or <strong>pre</strong> condition or <strong>pre</strong> place or <strong>pre</strong> transition or <strong>pre</strong> set_of_events or <strong>pre</strong> set_of_conditions or <strong>pre</strong> set_of_places or <strong>pre</strong> set_of_transitions – Preset of a node or set of nodes
+</div></li>
+<li class="level1"><div class="li">
+ <strong>post</strong> event or <strong>post</strong> condition or <strong>post</strong> place or <strong>post</strong> transition or <strong>post</strong> set_of_events or <strong>post</strong> set_of_conditions or <strong>post</strong> set_of_places or <strong>post</strong> set_of_transitions – Postset of a node or set of nodes
+</div></li>
+<li class="level1"><div class="li">
+ <strong>cond</strong> place or <strong>cond</strong> set_of_places – Set of conditions corresponding to a place or a place set
+</div></li>
+<li class="level1"><div class="li">
+ <strong>evs</strong> transition or <strong>evs</strong> signal or <strong>evs</strong> set_of_transitions or <strong>evs</strong> set_of_signals – Set of events corresponding to a transition, a signal, a transition set or a signal set
+</div></li>
+<li class="level1"><div class="li">
+ <strong>pls</strong> condition or <strong>pls</strong> set_of_conditions – Place corresponding to a condition, or place set corresponding to a condition set
+</div></li>
+<li class="level1"><div class="li">
+ <strong>tran</strong> event or <strong>tran</strong> set_of_events or <strong>tran</strong> signal or <strong>tran</strong> set_of_signals – Transition corresponding to an event, or transition set corresponding to an event set, a signal or a signal set
+</div></li>
+<li class="level1"><div class="li">
+ <strong>sig</strong> event or <strong>sig</strong> transition or <strong>sig</strong> set_of_events or <strong>sig</strong> set_of_ transitions – Signal corresponding to an event or a transition, or signal set corresponding to event set or an transition set
+</div></li>
+<li class="level1"><div class="li">
+ <strong>card</strong> set – Set cardinality
+</div></li>
 </ul>
 
+
 </div>
-<!-- EDIT4 SECTION "Unary operators" [764-4791] -->
-<h2 class="sectionedit5"><a name="binary_operators" id="binary_operators">Binary operators</a></h2>
+
+<h2 class="sectionedit5" id="binary_operators">Binary operators</h2>
 <div class="level2">
 <ul>
-<li class="level1"><div class="li"> &amp;, |, ^, →, ↔ – Boolean AND, OR, XOR, implication, and equivalence</div>
-</li>
-<li class="level1"><div class="li"> +, -, *, /, % – Numerical operators as usual</div>
-</li>
-<li class="level1"><div class="li"> =, != – Equality and non-equality for non-Booleans, as long as the argument types agree; for Booleans use ↔ and ^ instead</div>
-</li>
-<li class="level1"><div class="li"> &lt;, ⇐, &gt;, &gt;= – Numerical comparisons and set inclusion</div>
-</li>
-<li class="level1"><div class="li"> + – String concatenation</div>
-</li>
-<li class="level1"><div class="li"> +, *, \ – Set union, intersection, and difference</div>
-</li>
-<li class="level1"><div class="li"> element <strong>in</strong> set – Set membership</div>
-</li>
+<li class="level1"><div class="li">
+ &amp;, |, ^, →, ↔ – Boolean AND, OR, XOR, implication, and equivalence
+</div></li>
+<li class="level1"><div class="li">
+ +, -, *, /, % – Numerical operators as usual
+</div></li>
+<li class="level1"><div class="li">
+ =, != – Equality and non-equality for non-Booleans, as long as the argument types agree; for Booleans use ↔ and ^ instead
+</div></li>
+<li class="level1"><div class="li">
+ &lt;, ⇐, &gt;, &gt;= – Numerical comparisons and set inclusion
+</div></li>
+<li class="level1"><div class="li">
+ + – String concatenation
+</div></li>
+<li class="level1"><div class="li">
+ +, *, \ – Set union, intersection, and difference
+</div></li>
+<li class="level1"><div class="li">
+ element <strong>in</strong> set – Set membership
+</div></li>
 </ul>
 
+
 </div>
-<!-- EDIT5 SECTION "Binary operators" [4792-5260] -->
-<h2 class="sectionedit6"><a name="ternary_operators" id="ternary_operators">Ternary operators</a></h2>
+
+<h2 class="sectionedit6" id="ternary_operators">Ternary operators</h2>
 <div class="level2">
 <ul>
-<li class="level1"><div class="li"> string<strong>[</strong>number<strong>..</strong>number<strong>]</strong> – Returns a substring of a string</div>
-</li>
-<li class="level1"><div class="li"> condition <strong>?</strong> expression <strong>:</strong> expression – Conditional expression, like in C/C++</div>
-</li>
+<li class="level1"><div class="li">
+ string<strong>[</strong>number<strong>..</strong>number<strong>]</strong> – Returns a substring of a string
+</div></li>
+<li class="level1"><div class="li">
+ condition <strong>?</strong> expression <strong>:</strong> expression – Conditional expression, like in C/C++
+</div></li>
 </ul>
 
+
 </div>
-<!-- EDIT6 SECTION "Ternary operators" [5261-5453] -->
-<h2 class="sectionedit7"><a name="multi-operand_operators" id="multi-operand_operators">Multi-operand operators</a></h2>
+
+<h2 class="sectionedit7" id="multi-operand_operators">Multi-operand operators</h2>
 <div class="level2">
 <ul>
-<li class="level1"><div class="li"> <strong>threshold[</strong>number<strong>](</strong>bool<strong>,</strong> bool<strong>,</strong> …<strong>,</strong> bool<strong>)</strong> – Multi-operand threshold operator; if [number] is dropped, 2 is assumed</div>
-</li>
-<li class="level1"><div class="li"> <strong>{</strong>expression<strong>,</strong> expression<strong>,</strong> …<strong>,</strong> expression<strong>}</strong> – Constructs a set out of several expressions of the same type; an empty set cannot be constructed in this way, as its type cannot be determined</div>
-</li>
+<li class="level1"><div class="li">
+ <strong>threshold[</strong>number<strong>](</strong>bool<strong>,</strong> bool<strong>,</strong> …<strong>,</strong> bool<strong>)</strong> – Multi-operand threshold operator; if [number] is dropped, 2 is assumed
+</div></li>
+<li class="level1"><div class="li">
+ <strong>{</strong>expression<strong>,</strong> expression<strong>,</strong> …<strong>,</strong> expression<strong>}</strong> – Constructs a set out of several expressions of the same type; an empty set cannot be constructed in this way, as its type cannot be determined
+</div></li>
 </ul>
 
+
 </div>
-<!-- EDIT7 SECTION "Multi-operand operators" [5454-5844] -->
-<h2 class="sectionedit8"><a name="iterators" id="iterators">Iterators</a></h2>
+
+<h2 class="sectionedit8" id="iterators">Iterators</h2>
 <div class="level2">
 
 <p>
 Below the “s.t.” clause is optional:
 </p>
 <ul>
-<li class="level1"><div class="li"> <strong>forall</strong> var <strong>in</strong> set <strong>s.t.</strong> predicate <strong>{</strong>expression<strong>}</strong> – Constructs an AND-expression by filtering and transforming elements of the given set</div>
-</li>
-<li class="level1"><div class="li"> <strong>exists</strong> var <strong>in</strong> set <strong>s.t.</strong> predicate <strong>{</strong>expression<strong>}</strong> – Constructs an OR-expression by filtering and transforming elements of the given set</div>
-</li>
-<li class="level1"><div class="li"> <strong>xorsum</strong> var <strong>in</strong> set <strong>s.t.</strong> predicate <strong>{</strong>expression<strong>}</strong> – Constructs an XOR-expression by filtering and transforming elements of the given set</div>
-</li>
-<li class="level1"><div class="li"> <strong>threshold[</strong>number<strong>]</strong> var <strong>in</strong> set <strong>s.t.</strong> predicate <strong>{</strong>expression<strong>}</strong> – Constructs a threshold operator by filtering and transforming elements of the given set; if <strong>[</strong>number<strong>]</strong> is dropped, 2 is assumed</div>
-</li>
-<li class="level1"><div class="li"> <strong>gather</strong> var <strong>in</strong> set <strong>s.t.</strong> predicate <strong>{</strong>expression<strong>}</strong> – Constructs a set by filtering and transforming elements of the given set</div>
-</li>
+<li class="level1"><div class="li">
+ <strong>forall</strong> var <strong>in</strong> set <strong>s.t.</strong> predicate <strong>{</strong>expression<strong>}</strong> – Constructs an AND-expression by filtering and transforming elements of the given set
+</div></li>
+<li class="level1"><div class="li">
+ <strong>exists</strong> var <strong>in</strong> set <strong>s.t.</strong> predicate <strong>{</strong>expression<strong>}</strong> – Constructs an OR-expression by filtering and transforming elements of the given set
+</div></li>
+<li class="level1"><div class="li">
+ <strong>xorsum</strong> var <strong>in</strong> set <strong>s.t.</strong> predicate <strong>{</strong>expression<strong>}</strong> – Constructs an XOR-expression by filtering and transforming elements of the given set
+</div></li>
+<li class="level1"><div class="li">
+ <strong>threshold[</strong>number<strong>]</strong> var <strong>in</strong> set <strong>s.t.</strong> predicate <strong>{</strong>expression<strong>}</strong> – Constructs a threshold operator by filtering and transforming elements of the given set; if <strong>[</strong>number<strong>]</strong> is dropped, 2 is assumed
+</div></li>
+<li class="level1"><div class="li">
+ <strong>gather</strong> var <strong>in</strong> set <strong>s.t.</strong> predicate <strong>{</strong>expression<strong>}</strong> – Constructs a set by filtering and transforming elements of the given set
+</div></li>
 </ul>
 
+
 </div>
-<!-- EDIT8 SECTION "Iterators" [5845-6748] -->
-<h2 class="sectionedit9"><a name="name_declaration" id="name_declaration">Name declaration</a></h2>
+
+<h2 class="sectionedit9" id="name_declaration">Name declaration</h2>
 <div class="level2">
 <ul>
-<li class="level1"><div class="li"> <strong>let</strong> var<strong>=</strong>value <strong>{</strong> expression <strong>}</strong> – Creates a name with a fixed value and scope</div>
-</li>
+<li class="level1"><div class="li">
+ <strong>let</strong> var<strong>=</strong>value <strong>{</strong> expression <strong>}</strong> – Creates a name with a fixed value and scope
+</div></li>
 </ul>
 
+
 </div>
-<!-- EDIT9 SECTION "Name declaration" [6749-] --></body></html>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                        </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    
+    <div class="buttons">
+                <a href="http://www.dokuwiki.org/donate" title="Donate" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="http://www.php.net" title="Powered by PHP" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+    </div>
+
+    <div class="userInfo">
+            </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img  width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+</body>
+</html>
