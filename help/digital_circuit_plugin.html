@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Workcraft - help:digital_circuit_plugin</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="date" content="2014-10-01T15:14:01+0000"/>
+<meta name="keywords" content="help,digital circuit plugin"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
+<link rel="start" href="digital_circuit_plugin.html"/>
+<link rel="contents" href="digital_circuit_plugin.html" title="Sitemap"/>
+<link rel="alternate" type="application/rss+xml" title="Changes" />
+<link rel="alternate" type="application/rss+xml" title="Current namespace" />
+<link rel="alternate" type="text/html" title="Plain HTML" href="_export/xhtml/help/digital_circuit_plugin.xhtml"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/digital_circuit_plugin.raw"/>
+<link rel="canonical" href="http://www.workcraft.org/help/digital_circuit_plugin"/>
+<link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var JSINFO = {"id":"help:digital_circuit_plugin","namespace":"help"};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export     ">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+        <h1><a href="start.html"  title="Workcraft start page"><img src="logo.png" width="327" height="57" alt="" /></a></h1>
+    
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="digital_circuit_plugin.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SEARCH TOOLS -->
+        <div id="dokuwiki__searchtools">
+            <h3 class="a11y"></h3>
+            <form action="start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        </div>
+
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+                            <div class="mobileTools">
+                    <li><a href="digital_circuit_plugin.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </div>
+                <ul>
+                                    </ul>
+                    </div>
+    </div>
+
+    <!-- BREADCRUMBS -->
+    
+    
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                <div class="pageId"><span>help:digital_circuit_plugin</span></div>
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#capturing">Capturing</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#functional_components">Functional components</a></div></li>
+<li class="level2"><div class="li"><a href="#input_and_output_ports">Input and output ports</a></div></li>
+<li class="level2"><div class="li"><a href="#connections">Connections</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="#editing">Editing</a></div></li>
+<li class="level1"><div class="li"><a href="#simulation">Simulation</a></div></li>
+<li class="level1"><div class="li"><a href="#verification">Verification</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="digital_circuit_plugin">Digital Circuit plugin</h1>
+<div class="level1">
+<div class="wrap_important plugin_wrap">
+<p>
+Familiarise yourself with <a href="toc_generic.html" class="wikilink1" title="help:toc_generic">Workcraft interface</a> to learn its common features that are available for all plugins.
+</p>
+</div>
+<p>
+This plugin is intended for capturing, simulation and verification of asynchronous digital circuits. For simulation and verification the circuit is automatically translated into a Signal Transition Graph (STG) that allows re-using the features of the <a href="stg_plugin.html" class="wikilink1" title="help:stg_plugin">STG plugin</a>.
+</p>
+
+</div>
+
+<h2 class="sectionedit4" id="capturing">Capturing</h2>
+<div class="level2">
+
+<p>
+In order to create a circuit model choose <em>File→Create work…</em> menu item. In the <em>New work</em> dialogue box select <em>Digital Circuit</em> as the model type. You may also want to give the work a meaningful name, e.g. <em>circuit-test1</em>, otherwise it will be created under <em>Untitled</em> name. Click <em>OK</em> or press <kbd>Enter</kbd> to create the work.
+</p>
+
+<p>
+<img src="new_work-circuit.png" class="mediacenter" title="New work of Signal Transition Graph type" alt="New work of Signal Transition Graph type" />
+</p>
+
+</div>
+
+<h3 class="sectionedit5" id="functional_components">Functional components</h3>
+<div class="level3">
+
+<p>
+The main building blocks of a digital circuit are functional components that can be created with the function generator <img src="editor_tools-function.png" class="media" title="[F] Function" alt="[F] Function" />. Initially a generated component has only a single output pin with neither set nor reset functions assigned. 
+</p>
+
+<p>
+<img src="circuit-function.png" class="mediacenter" title="Generating a new function" alt="Generating a new function" />
+</p>
+
+<p>
+The set/reset functions should be specified by selecting the output pin and entering the corresponding <a href="boolean_expression.html" class="wikilink1" title="help:boolean_expression">Boolean expressions</a> in the <em>Set Function</em> and <em>Reset Function</em> entries of the property editor. New pins can be added through the <em>Add function</em> item of the popup menu that is accessible by right-clicking the component. 
+</p>
+
+<p>
+<img src="circuit-function-many_outputs.png" class="mediacenter" title="Generating a new function" alt="Generating a new function" />
+</p>
+
+<p>
+By default the created pins are of <em>Output</em> type. This be changed to <em>Input</em> in the property editor - see <em>I/O type</em> entry. However, explicitly creating input pins is usually not required. When a set or reset function is entered for an output pin, the input pins are automatically created for all the literals in the <a href="boolean_expression.html" class="wikilink1" title="help:boolean_expression">Boolean expressions</a>. Note that the input pins do not disappear if they become unneeded after modification of the set/reset functions. You may need to manually remove those pins by first selecting them and then pressing <kbd>Delete</kbd> button.
+</p>
+
+<p>
+A component visualisation is defined by its render type selected in the property editor, as follows:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <em>Box</em> – the component is visualises as a box with explicitly named pins and their set and reset functions rendered next to them. This render type is convenient when a component has more than one output or its set/reset functions are too complex. 
+</div></li>
+</ul>
+
+<ul>
+<li class="level1"><div class="li">
+ <em>Gate</em> – the set and reset of a single component output are visualised using the traditional graphical mnemonics for Boolean operations. If a single function is specified, then the other is assumed to be complimentary and the component is rendered as a combinational gate (possibly with several layers of logic). If both functions are specified then the component is rendered as a C-element. The obtained result is free of textual information (even the pins are not labelled) and therefore is usually easier to comprehend. Rendering a component as gate is convenient when it has a single output with relatively simple set/reset functions.
+</div></li>
+</ul>
+
+
+<p>
+<img src="circuit-function-render_type.png" class="mediacenter" title="Function rendered as a gate" alt="Function rendered as a gate" />
+</p>
+
+</div>
+
+<h3 class="sectionedit6" id="input_and_output_ports">Input and output ports</h3>
+<div class="level3">
+
+<p>
+Other building blocks of a digital circuit are its primary input and output ports. These are used to interact with the circuit environment. The ports are created with the port generator <img src="editor_tools-port.png" class="media" title="[P] Input/Output port" alt="[P] Input/Output port" /> - just activate this editor tool and click the editor panel in a position you want to place the port. By default an output port is created, however, if you hold <kbd>Shift</kbd> while clicking the editor panel then an input port is created. Note that you can change the of existing port <em>I/O type</em> in the property editor too.
+</p>
+
+<p>
+<img src="circuit-ports.png" class="mediacenter" title="Input and output ports" alt="Input and output ports" />
+</p>
+
+</div>
+
+<h3 class="sectionedit7" id="connections">Connections</h3>
+<div class="level3">
+
+<p>
+When the connection tool <img src="editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" /> is active you can connect  the pins of the circuit components and primary ports. The output pins and the input ports can be connected either to the input pins or to the output ports. Several connections may start at the same output pin or an input port, however, only a single connection can end up at an input pin or an output port.  If an incorrect connection is attempted (e.g. a connection from an input pin to an output port or more than one connections to an input pin) then a warning message will be issued.
+</p>
+
+<p>
+<img src="circuit-connection-invalid.png" class="mediacenter" title="Invalid connection" alt="Invalid connection" />
+</p>
+
+<p>
+In order to reduce the number of arcs going from the same output pin (or an input port) and simplify the layout of the connection arc, a joint node is introduced. It can be created with a joint generator <img src="editor_tools-joint.png" class="media" title="[J] Joint" alt="[J] Joint" /> and acts as a fork, i.e. it allows one incoming connection and multiple outgoing connections.
+</p>
+
+<p>
+<img src="circuit-connection-fork.png" class="mediacenter" title="Connections with forks" alt="Connections with forks" />
+</p>
+
+</div>
+
+<h2 class="sectionedit8" id="editing">Editing</h2>
+<div class="level2">
+
+<p>
+For editing the model activate the selection tool <img src="editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />. All the standard editing features (select, drag-and-drop, delete, copy, undo, group, etc.) work the same - see generic help on <a href="tool_controls_panel.html#selection_controls" class="wikilink1" title="help:tool_controls_panel">Selection controls</a> and <a href="property_editor_panel.html" class="wikilink1" title="help:property_editor_panel">Property editor</a> for details. 
+</p>
+
+<p>
+Similar to all the other models, textual comments can be created by activating the <img src="editor_tools-text_note.png" class="media" title="[N] Text Note" alt="[N] Text Note" /> tool and clicking the editor panel in the position you want to put the text. Double-click on the note box to edit its text label in-place or do it through the property editor panel when the note is selected.
+</p>
+
+</div>
+
+<h2 class="sectionedit9" id="simulation">Simulation</h2>
+<div class="level2">
+
+<p>
+For simulation of a Digital Circuit model activate the simulation tool <img src="editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" />. The enabled pins and ports are highlighted and can be activated by clicking them. The simulation tool controls provide the means for analysis and navigation through the simulation trace, see generic help on <a href="tool_controls_panel.html#simulation_controls" class="wikilink1" title="help:tool_controls_panel">Simulation controls</a> for details.
+</p>
+
+<p>
+The circuit simulation is just an abstraction over the simulation of an automatically generated STG representation of the circuit components. Therefore all the specifics of <a href="stg_plugin.html#simulation" class="wikilink1" title="help:stg_plugin">STG simulation</a> also apply to the Digital Circuit plugin.
+</p>
+
+</div>
+
+<h2 class="sectionedit10" id="verification">Verification</h2>
+<div class="level2">
+
+<p>
+Verification of a digital circuit is usually made in the context of its environment. The environment can be described as an STG and attached to the circuit model using the property editor when no nodes are selected. 
+</p>
+
+<p>
+When a verification task is issued via the <em>Tools→Verification</em> menu, the circuit is first translated into an STG that is subsequently composed with the STG of the environment. The resultant STG is used for verification of the desired properties:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <em>Check circuit only for conformation</em> - verify if the circuit conforms to the environment   specification.
+</div></li>
+<li class="level1"><div class="li">
+ <em>Check circuit only for deadlocks</em> - verify if the circuit is deadlock-free.
+</div></li>
+<li class="level1"><div class="li">
+ <em>Check circuit only for hazards</em> - verify if the circuit is hazard-free.
+</div></li>
+<li class="level1"><div class="li">
+ <em>Check circuit for conformation, deadlocks and hazards (reuse unfolding)]</em> - verify if the circuit conforms to the environment specification and is free of deadlocks and hazards under the given environment.
+</div></li>
+</ul>
+
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                        </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    
+    <div class="buttons">
+                <a href="http://www.dokuwiki.org/donate" title="Donate" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="http://www.php.net" title="Powered by PHP" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+    </div>
+
+    <div class="userInfo">
+            </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img  width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+</body>
+</html>
+

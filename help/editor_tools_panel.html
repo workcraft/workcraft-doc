@@ -5,29 +5,30 @@
     <title>Workcraft - help:editor_tools_panel</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
-<meta name="date" content="2014-06-20T21:01:25+0000"/>
-<meta name="keywords" content="help,editor_tools_panel"/>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="date" content="2014-10-01T15:09:59+0000"/>
+<meta name="keywords" content="help,editor tools panel"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="editor_tools_panel.html"/>
 <link rel="contents" href="editor_tools_panel.html" title="Sitemap"/>
 <link rel="alternate" type="application/rss+xml" title="Changes" />
 <link rel="alternate" type="application/rss+xml" title="Current namespace" />
+<link rel="edit" title="Edit this page" href="editor_tools_panel.html"/>
 <link rel="alternate" type="text/html" title="Plain HTML" href="_export/xhtml/help/editor_tools_panel.xhtml"/>
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/editor_tools_panel.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/editor_tools_panel"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var JSINFO = {"id":"help:editor_tools_panel","namespace":"help"};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2014/10/01 15:20//';var JSINFO = {"id":"help:editor_tools_panel","namespace":"help"};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="shortcut icon" href="favicon.vnd.microsoft.icon" />
+    <link rel="shortcut icon" href="favicon.ico" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     </head>
 
 <body>
     <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
-    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export     ">
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export loggedIn    ">
 
         
 <!-- ********** HEADER ********** -->
@@ -40,7 +41,7 @@
                     <div id="dokuwiki__usertools">
                 <h3 class="a11y">User Tools</h3>
                 <ul>
-                    <li><a href="editor_tools_panel.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+                    <li><a href="editor_tools_panel.html"  class="action admin" rel="nofollow" title="Admin">Admin</a></li><li><a href="editor_tools_panel.html"  class="action profile" rel="nofollow" title="Profile">Profile</a></li><li><a href="editor_tools_panel.html"  class="action logout" rel="nofollow" title="Logout">Logout</a></li>                </ul>
             </div>
         
         <!-- SEARCH TOOLS -->
@@ -52,15 +53,17 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <li><a href="editor_tools_panel.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:editor_tools_panel" /><input type="hidden" name="sectok" value="a4e6df2cf20dfdb5dbb0d15659699302" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Media</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
-                                    </ul>
+                    <li><a href="editor_tools_panel.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="editor_tools_panel.html"  class="action media" rel="nofollow" title="Media">Media</a></li><li><a href="editor_tools_panel.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
     </div>
 
     <!-- BREADCRUMBS -->
     
-    
+    <div class="notify">New release available: 2014-09-29 "Hrun".
+          <a href="http://download.dokuwiki.org">upgrade now!</a> [46] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a></div><div class="notify">Security Hotfix 2014-05-05b for to prevent zero byte attacks on external auth systems is available.
+          <a href="http://download.dokuwiki.org">upgrade now!</a> [44.2] <a href="http://www.dokuwiki.org/update_check">(what's this?)</a></div>
     <hr class="a11y" />
 </div></div><!-- /header -->
 
@@ -73,7 +76,7 @@
                 <div class="page group">
                                                             <!-- wikipage start -->
                     
-<h1 class="sectionedit1" id="helpeditor_tools">Help: Editor tools</h1>
+<h1 class="sectionedit1" id="editor_tools">Editor tools</h1>
 <div class="level1">
 
 <p>
@@ -85,7 +88,7 @@ The <strong>Editor tools</strong> panel contains the frequently accessed tools f
 </p>
 
 </div>
-
+<div class='secedit editbutton_section editbutton_1'><form class="button btn_secedit" method="post" action="editor_tools_panel.html"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="rev" value="1412176199" /><input type="hidden" name="summary" value="[Editor tools] " /><input type="hidden" name="target" value="section" /><input type="hidden" name="range" value="1-191" /><input type="submit" value="Edit" class="button" title="Editor tools" /></div></form></div>
 <h2 class="sectionedit2" id="generic_tools">Generic tools</h2>
 <div class="level2">
 
@@ -135,7 +138,7 @@ Some of the tools are implemented in the core of Workcraft and are available in 
 
 
 </div>
-
+<div class='secedit editbutton_section editbutton_2'><form class="button btn_secedit" method="post" action="editor_tools_panel.html"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="rev" value="1412176199" /><input type="hidden" name="summary" value="[Generic tools] " /><input type="hidden" name="target" value="section" /><input type="hidden" name="range" value="192-2650" /><input type="submit" value="Edit" class="button" title="Generic tools" /></div></form></div>
 <h2 class="sectionedit3" id="specific_tools">Specific tools</h2>
 <div class="level2">
 
@@ -172,16 +175,22 @@ Most of the tools are model-specific and are implemented by the corresponding pl
 
 
 </div>
-
+<div class='secedit editbutton_section editbutton_3'><form class="button btn_secedit" method="post" action="editor_tools_panel.html"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="rev" value="1412176199" /><input type="hidden" name="summary" value="[Specific tools] " /><input type="hidden" name="target" value="section" /><input type="hidden" name="range" value="2651-" /><input type="submit" value="Edit" class="button" title="Specific tools" /></div></form></div>
                     <!-- wikipage stop -->
                                     </div>
 
+                                    <div class="docInfo"><bdi>help/editor_tools_panel.txt</bdi> · Last modified: 2014/10/01 15:09 by <bdi>danil</bdi></div>
                                             </div></div><!-- /content -->
 
             <hr class="a11y" />
 
             <!-- PAGE ACTIONS -->
             <div id="dokuwiki__pagetools">
+                            <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="editor_tools_panel.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="editor_tools_panel.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="editor_tools_panel.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="editor_tools_panel.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                </div>
                         </div>
         </div><!-- /wrapper -->
 
@@ -203,7 +212,7 @@ Most of the tools are model-specific and are implemented by the corresponding pl
     </div>
 
     <div class="userInfo">
-            </div>
+        Logged in as: danil    </div>
 </div></div><!-- /footer -->
 
     </div></div><!-- /site -->
@@ -212,3 +221,4 @@ Most of the tools are model-specific and are implemented by the corresponding pl
     <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
 </body>
 </html>
+

@@ -5,30 +5,29 @@
     <title>Workcraft - help:tool_controls_panel</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
-<meta name="date" content="2014-06-20T21:08:00+0000"/>
-<meta name="keywords" content="help,tool_controls_panel"/>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="date" content="2014-10-01T15:11:01+0000"/>
+<meta name="keywords" content="help,tool controls panel"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="tool_controls_panel.html"/>
 <link rel="contents" href="tool_controls_panel.html" title="Sitemap"/>
 <link rel="alternate" type="application/rss+xml" title="Changes" />
 <link rel="alternate" type="application/rss+xml" title="Current namespace" />
-<link rel="edit" title="Edit this page" href="tool_controls_panel.html"/>
 <link rel="alternate" type="text/html" title="Plain HTML" href="_export/xhtml/help/tool_controls_panel.xhtml"/>
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/tool_controls_panel.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/tool_controls_panel"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2014/07/11 15:50//';var JSINFO = {"id":"help:tool_controls_panel","namespace":"help"};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var JSINFO = {"id":"help:tool_controls_panel","namespace":"help"};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="shortcut icon" href="favicon.vnd.microsoft.icon" />
+    <link rel="shortcut icon" href="favicon.ico" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     </head>
 
 <body>
     <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
-    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export loggedIn    ">
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export     ">
 
         
 <!-- ********** HEADER ********** -->
@@ -41,7 +40,7 @@
                     <div id="dokuwiki__usertools">
                 <h3 class="a11y">User Tools</h3>
                 <ul>
-                    <li><a href="tool_controls_panel.html"  class="action admin" rel="nofollow" title="Admin">Admin</a></li><li><a href="tool_controls_panel.html"  class="action profile" rel="nofollow" title="Profile">Profile</a></li><li><a href="tool_controls_panel.html"  class="action logout" rel="nofollow" title="Logout">Logout</a></li>                </ul>
+                    <li><a href="tool_controls_panel.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
             </div>
         
         <!-- SEARCH TOOLS -->
@@ -53,9 +52,9 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:tool_controls_panel" /><input type="hidden" name="sectok" value="0f1627cf4774e948703352645f3508be" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Media</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <li><a href="tool_controls_panel.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </div>
                 <ul>
-                    <li><a href="tool_controls_panel.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="tool_controls_panel.html"  class="action media" rel="nofollow" title="Media">Media</a></li><li><a href="tool_controls_panel.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
+                                    </ul>
                     </div>
     </div>
 
@@ -74,11 +73,20 @@
                 <div class="page group">
                                                             <!-- wikipage start -->
                     
-<h1 class="sectionedit1" id="helptool_controls">Help: Tool Controls</h1>
+<h1 class="sectionedit1" id="tool_controls">Tool Controls</h1>
 <div class="level1">
 
 <p>
-The <strong>Tool control</strong> panel provides access to the extended functionality (if present) of a selected tool. Of the generic tools only the <strong>Selection tool</strong> has such extended functionality.
+The <strong>Tool control</strong> panel provides access to the extended functionality (if present) of a selected tool. Of the generic tools only the <strong>Selection tool</strong> and <strong>Simulation tool</strong> have such extended functionality. Let us consider them in detail.
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="selection_controls">Selection controls</h2>
+<div class="level2">
+
+<p>
+The selection tool controls provide the means to transform the selected nodes and connections of the model.
 </p>
 
 <p>
@@ -122,21 +130,84 @@ The <strong>Tool control</strong> panel provides access to the extended function
 
 </div>
 
+<h2 class="sectionedit3" id="simulation_controls">Simulation controls</h2>
+<div class="level2">
+
+<p>
+The simulation tool controls provides the means to analyse and navigate the simulation data. There are two sources of simulation data:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <strong>Trace</strong> - the <em>base</em> sequence of events, often from an external tool, e.g. a trace leading to a deadlock. 
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Branch</strong> - the <em>deviated</em> sequence of events executed by explicitly clicking the excited nodes of the model. 
+</div></li>
+</ul>
+
+
+<p>
+Usually the event names correspond to the model nodes whose execution changed the state of the model. The sequences of events are recorded in the corresponding columns of the <em>Trace</em>–<em>Branch</em> table. You can click the name of the event in either column to restore the model state just before that event has happened. 
+</p>
+
+<p>
+<img src="tool_controls-simulate.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+The navigation through the simulation data can be done with the following buttons:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <img src="tool_controls-simulate-play.png" class="media" title="Automatic playback" alt="Automatic playback" /> - <strong>automatic playback</strong><br/>
+- execute the trace and branch events starting from the current position.
+</div></li>
+<li class="level1"><div class="li">
+ <img src="tool_controls-simulate-stop.png" class="media" title="Reset playback" alt="Reset playback" /> - <strong>reset playback</strong><br/>
+- stop the execution and reset the trace and branch data.
+</div></li>
+<li class="level1"><div class="li">
+ <img src="tool_controls-simulate-step_backward.png" class="media" title="Step backward" alt="Step backward" /> - <strong>step backward</strong><br/>
+- undo the last event that lead to the current state.
+</div></li>
+<li class="level1"><div class="li">
+ <img src="tool_controls-simulate-step_forward.png" class="media" title="Step forward" alt="Step forward" /> - <strong>step forward</strong><br/>
+- execute the next event in the trace or branch.
+</div></li>
+<li class="level1"><div class="li">
+ <img src="tool_controls-simulate-random.png" class="media" title="Random playback" alt="Random playback" /> - <strong>random playback</strong><br/>
+- automatically execute events selecting them randomly from a pool of events that are enabled in the current state.
+</div></li>
+<li class="level1"><div class="li">
+ <img src="tool_controls-simulate-copy_trace.png" class="media" title="Copy to clipboard" alt="Copy to clipboard" /> - <strong>copy to clipboard</strong><br/>
+- copy the trace, the branch and the current simulation state into the clipboard.
+</div></li>
+<li class="level1"><div class="li">
+ <img src="tool_controls-simulate-paste_trace.png" class="media" title="Paste from clipboard" alt="Paste from clipboard" /> - <strong>paste from clipboard</strong><br/>
+- paste the trace, the branch and the current simulation state from the clipboard.
+</div></li>
+<li class="level1"><div class="li">
+ <img src="tool_controls-simulate-merge_trace.png" class="media" title="Merge branch into trace" alt="Merge branch into trace" /> - <strong>merge branch into trace</strong><br/>
+- merge the branch into the main execution trace.
+</div></li>
+</ul>
+
+
+<p>
+The slide bar under the navigation buttons controls the speed of playback for the existing or randomly generated sequence of events.
+</p>
+
+</div>
+
                     <!-- wikipage stop -->
                                     </div>
 
-                                    <div class="docInfo"><bdi>help/tool_controls_panel.txt</bdi> · Last modified: 2014/06/20 21:08 by <bdi>danil</bdi></div>
                                             </div></div><!-- /content -->
 
             <hr class="a11y" />
 
             <!-- PAGE ACTIONS -->
             <div id="dokuwiki__pagetools">
-                            <h3 class="a11y">Page Tools</h3>
-                <div class="tools">
-                    <ul>
-                        <li><a href="tool_controls_panel.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="tool_controls_panel.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="tool_controls_panel.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="tool_controls_panel.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
-                </div>
                         </div>
         </div><!-- /wrapper -->
 
@@ -158,7 +229,7 @@ The <strong>Tool control</strong> panel provides access to the extended function
     </div>
 
     <div class="userInfo">
-        Logged in as: danil    </div>
+            </div>
 </div></div><!-- /footer -->
 
     </div></div><!-- /site -->
@@ -167,3 +238,4 @@ The <strong>Tool control</strong> panel provides access to the extended function
     <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
 </body>
 </html>
+

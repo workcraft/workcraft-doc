@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Workcraft - help:stg_plugin</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="date" content="2014-10-01T15:43:31+0000"/>
+<meta name="keywords" content="help,stg plugin"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
+<link rel="start" href="stg_plugin.html"/>
+<link rel="contents" href="stg_plugin.html" title="Sitemap"/>
+<link rel="alternate" type="application/rss+xml" title="Changes" />
+<link rel="alternate" type="application/rss+xml" title="Current namespace" />
+<link rel="alternate" type="text/html" title="Plain HTML" href="_export/xhtml/help/stg_plugin.xhtml"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/stg_plugin.raw"/>
+<link rel="canonical" href="http://www.workcraft.org/help/stg_plugin"/>
+<link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var JSINFO = {"id":"help:stg_plugin","namespace":"help"};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export     ">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+        <h1><a href="start.html"  title="Workcraft start page"><img src="logo.png" width="327" height="57" alt="" /></a></h1>
+    
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="stg_plugin.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SEARCH TOOLS -->
+        <div id="dokuwiki__searchtools">
+            <h3 class="a11y"></h3>
+            <form action="start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        </div>
+
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+                            <div class="mobileTools">
+                    <li><a href="stg_plugin.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </div>
+                <ul>
+                                    </ul>
+                    </div>
+    </div>
+
+    <!-- BREADCRUMBS -->
+    
+    
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                <div class="pageId"><span>help:stg_plugin</span></div>
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#capturing">Capturing</a></div></li>
+<li class="level1"><div class="li"><a href="#editing">Editing</a></div></li>
+<li class="level1"><div class="li"><a href="#simulation">Simulation</a></div></li>
+<li class="level1"><div class="li"><a href="#verification">Verification</a></div></li>
+<li class="level1"><div class="li"><a href="#synthesis">Synthesis</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="signal_transition_graph_plugin">Signal Transition Graph plugin</h1>
+<div class="level1">
+<div class="wrap_important plugin_wrap">
+<p>
+Familiarise yourself with <a href="toc_generic.html" class="wikilink1" title="help:toc_generic">Workcraft interface</a> to learn its common features that are available for all plugins.
+</p>
+</div>
+<p>
+This plugin is intended for capturing, simulation and verification of Signal Transition Graphs (STGs), that is a special kind of Petri nets whose transitions are associated with signal events. 
+</p>
+
+</div>
+
+<h2 class="sectionedit4" id="capturing">Capturing</h2>
+<div class="level2">
+
+<p>
+In order to create an STG model choose <em>File→Create work…</em> menu item. In the <em>New work</em> dialogue box select <em>Signal Transition Graph</em> as the model type. You may also want to give the work a meaningful name, e.g. <em>stg-test1</em>, otherwise it will be created under <em>Untitled</em> name. Click <em>OK</em> or press <kbd>Enter</kbd> to create the work.
+</p>
+
+<p>
+<img src="new_work-stg.png" class="mediacenter" title="New work of Signal Transition Graph type" alt="New work of Signal Transition Graph type" />
+</p>
+
+<p>
+To capture an STG you just put its places and transitions on the editor pane and connect them by means of arcs. Creation of places is similar to that of Petri net plugin, by using the place generator <img src="editor_tools-place.png" class="media" title="[P] Place" alt="[P] Place" />. However, the creation of transitions is a bit more complicated as there are two classes of transitions in this plugin with their respective node generator tools:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <img src="editor_tools-signal_transition.png" class="media" title="[T]Signal Transition" alt="[T]Signal Transition" />- <strong>signal transition generator</strong> <br/>
+- a tool for creating signal transitions with their rising and falling phases (denoted by <code>+</code> and <code>-</code> respectively after the signal name). This tool can also be activated by pressing <kbd>T</kbd>. 
+</div></li>
+<li class="level1"><div class="li">
+ <img src="editor_tools-transition.png" class="media" title="[D]Dummy Transition" alt="[D]Dummy Transition" />- <strong>dummy transition generator</strong> <br/>
+- a tool for creating dummy transitions that do not belong to any signal and do not have rising or falling phase, but rather are used to simplify the structure of the STG. This tool can also be activated by pressing <kbd>D</kbd>.
+</div></li>
+</ul>
+
+
+<p>
+Three types of signal transitions are supported denoting the <em>input</em>, <em>output</em> and <em>internal</em> events. By default a falling phase of an output signal is created (usually the automatically generated name is <code>out0-</code>) when you click the editor panel. This behaviour can be changed by holding <kbd>Shift</kbd> and/or <kbd>Ctrl</kbd> keys while creating a signal transition as follows:
+</p>
+<ul>
+<li class="level1"><div class="li"> <kbd>Shift</kbd> - rising phase of an output signal (usually <code>out0+</code>).</div>
+</li>
+<li class="level1"><div class="li"> <kbd>Ctrl</kbd> - falling phase of an input signal (usually <code>in0-</code>).</div>
+</li>
+<li class="level1"><div class="li"> <kbd>Ctrl</kbd>+<kbd>Shift</kbd> - rising phase of an input signal (usually <code>in0+</code>).</div>
+</li>
+</ul>
+
+<p>
+The internal signals are less frequently used and therefore their is no key combination for them. Instead you need to create an output transition first, then rename it and finally change its signal type in the property editor. Note that renaming of the transition before changing its type is important as otherwise all transitions with the same signal name will change their type.
+</p>
+
+<p>
+If no model elements are selected, then the property editor shows the attributes of the whole model. In case of STG these are the names and types of all the signals. This is the good place to change the signals&#039; names, so that all transitions of a renamed signal see the modification.
+</p>
+
+<p>
+<img src="stg-transition_types.png" class="mediacenter" title="Transitions of different types and polarity" alt="Transitions of different types and polarity" />
+</p>
+
+<p>
+The STG transitions can be easily recognised by their color. By default the input transitions are red, output - blue, internal - green and dummies are black. This color scheme can be changed in the global settings  under the <em>Models→Signal Transition Graph</em> leaf of the preferences tree (accessible via <em>Tools→Preferences…</em> menu item).
+</p>
+
+<p>
+<img src="preferences-models-stg.png" class="mediacenter" title="Global settings for Signal Transition Graph plugin" alt="Global settings for Signal Transition Graph plugin" />
+</p>
+
+<p>
+The automatic naming for the signal transitions is as follows. A transition is given <code>in</code> or <code>out</code> prefix depending on the type of the signal it represents – input or output respectively. Then a numerical suffix is added to the name, starting from <code>0</code>. If a transition of the same signal already exists, then its type is checked to match the intended type of a newly created transition. If there is a mismatch (e.g. we want to create an output transition <code>out-</code> but a transition of an input signal exists that has an ambiguous name <code>out0+</code>) then the numerical suffix is incremented until a new transition of intended type can be created without causing a conflict.
+</p>
+
+<p>
+Note that in order to distinguish transitions of the same signal and the same polarity they are assigned <em>instance</em> numbers that are separated from the label by <code>/</code> symbol. Therefore two rising transitions of a signal <code>out0</code> have different instance number, e.g. <code>0</code> and <code>1</code> and their full names are <code>out0+/0</code> and <code>out0+/1</code> respectively. The instance numbers are automatically generated to be unique among transitions of the same phase and of the same signal. Usually the instance numbers do not need to be changed and therefore, for simplicity, they are even hidden in the editor panel. However, the instance number of a transition can be seen and altered if necessary in the property editor.
+</p>
+
+<p>
+When the connection tool <img src="editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" /> is active you can connect places and transitions with arcs by first click the source node and then the destination node. If you hold <kbd>Ctrl</kbd> then the destination node becomes a source for the next arc making it easier to form a sequence of connected nodes. 
+</p>
+
+<p>
+Note that places can only be connected to transitions. If you attempt to connect two places, then a warning will be issued that connections is not valid. However unlike Petri nets, the STG transitions can be connected to each other without an explicit place in between. This <em>shorthand</em> notation is used when a place has a single transition in its preset and a single transition in its postset. For simplicity such a implicit place is hidden and an arc is drawn directly between two transitions.
+</p>
+
+<p>
+<img src="stg-invalid_connection.png" class="mediacenter" title="Connecting STG nodes" alt="Connecting STG nodes" />
+</p>
+
+</div>
+
+<h2 class="sectionedit5" id="editing">Editing</h2>
+<div class="level2">
+
+<p>
+For editing the model activate the selection tool <img src="editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />. All the standard editing features (select, drag-and-drop, delete, copy, undo, group, etc.) work the same - see generic help on <a href="tool_controls_panel.html#selection_controls" class="wikilink1" title="help:tool_controls_panel">Selection controls</a> and <a href="property_editor_panel.html" class="wikilink1" title="help:property_editor_panel">Property editor</a> for details. 
+The only new feature is double clicking on a place:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Double-click on an empty place to mark it with a token. 
+</div></li>
+<li class="level1"><div class="li">
+ Double-click a place marked with a token to remove the token. 
+</div></li>
+<li class="level1"><div class="li">
+ If a place has more than one token then double-clicking does not have any effect.
+</div></li>
+</ul>
+
+
+<p>
+The attributes of an implicit place, e.g. the number of tokens or its capacity, can be modified in the property editor of a corresponding arc connecting two transitions. The signal name, phase and instance number of a transition can be changed in the property editor when the transition is selected. 
+</p>
+
+<p>
+<img src="stg-editing.png" class="mediacenter" title="Editing Petri net nodes" alt="Editing Petri net nodes" />
+</p>
+
+<p>
+Similar to all the other models, textual comments can be created by activating the <img src="editor_tools-text_note.png" class="media" title="[N] Text Note" alt="[N] Text Note" /> tool and clicking the editor panel in the position you want to put the text. Double-click on the note box to edit its text label in-place or do it through the property editor panel when the note is selected.
+</p>
+
+</div>
+
+<h2 class="sectionedit6" id="simulation">Simulation</h2>
+<div class="level2">
+
+<p>
+For simulation of an STG model activate the simulation tool <img src="editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" />. The enabled transition are highlighted and can be fired by clicking them. The simulation tool controls provide the means for analysis and navigation through the simulation trace, see generic help on <a href="tool_controls_panel.html#simulation_controls" class="wikilink1" title="help:tool_controls_panel">Simulation controls</a> for details.
+</p>
+
+<p>
+Note that the simulation controls are extended with the signal state table. The first column of the table lists all the signals of the STG while the second column captures the current state of each signal. The state of a signal is determined only by the phase of its last transition in the simulation trace. If the last was the signal&#039;s rising transition, then the state is <code>1</code>; if it was a falling transition, then the state is <code>0</code>. If no transition of a signal has happened yet, then its state is considered unknown and is denoted by a question mark <code>?</code>. If a signal is excited (i.e. its transition is currently enabled) then its current state is in emphasised by bold font (<code><strong>1</strong></code>, <code><strong>0</strong></code>, or <code><strong>?</strong></code>).
+</p>
+
+<p>
+<img src="stg-simulation.png" class="mediacenter" title="Simulating STG" alt="Simulating STG" />
+</p>
+
+</div>
+
+<h2 class="sectionedit7" id="verification">Verification</h2>
+<div class="level2">
+
+<p>
+A number of STG properties can be verified via <em>Tools→Verification</em> menu.
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <em>Check for CSC [MPSat]</em> - verify the STG has Complete State Coding (CSC).
+</div></li>
+<li class="level1"><div class="li">
+ <em>Check for USC [MPSat]</em> - verify the STG has Unique State Coding (USC).
+</div></li>
+<li class="level1"><div class="li">
+ <em>Check for consistency [MPSat]</em> - verify that STG signals are consistent (rising and falling transitions of the same signal alternate in all possible traces).
+</div></li>
+<li class="level1"><div class="li">
+ <em>Check for deadlocks [MPSat]</em> - verify if the STG is deadlock-free.
+</div></li>
+<li class="level1"><div class="li">
+ <em>Check for normalcy [MPSat]</em> - check the normalcy property of the STG.
+</div></li>
+<li class="level1"><div class="li">
+ <em>Check for output persistence (without dummies) [MPSat]</em> - verify the output signals of the STG are persistent (once enabled they do not get disabled until fired).
+</div></li>
+<li class="level1"><div class="li">
+ <em>Custom properties[MPSat]…</em> - custom properties can be verified through formulation a reachability analysis problem using <a href="reach.html" class="wikilink1" title="help:reach">Reach language</a> in a specialised MPSat configuration window.
+</div></li>
+</ul>
+
+
+<p>
+If the verified property is not satisfied, then a trace (or a family of traces) leading to the violation is reported. The trace can be passed to the simulation tool (by clicking the <em>Play</em> button) for playback and analysis of the reasons leading to the violation.
+</p>
+
+<p>
+<img src="stg-verification.png" class="mediacenter" title="Verification for deadlock" alt="Verification for deadlock" />
+</p>
+
+</div>
+
+<h2 class="sectionedit8" id="synthesis">Synthesis</h2>
+<div class="level2">
+
+<p>
+The STG specification can be synthesised into Boolean equations by using <em>Petrify</em> or <em>MPSat</em> as backend tools:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <em>Petrify</em> is a tool for synthesis of Petri nets and asynchronous controllers. It explicitly enumerates all states reachable by the specification, encodes them with the vectors of signal values and derives the Boolean equations for the output signals. The full state space exploration limits the applicability of this tool to relatively compact asynchronous controllers (up to few dozens of signals). Apart from logic synthesis, Petrify is also capable of hazard-free decomposition and technology mapping of its solution into the library of available gates.
+</div></li>
+</ul>
+
+<ul>
+<li class="level1"><div class="li">
+ <em>MPSat</em> is a model checking and synthesis system that uses Petri net unfoldings as a means to avoid the explicit representation of the specification state space. It relies on SAT solver for the synthesis and verification tasks. MPSat does not (fully) support decomposition and technology mapping yet. On the other hand, MPSat enables verification of several predefined model properties (deadlock, CSC, USC, normalcy) and provides a <a href="reach.html" class="wikilink1" title="help:reach">Reach language</a> to verify custom properties.
+</div></li>
+</ul>
+
+
+<p>
+These synthesis options are available under the <em>Tools→Synthesis</em> menu:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <em>Complex gate synthesis [MPSat]</em> - synthesise the STG in complex gates using <em>MPSat</em> backend tool.
+</div></li>
+<li class="level1"><div class="li">
+ <em>Complex gate synthesis [Petrify]</em> - synthesise the STG in complex gates using <em>Petrify</em> backend tool.
+</div></li>
+<li class="level1"><div class="li">
+ <em>Generalized C-element synthesis [Petrify]</em> - synthesise the STG in generalised C-elements using <em>Petrify</em> backend tool.
+</div></li>
+<li class="level1"><div class="li">
+ <em>Technology mapping synthesis [Petrify]</em> - synthesise the STG for a library of available gates using <em>Petrify</em> backend tool. The library of gates can be specified in the under <em>External tools→Petrify</em> leaf of the global preferences tree (available via <em>Edit→Preferences</em> menu).
+</div></li>
+</ul>
+
+
+<p>
+Here is an example of synthesising a basic specification of an inverter with <em>Petrify</em> (equations on top of the Output window) and with <em>MPSat</em> (equation at the bottom of the Output window).
+</p>
+
+<p>
+<img src="stg-synthesis.png" class="mediacenter" title="Synthesis of the STG specification" alt="Synthesis of the STG specification" />
+</p>
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                        </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    
+    <div class="buttons">
+                <a href="http://www.dokuwiki.org/donate" title="Donate" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="http://www.php.net" title="Powered by PHP" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+    </div>
+
+    <div class="userInfo">
+            </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img  width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+</body>
+</html>
+

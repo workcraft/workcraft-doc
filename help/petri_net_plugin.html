@@ -5,9 +5,9 @@
     <title>Workcraft - help:petri_net_plugin</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
-<meta name="date" content="2014-06-22T22:58:05+0000"/>
-<meta name="keywords" content="help,petri_net_plugin"/>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="date" content="2014-10-01T15:01:07+0000"/>
+<meta name="keywords" content="help,petri net plugin"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="petri_net_plugin.html"/>
 <link rel="contents" href="petri_net_plugin.html" title="Sitemap"/>
@@ -21,7 +21,7 @@
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="shortcut icon" href="favicon.vnd.microsoft.icon" />
+    <link rel="shortcut icon" href="favicon.ico" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     </head>
 
@@ -78,14 +78,8 @@
 <div>
 
 <ul class="toc">
-<li class="level1"><div class="li"><a href="#create_a_new_work">Create a new work</a></div></li>
-<li class="level1"><div class="li"><a href="#capture_and_edit_a_model">Capture and edit a model</a></div>
-<ul class="toc">
-<li class="level2"><div class="li"><a href="#create_elements">Create elements</a></div></li>
-<li class="level2"><div class="li"><a href="#connect_nodes">Connect nodes</a></div></li>
-<li class="level2"><div class="li"><a href="#edit_the_model">Edit the model</a></div></li>
-</ul>
-</li>
+<li class="level1"><div class="li"><a href="#capturing">Capturing</a></div></li>
+<li class="level1"><div class="li"><a href="#editing">Editing</a></div></li>
 <li class="level1"><div class="li"><a href="#simulation">Simulation</a></div></li>
 <li class="level1"><div class="li"><a href="#verification">Verification</a></div></li>
 </ul>
@@ -93,60 +87,61 @@
 </div>
 <!-- TOC END -->
 
-<h1 class="sectionedit1" id="help_on_using_petri_net_plugin">Help on using Petri net plugin</h1>
+<h1 class="sectionedit1" id="petri_net_plugin">Petri Net plugin</h1>
 <div class="level1">
-
+<div class="wrap_important plugin_wrap">
 <p>
-This plugin is intended for capturing, simulation and verification of Petri net models. Read <a href="start.html" class="wikilink1" title="help:start">General help</a> to familiarise yourself with the generic features of Workcraft that are common for all the plugins.
+Familiarise yourself with <a href="toc_generic.html" class="wikilink1" title="help:toc_generic">Workcraft interface</a> to learn its common features that are available for all plugins.
+</p>
+</div>
+<p>
+This plugin is intended for capturing, simulation and verification of Petri net models. 
 </p>
 
 </div>
 
-<h2 class="sectionedit2" id="create_a_new_work">Create a new work</h2>
+<h2 class="sectionedit4" id="capturing">Capturing</h2>
 <div class="level2">
 
 <p>
-In order to create a Petri net work choose <em>File→Create work…</em> menu item. In the <em>New work</em> dialogue box select <em>Petri Net</em> as the model type. You may also want to give the work some meaningful name, e.g. <em>test1</em>, otherwise it will be created with <em>Untitled</em> name. Click <em>OK</em> or press <kbd>Enter</kbd> to create the work.
+In order to create a Petri net work choose <em>File→Create work…</em> menu item. In the <em>New work</em> dialogue box select <em>Petri Net</em> as the model type. You may also want to give the work some meaningful name, e.g. <em>pn-test1</em>, otherwise it will be created with <em>Untitled</em> name. Click <em>OK</em> or press <kbd>Enter</kbd> to create the work.
 </p>
 
 <p>
-<a href="new_work-petri_net.png_help_petri_net_plugin.html" class="media" title="help:new_work-petri_net.png"><img src="new_work-petri_net.png" class="mediacenter" title="New work of Petri net type" alt="New work of Petri net type" /></a>
+<img src="new_work-petri_net.png" class="mediacenter" title="New work of Petri net type" alt="New work of Petri net type" />
 </p>
-
-</div>
-
-<h2 class="sectionedit3" id="capture_and_edit_a_model">Capture and edit a model</h2>
-<div class="level2">
 
 <p>
-A Petri net model can be captured by creating places and transitions and connecting them with the producing and consuming arcs. 
+A Petri net model can be captured by dropping places and transitions onto the editor panel and connecting them with the producing and consuming arcs. 
 </p>
-
-</div>
-
-<h3 class="sectionedit4" id="create_elements">Create elements</h3>
-<div class="level3">
 
 <p>
-With the place generator <img src="editor_tools-place.png" class="media" title="[P] Place" alt="[P] Place" />, transition generator <img src="editor_tools-transition.png" class="media" title="[T] Transition" alt="[T] Transition" /> or text node generator <img src="editor_tools-text_note.png" class="media" title="[N] Text Note" alt="[N] Text Note" /> activated you can create a series of places, transition or text notes respectively by clicking the editor panel in the position you want a new element to appear. 
+With the place generator <img src="editor_tools-place.png" class="media" title="[P] Place" alt="[P] Place" /> or transition generator <img src="editor_tools-transition.png" class="media" title="[T] Transition" alt="[T] Transition" /> activated you can create a series of places or transition respectively, by clicking the editor panel in the position you want a new node to appear. 
 </p>
-
-</div>
-
-<h3 class="sectionedit5" id="connect_nodes">Connect nodes</h3>
-<div class="level3">
 
 <p>
 When the connection tool <img src="editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" /> is active you can connect places and transitions with arcs by first click the source node and then the destination node. If you hold <kbd>Ctrl</kbd> then the destination node becomes a source for the next arc making it easier to form a sequence of connected nodes. Note that places can only be connected to transitions and transitions can only be connected to places. If you attempt to connect two nodes of the same type, then a warning will be issued that connections is not valid. 
 </p>
 
+<p>
+<img src="petri_net-invalid_connection.png" class="mediacenter" title="Connecting Petri net nodes" alt="Connecting Petri net nodes" />
+</p>
+
 </div>
 
-<h3 class="sectionedit6" id="edit_the_model">Edit the model</h3>
-<div class="level3">
+<h2 class="sectionedit5" id="editing">Editing</h2>
+<div class="level2">
 
 <p>
-For editing the selection tool <img src="editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" /> must be activated. All the standard features (select, drag-and-drop, delete, copy, undo, group, etc.) work the same. The only new feature is double clicking on a place:
+For editing the model activate the selection tool <img src="editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />. All the standard editing features (select, drag-and-drop, delete, copy, undo, group, etc.) work the same - see generic help on <a href="tool_controls_panel.html#selection_controls" class="wikilink1" title="help:tool_controls_panel">Selection controls</a> and <a href="property_editor_panel.html" class="wikilink1" title="help:property_editor_panel">Property editor</a> for details. 
+</p>
+
+<p>
+<img src="petri_net-editing.png" class="mediacenter" title="Editing Petri net nodes" alt="Editing Petri net nodes" />
+</p>
+
+<p>
+The only new editing feature is double clicking on a place:
 </p>
 <ul>
 <li class="level1"><div class="li">
@@ -161,22 +156,38 @@ For editing the selection tool <img src="editor_tools-select.png" class="media" 
 </ul>
 
 
-</div>
-
-<h2 class="sectionedit7" id="simulation">Simulation</h2>
-<div class="level2">
-
 <p>
-For simulation of a Petri net model activete the simulation tool <img src="editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" />. 
+Similar to all the other plugins, textual comments can be created by activating the <img src="editor_tools-text_note.png" class="media" title="[N] Text Note" alt="[N] Text Note" /> tool and clicking the editor panel in the position you want to put the text. Double-click on the note box to edit its text label in-place or do it through the property editor panel when the note is selected.
 </p>
 
 </div>
 
-<h2 class="sectionedit8" id="verification">Verification</h2>
+<h2 class="sectionedit6" id="simulation">Simulation</h2>
 <div class="level2">
 
 <p>
-A Petri net can be verified for deadlocks via <em>Tools→Verification→Check for deadlocks [MPSat]</em> menu. Custom properties can be verified through formulation a reachability analysis problem in <a href="reach.html" class="wikilink1" title="help:reach">Reach language</a>. This is done a specialised MPSat configuration window accessible via <em>Tools→Verification→Custom properties[MPSat]…</em> menu.
+For simulation of a Petri net model activate the simulation tool <img src="editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" />. The enabled transitions are highlighted and can be fired by clicking them. The <em>Tool controls</em> panel of the simulation tool provides the means for analysis and navigation through the simulation trace, see generic help on <a href="tool_controls_panel.html#simulation_controls" class="wikilink1" title="help:tool_controls_panel">Simulation controls</a> for details.
+</p>
+
+<p>
+<img src="petri_net-simulation.png" class="mediacenter" title="Simulating Petri net" alt="Simulating Petri net" />
+</p>
+
+</div>
+
+<h2 class="sectionedit7" id="verification">Verification</h2>
+<div class="level2">
+
+<p>
+A Petri net can be verified for deadlocks via <em>Tools→Verification→Check for deadlocks [MPSat]</em> menu. Custom properties can be verified by formulating a reachability analysis problem in <a href="reach.html" class="wikilink1" title="help:reach">Reach language</a>. This is done a specialised MPSat configuration window accessible via <em>Tools→Verification→Custom properties[MPSat]…</em> menu.
+</p>
+
+<p>
+If the verified property is not satisfied, then a trace (or several traces) leading to the violation is reported. The trace can be passed to the the simulation tool (by clicking the <em>Play</em> button) for playback and analysis of the reasons leading to the violation.
+</p>
+
+<p>
+<img src="petri_net-verification.png" class="mediacenter" title="Verification for deadlock" alt="Verification for deadlock" />
 </p>
 
 </div>
@@ -220,3 +231,4 @@ A Petri net can be verified for deadlocks via <em>Tools→Verification→Check f
     <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
 </body>
 </html>
+
