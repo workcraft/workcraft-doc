@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Workcraft - tutorial:stg:celement:start</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="keywords" content="tutorial,stg,celement,start"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
+<link rel="start" href="start.html"/>
+<link rel="contents" href="start.html" title="Sitemap"/>
+<link rel="alternate" type="application/rss+xml" title="Changes" />
+<link rel="alternate" type="application/rss+xml" title="Current namespace" />
+<link rel="alternate" type="text/html" title="Plain HTML" href="../../_export/xhtml/tutorial/stg/celement/start.xhtml"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/stg/celement/start.raw"/>
+<link rel="canonical" href="http://www.workcraft.org/tutorial/stg/celement/start"/>
+<link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:stg:celement';var JSINFO = {"id":"tutorial:stg:celement:start","namespace":"tutorial:stg:celement"};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="../../favicon.ico" />
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export     ">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+        <h1><a href="../../start.html"  title="Workcraft start page"><img src="../../logo.png" width="327" height="57" alt="" /></a></h1>
+    
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="start.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SEARCH TOOLS -->
+        <div id="dokuwiki__searchtools">
+            <h3 class="a11y"></h3>
+            <form action="../../start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        </div>
+
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+                            <div class="mobileTools">
+                    <li><a href="start.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </div>
+                <ul>
+                                    </ul>
+                    </div>
+    </div>
+
+    <!-- BREADCRUMBS -->
+    
+    
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                <div class="pageId"><span>tutorial:stg:celement:start</span></div>
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#modelling">Modelling</a></div></li>
+<li class="level1"><div class="li"><a href="#verification_of_specification">Verification of specification</a></div></li>
+<li class="level1"><div class="li"><a href="#synthesis">Synthesis</a></div></li>
+<li class="level1"><div class="li"><a href="#circuit_capturing">Circuit capturing</a></div></li>
+<li class="level1"><div class="li"><a href="#verification_of_implementation">Verification of implementation</a></div></li>
+<li class="level1"><div class="li"><a href="#solutions">Solutions</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="synthesis_and_verification_of_c-element">Synthesis and verification of C-element</h1>
+<div class="level1">
+
+<p>
+<a href="http://en.wikipedia.org/wiki/C-element" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/C-element">C-element</a> is a gate that synchronises the phases of its inputs. A symbol for a 2-input C-element and its timing diagram are shown in the figures below. Initially all the signals are in the low state. When both inputs <code>in1</code> and <code>in2</code> go high, the output <code>out</code> also switches to logical 1. It stays in this state until both inputs go low, at which stage the output switches to logical 0.
+</p>
+<div class="plugin_wrap"><div class="wrap_column wrap_third plugin_wrap"><div class="table sectionedit6"><table class="inline">
+	<tr class="row0">
+		<td class="col0"><img src="schematic-celement.png" class="mediacenter" alt="" /></td>
+	</tr>
+	<tr class="row1">
+		<td class="col0 centeralign">  Symbol  </td>
+	</tr>
+</table></div>
+</div><div class="wrap_column wrap_third plugin_wrap"><div class="table sectionedit9"><table class="inline">
+	<tr class="row0">
+		<td class="col0"><img src="td-celement.png" class="mediacenter" alt="" /></td>
+	</tr>
+	<tr class="row1">
+		<td class="col0 centeralign">  Timing diagram  </td>
+	</tr>
+</table></div>
+</div></div>
+</div>
+
+<h2 class="sectionedit10" id="modelling">Modelling</h2>
+<div class="level2">
+
+<p>
+Let us model the C-element behaviour using STG formalism. Create a new STG work called <em>stg-celement</em> and <em>translate</em> the sequence of events in the timing diagram into a sequence of STG transitions. Basically you need to create a signal transition for each event of the timing diagram and capture the causality between these events by means of directed arcs between signal transitions.
+</p>
+
+<p>
+Start with the reset phase of the C-element where <code>out-</code> event is caused by <code>in1-</code> and <code>in2-</code> events:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Activate the <strong>signal transition generator</strong> <img src="../../../help/editor_tools-signal_transition.png" class="media" title="[T] Signal Transition" alt="[T] Signal Transition" />. Pay attention to the hint at the bottom of the screen: <em>Click to create a rising (or falling with Ctrl) transition of an output (or input with Shift) signal</em>.
+</div></li>
+<li class="level1"><div class="li">
+ Click the Editor panel in the location where you want the <code>out-</code> transition to appear.
+</div></li>
+<li class="level1"><div class="li">
+ Hold <kbd>Shift</kbd> and click in the desired location of <code>in1-</code> transition. The default name for the input signal is <code>in</code>, therefore you need to rename it. Go to the Property editor and change <em>in name</em> from <code>in</code> to <code>in1</code>. 
+</div></li>
+<li class="level1"><div class="li">
+ Create <code>in2-</code> transition the same way as <code>in1-</code>.
+</div></li>
+<li class="level1"><div class="li">
+ Activate <strong>connection tool</strong> <img src="../../../help/editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" />. Pay attention to the hints at the bottom of the screen. Initially the hint says <em>Click on the first component.</em> After the first component is chosen, the hint changes to <em>Click on the second component or create a node point. Hold Ctrl to connect continuously</em>.
+</div></li>
+<li class="level1"><div class="li">
+ Click <code>in1-</code>, move the mouse pointer to the <code>out-</code> transition and click again. A causality arc from <code>in1-</code> to <code>out-</code> will be created.
+</div></li>
+<li class="level1"><div class="li">
+ Repeat the connection procedure to capture causality between <code>in2-</code> and <code>out-</code> transitions.
+</div></li>
+</ul>
+
+
+<p>
+<img src="stg-celement-step1.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+Similarly capture the set phase of the C-element:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Create transitions <code>in1+</code>, <code>in2+</code> and <code>out+</code>. As before, rename the default <code>in</code> signal to <code>in1</code> and <code>in2</code> respectively.
+</div></li>
+<li class="level1"><div class="li">
+ Create causality arcs from <code>in1+</code> to <code>out+</code> and from <code>in2+</code> to <code>out+</code>.
+</div></li>
+<li class="level1"><div class="li">
+ Use the <strong>selection tool</strong> <img src="../../../help/editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" /> to rearrange the STG nodes similar to the following figure.
+</div></li>
+</ul>
+
+
+<p>
+<img src="stg-celement-step2.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+Now connect the set and reset portions of the specification:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ The same as before, use <strong>connection tool</strong> <img src="../../../help/editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" /> to introduce causality from <code>out+</code> to <code>in1-</code> and to <code>in2-</code>.
+</div></li>
+<li class="level1"><div class="li">
+ Create an arc from <code>out-</code> to <code>in1+</code>, but this time instead of a straight line connection use a polyline. After choosing the source of the connection (<code>out-</code> transition) click aside of the existing nodes - this will create a node point of a polyline. Continue forming the shape of the polyline by creating its node points, and finally choose the destination transition <code>in1+</code>.
+</div></li>
+<li class="level1"><div class="li">
+ Repeat the same procedure for creating a polyline connection from <code>out-</code> to <code>in2+</code>.
+</div></li>
+</ul>
+
+
+<p>
+<img src="stg-celement-step3.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+Finally, specify the initial state of the C-element in accordance to the starting point of the timing diagram:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Activate the <strong>selection tool</strong> <img src="../../../help/editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />.
+</div></li>
+<li class="level1"><div class="li">
+ Select the arc from <code>out-</code> to <code>in1+</code> and in the Property editor set the <em>Tokens</em> value to 1.
+</div></li>
+<li class="level1"><div class="li">
+ Similarly put a token on the arc from <code>out-</code> to <code>in2+</code>.
+</div></li>
+</ul>
+
+
+<p>
+<img src="stg-celement.png" class="mediacenter" title="C-element STG model" alt="C-element STG model" />
+</p>
+
+</div>
+
+<h2 class="sectionedit11" id="verification_of_specification">Verification of specification</h2>
+<div class="level2">
+
+<p>
+Activate the <strong>simulation tool</strong> <img src="../../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> and exercise the obtained STG model. Click one of the enabled signal transitions (they are highlighted in orange) to <em>evaluate</em> the STG into the next state. Note that the sequence of fired transitions is recorded in the simulation trace that is somewhat similar to the original timing diagram. Check that the simulation traces resemble to the intended behaviour of a C-element.
+</p>
+
+<p>
+Before proceeding to the synthesis of the C-element it is a good idea to verify that its specification meets essential requirements, e.g. that it is consistent and is free from deadlocks.
+</p>
+
+<p>
+To verify the signal consistency (i.e. that the rising and falling phases of each signal alternate in all possible execution traces) select <em>Tools→Verification→Check for consistency [MPSat]</em> menu item. Similarly, for deadlock checking select <em>Tools→Verification→Check for deadlocks [MPSat]</em> menu item. 
+</p>
+
+<p>
+If the specification violates consistency or has a deadlock then a trace leading to the problematic state will be reported. This trace can be simulated for better understanding the reported issues and for correcting them in the specification.
+</p>
+
+</div>
+
+<h2 class="sectionedit12" id="synthesis">Synthesis</h2>
+<div class="level2">
+
+<p>
+The STG specification can now be synthesised into an asynchronous circuit implementation either with Petrify or MPSat backend tools via <em>Tools→Synthesis</em> menu.
+</p>
+
+<p>
+A complex gate solution obtained with Petrify (<em>Tools→Synthesis→Complex gate synthesis [Petrify]</em> menu item) is as follows <span class="wrap_important ">Note that solution is not unique and you may get a slightly different equation.</span>:
+</p>
+<pre class="code">[out] = in2 (in1 + out) + in1 out;</pre>
+
+<p>
+By opening the parenthesis one can obtained the following equation:
+</p>
+<pre class="code">[out] = in1 in2 + in2 out + in1 out;</pre>
+
+<p>
+This equation can be directly mapped into an OR-AND complex gate whose function is <code>Z = A*B + C*D + E*F</code> ; let us call it <em>OA222</em> gate. The association of the C-element ports to the <em>OA222</em> gate pins is best described by the following Verilog module:
+</p>
+<pre class="code verilog"><span class="kw1">module</span> celement <span class="br0">&#40;</span>in1<span class="sy0">,</span> in2<span class="sy0">,</span> out<span class="br0">&#41;</span><span class="sy0">;</span>
+  <span class="kw1">input</span> in1<span class="sy0">;</span>
+  <span class="kw1">input</span> in2<span class="sy0">;</span>
+  <span class="kw1">output</span> out<span class="sy0">;</span>
+  OA222 inst_c <span class="br0">&#40;</span>.A<span class="br0">&#40;</span>in1<span class="br0">&#41;</span><span class="sy0">,</span> .B<span class="br0">&#40;</span>in2<span class="br0">&#41;</span><span class="sy0">,</span> .C<span class="br0">&#40;</span>in2<span class="br0">&#41;</span><span class="sy0">,</span> .D<span class="br0">&#40;</span>out<span class="br0">&#41;</span><span class="sy0">,</span> .E<span class="br0">&#40;</span>in1<span class="br0">&#41;</span><span class="sy0">,</span> .F<span class="br0">&#40;</span>out<span class="br0">&#41;</span><span class="sy0">,</span> .Z<span class="br0">&#40;</span>out<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">endmodule</span></pre>
+
+</div>
+
+<h2 class="sectionedit13" id="circuit_capturing">Circuit capturing</h2>
+<div class="level2">
+
+<p>
+Create a new Digital Circuit work called <em>circuit-celement-cg</em> and capture the implementation suggested by Petrify in form of a gate-level netlist. <span class="wrap_info ">In the future versions of Workcraft the derivation of a circuit from the synthesis output will be automated, but for now please do it manually.</span>
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Activate <strong>functional generator</strong> <img src="../../../help/editor_tools-function.png" class="media" title="[F] Function" alt="[F] Function" /> and click in the desired position of the OR-AND complex gate.
+</div></li>
+<li class="level1"><div class="li">
+ Activate <strong>selection tool</strong> <img src="../../../help/editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />.
+</div></li>
+<li class="level1"><div class="li">
+ Select the only pin of the newly created function component.
+</div></li>
+<li class="level1"><div class="li">
+ In the Property editor change the <em>Name</em> of the pin to <code>Z</code> and modify its <em>Set function</em> to <code>A*B+C*D+E*F</code>.
+</div></li>
+</ul>
+
+
+<p>
+<img src="circuit-celement-cg-step1.png" class="mediacenter" alt="" />
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Select the function component and in the Property editor change its rendering type from <em>Box</em> to <em>Gate</em>.
+</div></li>
+</ul>
+
+
+<p>
+<img src="circuit-celement-cg-step2.png" class="mediacenter" alt="" />
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Activate <strong>port generator</strong> <img src="../../../help/editor_tools-port.png" class="media" title="[P] Input/output port" alt="[P] Input/output port" />. Pay attention to the hint at the bottom of the screen: <em>Click to create an output port (hold Shift for input port)</em>.
+</div></li>
+<li class="level1"><div class="li">
+ Click in intended location of the output port. Note that by default the port will be named <code>out1</code> - you can change this name to <code>out</code> later. 
+</div></li>
+<li class="level1"><div class="li">
+ Hold <kbd>Shift</kbd> and click in the desired locations of the input ports – they will be automatically assigned <code>in0</code> and <code>in1</code> names.
+</div></li>
+<li class="level1"><div class="li">
+ Switch to the selection tool. Choose the output port, go to the property editor and change port <em>Name</em> to <code>out</code>. Similarly change the name of input port <code>in0</code> to <code>in2</code>.
+</div></li>
+</ul>
+
+
+<p>
+<img src="circuit-celement-cg-step3.png" class="mediacenter" alt="" />
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Activate <strong>connection tool</strong> <img src="../../../help/editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" />.
+</div></li>
+<li class="level1"><div class="li">
+ Connect input ports <code>in1</code> to the 1<sup>st</sup> and 5<sup>th</sup> pins of the complex gate (<code>A</code> and <code>E</code> respectively).
+</div></li>
+<li class="level1"><div class="li">
+ Connect input ports <code>in2</code> to the 2<sup>nd</sup> and 3<sup>rd</sup> pins of the complex gate (<code>B</code> and <code>C</code> respectively).
+</div></li>
+<li class="level1"><div class="li">
+ Connect the output pin of the gate to the output port <code>out</code> and to the 4<sup>th</sup> and 6<sup>th</sup> inputs of the gate (<code>D</code> and <code>F</code> respectively).
+</div></li>
+</ul>
+
+
+<p>
+<img src="circuit-celement-cg-step4.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+You may want to tidy up the circuit schematic and make it more readable by adding forks into the wires. This can be done with the <strong>joint generator</strong> <img src="../../../help/editor_tools-joint.png" class="media" title="[J] Joint" alt="[J] Joint" />. The resultant circuit should look similar to the following diagram.
+</p>
+
+<p>
+<img src="circuit-celement-cg-step5.png" class="mediacenter" alt="" />
+</p>
+
+</div>
+
+<h2 class="sectionedit14" id="verification_of_implementation">Verification of implementation</h2>
+<div class="level2">
+
+<p>
+Activate the <strong>simulation tool</strong> <img src="../../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> and simulate the captured complex gate implementation of the C-element. Ports, pins and wires are colour-coded: blue means low level and red means high level of the signal. Excited pins and ports are highlighted in orange. 
+</p>
+
+<p>
+Click one of the exited pins to toggle its logical value. Similar to the STG simulation, the sequence of signal events is recorded in the simulation trace and can be subsequently replayed for analysing the circuit behaviour.
+</p>
+
+<p>
+Note that in simulation the C-element inputs are not restricted in any way, i.e. they can change in an unexpected manner causing malfunction of the circuit. This can be confirmed by checking the circuit for hazards <em>Tools→Verification→Check for hazards only</em> – the circuit has a hazard after the following trace: <code>0: in2+, in1+</code>.
+</p>
+
+<p>
+Play this trace to discover that indeed, by the end of the trace the output of the C-element is excited and ready to switch to logical 1, but an unexpected <code>in1-</code> or <code>in2-</code> transition would disable it, that does not fit the specification.
+</p>
+
+<p>
+Restrict the environment behaviour in such a way that the circuit only receives those inputs that are expected according to the specification. For example, you can feed the inverted value of C-element output to its inputs.
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Activate the <strong>selection tool</strong> <img src="../../../help/editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />.
+</div></li>
+<li class="level1"><div class="li">
+ Select both input ports <code>in1</code> and <code>in2</code> (hold <kbd>Shift</kbd> and click each of them).
+</div></li>
+<li class="level1"><div class="li">
+ In the property editor assign the same <em>Set function</em> <code>!out</code>  to both inputs (<code>!</code> means inversion – see <a href="..../../help/boolean_expression.html" class="wikilink1" title="help:boolean_expression">Boolean expressions</a> for details).
+</div></li>
+</ul>
+
+
+<p>
+<img src="circuit-celement-cg-step6.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+Repeat the verification procedure to check if the circuit is free of hazards under the well behaved environment. Also check the circuit for deadlocks and verify if it conforms to the environment specification. All these verification steps can be run via <em>Tools→Verification→Check circuit for conformation, deadlocks and hazards (reuse unfolding)</em> menu.
+</p>
+
+<p>
+Try to alter the circuit and verify if it still conforms to the environment, is deadlock-free and operates without hazards.
+</p>
+
+</div>
+
+<h2 class="sectionedit15" id="solutions">Solutions</h2>
+<div class="level2">
+
+<p>
+Download all the Workcraft models discussed in this tutorial here:
+</p>
+
+<p>
+<span class="wrap_download "><a href="celement.tar.gz" class="media mediafile mf_gz" title="tutorial:stg:celement:celement.tar.gz (5.9 KB)">C-element models</a> (5.94 KiB, <acronym title="Modified: 2014-11-13 10:49.47">1d ago</acronym>)</span>
+</p>
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                        </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    
+    <div class="buttons">
+                <a href="http://www.dokuwiki.org/donate" title="Donate" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="http://www.php.net" title="Powered by PHP" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+    </div>
+
+    <div class="userInfo">
+            </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img  width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+</body>
+</html>
+

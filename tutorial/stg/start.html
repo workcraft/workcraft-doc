@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:stg:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="tutorial,stg,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -71,247 +71,29 @@
                 <div class="pageId"><span>tutorial:stg:start</span></div>
                 <div class="page group">
                                                             <!-- wikipage start -->
-                    <!-- TOC START -->
-<div id="dw__toc">
-<h3 class="toggle">Table of Contents</h3>
-<div>
-
-<ul class="toc">
-<li class="level1"><div class="li"><a href="#vme_bus_controller">VME bus controller</a></div></li>
-<li class="level1"><div class="li"><a href="#modelling">Modelling</a></div></li>
-<li class="level1"><div class="li"><a href="#verification_of_the_stg_model">Verification of the STG model</a></div></li>
-<li class="level1"><div class="li"><a href="#synthesis">Synthesis</a></div></li>
-<li class="level1"><div class="li"><a href="#circuit_capturing">Circuit capturing</a></div></li>
-<li class="level1"><div class="li"><a href="#verification_of_the_circuit_implementation">Verification of the circuit implementation</a></div></li>
-<li class="level1"><div class="li"><a href="#solutions">Solutions</a></div></li>
-</ul>
-</div>
-</div>
-<!-- TOC END -->
-
+                    
 <h1 class="sectionedit1" id="synthesis_and_verification_of_asynchronous_circuits">Synthesis and verification of asynchronous circuits</h1>
 <div class="level1">
 <div class="wrap_important plugin_wrap">
 <p>
-Familiarise yourself with the <a href="../help/stg_plugin.html" class="wikilink1" title="help:stg_plugin">Signal Transition Graph plugin</a> and <a href="../help/digital_circuit_plugin.html" class="wikilink1" title="help:digital_circuit_plugin">Digital Circuit plugin</a> before proceeding with this tutorial.
+Familiarise yourself with the <a href="../../help/stg_plugin.html" class="wikilink1" title="help:stg_plugin">Signal Transition Graph plugin</a> and <a href="../../help/digital_circuit_plugin.html" class="wikilink1" title="help:digital_circuit_plugin">Digital Circuit plugin</a> before proceeding with these tutorials.
 </p>
 </div>
 <p>
-In this tutorial you will learn how to specify the intended circuit behaviour with <a href="../overview/stg.html" class="wikilink1" title="overview:stg">Signal Transition Graphs</a>, synthesise its asynchronous implementation, capture the circuit schematic in <a href="../overview/digital_circuit.html" class="wikilink1" title="overview:digital_circuit">Digital Circuit</a> plugin and verify it against the initial specification.
+A Signal Transition Graph (STG) is basically a <a href="http://en.wikipedia.org/wiki/Petri net" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/Petri net">Petri net</a> whose transitions are labelled with signal events. This makes STG a convenient formalism for specification, synthesis and verification of <a href="http://en.wikipedia.org/wiki/asynchronous circuit" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/asynchronous circuit">asynchronous circuits</a>. In this series of tutorials you will learn how to specify the intended behaviour of an asynchronous circuit using <a href="../overview/stg.html" class="wikilink1" title="overview:stg">Signal Transition Graphs</a> plugin, synthesise its asynchronous implementation, capture the circuit schematic in <a href="../overview/digital_circuit.html" class="wikilink1" title="overview:digital_circuit">Digital Circuit</a> plugin and formally verify it against the initial specification.
 </p>
-
-<p>
-A Signal Transition Graph (STG) is basically a <a href="http://en.wikipedia.org/wiki/Petri net" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/Petri net">Petri net</a> whose transitions are labelled with signal events. This makes STG a convenient formalism for specification, synthesis and verification of <a href="http://en.wikipedia.org/wiki/asynchronous circuit" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/asynchronous circuit">asynchronous circuits</a>. 
-</p>
-
-<p>
-We use <a href="http://en.wikipedia.org/wiki/VME bus" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/VME bus">VME bus</a> controller as our running example throughout the tutorial to demonstrate a design flow for asynchronous circuits based on STGs.
-</p>
-
-</div>
-
-<h2 class="sectionedit4" id="vme_bus_controller">VME bus controller</h2>
-<div class="level2">
-
-<p>
-VME bus controller provides an interface between a data bus and a slave device, as shown in the following diagram.
-<img src="schemetic-vme.png" class="mediacenter" alt="" />
-</p>
-
-<p>
-The controller has two modes of operation: reading from the device into the bus (activated by <code>dsr+</code>) and writing from the bus into the device (activated by <code>dsw+</code>).
-</p>
-
-<p>
-In the reading mode, a request to read data form the device is made through <code>lds+</code>. When the device has the data ready and this is acknowledged by <code>ldtack+</code>, the controller opens the transceiver by <code>d+</code> and notifies the bus that data is ready for transfer by <code>dtack+</code>. After the read operation is complete all the signals return to the initial state.
-</p>
-
-<p>
-In the writing mode, once the data is stable on the bus, the transceiver is opened by <code>d+</code>, and the write request is made by <code>lds+</code>. When the device acknowledges the receipt of data by <code>ldtack+</code>, the transceiver is closed with <code>d-</code>, thus isolating the device from the bus, and the bus is notified that the write operation is complete by <code>dtack+</code>. After that all the signals return to the initial state.
-</p>
-
-<p>
-These two regimes of VME control are captured by the following timing diagrams.
-</p>
-<div class="plugin_wrap"><div class="wrap_column wrap_half plugin_wrap"><div class="table sectionedit9"><table class="inline">
-	<tr class="row0">
-		<td class="col0"><img src="td-vme-read.png" class="mediacenter" alt="" /></td>
-	</tr>
-	<tr class="row1">
-		<td class="col0 centeralign">  Timing diagram for the read mode  </td>
-	</tr>
-</table></div>
-</div><div class="wrap_column wrap_half plugin_wrap"><div class="table sectionedit12"><table class="inline">
-	<tr class="row0">
-		<td class="col0"><img src="td-vme-write.png" class="mediacenter" alt="" /></td>
-	</tr>
-	<tr class="row1">
-		<td class="col0 centeralign">  Timing diagram for the write mode  </td>
-	</tr>
-</table></div>
-</div></div>
-</div>
-
-<h2 class="sectionedit13" id="modelling">Modelling</h2>
-<div class="level2">
-
-<p>
-Let us model the read mode of VME controller with an STG. Create a new STG work called <em>stg-vme-read</em> and capture the sequence of events of the corresponding timing diagram. 
-</p>
-
-<p>
-Do the same for the write mode of VME bus control, in a separate STG work called <em>stg-vme-write</em>.
-</p>
-
-<p>
-The result should be similar to the following STGs.
-</p>
-<div class="plugin_wrap"><div class="wrap_column wrap_half plugin_wrap"><div class="table sectionedit18"><table class="inline">
-	<tr class="row0">
-		<td class="col0"><img src="stg-vme-read.png" class="mediacenter" alt="" /></td>
-	</tr>
-	<tr class="row1">
-		<td class="col0 centeralign">  STG for read operation  </td>
-	</tr>
-</table></div>
-</div><div class="wrap_column wrap_half plugin_wrap"><div class="table sectionedit21"><table class="inline">
-	<tr class="row0">
-		<td class="col0"><img src="stg-vme-write.png" class="mediacenter" alt="" /></td>
-	</tr>
-	<tr class="row1">
-		<td class="col0 centeralign">  STG for write operation  </td>
-	</tr>
-</table></div>
-</div></div>
-<p>
-The two STGs describe the behaviour of the same circuit and need to be composed into one specification by merging their initial states. Create a new STG work called <em>stg-vme-read_write</em> and copy-paste the STGs for <em>stg-vme-read</em> and <em>stg-vme-write</em> works into it. Create a marked place <code>p1</code> that replaces the places <code>p1r</code> and <code>p1w</code>. Similarly, substitute the places <code>p2r</code> and <code>p2w</code> with a new marked place <code>p2</code>. The result should look like the following diagram.
-</p>
-<div class="plugin_wrap"><div class="table sectionedit24"><table class="inline">
-	<tr class="row0">
-		<td class="col0"><img src="stg-vme-read_write.png" class="mediacenter" alt="" /></td>
-	</tr>
-	<tr class="row1">
-		<td class="col0 centeralign">  Combined STG for read and write scenarios  </td>
-	</tr>
-</table></div>
-</div><div class="wrap_hide plugin_wrap">
-<p>
-Once the initially marked places are merged, one can notice that transitions <code>ldtack-</code>, <code>lds-</code> and <code>dtack-</code>. Here is the simplified STG.
-</p>
-<div class="plugin_wrap"><div class="table sectionedit29"><table class="inline">
-	<tr class="row0">
-		<td class="col0"><img src="stg-vme.png" class="mediacenter" alt="" /></td>
-	</tr>
-	<tr class="row1">
-		<td class="col0 centeralign">  Simplified STG for read and write scenarios  </td>
-	</tr>
-</table></div>
-</div></div><div class="wrap_box plugin_wrap">
-<h4 id="task_1">Task 1</h4>
 <ul>
 <li class="level1"><div class="li">
- Construct an STG model of VME bus controller based on the timing diagrams for its read and write modes of operation. 
+ <a href="celement/start.html" class="wikilink1" title="tutorial:stg:celement:start">Synthesis and verification of C-element</a> (basic circuit, detail explanation)
 </div></li>
 <li class="level1"><div class="li">
- Simulate the STG to better understand the behaviour of VME bus controller.
+ <a href="buck/start.html" class="wikilink1" title="tutorial:stg:buck:start">Synthesis and verification of buck control</a> (medium complexity with some hints)
+</div></li>
+<li class="level1"><div class="li">
+ <a href="vme/start.html" class="wikilink1" title="tutorial:stg:vme:start">Synthesis and verification of VME bus controller</a> (advanced material for individual work)
 </div></li>
 </ul>
 
-</div>
-</div>
-
-<h2 class="sectionedit32" id="verification_of_the_stg_model">Verification of the STG model</h2>
-<div class="level2">
-<div class="wrap_box plugin_wrap">
-<h4 id="task_2">Task 2</h4>
-<ul>
-<li class="level1"><div class="li">
- Verify the STG specification for deadlocks, consistency and output persistence.
-</div></li>
-<li class="level1"><div class="li">
- Check is the STG specification has CSC. If not, solve it by inserting a new internal signal to distinguish the states with the same code. See if your solution is different from Petrify.
-</div></li>
-</ul>
-
-</div>
-</div>
-
-<h2 class="sectionedit35" id="synthesis">Synthesis</h2>
-<div class="level2">
-
-<p>
-The STG specification can now be synthesised into an asynchronous circuit implementation either with Petrify or MPSat backend tools. A complex gate solution obtained with Petrify is as follwos:
-</p>
-<pre class="code">[d] = dsr ldtack csc0&#039; + dsw (csc0 + ldtack&#039;); 
-[dtack] = d&#039; csc0&#039; (dsr&#039; + dsw) + dsw&#039; d; 
-[lds] = csc0&#039;; 
-[csc0] = dsr&#039; d&#039; (csc0 + dsw&#039;) + ldtack csc0; </pre>
-
-<p>
-Notice a new signal <code>csc0</code> that was introduce by Petrify in order to resolve the CSC conflict.
-</p>
-<div class="wrap_box plugin_wrap">
-<h4 id="task_3">Task 3</h4>
-<ul>
-<li class="level1"><div class="li">
- Synthesize the controller in complex gates using Petrify
-</div></li>
-<li class="level1"><div class="li">
- Synthesize the controller in complex gates using MPSat (you may need to resolve CSC first, either manually or automatically using <em>Tools→Encodding conflicts</em> menu).
-</div></li>
-<li class="level1"><div class="li">
- Compare the solutions of Petrify and MPSat in terms of size and latency.
-</div></li>
-<li class="level1"><div class="li">
- Use Petrify to do the technology mapping onto a gate library.
-</div></li>
-</ul>
-
-</div>
-</div>
-
-<h2 class="sectionedit38" id="circuit_capturing">Circuit capturing</h2>
-<div class="level2">
-
-<p>
-Create a new Digital Circuit model and capture the equations generated by Petrify in form of a gate-level netlist. Your circuit should look similar to the following diagram.
-</p>
-
-<p>
-<img src="circuit-vme-cg.png" class="mediacenter" title="Complex gate implementation" alt="Complex gate implementation" />
-</p>
-
-</div>
-
-<h2 class="sectionedit39" id="verification_of_the_circuit_implementation">Verification of the circuit implementation</h2>
-<div class="level2">
-<div class="wrap_box plugin_wrap">
-<h4 id="task_4">Task 4</h4>
-<ul>
-<li class="level1"><div class="li">
- Create an STG describing the environment and assign it to the circuit model.
-</div></li>
-<li class="level1"><div class="li">
- Verify that the circuit implementation is deadlock-free, hazard-free and conforms to the environment specification.
-</div></li>
-<li class="level1"><div class="li">
- Decompose one of the complex gates by splitting it into simple gates and verify the circuit for hazards. If a hazard is reported (most likely it will be), then play back the trace leading to the problematic state to better understand why the naive decomposition does not work.
-</div></li>
-</ul>
-
-</div>
-</div>
-
-<h2 class="sectionedit42" id="solutions">Solutions</h2>
-<div class="level2">
-
-<p>
-Download all the Workcraft models discussed in this section here:
-</p>
-
-<p>
-<span class="wrap_download "><a href="vme.tar.gz" class="media mediafile mf_gz" title="tutorial:stg:vme.tar.gz (27.9 KB)">VME bus controller models</a> (27.92 KiB, <acronym title="Modified: 2014-08-12 20:13.41">2M ago</acronym>)</span>
-</p>
 
 </div>
 

@@ -102,7 +102,7 @@
 <div class="level1">
 <div class="wrap_important plugin_wrap">
 <p>
-Familiarise yourself with the <a href="../help/petri_net_plugin.html" class="wikilink1" title="help:petri_net_plugin">Petri Net plugin</a> before proceeding with this tutorial.
+Familiarise yourself with the <a href="../../help/petri_net_plugin.html" class="wikilink1" title="help:petri_net_plugin">Petri Net plugin</a> before proceeding with this tutorial.
 </p>
 </div>
 <p>
@@ -155,7 +155,7 @@ Note the difference between the names and labels:
 <div class="level2">
 
 <p>
-Enter the simulation tool by pressing the <img src="../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> button and play with the dining philosophers model. Initially both forks are on the table and places <code>fork1_free</code> and <code>fork2_free</code> are marked. Each philosopher can take any of the forks - the corresponding <code>*_take_left_fork</code> and <code>*_take_right_fork</code> transitions are enabled for both philosophers. 
+Enter the simulation tool by pressing the <img src="../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> button and play with the dining philosophers model. Initially both forks are on the table and places <code>fork1_free</code> and <code>fork2_free</code> are marked. Each philosopher can take any of the forks - the corresponding <code>*_take_left_fork</code> and <code>*_take_right_fork</code> transitions are enabled for both philosophers. 
 </p>
 
 <p>
@@ -198,7 +198,7 @@ The easiest and most obvious property to check is that the model does not have a
 </p>
 
 <p>
-Verification of custom properties is based on reachability analysis on the Petri net. For this a custom property should  be expressed in <a href="../help/reach.html" class="wikilink1" title="help:reach">Reach language</a>. For example, you can try and verify that both philosophers cannot be eating at the same time. For this you need to open <em>MPSat configuration</em> window via <em>Tools→Verification</em>, choose <em>Reachability analysis</em> as the MPSat mode, select <em>Minimise cost function</em> as the MPSat solution type, input <em>Both philosophers never eat simultaneously</em> as the property name and enter the following Reach expression in the <em>Property specification (Reach)</em> box: <code>$P“A_eating” &amp; $P“B_eating”</code>. Save this property by clicking the <em>Save as new preset…</em> button and giving it some meaningful name, e.g. <em> both_philosophers_never_eat_simultaneously</em>. Notice the space as the first symbol of the preset name - this is to have it on the top of the custom properties list that is sorted alphabetically. The result should be similar to the following screenshot.
+Verification of custom properties is based on reachability analysis on the Petri net. For this a custom property should  be expressed in <a href="../../help/reach.html" class="wikilink1" title="help:reach">Reach language</a>. For example, you can try and verify that both philosophers cannot be eating at the same time. For this you need to open <em>MPSat configuration</em> window via <em>Tools→Verification</em>, choose <em>Reachability analysis</em> as the MPSat mode, select <em>Minimise cost function</em> as the MPSat solution type, input <em>Both philosophers never eat simultaneously</em> as the property name and enter the following Reach expression in the <em>Property specification (Reach)</em> box: <code>$P“A_eating” &amp; $P“B_eating”</code>. Save this property by clicking the <em>Save as new preset…</em> button and giving it some meaningful name, e.g. <em> both_philosophers_never_eat_simultaneously</em>. Notice the space as the first symbol of the preset name - this is to have it on the top of the custom properties list that is sorted alphabetically. The result should be similar to the following screenshot.
 </p>
 
 <p>
@@ -206,7 +206,7 @@ Verification of custom properties is based on reachability analysis on the Petri
 </p>
 
 <p>
-Let us explain how to interpret the Reach formula. Consider an expression <code>$P“place_name”</code>. It instructs MPSat to check if a marking is reachable where the place <code>place_name</code> has a token. In basic cases one can apply logical operations and quantifiers (e.g. <code>&amp;</code>, <code>|</code>, <code>forall</code>, <code>existis</code>, etc.) to a marking which violates the property. For expressing a more sophisticated refer to <a href="../help/reach.html" class="wikilink1" title="help:reach">Reach language documentation</a>.
+Let us explain how to interpret the Reach formula. Consider an expression <code>$P“place_name”</code>. It instructs MPSat to check if a marking is reachable where the place <code>place_name</code> has a token. In basic cases one can apply logical operations and quantifiers (e.g. <code>&amp;</code>, <code>|</code>, <code>forall</code>, <code>existis</code>, etc.) to a marking which violates the property. For expressing a more sophisticated refer to <a href="../../help/reach.html" class="wikilink1" title="help:reach">Reach language documentation</a>.
 </p>
 
 <p>
