@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:stg:celement:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="noindex,nofollow"/>
+<meta name="robots" content="index,follow"/>
 <meta name="keywords" content="tutorial,stg,celement,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -125,7 +125,7 @@ Start with the reset phase of the C-element where <code>out-</code> event is cau
 </p>
 <ul>
 <li class="level1"><div class="li">
- Activate the <strong>signal transition generator</strong> <img src="../../../help/editor_tools-signal_transition.png" class="media" title="[T] Signal Transition" alt="[T] Signal Transition" />. Pay attention to the hint at the bottom of the screen: <em>Click to create a rising (or falling with Ctrl) transition of an output (or input with Shift) signal</em>.
+ Activate the <strong>signal transition generator</strong> <img src="../../help/editor_tools-signal_transition.png" class="media" title="[T] Signal Transition" alt="[T] Signal Transition" />. Pay attention to the hint at the bottom of the screen: <em>Click to create a rising (or falling with Ctrl) transition of an output (or input with Shift) signal</em>.
 </div></li>
 <li class="level1"><div class="li">
  Click the Editor panel in the location where you want the <code>out-</code> transition to appear.
@@ -137,7 +137,7 @@ Start with the reset phase of the C-element where <code>out-</code> event is cau
  Create <code>in2-</code> transition the same way as <code>in1-</code>.
 </div></li>
 <li class="level1"><div class="li">
- Activate <strong>connection tool</strong> <img src="../../../help/editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" />. Pay attention to the hints at the bottom of the screen. Initially the hint says <em>Click on the first component.</em> After the first component is chosen, the hint changes to <em>Click on the second component or create a node point. Hold Ctrl to connect continuously</em>.
+ Activate <strong>connection tool</strong> <img src="../../help/editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" />. Pay attention to the hints at the bottom of the screen. Initially the hint says <em>Click on the first component.</em> After the first component is chosen, the hint changes to <em>Click on the second component or create a node point. Hold Ctrl to connect continuously</em>.
 </div></li>
 <li class="level1"><div class="li">
  Click <code>in1-</code>, move the mouse pointer to the <code>out-</code> transition and click again. A causality arc from <code>in1-</code> to <code>out-</code> will be created.
@@ -163,7 +163,7 @@ Similarly capture the set phase of the C-element:
  Create causality arcs from <code>in1+</code> to <code>out+</code> and from <code>in2+</code> to <code>out+</code>.
 </div></li>
 <li class="level1"><div class="li">
- Use the <strong>selection tool</strong> <img src="../../../help/editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" /> to rearrange the STG nodes similar to the following figure.
+ Use the <strong>selection tool</strong> <img src="../../help/editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" /> to rearrange the STG nodes similar to the following figure.
 </div></li>
 </ul>
 
@@ -177,7 +177,7 @@ Now connect the set and reset portions of the specification:
 </p>
 <ul>
 <li class="level1"><div class="li">
- The same as before, use <strong>connection tool</strong> <img src="../../../help/editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" /> to introduce causality from <code>out+</code> to <code>in1-</code> and to <code>in2-</code>.
+ The same as before, use <strong>connection tool</strong> <img src="../../help/editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" /> to introduce causality from <code>out+</code> to <code>in1-</code> and to <code>in2-</code>.
 </div></li>
 <li class="level1"><div class="li">
  Create an arc from <code>out-</code> to <code>in1+</code>, but this time instead of a straight line connection use a polyline. After choosing the source of the connection (<code>out-</code> transition) click aside of the existing nodes - this will create a node point of a polyline. Continue forming the shape of the polyline by creating its node points, and finally choose the destination transition <code>in1+</code>.
@@ -197,7 +197,7 @@ Finally, specify the initial state of the C-element in accordance to the startin
 </p>
 <ul>
 <li class="level1"><div class="li">
- Activate the <strong>selection tool</strong> <img src="../../../help/editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />.
+ Activate the <strong>selection tool</strong> <img src="../../help/editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />.
 </div></li>
 <li class="level1"><div class="li">
  Select the arc from <code>out-</code> to <code>in1+</code> and in the Property editor set the <em>Tokens</em> value to 1.
@@ -218,7 +218,7 @@ Finally, specify the initial state of the C-element in accordance to the startin
 <div class="level2">
 
 <p>
-Activate the <strong>simulation tool</strong> <img src="../../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> and exercise the obtained STG model. Click one of the enabled signal transitions (they are highlighted in orange) to <em>evaluate</em> the STG into the next state. Note that the sequence of fired transitions is recorded in the simulation trace that is somewhat similar to the original timing diagram. Check that the simulation traces resemble to the intended behaviour of a C-element.
+Activate the <strong>simulation tool</strong> <img src="../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> and exercise the obtained STG model. Click one of the enabled signal transitions (they are highlighted in orange) to <em>evaluate</em> the STG into the next state. Note that the sequence of fired transitions is recorded in the simulation trace that is somewhat similar to the original timing diagram. Check that the simulation traces resemble to the intended behaviour of a C-element.
 </p>
 
 <p>
@@ -272,10 +272,10 @@ Create a new Digital Circuit work called <em>circuit-celement-cg</em> and captur
 </p>
 <ul>
 <li class="level1"><div class="li">
- Activate <strong>functional generator</strong> <img src="../../../help/editor_tools-function.png" class="media" title="[F] Function" alt="[F] Function" /> and click in the desired position of the OR-AND complex gate.
+ Activate <strong>functional generator</strong> <img src="../../help/editor_tools-function.png" class="media" title="[F] Function" alt="[F] Function" /> and click in the desired position of the OR-AND complex gate.
 </div></li>
 <li class="level1"><div class="li">
- Activate <strong>selection tool</strong> <img src="../../../help/editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />.
+ Activate <strong>selection tool</strong> <img src="../../help/editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />.
 </div></li>
 <li class="level1"><div class="li">
  Select the only pin of the newly created function component.
@@ -301,7 +301,7 @@ Create a new Digital Circuit work called <em>circuit-celement-cg</em> and captur
 </p>
 <ul>
 <li class="level1"><div class="li">
- Activate <strong>port generator</strong> <img src="../../../help/editor_tools-port.png" class="media" title="[P] Input/output port" alt="[P] Input/output port" />. Pay attention to the hint at the bottom of the screen: <em>Click to create an output port (hold Shift for input port)</em>.
+ Activate <strong>port generator</strong> <img src="../../help/editor_tools-port.png" class="media" title="[P] Input/output port" alt="[P] Input/output port" />. Pay attention to the hint at the bottom of the screen: <em>Click to create an output port (hold Shift for input port)</em>.
 </div></li>
 <li class="level1"><div class="li">
  Click in intended location of the output port. Note that by default the port will be named <code>out1</code> - you can change this name to <code>out</code> later. 
@@ -320,7 +320,7 @@ Create a new Digital Circuit work called <em>circuit-celement-cg</em> and captur
 </p>
 <ul>
 <li class="level1"><div class="li">
- Activate <strong>connection tool</strong> <img src="../../../help/editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" />.
+ Activate <strong>connection tool</strong> <img src="../../help/editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" />.
 </div></li>
 <li class="level1"><div class="li">
  Connect input ports <code>in1</code> to the 1<sup>st</sup> and 5<sup>th</sup> pins of the complex gate (<code>A</code> and <code>E</code> respectively).
@@ -339,7 +339,7 @@ Create a new Digital Circuit work called <em>circuit-celement-cg</em> and captur
 </p>
 
 <p>
-You may want to tidy up the circuit schematic and make it more readable by adding forks into the wires. This can be done with the <strong>joint generator</strong> <img src="../../../help/editor_tools-joint.png" class="media" title="[J] Joint" alt="[J] Joint" />. The resultant circuit should look similar to the following diagram.
+You may want to tidy up the circuit schematic and make it more readable by adding forks into the wires. This can be done with the <strong>joint generator</strong> <img src="../../help/editor_tools-joint.png" class="media" title="[J] Joint" alt="[J] Joint" />. The resultant circuit should look similar to the following diagram.
 </p>
 
 <p>
@@ -352,7 +352,7 @@ You may want to tidy up the circuit schematic and make it more readable by addin
 <div class="level2">
 
 <p>
-Activate the <strong>simulation tool</strong> <img src="../../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> and simulate the captured complex gate implementation of the C-element. Ports, pins and wires are colour-coded: blue means low level and red means high level of the signal. Excited pins and ports are highlighted in orange. 
+Activate the <strong>simulation tool</strong> <img src="../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> and simulate the captured complex gate implementation of the C-element. Ports, pins and wires are colour-coded: blue means low level and red means high level of the signal. Excited pins and ports are highlighted in orange. 
 </p>
 
 <p>
@@ -372,13 +372,13 @@ Restrict the environment behaviour in such a way that the circuit only receives 
 </p>
 <ul>
 <li class="level1"><div class="li">
- Activate the <strong>selection tool</strong> <img src="../../../help/editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />.
+ Activate the <strong>selection tool</strong> <img src="../../help/editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />.
 </div></li>
 <li class="level1"><div class="li">
  Select both input ports <code>in1</code> and <code>in2</code> (hold <kbd>Shift</kbd> and click each of them).
 </div></li>
 <li class="level1"><div class="li">
- In the property editor assign the same <em>Set function</em> <code>!out</code>  to both inputs (<code>!</code> means inversion – see <a href="..../../help/boolean_expression.html" class="wikilink1" title="help:boolean_expression">Boolean expressions</a> for details).
+ In the property editor assign the same <em>Set function</em> <code>!out</code>  to both inputs (<code>!</code> means inversion – see <a href="../../help/boolean_expression.html" class="wikilink1" title="help:boolean_expression">Boolean expressions</a> for details).
 </div></li>
 </ul>
 
@@ -405,7 +405,7 @@ Download all the Workcraft models discussed in this tutorial here:
 </p>
 
 <p>
-<span class="wrap_download "><a href="celement.tar.gz" class="media mediafile mf_gz" title="tutorial:stg:celement:celement.tar.gz (5.9 KB)">C-element models</a> (5.94 KiB, <acronym title="Modified: 2014-11-13 10:49.47">1d ago</acronym>)</span>
+<span class="wrap_download "><a href="celement.tar.gz" class="media mediafile mf_gz" title="tutorial:stg:celement:celement.tar.gz (5.9 KB)">C-element models</a> (5.94 KiB, <acronym title="Modified: 2014-11-13 10:49.47">2M ago</acronym>)</span>
 </p>
 
 </div>

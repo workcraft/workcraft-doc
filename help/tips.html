@@ -6,7 +6,6 @@
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
 <meta name="robots" content="index,follow"/>
-<meta name="date" content="2014-06-20T20:45:25+0000"/>
 <meta name="keywords" content="help,tips"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="tips.html"/>
@@ -100,7 +99,10 @@
  Hold <kbd>Shift</kbd> to include objects into a selection and <kbd>Ctrl</kbd> to exclude objects from a selection.
 </div></li>
 <li class="level1"><div class="li">
- Outline a selection area <em>from-right-to-left</em> for adding fully covered objects, and <em>from-left-to-right</em> for adding any touched objects.
+ Outline a selection rectangle <em>from-left-to-right</em> for adding objects that are inside the selection region, and <em>from-right-to-left</em> for adding objects touched by the selection region.
+</div></li>
+<li class="level1"><div class="li">
+ Press <kbd>Crtl</kbd>+<kbd>A</kbd> to select everything or <kbd>Ctrl</kbd>+<kbd>I</kbd> to inverse the selection.
 </div></li>
 <li class="level1"><div class="li">
  Use <em>left mouse button</em> or <kbd>&larr;</kbd>, <kbd>&uarr;</kbd>, <kbd>&rarr;</kbd>, <kbd>&darr;</kbd> to move selected components.
@@ -134,13 +136,16 @@
 <div class="level2">
 <ul>
 <li class="level1"><div class="li">
- <kbd>Ctrl</kbd>+<kbd>G</kbd> combines selected objects into a group and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> ungroups them.
+ <kbd>Ctrl</kbd>+<kbd>G</kbd> combines selected objects into a group and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> splits selected groups into individual objects.
 </div></li>
 <li class="level1"><div class="li">
  Press <kbd>Page&darr;</kbd> or <em>double-click</em> a group to enter it. Press <kbd>Page&uarr;</kbd> or <em>double-click</em> outside a group to leave it.
 </div></li>
 <li class="level1"><div class="li">
- Scroll the mouse wheel <em>forward</em> to zooms in and <em>backward</em> to zoom out. Alternatively press <kbd>+</kbd> to zoom in and <kbd>&minus;</kbd> to zoom out.
+ Scroll the mouse wheel <em>forward</em> to zooms in and <em>backward</em> to zoom out. Alternatively press <kbd>+</kbd> to zoom in and <kbd>&minus;</kbd> to zoom out. Press <kbd>Ctrl</kbd>+<kbd>0</kbd> to restore the default scale.
+</div></li>
+<li class="level1"><div class="li">
+ Press <kbd>Ctrl</kbd>+<kbd>F</kbd> to fit the selection into the screen or <kbd>Ctrl</kbd>+<kbd>T</kbd> to centre it.
 </div></li>
 <li class="level1"><div class="li">
  Use the <em>middle mouse button</em> or <kbd>Ctrl</kbd>+<em>right mouse button</em> or <kbd>Ctrl</kbd>+<kbd>&larr;</kbd>, <kbd>&uarr;</kbd>, <kbd>&rarr;</kbd>, <kbd>&darr;</kbd> to pan the view.
@@ -168,7 +173,7 @@
 <div class="level2">
 <ul>
 <li class="level1"><div class="li">
- Use <code>punf</code> with <code>-r</code> option to replicate Petri net places sensed by read-arcs and speed up the unfolding.
+ In order to speed up the unfolding of Petri nets with read arcs add <code>-r</code> option to <code>punf</code> tool – the places sensed by read-arcs will be replicated.
 </div></li>
 <li class="level1"><div class="li">
  Use <code>petrify</code> with <code>-nosi</code> option to allow synthesis of non-speed-independent specifications.

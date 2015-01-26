@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:stg:buck:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="noindex,nofollow"/>
+<meta name="robots" content="index,follow"/>
 <meta name="keywords" content="tutorial,stg,buck,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -323,7 +323,7 @@ Note that this STG is just a cosmetic improvement over the original one and can 
 <div class="level2">
 
 <p>
-Activate the <strong>simulation tool</strong> <img src="../../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> and exercise the obtained STG model. Click one of the enabled signal transitions (they are highlighted in orange) to <em>evaluate</em> the STG into the next state. Make sure the simulation traces correspond to those intended by the informal specification of the phase diagram.
+Activate the <strong>simulation tool</strong> <img src="../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> and exercise the obtained STG model. Click one of the enabled signal transitions (they are highlighted in orange) to <em>evaluate</em> the STG into the next state. Make sure the simulation traces correspond to those intended by the informal specification of the phase diagram.
 </p>
 
 <p>
@@ -331,7 +331,7 @@ Before proceeding to the synthesis step verify the specification for signal cons
 </p>
 
 <p>
-Another property you need to verify is that PMOS and NMOS transistors are never open simultaneously, i.e. that signals <code>gp</code> and <code>gn</code> are never hight at the same time. This design-specific property can be formulated as a reachability analysis problem using <a href="../../../help/reach.html" class="wikilink1" title="help:reach">Reach language</a>:
+Another property you need to verify is that PMOS and NMOS transistors are never open simultaneously, i.e. that signals <code>gp</code> and <code>gn</code> are never hight at the same time. This design-specific property can be formulated as a reachability analysis problem using <a href="../../help/reach.html" class="wikilink1" title="help:reach">Reach language</a>:
 </p>
 <ul>
 <li class="level1"><div class="li">
@@ -432,7 +432,10 @@ Create a new Digital Circuit work called <em>circuit-buck-cg</em> and capture th
  Create input ports <code>gn_ack</code>, <code>oc</code>, <code>uv</code>, <code>zc</code> and <code>gp_ack</code>.
 </div></li>
 <li class="level1"><div class="li">
- Connect the input port to the corresponding pins of the <code>inst_gp</code> and <code>inst_gn</code> gates. Make use of <strong>joint generator</strong> <img src="../../../help/editor_tools-joint.png" class="media" title="[J] Joint" alt="[J] Joint" /> for forking the connections.
+ Connect the input port to the corresponding pins of the <code>inst_gp</code> and <code>inst_gn</code> gates. Make use of <strong>joint generator</strong> <img src="../../help/editor_tools-joint.png" class="media" title="[J] Joint" alt="[J] Joint" /> for forking the connections.
+</div></li>
+<li class="level1"><div class="li">
+ Set the initial state of <code>gn</code> and <code>gn_ack</code> signals to <code>1</code>. For this select the corresponding ports and in the <em>Property editor</em> tick the <em>Init to one</em> check box.
 </div></li>
 </ul>
 
@@ -451,7 +454,7 @@ The captured circuit should look like this.
 <div class="level2">
 
 <p>
-Activate the <strong>simulation tool</strong> <img src="../../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> and simulate the captured complex gate implementation of the buck control. Ports, pins and wires are colour-coded: blue means low level and red means high level of the signal. Excited pins and ports are highlighted in orange. 
+Activate the <strong>simulation tool</strong> <img src="../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> and simulate the captured complex gate implementation of the buck control. Ports, pins and wires are colour-coded: blue means low level and red means high level of the signal. Excited pins and ports are highlighted in orange. 
 </p>
 
 <p>
@@ -489,7 +492,7 @@ Download all the Workcraft models discussed in this tutorial here:
 </p>
 
 <p>
-<span class="wrap_download "><a href="buck.tar.gz" class="media mediafile mf_gz" title="tutorial:stg:buck:buck.tar.gz (23.2 KB)">Buck control models</a> (23.18 KiB, <acronym title="Modified: 2014-11-14 17:06.37">47m ago</acronym>)</span>
+<span class="wrap_download "><a href="buck.tar.gz" class="media mediafile mf_gz" title="tutorial:stg:buck:buck.tar.gz (23.2 KB)">Buck control models</a> (23.18 KiB, <acronym title="Modified: 2014-11-14 17:06.37">2M ago</acronym>)</span>
 </p>
 
 </div>

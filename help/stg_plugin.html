@@ -5,8 +5,7 @@
     <title>Workcraft - help:stg_plugin</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="noindex,nofollow"/>
-<meta name="date" content="2014-10-01T15:43:31+0000"/>
+<meta name="robots" content="index,follow"/>
 <meta name="keywords" content="help,stg plugin"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="stg_plugin.html"/>
@@ -78,7 +77,12 @@
 <div>
 
 <ul class="toc">
-<li class="level1"><div class="li"><a href="#capturing">Capturing</a></div></li>
+<li class="level1"><div class="li"><a href="#capturing">Capturing</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#node_generator_tools">Node generator tools</a></div></li>
+<li class="level2"><div class="li"><a href="#connection_tool">Connection tool</a></div></li>
+</ul>
+</li>
 <li class="level1"><div class="li"><a href="#editing">Editing</a></div></li>
 <li class="level1"><div class="li"><a href="#simulation">Simulation</a></div></li>
 <li class="level1"><div class="li"><a href="#verification">Verification</a></div></li>
@@ -113,34 +117,57 @@ In order to create an STG model choose <em>File→Create work…</em> menu item.
 </p>
 
 <p>
-To capture an STG you just put its places and transitions on the editor pane and connect them by means of arcs. Creation of places is similar to that of Petri net plugin, by using the place generator <img src="editor_tools-place.png" class="media" title="[P] Place" alt="[P] Place" />. However, the creation of transitions is a bit more complicated as there are two classes of transitions in this plugin with their respective node generator tools:
+To capture an STG you just put its nodes (places, dummies and signal transitions) on the editor pane and connect them by means of arcs. 
+</p>
+
+</div>
+
+<h3 class="sectionedit5" id="node_generator_tools">Node generator tools</h3>
+<div class="level3">
+
+<p>
+Creation of places is similar to that of Petri net plugin, by using the place generator <img src="editor_tools-place.png" class="media" title="[P] Place" alt="[P] Place" /> – just click the editor panel in the position you want a new place to appear. However, the creation of transitions is a bit more complicated as there are two classes of transitions in this plugin with their respective node generator tools:
 </p>
 <ul>
 <li class="level1"><div class="li">
- <img src="editor_tools-signal_transition.png" class="media" title="[T]Signal Transition" alt="[T]Signal Transition" />- <strong>signal transition generator</strong> <br/>
+ <img src="editor_tools-signal_transition.png" class="media" title="[T] Signal Transition" alt="[T] Signal Transition" />- <strong>signal transition generator</strong> <br/>
 - a tool for creating signal transitions with their rising and falling phases (denoted by <code>+</code> and <code>-</code> respectively after the signal name). This tool can also be activated by pressing <kbd>T</kbd>. 
 </div></li>
 <li class="level1"><div class="li">
- <img src="editor_tools-transition.png" class="media" title="[D]Dummy Transition" alt="[D]Dummy Transition" />- <strong>dummy transition generator</strong> <br/>
+ <img src="editor_tools-transition.png" class="media" title="[D] Dummy Transition" alt="[D] Dummy Transition" />- <strong>dummy transition generator</strong> <br/>
 - a tool for creating dummy transitions that do not belong to any signal and do not have rising or falling phase, but rather are used to simplify the structure of the STG. This tool can also be activated by pressing <kbd>D</kbd>.
 </div></li>
 </ul>
 
 
 <p>
-Three types of signal transitions are supported denoting the <em>input</em>, <em>output</em> and <em>internal</em> events. By default a falling phase of an output signal is created (usually the automatically generated name is <code>out0-</code>) when you click the editor panel. This behaviour can be changed by holding <kbd>Shift</kbd> and/or <kbd>Ctrl</kbd> keys while creating a signal transition as follows:
+Three types of signal transitions are supported denoting the <em>input</em>, <em>output</em> and <em>internal</em> events. By default a falling phase of an output signal is created (usually the automatically generated name is <code>out-</code> - see <a href="#naming_of_transitions" title="help:stg_plugin ↵" class="wikilink1">Naming of transitions</a> for details) when you click the editor panel. This behaviour can be changed by holding <kbd>Shift</kbd> and/or <kbd>Ctrl</kbd> keys while creating a signal transition as follows:
 </p>
 <ul>
-<li class="level1"><div class="li"> <kbd>Shift</kbd> - rising phase of an output signal (usually <code>out0+</code>).</div>
+<li class="level1"><div class="li"> <kbd>Shift</kbd> - create a rising phase of an output signal (usually <code>out+</code>).</div>
 </li>
-<li class="level1"><div class="li"> <kbd>Ctrl</kbd> - falling phase of an input signal (usually <code>in0-</code>).</div>
+<li class="level1"><div class="li"> <kbd>Ctrl</kbd> - create a falling phase of an input signal (usually <code>in+</code>).</div>
 </li>
-<li class="level1"><div class="li"> <kbd>Ctrl</kbd>+<kbd>Shift</kbd> - rising phase of an input signal (usually <code>in0+</code>).</div>
+<li class="level1"><div class="li"> <kbd>Ctrl</kbd>+<kbd>Shift</kbd> - create a rising phase of an input signal (usually <code>in+</code>).</div>
 </li>
 </ul>
+<div class="wrap_info plugin_wrap">
+<h4 id="naming_of_transitions">Naming of transitions</h4>
 
 <p>
-The internal signals are less frequently used and therefore their is no key combination for them. Instead you need to create an output transition first, then rename it and finally change its signal type in the property editor. Note that renaming of the transition before changing its type is important as otherwise all transitions with the same signal name will change their type.
+The automatic naming for the signal transitions is as follows. A transition is given <code>in</code> or <code>out</code> prefix depending on the type of the signal it represents – input or output respectively. Then a numerical suffix is added to the name, starting from <code>0</code>. If a transition of the same signal already exists, then its type is checked to match the intended type of a newly created transition. If there is a mismatch (e.g. we want to create an output transition <code>out-</code> but a transition of an input signal exists that has an ambiguous name <code>out+</code>) then the numerical suffix <code>0</code> is added to the transition name, making it <code>out0-</code>. If the name <code>out0</code> is also taken by another signal type, a dummy or a place, then the suffix is incremented until a new transition of intended type can be created without causing a conflict.
+</p>
+
+<p>
+Note that in order to distinguish transitions of the same signal and the same polarity they are assigned <em>instance</em> numbers that are separated from the label by <code>/</code> symbol. Therefore two rising transitions of a signal <code>out</code> have different instance number, e.g. <code>0</code> and <code>1</code> and their full names are <code>out+/0</code> and <code>out+/1</code> respectively. The instance numbers are automatically generated to be unique among transitions of the same phase and of the same signal. Usually the instance numbers do not need to be changed and therefore, for simplicity, they are even hidden in the editor panel. However, the instance number of a transition can be seen and altered if necessary in the property editor.
+</p>
+
+<p>
+The automatically generated names for the dummies start from <code>dum0</code> and the numerical suffix is incremented for each next dummy. Note that dummies also can have the <em>instance</em> numbers (e.g. <code>dum/1</code> and <code>dum/2</code> are essentially different transitions). However, it is usually more convenient to distinguish the dummies by their name main portion of their names (e.g. <code>dum1</code> and <code>dum2</code>).
+</p>
+</div>
+<p>
+The internal signals are less frequently used and therefore their is no key combination for them. Instead you need to create an output (or input) transition first, then rename it and finally change its signal type in the property editor. Note that renaming of the transition before changing its type is important as otherwise all transitions with the same signal name will change their type.
 </p>
 
 <p>
@@ -159,20 +186,21 @@ The STG transitions can be easily recognised by their color. By default the inpu
 <img src="preferences-models-stg.png" class="mediacenter" title="Global settings for Signal Transition Graph plugin" alt="Global settings for Signal Transition Graph plugin" />
 </p>
 
+</div>
+
+<h3 class="sectionedit8" id="connection_tool">Connection tool</h3>
+<div class="level3">
+
 <p>
-The automatic naming for the signal transitions is as follows. A transition is given <code>in</code> or <code>out</code> prefix depending on the type of the signal it represents – input or output respectively. Then a numerical suffix is added to the name, starting from <code>0</code>. If a transition of the same signal already exists, then its type is checked to match the intended type of a newly created transition. If there is a mismatch (e.g. we want to create an output transition <code>out-</code> but a transition of an input signal exists that has an ambiguous name <code>out0+</code>) then the numerical suffix is incremented until a new transition of intended type can be created without causing a conflict.
+When the connection tool <img src="editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" /> is active you can connect places and transitions with arcs by first click the source node and then the destination node. This will create a straight line connection between the source and the destination nodes. You can also create a polyline connection by clicking the editor panel in the positions of <em>intermediate</em> points, before clicking the destination node.
 </p>
 
 <p>
-Note that in order to distinguish transitions of the same signal and the same polarity they are assigned <em>instance</em> numbers that are separated from the label by <code>/</code> symbol. Therefore two rising transitions of a signal <code>out0</code> have different instance number, e.g. <code>0</code> and <code>1</code> and their full names are <code>out0+/0</code> and <code>out0+/1</code> respectively. The instance numbers are automatically generated to be unique among transitions of the same phase and of the same signal. Usually the instance numbers do not need to be changed and therefore, for simplicity, they are even hidden in the editor panel. However, the instance number of a transition can be seen and altered if necessary in the property editor.
+If you hold <kbd>Ctrl</kbd> then the destination node becomes a source for the next arc making it easier to form a sequence of connected nodes. 
 </p>
 
 <p>
-When the connection tool <img src="editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" /> is active you can connect places and transitions with arcs by first click the source node and then the destination node. If you hold <kbd>Ctrl</kbd> then the destination node becomes a source for the next arc making it easier to form a sequence of connected nodes. 
-</p>
-
-<p>
-Note that places can only be connected to transitions. If you attempt to connect two places, then a warning will be issued that connections is not valid. However unlike Petri nets, the STG transitions can be connected to each other without an explicit place in between. This <em>shorthand</em> notation is used when a place has a single transition in its preset and a single transition in its postset. For simplicity such a implicit place is hidden and an arc is drawn directly between two transitions.
+Note that places can only be connected to transitions. If you attempt to connect two places, then a warning will be issued that connections is not valid. However, unlike Petri nets, the STG transitions can be connected to each other without an explicit place in between. This <em>shorthand</em> notation is used when a place has a single transition in its preset and a single transition in its postset. For simplicity such an implicit place is hidden and the arc is drawn directly between two transitions.
 </p>
 
 <p>
@@ -181,7 +209,7 @@ Note that places can only be connected to transitions. If you attempt to connect
 
 </div>
 
-<h2 class="sectionedit5" id="editing">Editing</h2>
+<h2 class="sectionedit9" id="editing">Editing</h2>
 <div class="level2">
 
 <p>
@@ -215,7 +243,7 @@ Similar to all the other models, textual comments can be created by activating t
 
 </div>
 
-<h2 class="sectionedit6" id="simulation">Simulation</h2>
+<h2 class="sectionedit10" id="simulation">Simulation</h2>
 <div class="level2">
 
 <p>
@@ -232,7 +260,7 @@ Note that the simulation controls are extended with the signal state table. The 
 
 </div>
 
-<h2 class="sectionedit7" id="verification">Verification</h2>
+<h2 class="sectionedit11" id="verification">Verification</h2>
 <div class="level2">
 
 <p>
@@ -258,7 +286,7 @@ A number of STG properties can be verified via <em>Tools→Verification</em> men
  <em>Check for output persistence (without dummies) [MPSat]</em> - verify the output signals of the STG are persistent (once enabled they do not get disabled until fired).
 </div></li>
 <li class="level1"><div class="li">
- <em>Custom properties[MPSat]…</em> - custom properties can be verified through formulation a reachability analysis problem using <a href="reach.html" class="wikilink1" title="help:reach">Reach language</a> in a specialised MPSat configuration window.
+ <em>Custom properties [MPSat]…</em> - custom properties can be verified through formulation a reachability analysis problem using <a href="reach.html" class="wikilink1" title="help:reach">Reach language</a> in a specialised MPSat configuration window.
 </div></li>
 </ul>
 
@@ -273,7 +301,7 @@ If the verified property is not satisfied, then a trace (or a family of traces) 
 
 </div>
 
-<h2 class="sectionedit8" id="synthesis">Synthesis</h2>
+<h2 class="sectionedit12" id="synthesis">Synthesis</h2>
 <div class="level2">
 
 <p>
@@ -303,7 +331,16 @@ These synthesis options are available under the <em>Tools→Synthesis</em> menu:
  <em>Complex gate synthesis [Petrify]</em> - synthesise the STG in complex gates using <em>Petrify</em> backend tool.
 </div></li>
 <li class="level1"><div class="li">
+ <em>Generalized C-element synthesis [MPSat]</em> - synthesise the STG in generalised C-elements using <em>MPSat</em> backend tool.
+</div></li>
+<li class="level1"><div class="li">
  <em>Generalized C-element synthesis [Petrify]</em> - synthesise the STG in generalised C-elements using <em>Petrify</em> backend tool.
+</div></li>
+<li class="level1"><div class="li">
+ <em>Standard C-element synthesis [MPSat]</em> - synthesise the STG in standard C-elements using <em>MPSat</em> backend tool.
+</div></li>
+<li class="level1"><div class="li">
+ <em>Technology mapping synthesis [MPSat]</em> - synthesise the STG for a library of available gates using <em>MPSat</em> backend tool.
 </div></li>
 <li class="level1"><div class="li">
  <em>Technology mapping synthesis [Petrify]</em> - synthesise the STG for a library of available gates using <em>Petrify</em> backend tool. The library of gates can be specified in the under <em>External tools→Petrify</em> leaf of the global preferences tree (available via <em>Edit→Preferences</em> menu).

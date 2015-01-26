@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Workcraft - overview:start</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="keywords" content="overview,start"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
+<link rel="start" href="start.html"/>
+<link rel="contents" href="start.html" title="Sitemap"/>
+<link rel="alternate" type="application/rss+xml" title="Changes" />
+<link rel="alternate" type="application/rss+xml" title="Current namespace" />
+<link rel="alternate" type="text/html" title="Plain HTML" href="_export/xhtml/overview/start.xhtml"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/overview/start.raw"/>
+<link rel="canonical" href="http://www.workcraft.org/overview/start"/>
+<link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
+<script type="text/javascript">/*<![CDATA[*/var NS='overview';var JSINFO = {"id":"overview:start","namespace":"overview"};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export     ">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+        <h1><a href="start.html"  title="Workcraft start page"><img src="logo.png" width="327" height="57" alt="" /></a></h1>
+    
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="start.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SEARCH TOOLS -->
+        <div id="dokuwiki__searchtools">
+            <h3 class="a11y"></h3>
+            <form action="start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        </div>
+
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+                            <div class="mobileTools">
+                    <li><a href="start.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </div>
+                <ul>
+                                    </ul>
+                    </div>
+    </div>
+
+    <!-- BREADCRUMBS -->
+    
+    
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                <div class="pageId"><span>overview:start</span></div>
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    
+<h1 class="sectionedit1" id="overview">Overview</h1>
+<div class="level1">
+<div class="plugin_include_content plugin_include__overview:interpreted_graph_models" id="plugin_include__overview__interpreted_graph_models">
+
+<h2 class="sectionedit4" id="interpreted_graph_models">Interpreted Graph Models</h2>
+
+<p>
+A large number of models that are employed in the field of concurrent systems design, such as <a href="http://en.wikipedia.org/wiki/Petri_net" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/Petri_net">Petri nets</a>, <a href="http://en.wikipedia.org/wiki/Asynchronous_circuit" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/Asynchronous_circuit">gate-level circuits</a>, <a href="http://en.wikipedia.org/wiki/Data_flow_diagram" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/Data_flow_diagram">dataflow structures</a>, etc. - all have an underlying static <a href="http://en.wikipedia.org/wiki/Graph_(mathematics)" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/Graph_(mathematics)">graph</a> structure. Their semantics, however, is defined using additional entities, e.g. tokens or node/arc states, which in turn form the overall state of the system. We jointly refer to such formalisms as <em>interpreted graph models</em>. 
+</p>
+
+<p>
+The similarities between the interpreted graph models allow for links between different formalisms to be created, either by means of adapter interfaces or by conversion from one model type into another. This greatly extends the range of applicable modelling and analysis techniques.
+</p>
+
+<p>
+Workcraft is designed to provide a flexible common framework for development of interpreted graph models, including visual editing, (co)simulation and analysis. The latter can be carried out either directly or by mapping a model into a behaviourally equivalent model of a different type (usually a Petri net). Hence the user can design a system using the most appropriate formalism (or even different formalisms for the subsystems), while still utilising the power of Petri net analysis techniques.
+</p>
+</div>
+<div class="plugin_include_content plugin_include__overview:supported_models" id="plugin_include__overview__supported_models">
+
+<h2 class="sectionedit8" id="supported_models">Supported models</h2>
+
+<p>
+This is a summary of the currently supported interpreted graph models that are implemented as as plug-ins for Workcraft framework.
+</p>
+<div class="table sectionedit9"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign" rowspan="2">  Model  </th><th class="col1 centeralign" colspan="4">  Supported features  </th>
+	</tr>
+	<tr class="row1">
+		<th class="col0 centeralign">  Editing        </th><th class="col1 centeralign">  Simulation     </th><th class="col2 centeralign">  Verification   </th><th class="col3 centeralign">  Synthesis      </th>
+	</tr>
+	</thead>
+	<tr class="row2">
+		<th class="col0"> <a href="directed_graph.html" class="wikilink1" title="overview:directed_graph">Directed Graph</a> <sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup>
+        </th><td class="col1 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col2 centeralign" bgcolor=#FFAAAA>No    </td><td class="col3 centeralign" bgcolor=#FFAAAA>No    </td><td class="col4 centeralign" bgcolor=#FFAAAA>No    </td>
+	</tr>
+	<tr class="row3">
+		<th class="col0"> <a href="fsm.html" class="wikilink1" title="overview:fsm">Finite State Machine</a> <sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup>
+        </th><td class="col1 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col2 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col3 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col4 centeralign" bgcolor=#FFAAAA>No    </td>
+	</tr>
+	<tr class="row4">
+		<th class="col0"> <a href="petri_net.html" class="wikilink1" title="overview:petri_net">Petri Net</a> <sup><a href="#fn__3" id="fnt__3" class="fn_top">3)</a></sup>
+        </th><td class="col1 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col2 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col3 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col4 centeralign" bgcolor=#FFAAAA>No    </td>
+	</tr>
+	<tr class="row5">
+		<th class="col0"> <a href="policy_net.html" class="wikilink1" title="overview:policy_net">Policy Net</a> <sup><a href="#fn__4" id="fnt__4" class="fn_top">4)</a></sup>
+        </th><td class="col1 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col2 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col3 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col4 centeralign" bgcolor=#FFAAAA>No    </td>
+	</tr>
+	<tr class="row6">
+		<th class="col0"> <a href="fst.html" class="wikilink1" title="overview:fst">Finite State Transducer</a> <sup><a href="#fn__5" id="fnt__5" class="fn_top">5)</a></sup>
+        </th><td class="col1 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col2 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col3 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col4 centeralign" bgcolor=#AAFFAA>Yes    </td>
+	</tr>
+	<tr class="row7">
+		<th class="col0"> <a href="stg.html" class="wikilink1" title="overview:stg">Signal Transition Graph</a> <sup><a href="#fn__6" id="fnt__6" class="fn_top">6)</a></sup>
+        </th><td class="col1 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col2 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col3 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col4 centeralign" bgcolor=#AAFFAA>Yes    </td>
+	</tr>
+	<tr class="row8">
+		<th class="col0"> <a href="son.html" class="wikilink1" title="overview:son">Structured Occurrence Net</a> <sup><a href="#fn__7" id="fnt__7" class="fn_top">7)</a></sup>
+        </th><td class="col1 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col2 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col3 centeralign" bgcolor=#FFFFAA>Some  </td><td class="col4 centeralign" bgcolor=#FFAAAA>No     </td>
+	</tr>
+	<tr class="row9">
+		<th class="col0"> <a href="digital_circuit.html" class="wikilink1" title="overview:digital_circuit">Digital Circuit</a> <sup><a href="#fn__8" id="fnt__8" class="fn_top">8)</a></sup>
+        </th><td class="col1 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col2 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col3 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col4 centeralign" bgcolor=#FFAAAA>No    </td>
+	</tr>
+	<tr class="row10">
+		<th class="col0"> <a href="cpog.html" class="wikilink1" title="overview:cpog">Conditional Partial Order Graph</a> <sup><a href="#fn__9" id="fnt__9" class="fn_top">9)</a></sup>
+        </th><td class="col1 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col2 centeralign" bgcolor=#FFFFAA>Some  </td><td class="col3 centeralign" bgcolor=#FFAAAA>No    </td><td class="col4 centeralign" bgcolor=#AAFFAA>Yes   </td>
+	</tr>
+	<tr class="row11">
+		<th class="col0"> <a href="dataflow_structure.html" class="wikilink1" title="overview:dataflow_structure">Dataflow Structure</a> <sup><a href="#fn__10" id="fnt__10" class="fn_top">10)</a></sup>
+        </th><td class="col1 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col2 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col3 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col4 centeralign" bgcolor=#FFAAAA>No    </td>
+	</tr>
+	<tr class="row12">
+		<th class="col0"> <a href="xmas_circuit.html" class="wikilink1" title="overview:xmas_circuit">xMAS Circuit</a> <sup><a href="#fn__11" id="fnt__11" class="fn_top">11)</a></sup>
+        </th><td class="col1 centeralign" bgcolor=#AAFFAA>Yes   </td><td class="col2 centeralign" bgcolor=#FFAAAA>No    </td><td class="col3 centeralign" bgcolor=#FFFFAA>Some  </td><td class="col4 centeralign" bgcolor=#FFAAAA>No    </td>
+	</tr>
+</table></div>
+
+<h3 class="sectionedit10" id="conversion_and_synthesis_of_models">Conversion and synthesis of models</h3>
+
+<p>
+<img src="model_taxonomy.png" class="media" alt="" />
+</p>
+</div>
+
+</div>
+<div class="footnotes">
+<div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+<a href="http://en.wikipedia.org/wiki/Directed_graph" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/Directed_graph">Directed Graph</a>.</div>
+<div class="fn"><sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
+<a href="http://en.wikipedia.org/wiki/Finite-state_machine" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/Finite-state_machine">Finite State Machine</a>.</div>
+<div class="fn"><sup><a href="#fnt__3" id="fn__3" class="fn_bot">3)</a></sup> 
+<a href="http://en.wikipedia.org/wiki/Petri_net" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/Petri_net">Petri net</a>.</div>
+<div class="fn"><sup><a href="#fnt__4" id="fn__4" class="fn_bot">4)</a></sup> 
+J.Fernandes, M.Koutny, M.Pietkiewicz-Koutny, D.Sokolov, A.Yakovlev: <em>“Step persistence in the design of GALS systems”</em>, Proc. International Conference on Application and Theory of Petri Nets(ATPN), pp.190–209, 2013.</div>
+<div class="fn"><sup><a href="#fnt__5" id="fn__5" class="fn_bot">5)</a></sup> 
+<a href="http://en.wikipedia.org/wiki/Finite_state_transducer" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/Finite_state_transducer">Finite State Transducer</a>.</div>
+<div class="fn"><sup><a href="#fnt__6" id="fn__6" class="fn_bot">6)</a></sup> 
+A.Yakovlev, L.Lavagno, A.Sangiovanni-Vincentelli: <em>“A unified signal transition graph model for asynchronous control circuit synthesis”</em>, Formal Methods in System Design, vol.9(3), pp.139–188, 1996.</div>
+<div class="fn"><sup><a href="#fnt__7" id="fn__7" class="fn_bot">7)</a></sup> 
+M.Koutny, B.Randell: <em>“Structured occurrence nets: a formalism for aiding system failure prevention and analysis techniques”</em>, Fundamenta Informaticae, vol.97(1–2), pp.41–91, 2009.</div>
+<div class="fn"><sup><a href="#fnt__8" id="fn__8" class="fn_bot">8)</a></sup> 
+I.Poliakov, A.Mokhov, A.Rafiev, D.Sokolov, A.Yakovlev: <em>“Automated verification of asynchronous circuits using circuit Petri nets”</em>, Proc. IEEE International Symposium on Asynchronous Circuits and Systems(ASYNC), pp.161–170, 2008.</div>
+<div class="fn"><sup><a href="#fnt__9" id="fn__9" class="fn_bot">9)</a></sup> 
+A.Mokhov, A.Yakovlev: <em>“Conditional partial order graphs: model, synthesis and application”</em>, IEEE Transactions on Computers, vol.59(11), pp.1480–1493, 2010.</div>
+<div class="fn"><sup><a href="#fnt__10" id="fn__10" class="fn_bot">10)</a></sup> 
+D.Sokolov, I.Poliakov, A.Yakovlev: <em>“Analysis of static data flow structures”</em>, Fundamenta Informaticae, vol. 88(4), pp.581–610, 2008.</div>
+<div class="fn"><sup><a href="#fnt__11" id="fn__11" class="fn_bot">11)</a></sup> 
+S.Chatterjee, M.Kishinevsky, U.Ogras: <em>“Quick formal modeling of communication fabrics to enable veriﬁcation”</em>, Proc. IEEE International Workshop on High Level Design Validation and Test(HLDVT), pp. 42–49, 2010.</div>
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                        </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    
+    <div class="buttons">
+                <a href="http://www.dokuwiki.org/donate" title="Donate" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="http://www.php.net" title="Powered by PHP" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+    </div>
+
+    <div class="userInfo">
+            </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img  width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+</body>
+</html>
+
