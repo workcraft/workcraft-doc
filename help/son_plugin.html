@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Workcraft - help:son_plugin</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="help,son plugin"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
+<link rel="start" href="son_plugin.html"/>
+<link rel="contents" href="son_plugin.html" title="Sitemap"/>
+<link rel="alternate" type="application/rss+xml" title="Changes" />
+<link rel="alternate" type="application/rss+xml" title="Current namespace" />
+<link rel="edit" title="Edit this page" href="son_plugin.html"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="_export/xhtml/help/son_plugin.xhtml"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/son_plugin.raw"/>
+<link rel="canonical" href="http://www.workcraft.org/help/son_plugin"/>
+<link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/05/22 22:00//';var JSINFO = {"id":"help:son_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export loggedIn    ">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+        <h1><a href="start.html"  title="Workcraft start page"><img src="logo.png" width="327" height="57" alt="" /></a></h1>
+    <br><br><br><br>
+    <div class="tools group">
+        <!-- USER TOOLS -->
+<!--
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="son_plugin.html"  class="action admin" rel="nofollow" title="Admin">Admin</a></li><li><a href="son_plugin.html"  class="action profile" rel="nofollow" title="Profile">Profile</a></li><li><a href="son_plugin.html"  class="action logout" rel="nofollow" title="Logout">Logout</a></li>                </ul>
+            </div>
+        -->
+
+        <!-- SEARCH TOOLS -->
+<!--
+        <div id="dokuwiki__searchtools">
+            <h3 class="a11y"></h3>
+            <form action="start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        </div>
+-->
+
+        <!-- SITE TOOLS -->
+<!--
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+                            <div class="mobileTools">
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:son_plugin" /><input type="hidden" name="sectok" value="59572f912ca769f4ab2554af76be551d" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                <ul>
+                    <li><a href="son_plugin.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="son_plugin.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="son_plugin.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
+                    </div>
+    </div>
+-->
+
+    <!-- BREADCRUMBS -->
+        
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                <div class="pageId"><span>help:son_plugin</span></div>
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#modelling">Modelling</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#occurrence_net">Occurrence Net</a></div></li>
+<li class="level2"><div class="li"><a href="#communication_son">Communication SON</a></div></li>
+<li class="level2"><div class="li"><a href="#behavioural_son">Behavioural SON</a></div></li>
+<li class="level2"><div class="li"><a href="#temporal_son">Temporal SON</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="#verification">Verification</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#structural_properties">Structural properties</a></div></li>
+<li class="level2"><div class="li"><a href="#reachability_analysis">Reachability analysis</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="#simulation">Simulation</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#error_simulation">Error simulation</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 id="structured_occurrence_net_plugin">Structured Occurrence Net plugin</h1>
+<div class="level1">
+<div class="wrap_important plugin_wrap">
+<p>
+Familiarise yourself with <a href="toc_generic.html" class="wikilink1" title="help:toc_generic">Workcraft interface</a> to learn its common features that are available for all plugins.
+</p>
+</div>
+<p>
+This plugin is intended for capturing, simulation and verification of Structured Occurrence Net models. 
+</p>
+
+</div>
+
+<h2 id="modelling">Modelling</h2>
+<div class="level2">
+
+<p>
+In order to create a Structured Occurrence Net (SON) net work choose <em>File→Create work…</em> menu item. In the <em>New work</em> dialogue box select <em>Structured Occurrence Net</em> as the model type. You may also want to give the work some meaningful name, e.g. <em>son-test1</em>, otherwise it will be created with <em>Untitled</em> name. Click <em>OK</em> or press <kbd>Enter</kbd> to create the work.
+</p>
+
+<p>
+<img src="new_work-son.png" class="mediacenter" title="New work of SON type" alt="New work of SON type" />
+</p>
+
+</div>
+
+<h3 id="occurrence_net">Occurrence Net</h3>
+<div class="level3">
+
+<p>
+An Occurrence Net (ON) is a directed acyclic graph used to record dependencies between events in a single execution of a concurrent system. The following figure shows an occurrence net example. 
+</p>
+
+<p>
+<img src="son-on_example.png" class="mediacenter" title="Occurrence Net example" alt="Occurrence Net example" />
+</p>
+
+<p>
+Activate Condition <img src="editor_tools-vertex.png" class="media" title="[B] Condition" alt="[B] Condition" />  or Event <img src="editor_tools-transition.png" class="media" title="[E] Event" alt="[E] Event" /> tool to create one or more conditions or events, respectively. Activate the Connect tool <img src="editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" /> to create causality arcs between conditions and events. In this mode, when the mouse is over a node (i.e. a condition or an event), this node will be highlighted. Then, guided by the messages at the foot of the <em>Editor window</em>, the user can draw a connection from this first node to a second node. Multiple such pairs of nodes can be connected, until the mode is switched to some other mode from connect. If <kbd>Ctrl</kbd> is held down while clicking on a set of nodes in sequence a whole linear series of connections can be made between these nodes.
+</p>
+
+<p>
+When the connection tool is activated, one of the following connection types can be selected in the <em>Tool controls</em> window:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Causal Connection
+</div></li>
+<li class="level1"><div class="li">
+ Behavioural Abstraction
+</div></li>
+</ul>
+
+
+<p>
+In the case of ordinary Occurrence Nets, the connection type must be a Causal Connection, and be from a condition to an event, or vice versa. Any attempt at linking two conditions will provoke an error message. 
+</p>
+<div class="wrap_info plugin_wrap">
+<p>
+Not all user errors are detected and so result only in error messages – those that cannot be immediately detected can be checked for using the <em>Verification Tool</em>. 
+</p>
+</div>
+<p>
+Conditions and events are automatically named (<code>c1</code>, <code>c2</code>, <code>c3</code> etc., and <code>e1</code>, <code>e2</code>, <code>e3</code>, etc.) as they are created. These names are by default shown in blue below the conditions and events. The user can use the <em>Property editor</em> to change various aspects of the currently selected node or connector, to provide a label, and to indicate the placement and colouring of this label.
+</p>
+
+<p>
+An occurrence net cannot be recognised and analysed until it has been defined, i.e. delineated as a group. To do this, use the Select tool <img src="editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" /> to select one or more nodes, either by clicking on them or dragging a bounding box around them; the selected nodes turn blue. These selected nodes can then be combined into a group using the Group tool <img src="tool_controls-select-group.png" class="media" title="Group selection (Ctrl+G)" alt="Group selection (Ctrl+G)" />. The resulting group is shown using a solid-line box, the entire contents of which will remain blue while the box is selected, as shown in the following figure. 
+</p>
+
+<p>
+<img src="son-group_selected.png" class="mediacenter" title="A selected ON group" alt="A selected ON group" />
+</p>
+
+<p>
+While the box is selected the <em>Property editor</em> can be used to give the group a label. The box becomes unselected if the user clicks outside it, and becomes selected again if she clicks inside it.
+</p>
+
+<p>
+Text notes can be included with condition and/or event nodes in groups but cannot be in groups on their own – an error report appears if an attempt is made to create such a group.
+</p>
+
+<p>
+A group can be destroyed, leaving its contents in place but ungrouped, using the Ungroup selection button <img src="tool_controls-select-ungroup.png" class="media" title="Ungroup selection (Ctrl+Shift+G)" alt="Ungroup selection (Ctrl+Shift+G)" />.
+</p>
+
+<p>
+Once a group has been created it will not be possible to edit any of its component within the group without entering the group. The user enters a group by double-clicking inside it or using the Level down button <img src="tool_controls-select-level_down.png" class="media" title="Level down (PageDown)" alt="Level down (PageDown)" />. The result is to remove the blue colour from the group, and to turn everything outside the group grey, and hence uneditable. The user can leave the group by double-clicking anywhere outside it or clicking the Level up button  <img src="tool_controls-select-level_up.png" class="media" title="Level up (PageUp)" alt="Level up (PageUp)" />. 
+</p>
+
+<p>
+<img src="son-group_entered.png" class="mediacenter" title="An entered ON group" alt="An entered ON group" />
+</p>
+
+<p>
+In summary, groups are used to structure a SON model. At any moment the user can be in just one group, and so be able to select and then edit the nodes and connectors that form its contents – everything outside the group will be greyed out and uneditable. Blue is used to identify the currently selected nodes or groups. Currently nested groups are not allowed by the SON plugin.
+</p>
+
+</div>
+
+<h3 id="communication_son">Communication SON</h3>
+<div class="level3">
+
+<p>
+The first and most basic form of SON is the Communication SON (C-SON). A C-SON involves two or more ONs that are connected by one or more synchronous or asynchronous communications, so can be used to model an activity that has involved interaction between communicating systems. Any communication between occurrence nets (i.e. groups) must go via a special node named a channel place. The channel place syntactic device has been introduced since <sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup>, which (rather anomalously) showed communication asynchronous or synchronous links as going directly between an event in one ON and one event in another ON.
+</p>
+
+<p>
+A communication link between two ONs is created via a channel place. First activate the Chnnel Place tool <img src="editor_tools-channel_place.png" class="media" title="Channel Place" alt="Channel Place" /> and create an instance of a channel place. Then use the Connection tool <img src="editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" />, to link an event in one ON to the channel place, and then the channel place to an event in another ON. Full details about the channel place concept are given in <sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup>.
+</p>
+
+<p>
+A new connection link to or from a channel place will be automatically shown as being of type <em>asynchronous communication</em>, represented by a bold dashed line with arrows. The channel place must not be in any group – it can only be linked to events that are in (two different) groups. The connection tool enforces these restrictions, but it does not stop users accidentally making a pair of directed links from a channel place or to a channel place – use of the verification tool will subsequently find this error.
+</p>
+
+<p>
+<img src="son-cson_example.png" class="mediacenter" title="A Communication SON example" alt="A Communication SON example" />
+</p>
+
+<p>
+Consider the above C-SON example. It consists of two interacting occurrence nets where the connection type between events <code>e0</code> and <code>e4</code> is an asynchronous communication, with the meaning that <code>e0</code> cannot happen before <code>e4</code>. An asynchronous communication can be turned into a synchronous communication by double clicking on its channel place. This will remove the arrow heads on the bold dashed lines – see the connection between <code>e2</code> and <code>e5</code>. Double clicking again on the channel place in a synchronous communication will turn it back into an asynchronous communication.
+</p>
+
+<p>
+A synchronous connection is in fact logically equivalent to a pair of channel places whose asynchronous communication links form a cycle – see the cycle involving <code>e3</code> and <code>e6</code>. (The user can use either form when creating a synchronous communication.)
+</p>
+<div class="wrap_info plugin_wrap">
+<p>
+The cycle involving <code>e3</code> and <code>e6</code> does not violate SON’s acyclic property due to its execution semantic. The two connected events can only be executed synchronously. The SON Simulator therefore ensures that both <code>e3</code> and <code>e6</code> participate in single step when either is selected by the user for execution, and that both channel places are filled and emptied synchronously, leading to conditions <code>c5</code> and <code>c9</code> holding.
+</p>
+</div>
+</div>
+
+<h3 id="behavioural_son">Behavioural SON</h3>
+<div class="level3">
+
+<p>
+The second form of structuring, behavioural abstraction, allows the activity of an evolving system to be modelled. Thus a Behavioural SON (B-SON) gives information about the evolution of an individual system, and the phase of the overall activity that is associated with each successive stage of evolution of this system. A phase is a fragment of an ON beginning with a global state (or “cut”) and ending with a global state which follows it in the causal sense, including all the conditions occurring between these global states. The following figure shows an ON which has been divided into three particular phases by two chosen cuts. 
+</p>
+
+<p>
+<img src="son-phases_and_cuts.jpeg" class="mediacenter" title="An ON which has been divided into three particular phases by two chosen cuts" alt="An ON which has been divided into three particular phases by two chosen cuts" />
+</p>
+
+<p>
+Using this phase concept, a B-SON thus provides a two-level view of execution history: the low level structure provides the details of its behaviours during the different evolution stages represented in the upper (abstract) level view.
+</p>
+
+<p>
+Between them the set of upper level conditions in an upper level ON must be linked to a <em class="u">complete</em> set of phases of the lower level, i.e. to all the initial and final conditions of each phase. And the ordering of the conditions of the upper ON must match that of the phases of the lower ON. The error message <em>“Invalid phase: phase does not reach initial/final state”</em> that results if either of these conditions is not met is rather obscure. (However, subject to these conditions, there can be multiple upper level ONs corresponding to a single behavioural ON, i.e. there can be several different behavioural abstractions of the same detailed activity.)
+</p>
+
+<p>
+To create a B-SON, activate Connect tool and choose the connection type <em>Behavioural Abstract</em> in the <em>Tool controls</em> panel. The connection then is able to provide a link to a condition in the abstract ON from appropriate conditions in the low level ON(s), as shown in the following figure.
+</p>
+
+<p>
+<img src="son-bson_example.png" class="mediacenter" title="A B-SON example" alt="A B-SON example" />
+</p>
+<div class="wrap_info plugin_wrap">
+<p>
+The present version of SON plugin follows the present (somewhat restrictive) set of formal definitions of B-SONs, so abstract ONs must be straight line graphs, which can have communication links to other abstract ONs, but cannot themselves have further levels of abstraction “above” them, and or be related to more than one low-level SON for each abstract condition. All of the conditions in an abstract ON must have behavioural links from low level ONs.
+</p>
+</div>
+</div>
+
+<h3 id="temporal_son">Temporal SON</h3>
+<div class="level3">
+
+<p>
+Temporal SON (T-SON), allows the use of temporal abstraction to define atomic actions, i.e. actions that appear to be instantaneous to their environment.  Intuitively, a T-SON shows a system abbreviation of that part of the behaviour that is hidden by the abstraction. This is illustrated by the following diagram.
+</p>
+
+<p>
+<img src="son-abbrevation.jpeg" class="mediacenter" title="System abbreviation" alt="System abbreviation" />
+</p>
+
+<p>
+Such an atomic action can be created using a concept of <em>block</em>. The means of defining a block is similar to the group function: select a set of nodes and combine them as a block by clicking the Block button <img src="tool_controls-select-block.png" class="media" title="Group selection into a block (Alt+B)" alt="Group selection into a block (Alt+B)" />. One can use the ungroup button <img src="tool_controls-select-ungroup.png" class="media" title="Ungroup selection (Ctrl+Shift+G)" alt="Ungroup selection (Ctrl+Shift+G)" /> to destroy a block (i.e. make the set of nodes editable again). A block is differentiated graphically from a group in having a dotted rather than solid line bounding box, and a shaded interior. 
+</p>
+
+<p>
+A block can be collapsed by either double-clicking inside it or by changing its <em>Is Collapsed</em> property in the Property editor.  The behaviour of a collapsed block is regarded as an (abstract) event, where the connectivity between this event and those conditions which survived collapsing (i.e., the block’s interface) is inherited from the events that have been collapsed. 
+</p>
+
+<p>
+Due to the special behaviours of the block, several restrictions apply to block creation.  Attempted violations of some of these restrictions are recognised and prohibited immediately during the creation operation, i.e., a block’s interface must be conditions; a block can involve only conditions and events; and it cannot cross phases. Other restrictions can be detected through the use of verification tool, e.g., the requirement for causal relations between block inputs and outputs; and for acyclicity (see the example below).
+</p>
+
+<p>
+As an example, the SON model in the following figure contains two (un-collapsed) blocks <code>b0</code> and <code>b1</code> represented by dotted-line boxes with light green background colour. Note that a collapsed block may potentially affect the behaviour of a SON model. For example, the collapsing of <code>b1</code> would lead to an invalid asynchronous cycle in the SON. Such an error can be detected by the structural verification tool.
+</p>
+
+<p>
+<img src="son-tson_example1.png" class="mediacenter" title="A SON model with two (un-collapsed) blocks" alt="A SON model with two (un-collapsed) blocks" />
+</p>
+
+</div>
+
+<h2 id="verification">Verification</h2>
+<div class="level2">
+
+<p>
+Two types of verification tools are currently available for SON models: structural properties and reachability analysis.
+</p>
+
+</div>
+
+<h3 id="structural_properties">Structural properties</h3>
+<div class="level3">
+
+<p>
+SON plugin provides the user with a set of structural verification algorithms that can be used to validate the model. For example, the cycle detection tasks check SONs’ acyclic property and the phase correctness tasks are used to verify valid phases in B-SONs. The user can invoke verification by selecting <em>Tools→Verification→Structural properties</em>. The verification setting dialog allows users to specify the particular SON’s model type as well as which groups they would like to verify. The results of the verification are detailed in a verification report, and are shown by colouring the SON model. Thus the borders of conditions and events that are implicated in a cycle are coloured red, and invalid nodes (e.g. an initial or final event, of a condition linked to multiple events) have their interiors coloured pink.
+</p>
+
+<p>
+<img src="son-verification-structural.png" class="mediacenter" title="Structural verification setting" alt="Structural verification setting" />
+</p>
+
+<p>
+If the <em>Highlight erroneous node</em> check box is ticked then incorrect nodes and cycle paths get highlighted.
+</p>
+
+<p>
+The <em>File</em> menu at the top of the Verification Result window can be used to Export the results to a text file. This will by default be to the user home directory, so the user will need first to navigate to this directory if so wished.
+</p>
+
+<p>
+The following figure shows how the ON verification tool reports (both pictorially and textually) the results of checks for freedom from cycles, caused by arcs within ONs, the requirement for ON fragments to start and terminate in places and not events, and the fact that places must not have multiple incoming or outgoing arcs.
+</p>
+
+<p>
+<img src="son-verification-on_example.png" class="mediacenter" title="Example for verification" alt="Example for verification" />
+</p>
+
+<p>
+<img src="son-verification-on_results.png" class="mediacenter" title="Results of verification" alt="Results of verification" />
+</p>
+
+<p>
+In the next example the events and conditions that are shown with red borders form a cycle involving asynchronous communications links joining multiple ONs. (<em>Tools→Set colour to default</em> can be used to remove these error indications.)
+</p>
+
+<p>
+<img src="son-verification-cson_example.png" class="mediacenter" title="Example for verification" alt="Example for verification" />
+</p>
+
+<p>
+<img src="son-verification-cson_results.png" class="mediacenter" title="Results of verification" alt="Results of verification" />
+</p>
+
+</div>
+
+<h3 id="reachability_analysis">Reachability analysis</h3>
+<div class="level3">
+
+<p>
+A reachability analysis can be applied to a SON model. Such analysis establishes whether a given marking (a set of marked conditions and/or channel places) can be reachable at the same time from the initial states. In other words, any marking involving two causally related nodes is not reachable since one of these nodes must happen before the other can.
+</p>
+
+<p>
+To use the function, mark some conditions/channel places first by either changing their <em>Marked</em> properties in the <em>Property editor</em> or by double clicking on them. Then run <em>Tool→Verification→Reachability analysis</em>. A dialog box will pop up to report the task’s result. If the verified marking is reachable, then a request can be made for the trace leading to the marking to be passed to the simulation tool for playback or further analysis. 
+</p>
+
+<p>
+<img src="son-verification-reachability.png" class="mediacenter" title="Reachability task result for a SON model with two marked conditions" alt="Reachability task result for a SON model with two marked conditions" />
+</p>
+
+</div>
+
+<h2 id="simulation">Simulation</h2>
+<div class="level2">
+
+<p>
+The simulation function can be activated by clicking on the Simulation button <img src="editor_tools-simulate.png" class="media" title="(M) Simulation" alt="(M) Simulation" />. The initial marking will be automatically set, i.e. all the input conditions of all the ONs will be filled with black tokens (except for those ONs that are ‘waiting’ for an event in another ON), and all of the thereby enabled events (including collapsed blocks, i.e. temporal abstractions) will be identified by being coloured orange. (Conditions and events that have not been grouped and made into an ON are not affected by simulation.) The simulation can then be conducted manually by clicking on a succession of enabled events, so causing tokens to move, and event colouring to be updated, and the simulation record augmented. At any stage a simulation can be abandoned, and any tokens and event colouring removed.
+</p>
+
+<p>
+<img src="son-simulation_example.png" class="mediacenter" title="Parallel execution setting" alt="Parallel execution setting" />
+</p>
+
+<p>
+During simulation a dialog box will pop up when an enabled event is clicked and there exist other enabled events. This box can be used to select one or more of these additional enabled events in order to execute them simultaneously with the checked event. As an example, the clicked enabled event in the above figure is <code>e2</code>, with events <code>e1</code> and <code>e4</code> shown as two possible further parallel-executed events. When <em>Run</em> is clicked the simulation will move on just from <code>e2</code>, as <code>e1</code> and <code>e4</code> have not been selected.
+</p>
+
+<p>
+The simulation tool controls provide the means to analyse and navigate a recorded simulation. There are two sources of data for a simulation record. They are shown in the two columns of the table in the <em>Tool Controls</em> window.
+</p>
+
+<p>
+<img src="son-simulation_controls.png" class="mediacenter" title="Simulation controls" alt="Simulation controls" />
+</p>
+
+<p>
+<em>Branch</em> (the right hand column) is used to record the firing sequence of events that were executed by explicitly clicking the enabled nodes of the model. The marks <code>&gt;</code> and <code>&lt;</code> represent forward and reverse directions of the simulation respectively. These directions can be switched by using <img src="tool_controls-simulate-direction.png" class="media" title="Switch to reverse simulation" alt="Switch to reverse simulation" />.
+</p>
+<div class="wrap_important plugin_wrap">
+<p>
+Clicking on any of the editor buttons will cause the simulation record to be deleted.
+</p>
+</div>
+<p>
+<em>Trace</em> (the left hand column) plays the role of a “base sequence of events”. Initially, when one starts to use the simulation tool, this column will be blank. However it can be populated from a firing sequence that has been recorded in Branch (the right hand column). This  sequence can be moved into <em>Trace</em> using the button <img src="tool_controls-simulate-merge_trace.png" class="media" title="Merge branch into trace" alt="Merge branch into trace" />, leaving the <em>Branch</em> table empty.
+</p>
+<div class="wrap_info plugin_wrap">
+<p>
+Trace can be also filled directly from other tools, e.g., with a firing sequence produced by the reachability tool.
+</p>
+</div>
+<p>
+While there is a firing sequence recorded in <em>Trace</em> or <em>Branch</em>, clicking on one of the entries causes the simulator to restore the model to its state just before that event has happened, i.e. with the tokens positioned, and the nodes enabled, appropriately. 
+</p>
+
+<p>
+The user can explore variants of a recorded trace by clicking on enabled events of the model. If one makes the same choice of enabled event(s) as before, nothing will be changed in <em>Trace</em> or in <em>Branch</em>, depending on which column the user selected. The relevant column will only start getting filled in (if the selected start point is from <em>Trace</em>) or replaced (in the case of selecting a start point from <em>Branch</em>) when the new firing sequence diverts from the one already recorded in the table in the <em>Tool controls</em> window.
+</p>
+
+<p>
+When the simulation button has been selected, and an entry in the branch or trace column chosen, the appropriate simulation tool control panel buttons become active, and provide access to several additional simulation functions, most of which relate to simulation traces.
+</p>
+
+</div>
+
+<h3 id="error_simulation">Error simulation</h3>
+<div class="level3">
+
+<p>
+Each event has associated with it a Fault bit (visible in the <em>Property editor</em> when the relevant event is selected). This bit can be used to indicate whether the user wishes to regard the event as a faulty one. It can be turned on or off (shown by being checked or unchecked in the <em>Property editor</em>) using <em>Tool→Error Tracing→Enable/Disable error tracing</em>. A collapsed block (representing an abstract event) will be automatically marked with a faulty state when it contains at least one faulty event.  If error tracing is turned on then the fault status of each event is also indicated in the Editor window, each event being flagged with a “1” or a “0”, “1” indicating a simulated fault. When error tracing is on, an error count is also shown below each condition, set initially to “0”. This count is not visible in a condition’s Property editor window, and cannot be changed manually by the user. Rather it is automatically calculated during simulation to indicate for each condition the number of faults that have been passed on the forward route to the condition. (These error counts are not affected by reverse simulation, or by closing a work and reopening it.) 
+</p>
+
+<p>
+When a simulation is started, all the error counts are set to zero, but the fault status of the events is not changed – in fact it becomes unchangeable while simulation is being used. Turning error tracing on and off has no effect on the fault flags and error numbers.
+</p>
+
+<p>
+The menu <em>Tools→Error tracing→Reset fault/error states</em> is used to re-initialise all numbers to zero.
+</p>
+
+</div>
+<div class="footnotes">
+<div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+M. Koutny and B. Randell, “Structured occurrence nets: A formalism for aiding system failure prevention and analysis techniques,” Fundamenta Informaticae, vol. 97, no. 1, pp. 41–91, Jan. 2009.</div>
+<div class="fn"><sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
+Kleijn and M. Koutny, “Causality in structured occurrence nets,” in Dependable and Historic Computing, vol. 6875. Springer Berlin Heidelberg, 2011, pp. 283–297</div>
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+<!--
+                                    <div class="docInfo"><bdi>help/son_plugin.txt</bdi> · Last modified: 2015/02/02 17:35 by <bdi>danil</bdi></div>
+                -->
+                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+<!--
+            <div id="dokuwiki__pagetools">
+                            <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="son_plugin.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="son_plugin.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="son_plugin.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="son_plugin.html"  class="action export_pdf" rel="nofollow" title="Export to PDF"><span>Export to PDF</span></a></li><li><a href="son_plugin.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                </div>
+                        </div>
+-->
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <!--
+    <div class="buttons">
+                <a href="http://www.dokuwiki.org/donate" title="Donate" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="http://www.php.net" title="Powered by PHP" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+    </div>
+-->
+
+<!--
+    <div class="userInfo">
+        Logged in as:: danil    </div>
+-->
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img  width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+</body>
+</html>
+
