@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Workcraft - tutorial:modelling:fsm:start</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="tutorial,modelling,fsm,start"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
+<link rel="start" href="start.html"/>
+<link rel="contents" href="start.html" title="Sitemap"/>
+<link rel="alternate" type="application/rss+xml" title="Changes" />
+<link rel="alternate" type="application/rss+xml" title="Current namespace" />
+<link rel="edit" title="Edit this page" href="start.html"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="../../_export/xhtml/tutorial/modelling/fsm/start.xhtml"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/fsm/start.raw"/>
+<link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/fsm/start"/>
+<link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:fsm';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/05/22 22:14//';var JSINFO = {"id":"tutorial:modelling:fsm:start","namespace":"tutorial:modelling:fsm","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="../../favicon.ico" />
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export loggedIn    ">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+        <h1><a href="../../start.html"  title="Workcraft start page"><img src="../../logo.png" width="327" height="57" alt="" /></a></h1>
+    <br><br><br><br>
+    <div class="tools group">
+        <!-- USER TOOLS -->
+<!--
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="start.html"  class="action admin" rel="nofollow" title="Admin">Admin</a></li><li><a href="start.html"  class="action profile" rel="nofollow" title="Profile">Profile</a></li><li><a href="start.html"  class="action logout" rel="nofollow" title="Logout">Logout</a></li>                </ul>
+            </div>
+        -->
+
+        <!-- SEARCH TOOLS -->
+<!--
+        <div id="dokuwiki__searchtools">
+            <h3 class="a11y"></h3>
+            <form action="../../start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        </div>
+-->
+
+        <!-- SITE TOOLS -->
+<!--
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+                            <div class="mobileTools">
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:fsm:start" /><input type="hidden" name="sectok" value="b42a9c3c8485fe7893de441cceb46be9" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                <ul>
+                    <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
+                    </div>
+    </div>
+-->
+
+    <!-- BREADCRUMBS -->
+        
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                <div class="pageId"><span>tutorial:modelling:fsm:start</span></div>
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    
+<h1 id="modelling_with_finite_state_machinesvending_machine">Modelling with Finite State Machines: Vending Machine</h1>
+<div class="level1">
+
+</div>
+
+<h2 id="exercise_1basic_vending_machine">Exercise 1: Basic Vending Machine</h2>
+<div class="level2">
+
+<p>
+The following FSM models a basic Vending Machine.
+</p>
+
+<p>
+<img src="fsm-vm-basic.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+Re-create it in Workcraft:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Select <em>File→Create work…</em>
+</div></li>
+<li class="level1"><div class="li">
+ Select <em>Finite State Machine</em> from the list of model types
+</div></li>
+<li class="level1"><div class="li">
+ Use <em>Editor tools</em> panel to draw the FSM. Note that:
+</div><ul>
+<li class="level2"><div class="li">
+ <code>s0</code> is the initial state; this can be set by selecting a node and editing its properties using the Property editor panel
+</div></li>
+<li class="level2"><div class="li">
+ action names are given on arcs – they can be set by selecting an arc and editing its properties using the Property editor panel
+</div></li>
+<li class="level2"><div class="li">
+ the arcs don’t have to be straight (see e.g. the arc from <code>s0</code> to <code>s1</code> in the picture below) – you can use polylines and/or Bezier curves
+</div></li>
+</ul>
+</li>
+<li class="level1"><div class="li">
+ Make sure to save your work!
+</div></li>
+</ul>
+
+
+<p>
+Simulate your model (by pressing the <img src="../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> button in the <em>Editor tools</em> panel). Try to re-create the following scenarios:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ buying a coke and then a chocolate
+</div></li>
+<li class="level1"><div class="li">
+ inserting a coin and then cancelling
+</div></li>
+<li class="level1"><div class="li">
+ inserting a coin, ordering coke and then cancelling (this scenario should be impossible)
+</div></li>
+</ul>
+
+
+<p>
+Formally verify (using <em>Tools→Verification</em> menu) whether the FSM
+</p>
+<ul>
+<li class="level1"><div class="li">
+ has deadlocks
+</div></li>
+<li class="level1"><div class="li">
+ has unreachable states
+</div></li>
+<li class="level1"><div class="li">
+ is reversible
+</div></li>
+<li class="level1"><div class="li">
+ is deterministic
+</div></li>
+</ul>
+
+
+</div>
+
+<h2 id="exercise_2strange_vending_machine">Exercise 2: Strange Vending Machine</h2>
+<div class="level2">
+
+<p>
+Re-create the following FSM in Workcraft (and save it in a different file).
+</p>
+
+<p>
+<img src="fsm-vm-nondet_unreach.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+Simulate your model. Try to re-create the following scenarios:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ buying a coke and then a chocolate
+</div></li>
+<li class="level1"><div class="li">
+ inserting a coin and then cancelling
+</div></li>
+<li class="level1"><div class="li">
+ ordering a chocolate but getting a coke instead
+</div></li>
+<li class="level1"><div class="li">
+ try to drive the FSM to state s6 that enables a windfall of coins (this scenario should be impossible)
+</div></li>
+</ul>
+
+
+<p>
+Verify the properties of this FSM as in the previous exercise. Can you explain the verification results?
+</p>
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+<!--
+                                    <div class="docInfo"><bdi>tutorial/modelling/fsm/start.txt</bdi> · Last modified: 2015/04/09 13:45 by <bdi>victor</bdi></div>
+                -->
+                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+<!--
+            <div id="dokuwiki__pagetools">
+                            <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action export_pdf" rel="nofollow" title="Export to PDF"><span>Export to PDF</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                </div>
+                        </div>
+-->
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <!--
+    <div class="buttons">
+                <a href="http://www.dokuwiki.org/donate" title="Donate" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="http://www.php.net" title="Powered by PHP" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+    </div>
+-->
+
+<!--
+    <div class="userInfo">
+        Logged in as:: danil    </div>
+-->
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img  width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+</body>
+</html>
+

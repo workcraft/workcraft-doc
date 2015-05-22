@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Workcraft - tutorial:modelling:fsm_pn:start</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="tutorial,modelling,fsm pn,start"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
+<link rel="start" href="start.html"/>
+<link rel="contents" href="start.html" title="Sitemap"/>
+<link rel="alternate" type="application/rss+xml" title="Changes" />
+<link rel="alternate" type="application/rss+xml" title="Current namespace" />
+<link rel="edit" title="Edit this page" href="start.html"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="../../_export/xhtml/tutorial/modelling/fsm_pn/start.xhtml"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/fsm_pn/start.raw"/>
+<link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/fsm_pn/start"/>
+<link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:fsm_pn';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/05/22 22:14//';var JSINFO = {"id":"tutorial:modelling:fsm_pn:start","namespace":"tutorial:modelling:fsm_pn","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="../../favicon.ico" />
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export loggedIn    ">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+        <h1><a href="../../start.html"  title="Workcraft start page"><img src="../../logo.png" width="327" height="57" alt="" /></a></h1>
+    <br><br><br><br>
+    <div class="tools group">
+        <!-- USER TOOLS -->
+<!--
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="start.html"  class="action admin" rel="nofollow" title="Admin">Admin</a></li><li><a href="start.html"  class="action profile" rel="nofollow" title="Profile">Profile</a></li><li><a href="start.html"  class="action logout" rel="nofollow" title="Logout">Logout</a></li>                </ul>
+            </div>
+        -->
+
+        <!-- SEARCH TOOLS -->
+<!--
+        <div id="dokuwiki__searchtools">
+            <h3 class="a11y"></h3>
+            <form action="../../start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        </div>
+-->
+
+        <!-- SITE TOOLS -->
+<!--
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+                            <div class="mobileTools">
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:fsm_pn:start" /><input type="hidden" name="sectok" value="09204a17a21a2180384a8cdf33ee9805" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                <ul>
+                    <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
+                    </div>
+    </div>
+-->
+
+    <!-- BREADCRUMBS -->
+        
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                <div class="pageId"><span>tutorial:modelling:fsm_pn:start</span></div>
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#exercise_1concurrent_vending_machine">Exercise 1: Concurrent vending machine</a></div></li>
+<li class="level1"><div class="li"><a href="#exercise_2from_fsm_to_pn_and_back">Exercise 2: From FSM to PN and back</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#simple_conversion">Simple conversion</a></div></li>
+<li class="level2"><div class="li"><a href="#pn_synthesis">PN synthesis</a></div></li>
+<li class="level2"><div class="li"><a href="#reachability_graph">Reachability graph</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 id="petri_net_synthesisconcurrent_vending_machine">Petri net synthesis: Concurrent vending machine</h1>
+<div class="level1">
+
+</div>
+
+<h2 id="exercise_1concurrent_vending_machine">Exercise 1: Concurrent vending machine</h2>
+<div class="level2">
+
+<p>
+The following FSM models a Concurrent Vending Machine that allows the user to insert a £1 coin (action <code>pound</code>) concurrently with making an order (actions <code>coke</code> and <code>choc</code>). Note that the concurrency between actions <code>pound</code> and <code>coke</code> as well as <code>pound</code> and <code>choc</code> is represented by interleaving – there are two corresponding <em>diamonds</em> in this FSM, and the layout is chosen so as to highlight them. Re-create it in Workcraft.
+</p>
+
+<p>
+<img src="fsm-vm-concurrent.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+Simulate your model to make sure that the concurrent actions can happen in any order, and that the Vending Machine processes the orders correctly.
+</p>
+
+<p>
+Formally verify whether the FSM
+</p>
+<ul>
+<li class="level1"><div class="li">
+ has deadlocks
+</div></li>
+<li class="level1"><div class="li">
+ has unreachable states
+</div></li>
+<li class="level1"><div class="li">
+ is reversible
+</div></li>
+<li class="level1"><div class="li">
+ is deterministic
+</div></li>
+</ul>
+
+
+</div>
+
+<h2 id="exercise_2from_fsm_to_pn_and_back">Exercise 2: From FSM to PN and back</h2>
+<div class="level2">
+
+</div>
+
+<h3 id="simple_conversion">Simple conversion</h3>
+<div class="level3">
+
+<p>
+FSMs can be considered as a special case of Petri nets where each transition has exactly one incoming and one outgoing arcs and the initial marking consists of one token. In particular, any FSM can be automatically converted to a Petri net by replacing its states with places, arcs with transitions, and putting a single token on a place corresponding to the initial state. Perform this conversion in Workcraft using the <em>Tools→Conversion→Petri Net</em> menu item:
+</p>
+
+<p>
+<img src="pn-vm-concurrent-map.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+Simulate your model and make sure that it is equivalent to the above FSM model, in particular the executions are the same. Also, formally verify its correctness properties as above.
+Pragmatically speaking, this Petri net model does not offer any advantage over the original FSM model:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ It is larger than the original FSM (if we take the total number of nodes and arcs as the measure).
+</div></li>
+<li class="level1"><div class="li">
+ Concurrency is still modelled as interleaving. Note that modelling concurrency by interleaving is natural in FSMs, but unnatural in Petri nets, where concurrent transitions would be a superior way of modelling concurrency.
+</div></li>
+</ul>
+
+
+</div>
+
+<h3 id="pn_synthesis">PN synthesis</h3>
+<div class="level3">
+
+<p>
+A better Petri net can often be obtained from the initial FSM model by the process called synthesis. It is a much more complicated procedure than the one outlined above, but it can be automated. Starting from the original FSM, synthesise a Petri net with the same reachability graph as this FSM using the <em>Tools→Conversion→Net synthesis [Petrify]</em> menu item. You can improve the layout manually. Note that transitions <code>pound</code> and <code>coke</code> as well as <code>pound</code> and <code>choc</code> are concurrent in this Petri net. 
+</p>
+
+<p>
+<img src="stg-vm-concurrent-synth.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+Simulate this Petri net, to make sure that it is equivalent to the original FSM model, and formally verify its correctness properties.
+</p>
+
+</div>
+
+<h3 id="reachability_graph">Reachability graph</h3>
+<div class="level3">
+
+<p>
+Construct the reachability graph of this Petri net (<em>Tools→Conversion→Finite State Transducer [Petrify]</em> menu item). Make sure that this reachability graph is the same as the original FSM (you will need to do manual layout to make it look like the original FSM).
+</p>
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+<!--
+                                    <div class="docInfo"><bdi>tutorial/modelling/fsm_pn/start.txt</bdi> · Last modified: 2015/04/09 13:46 by <bdi>victor</bdi></div>
+                -->
+                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+<!--
+            <div id="dokuwiki__pagetools">
+                            <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action export_pdf" rel="nofollow" title="Export to PDF"><span>Export to PDF</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                </div>
+                        </div>
+-->
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <!--
+    <div class="buttons">
+                <a href="http://www.dokuwiki.org/donate" title="Donate" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="http://www.php.net" title="Powered by PHP" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+    </div>
+-->
+
+<!--
+    <div class="userInfo">
+        Logged in as:: danil    </div>
+-->
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img  width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+</body>
+</html>
+
