@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:modelling:wagging:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="tutorial,modelling,wagging,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/wagging/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/wagging/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:wagging';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/05/22 22:14//';var JSINFO = {"id":"tutorial:modelling:wagging:start","namespace":"tutorial:modelling:wagging","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:wagging';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/05/27 21:23//';var JSINFO = {"id":"tutorial:modelling:wagging:start","namespace":"tutorial:modelling:wagging","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:wagging:start" /><input type="hidden" name="sectok" value="e03773060a7bbeb43763fb6637356c62" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:wagging:start" /><input type="hidden" name="sectok" value="7cc7de0e63d76fc6cea257f3d1fee91a" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -157,6 +157,14 @@ Disadvantages of wagging:
 </div></li>
 </ul>
 
+<div class="wrap_info plugin_wrap">
+<p>
+Each slice of a wagging stage should contain at least one register to accept an incoming token. For efficiency reasons it is advantageous to have a register as the first element of the slice. This enables the token to propagate into the active slice with minimum delays and free space for the next token.
+</p>
+</div>
+<p>
+.
+</p>
 
 </div>
 
@@ -172,7 +180,7 @@ Consider the following conceptual RISC pipeline. Recall that in asynchronous pip
 </p>
 
 <p>
-Re-create this <em>Dataflow Structure</em> model in Workcraft. For simplicity, set all the register delays to 0, and the delays of combinational logic blocks to 1, except for <code>MemAccess</code> whose delay should be set to 3, making it the bottleneck. Make sure that token colours are all different.
+Re-create this <em>Dataflow Structure</em> model in Workcraft. For simplicity, set all the register delays to 0, and the delays of combinational logic blocks to 1, except for <code>MemAccess</code> whose delay should be set to 3, making it the bottleneck. Make sure that token colours are all different - see the <em>Token color</em> property of the marked registers in the <em>Property editor</em>.
 </p>
 
 <p>
@@ -203,31 +211,31 @@ Simulate this model to get the feel of the <em>spread token semantics</em> <a h
 
 
 <p>
-Now analyse the performance of this pipeline with the <strong>cycle analiser</strong> <img src="../../help/editor_tools-cycle_analiser.png" class="media" title="[A] Cycle analiser" alt="[A] Cycle analiser" /> tool. In the <em>Tool controls</em> window one can see the result of the analysis: there is a single cycle with the estimated throughput 0.714. Indeed, the total delay of the pipeline is 1+1+1+3+1=7, and there are 5 tokens in it, so the throughput is 5/7≈0.714. Moreover, the bottleneck <code>MemAccess</code> is highlighted in red:
+Now analyse the performance of this pipeline with the <strong>cycle analyser</strong> <img src="../../help/editor_tools-cycle_analyser.png" class="media" title="[A] Cycle analyser" alt="[A] Cycle analyser" /> tool. In the <em>Tool controls</em> window one can see the result of the analysis: there is a single cycle with the estimated throughput 0.714. Indeed, the total delay of the pipeline is 1+1+1+3+1=7, and there are 5 tokens in it, so the throughput is 5/7≈0.714. Moreover, the bottleneck <code>MemAccess</code> is highlighted in red:
 </p>
 
 <p>
-<img src="dfs-basic-cycle-analisys-screenshot.png" class="mediacenter" alt="" />
+<img src="dfs-basic-cycle-analysis-screenshot.png" class="mediacenter" alt="" />
+</p>
+<div class="wrap_info plugin_wrap">
+<p>
+By clicking on a cycle in the <em>Tool control</em> window one can highlight it in the model, with the bottleneck(s) of this cycle shown in red (if any). If no cycle is selected, the bottleneck(s) of the whole model are shown.
+</p>
+</div>
+<p>
+The performance of this pipeline can be improved using wagging. Select the bottleneck <code>MemAccess</code> together with preceding register (see the note about wagging efficiency) and apply 2-way wagging to it: <em>Tools→Wagging→2-way wagging</em>. This transformation replicates the selected section of pipeline and adds some control structures (for the purposes of this practical, the gory details are <del>swept under the carpet</del> abstracted away for the sake of presentation). Now the tokens entering this stage of the pipeline alternate between choosing the upper and lower branch, and exit the stage in the same order they have entered it. This has an effect of halving the stage delay: Indeed, the <em>Cycle analyser</em> shows that the throughput has increased from 0.714 to 0.909:
 </p>
 
 <p>
-The performance of this pipeline can be improved using wagging. Select the bottleneck <code>MemAccess</code> and apply 2-way wagging to it: <em>Tools→Wagging→2-way wagging</em>:
+<img src="dfs-basic_2way_wagging-cycle-analysis-screenshot.png" class="mediacenter" alt="" />
 </p>
-
+<div class="wrap_info plugin_wrap">
 <p>
-<img src="dfs-basic-2way_wagging.png" class="mediacenter" alt="" />
+Note that there are several cycles with infinite throughput - these are formed by the control structures which have 0 delays and can be ignored. Only the two cycles shown at the top are relevant - they correspond to the two branches formed due to wagging.
 </p>
-
+</div>
 <p>
-This transformation replicates the <code>MemAccess</code> block and adds some control structures (for the purposes of this practical, the gory details are <del>swept under the carpet</del> abstracted away for the sake of presentation). Now the tokens entering this stage of the pipeline alternate between choosing the upper and lower branch, and exit the stage in the same order they have entered it. This has an effect of halving the stage delay: Indeed, the <em>Cycle analiser</em> shows that the throughput has increased from 0.714 to 0.909. <span class="wrap_info ">Note that there are several cycles with infinite throughput - these are formed by the control structures which have 0 delays and can be ignored. Only the two cycles shown at the top are relevant - they correspond to the two branches formed due to wagging.</span>
-</p>
-
-<p>
-To further improve the performance of the pipeline, 3-way wagging can be applied instead of 2-way wagging: Indeed, the delay of <code>MemAccess</code> is three times the delay of the other stages. Undo the 2-way wagging by pressing <kbd>Ctrl</kbd>+<kbd>Z</kbd>, select <code>MemAccess</code>, and apply 3-way wagging to it: <em>Tools→Wagging→3-way wagging</em>. This increases the throughput to 1:
-</p>
-
-<p>
-<img src="dfs-basic_3way_wagging-cycle-analisys-screenshot.png" class="mediacenter" alt="" />
+To further improve the performance of the pipeline, 3-way wagging can be applied instead of 2-way wagging: Indeed, the delay of <code>MemAccess</code> is three times the delay of the other stages. Undo the 2-way wagging by pressing <kbd>Ctrl</kbd>+<kbd>Z</kbd>, select <code>MemAccess</code> and preceding register, and apply 3-way wagging to it: <em>Tools→Wagging→3-way wagging</em>. This increases the throughput to 1.
 </p>
 
 </div>
@@ -244,19 +252,15 @@ The following ARISC pipeline was adapted from <a href="#refnotes:1:note4" name=
 </p>
 
 <p>
-Download this model: <span class="wrap_download "><a href="dfs-arisc.work" class="media mediafile mf_work" title="tutorial:modelling:wagging:dfs-arisc.work (3.9 KB)">dfs-arisc.work</a> (3.91 KiB, <acronym title="Modified: 2015-04-13 18:37.31">1M ago</acronym>)</span>.
+Download this model: <span class="wrap_download "><a href="dfs-arisc.work" class="media mediafile mf_work" title="tutorial:modelling:wagging:dfs-arisc.work (3.9 KB)">dfs-arisc.work</a> (3.91 KiB, <acronym title="Modified: 2015-05-27 11:56.18">9h ago</acronym>)</span>.
 </p>
 
 <p>
-Analyse this model using <strong>cycle analiser</strong> <img src="../../help/editor_tools-cycle_analiser.png" class="media" title="[A] Cycle analiser" alt="[A] Cycle analiser" /> tool. 
+Analyse this model using <strong>cycle analyser</strong> <img src="../../help/editor_tools-cycle_analyser.png" class="media" title="[A] Cycle analyser" alt="[A] Cycle analyser" /> tool. 
 </p>
 <div class="wrap_info plugin_wrap">
 <p>
 By default the <em>Tool control</em> window shows 10 cycles with the worst throughput – this is controlled by the <em>Cycle count</em> field in this window. You can increase this number to see all the cycles in the model.
-</p>
-</div><div class="wrap_info plugin_wrap">
-<p>
-By clicking on a cycle in the <em>Tool control</em> window one can highlight it in the model, with the bottleneck(s) of this cycle shown in red (if any). If no cycle is selected, the bottleneck(s) of the whole model are shown.
 </p>
 </div><div class="wrap_important plugin_wrap">
 <p>
@@ -264,7 +268,7 @@ The throughput of the whole pipeline is determined by the throughput of its slow
 </p>
 </div>
 <p>
-Examine the cycles with the suboptimal throughput, and intelligently apply wagging to improve the performance of this pipeline. Try to increase the throughput from 0.105 to 0.125. Solution: <span class="wrap_spoiler ">Apply 4-way wagging to Data Mem. block and 2-way wagging to Arith. block.</span>
+Examine the cycles with the suboptimal throughput, and intelligently apply wagging to improve the performance of this pipeline. Try to increase the throughput from 0.105 to 0.125. Solution: <span class="wrap_spoiler ">Apply 4-way wagging to Data Mem. and 2-way wagging to Arith.</span>
 </p>
 
 
@@ -305,7 +309,7 @@ K. T. Christensen, P. Jensen, P. Korger, J. Sparsø: <em>The design of an a
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/wagging/start.txt</bdi> · Last modified: 2015/04/17 14:47 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/wagging/start.txt</bdi> · Last modified: 2015/05/27 21:01 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 
