@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:modelling:stg:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="tutorial,modelling,stg,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/stg/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/stg/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:stg';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/05/22 22:14//';var JSINFO = {"id":"tutorial:modelling:stg:start","namespace":"tutorial:modelling:stg","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:stg';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/08/03 15:35//';var JSINFO = {"id":"tutorial:modelling:stg:start","namespace":"tutorial:modelling:stg","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:stg:start" /><input type="hidden" name="sectok" value="74dbdf6296dc7f09658b16ee3137163c" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:stg:start" /><input type="hidden" name="sectok" value="e14e0f862ff8755e0a6ea3d47b01424b" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -201,7 +201,7 @@ The resulting STG model of the system should appear in a new tab. It is also sho
  The layout was manually modified to resemble the layout of the original STGs.
 </div></li>
 <li class="level1"><div class="li">
- Places <code>CS1</code>, <code>CS2</code>, <code>token1</code> and <code>token2</code> have one incoming and one outgoing arc, and so were not shown in the resulting composition. They can be made explicit by selecting the corresponding transition-to-transition arcs, clicking <em>Tools→Transformations→Make places explicit</em> and renaming.
+ Places <code>CS1</code>, <code>CS2</code>, <code>token1</code> and <code>token2</code> have one incoming and one outgoing arc, and so were not shown in the resulting composition. They can be made explicit by selecting the corresponding transition-to-transition arcs, clicking <em>Transformations→Make places explicit</em> and renaming.
 </div></li>
 <li class="level1"><div class="li">
  The dummy transitions were renamed to correspond to the <code>moveXtoY</code> transitions in the original STGs.
@@ -261,7 +261,7 @@ Verify the following custom properties of the model. Note that the tool checks i
  At most one of the DME elements can hold the token. Hint: <code><span class="wrap_spoiler ">$P&quot;token1&quot; &amp; $P&quot;token2&quot;</span></code>.
 </div></li>
 <li class="level1"><div class="li">
- Places <code>notoken1</code> and <code>notoken2</code> are redundant and can be removed (together with their arcs) without affecting the behaviour of the system. A place is redundant if the absence of a token in it is never the sole reason of some transition being disabled. E.g. whenever there is a token on place <code>token1</code>, there is always a token on <code>notoken2</code>, and so transition <code>move1to2</code> is enabled, and also whenever there is no token on <code>notoken2</code> there is no token on <code>token1</code>, and so <code>notoken2</code> is never the sole reason for <code>move1to2</code> being disabled. Hints for redundancy of <code>notoken1</code>: <code><span class="wrap_spoiler ">$P&quot;token2&quot; &amp; ~$P&quot;notoken1&quot;</span></code>, and for redundancy of <code>notoken2</code>: <code><span class="wrap_spoiler ">$P&quot;token1&quot; &amp; ~$P&quot;notoken2&quot;</span></code>.
+ Places <code>notoken1</code> and <code>notoken2</code> are redundant and can be removed (together with their arcs) without affecting the behaviour of the system. A place is redundant if the absence of a token in it is never the sole reason of some transition being disabled. E.g. whenever there is a token on place <code>token1</code>, there is always a token on <code>notoken2</code>, and so transition <code>move1to2</code> is enabled, and also whenever there is no token on <code>notoken2</code> there is no token on <code>token1</code>, and so <code>notoken2</code> is never the sole reason for <code>move1to2</code> being disabled. Hints: the redundancy of <code>notoken1</code>: <code><span class="wrap_spoiler ">$P&quot;token2&quot; &amp; ~$P&quot;notoken1&quot;</span></code>, and the redundancy of <code>notoken2</code>: <code><span class="wrap_spoiler ">$P&quot;token1&quot; &amp; ~$P&quot;notoken2&quot;</span></code>.
 </div></li>
 <li class="level1"><div class="li">
  It is impossible for both grants to be asserted simultaneously (this property is violated). To check if an action has been asserted use the construction <code>$S&quot;action&quot;</code>, e.g. <code>$S&quot;grant1&quot;</code>.  Hint: <code><span class="wrap_spoiler ">$S&quot;grant1&quot; &amp; $S&quot;grant2&quot;</span></code>. Play the reported violation trace in the simulator and explain why mutual exclusion of places <code>CS1</code> and <code>CS2</code> holds in spite of the violation of this property.
@@ -295,7 +295,7 @@ One can also contract the dummy transitions without changing the behaviour of th
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/stg/start.txt</bdi> · Last modified: 2015/04/09 13:48 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/stg/start.txt</bdi> · Last modified: 2015/07/31 22:23 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/synthesis/buck/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/synthesis/buck/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:buck';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/05/22 22:14//';var JSINFO = {"id":"tutorial:synthesis:buck:start","namespace":"tutorial:synthesis:buck","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:buck';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/08/03 15:36//';var JSINFO = {"id":"tutorial:synthesis:buck:start","namespace":"tutorial:synthesis:buck","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:buck:start" /><input type="hidden" name="sectok" value="8f16a6da31cd5edb3b12a1e6f035d1d3" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:buck:start" /><input type="hidden" name="sectok" value="5951012722f577fca2f46d1d7dc103a2" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -88,13 +88,19 @@
 <li class="level1"><div class="li"><a href="#synthesis">Synthesis</a></div></li>
 <li class="level1"><div class="li"><a href="#circuit_capturing">Circuit capturing</a></div></li>
 <li class="level1"><div class="li"><a href="#verification_of_implementation">Verification of implementation</a></div></li>
+<li class="level1"><div class="li"><a href="#alternative_implementations_optional">Alternative implementations (optional)</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#standard-c_implementation">Standard-C implementation</a></div></li>
+<li class="level2"><div class="li"><a href="#logic_decomposition_and_technology_mapping">Logic decomposition and technology mapping</a></div></li>
+</ul>
+</li>
 <li class="level1"><div class="li"><a href="#solutions">Solutions</a></div></li>
 </ul>
 </div>
 </div>
 <!-- TOC END -->
 
-<h1 id="synthesis_and_verification_of_buck_control">Synthesis and verification of buck control</h1>
+<h1 id="synthesis_and_verification_of_buck_controller">Synthesis and verification of buck controller</h1>
 <div class="level1">
 
 <p>
@@ -360,7 +366,7 @@ Activate the <strong>simulation tool</strong> <img src="../../help/editor_tools-
 </p>
 
 <p>
-Before proceeding to the synthesis step verify the specification for consistency (i.e. that the rising and falling phases of each signal alternate in all possible execution traces), deadlock-freeness and output-persistency. These can be done via <em>Tools→Verification</em> menu. 
+Before proceeding to the synthesis step verify the specification for consistency (i.e. that the rising and falling phases of each signal alternate in all possible execution traces), deadlock-freeness and output-persistency. These can be done via <em>Verification</em> menu. 
 </p>
 
 <p>
@@ -368,13 +374,13 @@ Another property one has to verify is that PMOS and NMOS transistors are never O
 </p>
 <ul>
 <li class="level1"><div class="li">
- Open the <em>Custom property definition</em> window by selecting <em>Tools→Verification→Custom properties [MPSat]…</em> menu.
+ Open the <em>Custom property definition</em> window by selecting <em>Verification→Custom properties [MPSat]…</em> menu.
 </div></li>
 <li class="level1"><div class="li">
  In <em>MPSat settings</em> set the <em>Mode</em> into <em>STG reachability analysis</em> and the <em>Solution</em> into <em>minimise cost function</em>.
 </div></li>
 <li class="level1"><div class="li">
- Enter a Reach expression that identifies the short-circuit, i.e. both <code>gp</code> and <code>gn</code> signals are high – <code>$S&quot;gp&quot; &amp; $S&quot;gn&quot;</code>. <sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup>.
+ Enter a Reach expression that identifies the short-circuit, i.e. both <code><span style='color:blue; '>gp</span></code> and <code><span style='color:blue; '>gn</span></code> signals are high – <code>$S&quot;gp&quot; &amp; $S&quot;gn&quot;</code>.<sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup>
 </div></li>
 <li class="level1"><div class="li">
  Select <em>unsatisfiable</em> to denote that the property holds if predicate is unsatisfiable.
@@ -401,13 +407,17 @@ When you click the <em>Run</em> button the STG will be searched for a state wher
 If the verified property is violated then a trace leading to the problematic state is reported. This trace can be simulated to diagnose the problem and correct it at the level of STG specification.
 </p>
 
+<p>
+Note that the property that signals <code><span style='color:blue; '>gp</span></code> and <code><span style='color:blue; '>gn</span></code> are never high at the same time is not sufficient to guarantee the absence of short-circuits. Indeed, the PMOS and NMOS transistors are big and slow, and so if e.g. <code><span style='color:blue; '>gp+</span></code> happens immediately after <code><span style='color:blue; '>gn-</span></code>, a transient short-circuit may be possible even though the property holds. In fact, the signals <code><span style='color:red; '>gp_ack</span></code> and <code><span style='color:red; '>gn_ack</span></code> were introduced specifically to detect the completion of the switching of the corresponding transistors, making it possible to avoid such short-circuits. Hence, a stronger correctness property ensuring that <code><span style='color:blue; '>gp</span></code> cannot be high whenever <code><span style='color:blue; '>gn</span></code> or <code><span style='color:red; '>gn_ack</span></code> is high, and similarly <code><span style='color:blue; '>gn</span></code> cannot be high whenever <code><span style='color:blue; '>gp</span></code> or <code><span style='color:red; '>gp_ack</span></code> is high, can be formulated as follows: <code>($S&quot;gp&quot; | $S&quot;gp_ack&quot;) &amp; ($S&quot;gn&quot; | $S&quot;gn_ack&quot;)</code>.<sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup> Verify that this stronger property also holds for the above STG model.
+</p>
+
 </div>
 
 <h2 id="synthesis">Synthesis</h2>
 <div class="level2">
 
 <p>
-The STG specification can now be synthesised into an asynchronous circuit implementation either with Petrify or MPSat backend tools via <em>Tools→Synthesis</em> menu.
+The STG specification can now be synthesised into an asynchronous circuit implementation either with Petrify or MPSat backend tools via <em>Synthesis</em> menu.
 </p>
 
 <p>
@@ -419,20 +429,21 @@ A complex-gate solution obtained with Petrify (via <em>Complex gate [Petrify]</e
 <p>
 Using De Morgan&#039;s law one can derive the following negative gate implementation:
 </p>
-<pre class="code">[gp] = ((uv&#039; + gn_ack) (gp_ack&#039; + oc))&#039;; 
+<pre class="code">[gp] = ((gn_ack + uv&#039;) (oc + gp_ack&#039;))&#039;; 
 [gn] = (zc + uv + gp_ack)&#039;; </pre>
 
 <p>
-These equations can be mapped to complex-gates with the following functions: <code>Z=((A&#039;+B)*(C&#039;+D))&#039;</code> for <code><span style='color:blue; '>gp</span></code> and <code>Z=(A+B+C)&#039;</code> for <code><span style='color:blue; '>gn</span></code>. Let us call the former gate <em>OAI2I2I</em> and the later <em>NR3</em>.
+These equations can be mapped to complex-gates with the following functions: <code>Z=((A+B&#039;)*(C+D&#039;))&#039;</code> for <code><span style='color:blue; '>gp</span></code> and <code>Z=(A+B+C)&#039;</code> for <code><span style='color:blue; '>gn</span></code>. Let us call the former gate <em>OAI2I2I</em> and the later <em>NR3</em>.
 </p>
 <div class="wrap_info plugin_wrap">
 <p>
 Circuit designers use hardware description languages, such as <a href="http://en.wikipedia.org/wiki/Verilog" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/Verilog">Verilog</a> or <a href="http://en.wikipedia.org/wiki/VHDL" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/VHDL">VHDL</a>, to precisely describe the circuit. For example, the association of the ports to the gates&#039; pins can be described by the following Verilog module (if you are not familiar with Verilog you can safely skip this part as it is not required by the rest of the tutorial):
 </p>
 <pre class="code verilog"><span class="kw1">module</span> control <span class="br0">&#40;</span>oc<span class="sy0">,</span> uv<span class="sy0">,</span> zc<span class="sy0">,</span> gp_ack<span class="sy0">,</span> gn_ack<span class="sy0">,</span> gp<span class="sy0">,</span> gn<span class="br0">&#41;</span><span class="sy0">;</span>
-  <span class="kw1">input</span> oc<span class="sy0">,</span> uv<span class="sy0">,</span> zc<span class="sy0">,</span> gp_ack<span class="sy0">,</span> gn_ack<span class="sy0">;</span>
+  <span class="kw1">input</span> oc<span class="sy0">,</span> uv<span class="sy0">,</span> zc<span class="sy0">;</span>
+  <span class="kw1">input</span> gp_ack<span class="sy0">,</span> gn_ack<span class="sy0">;</span>
   <span class="kw1">output</span> gp<span class="sy0">,</span> gn<span class="sy0">;</span>
-  OAI2I2I inst_gp <span class="br0">&#40;</span>.A<span class="br0">&#40;</span>uv<span class="br0">&#41;</span><span class="sy0">,</span> .B<span class="br0">&#40;</span>gn_ack<span class="br0">&#41;</span><span class="sy0">,</span> .C<span class="br0">&#40;</span>gp_ack<span class="br0">&#41;</span><span class="sy0">,</span> .D<span class="br0">&#40;</span>oc<span class="br0">&#41;</span><span class="sy0">,</span> .Z<span class="br0">&#40;</span>gp<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  OAI2I2I inst_gp <span class="br0">&#40;</span>.A<span class="br0">&#40;</span>gn_ack<span class="br0">&#41;</span><span class="sy0">,</span> .B<span class="br0">&#40;</span>uv<span class="br0">&#41;</span><span class="sy0">,</span> .C<span class="br0">&#40;</span>oc<span class="br0">&#41;</span><span class="sy0">,</span> .D<span class="br0">&#40;</span>gp_ack<span class="br0">&#41;</span><span class="sy0">,</span> .Z<span class="br0">&#40;</span>gp<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
   NR3 inst_gn <span class="br0">&#40;</span>.A<span class="br0">&#40;</span>zc<span class="br0">&#41;</span><span class="sy0">,</span> .B<span class="br0">&#40;</span>uv<span class="br0">&#41;</span><span class="sy0">,</span> .C<span class="br0">&#40;</span>gp_ack<span class="br0">&#41;</span><span class="sy0">,</span> .Z<span class="br0">&#40;</span>gn<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
 <span class="kw1">endmodule</span></pre>
 </div>
@@ -440,19 +451,23 @@ Circuit designers use hardware description languages, such as <a href="http://en
 
 <h2 id="circuit_capturing">Circuit capturing</h2>
 <div class="level2">
-
+<div class="wrap_info plugin_wrap">
 <p>
-Create a new Digital Circuit work called <em>circuit-buck-cg</em> and capture the implementation suggested by Petrify in the form of a gate-level netlist. <span class="wrap_info ">In the future versions of Workcraft the derivation of a circuit from the synthesis output will be automated, but for now please do it manually.</span>
+Workcraft can automatically derive a circuit from the synthesis output of Petrify. For this open the <em>Edit→Preferences…</em> window and under <em>Models→Digital Circuit</em> leaf enable the <em>Import synthesis result</em> checkbox. However, for the purpose of this exercise please capture the circuit schematics manually.
+</p>
+</div>
+<p>
+Create a new Digital Circuit work called <em>circuit-buck-cg</em> and capture the implementation suggested by Petrify in the form of a gate-level netlist. 
 </p>
 <ul>
 <li class="level1"><div class="li">
  Create a Digital Circuit work <em>circuit-buck-cg</em>.
 </div></li>
 <li class="level1"><div class="li">
- Add a functional component with the set function <code>((A&#039; + B) * (C&#039; + D))&#039;</code> <sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup>. Rename it to <code>inst_gp</code> and change its rendering type to <em>GATE</em>.
+ Add a functional component with the set function <code>((A + B&#039;) * (C + D&#039;))&#039;</code>.<sup><a href="#fn__3" id="fnt__3" class="fn_top">3)</a></sup> Rename it to <code>inst_gp</code> and change its rendering type to <em>GATE</em>.
 </div></li>
 <li class="level1"><div class="li">
- Add a functional component with the set function <code>(A + B + C)&#039;</code> <sup><a href="#fn__3" id="fnt__3" class="fn_top">3)</a></sup>. Rename it to <code>inst_gn</code> and change its rendering type to <em>GATE</em>.
+ Add a functional component with the set function <code>(A + B + C)&#039;</code>.<sup><a href="#fn__4" id="fnt__4" class="fn_top">4)</a></sup> Rename it to <code>inst_gn</code> and change its rendering type to <em>GATE</em>.
 </div></li>
 <li class="level1"><div class="li">
  Create two output ports <code><span style='color:blue; '>gp</span></code> and <code><span style='color:blue; '>gn</span></code>. 
@@ -464,7 +479,7 @@ Create a new Digital Circuit work called <em>circuit-buck-cg</em> and capture th
  Create input ports <code><span style='color:red; '>gn_ack</span></code>, <code><span style='color:red; '>oc</span></code>, <code><span style='color:red; '>uv</span></code>, <code><span style='color:red; '>zc</span></code> and <code><span style='color:red; '>gp_ack</span></code>.
 </div></li>
 <li class="level1"><div class="li">
- Connect the input port to the corresponding pins of the <code>inst_gp</code> and <code>inst_gn</code> gates. Make use of <strong>joint generator</strong> <img src="../../help/editor_tools-joint.png" class="media" title="[J] Joint" alt="[J] Joint" /> for forking the connections.
+ Connect the input port to the corresponding pins of the <code>inst_gp</code> and <code>inst_gn</code> gates. To fork a wire just start a connection from an existing wire - a joint point will be automatically created.
 </div></li>
 <li class="level1"><div class="li">
  Set the initial state of <code><span style='color:blue; '>gn</span></code> and <code><span style='color:red; '>gn_ack</span></code> signals to <code>1</code>. For this select the corresponding ports and in the <em>Property editor</em> tick the <em>Init to one</em> check box.
@@ -501,19 +516,208 @@ Note that switching of input ports is not restricted. Environment can change the
  Activate <strong>selection tool</strong> and make sure nothing is selected – the Property editor will show the properties of the whole circuit.
 </div></li>
 <li class="level1"><div class="li">
- Click the <em>Environment <abbr title="Uniform Resource Identifier">URI</abbr></em> property - a file browser will pop up. Locate the <em>stg-buck-scenarios_merged</em> file and open it. A path to that file will be copied to the <em>Environment <abbr title="Uniform Resource Identifier">URI</abbr></em> property <sup><a href="#fn__4" id="fnt__4" class="fn_top">4)</a></sup>.
+ Click the <em>Environment <abbr title="Uniform Resource Identifier">URI</abbr></em> property - a file browser will pop up. Locate the <em>stg-buck-scenarios_merged</em> file and open it. A path to that file will be copied to the <em>Environment <abbr title="Uniform Resource Identifier">URI</abbr></em> property.<sup><a href="#fn__5" id="fnt__5" class="fn_top">5)</a></sup>
 </div></li>
 </ul>
 
 
 <p>
-Now circuit verification will be conducted in the context of the environment that behaves according to STG in <em>stg-buck-scenarios_merged</em> file. Check the circuit for hazards, deadlocks and verify that it conforms to the environment specification. All these verification steps can be run via <em>Tools→Verification→Conformation, deadlock and hazard (reuse unfolding) [MPSat]</em> menu.
+Now circuit verification will be conducted in the context of the environment that behaves according to STG in <em>stg-buck-scenarios_merged</em> file. Check the circuit for hazards, deadlocks and verify that it conforms to the environment specification. All these verification steps can be run via <em>Verification→Conformation, deadlock and hazard (reuse unfolding) [MPSat]</em> menu.
 </p>
 
 <p>
 Try to alter the circuit and verify if it still conforms to the environment, is deadlock-free and operates without hazards.
 </p>
 
+</div>
+
+<h2 id="alternative_implementations_optional">Alternative implementations (optional)</h2>
+<div class="level2">
+
+<p>
+When synthesising a complex-gate implementation with MPSat (via <em>Complex gate [MPSat]</em> menu), three alternative implementations of <code><span style='color:blue; '>gp</span></code> are computed:
+</p>
+<pre class="code">Signal gp (cost 4)
+Triggers (underapproximation): oc uv gn_ack
+Context: gp
+Equation (4 lits): uv gn_ack&#039; + oc&#039; gp
+Context: zc
+Equation (4 lits): gn_ack&#039; (oc&#039; zc&#039; + uv)
+Context: gp_ack
+Equation (4 lits): uv gn_ack&#039; + oc&#039; gp_ack</pre>
+
+<p>
+Note that:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ The last implementation coincides with the one obtained by Petrify.
+</div></li>
+<li class="level1"><div class="li">
+ Signals <code><span style='color:red; '>oc</span></code>, <code><span style='color:red; '>uv</span></code>, and <code><span style='color:red; '>gn_ack</span></code> are the <em>triggers</em> of <code><span style='color:blue; '>gp</span></code>, i.e. their firing can enable <code><span style='color:blue; '>gp</span></code>.
+</div><ul>
+<li class="level2"><div class="li">
+ The triggers can be found by inspecting the STG: there are arcs <code><span style='color:red; '>gn_ack-</span></code> → <code><span style='color:blue; '>gp+</span></code> (in each of the three scenarios), <code><span style='color:red; '>uv+</span></code> → <code><span style='color:blue; '>gp+</span></code> (in the “early ZC” scenario), and <code><span style='color:red; '>oc+</span></code> → <code><span style='color:blue; '>gp-</span></code> (in the reset part).
+</div></li>
+<li class="level2"><div class="li">
+ Triggers are always in the support — they occur in each of the three equations above.
+</div></li>
+</ul>
+</li>
+<li class="level1"><div class="li">
+ Different <em>context</em> signals can be added to the triggers to form a support, in this case either of <code><span style='color:blue; '>gp</span></code>, <code><span style='color:red; '>zc</span></code> or <code><span style='color:red; '>gp_ack</span></code> can be used.
+</div></li>
+</ul>
+
+
+<p>
+The first implementation uses <code><span style='color:blue; '>gp</span></code> itself as a context signal, which results in a gate with feedback:
+</p>
+
+<p>
+<img src="circuit-buck-cg-feedback.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+This implementation is particularly interesting, as it suggests that <code><span style='color:blue; '>gp</span></code> might be implemented by a latch (i.e. a state-holding element) rather than a combinational gate. Below we explore some such implementations.
+</p>
+
+</div>
+
+<h3 id="standard-c_implementation">Standard-C implementation</h3>
+<div class="level3">
+
+<p>
+The <em>standard-C architecture</em> (a.k.a. <em>“monotonic covers”</em>) is shown in the picture below. It uses a C-element as the state-holding element that is driven by two combinational gates computing the <em>Set</em> and <em>Reset functions</em> of the implemented signal.
+</p>
+
+<p>
+<img src="circuit-standard-c-architecture.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+The standard-C implementation of the buck STG can be synthesised using <em>Synthesis→Standard C-element [MPSat]</em> menu as follows (<span class="wrap_important ">note that solution is not unique and you may get a slightly different set of equations</span>):
+</p>
+<pre class="code">SOLUTION 0:
+Signal gn SET (cost 2)
+Triggers (underapproximation): gp_ack
+Context: oc gn
+Equation (2 lits): oc gp_ack&#039;
+Context: uv zc gn
+Equation (3 lits): uv&#039; zc&#039; gp_ack&#039;
+
+SOLUTION 1:
+Signal gn RESET (cost 2)
+Triggers (underapproximation): uv zc
+Context: gn
+Equation (2 lits): zc + uv
+
+SOLUTION 2:
+Signal gp SET (cost 2)
+Triggers (underapproximation): uv gn_ack
+Context: gp
+Equation (2 lits): uv gn_ack&#039;
+
+SOLUTION 3:
+Signal gp RESET (cost 1)
+Triggers (underapproximation): oc
+Context: gp
+Equation (1 lits): oc</pre>
+
+<p>
+These equations provide the Set and Reset functions for <code><span style='color:blue; '>gn</span></code> and <code><span style='color:blue; '>gp</span></code>. Note that:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Two alternative implementations are suggested for the Set function of <code><span style='color:blue; '>gn</span></code>.
+</div></li>
+<li class="level1"><div class="li">
+ There is no benefit in implementing <code><span style='color:blue; '>gn</span></code> using standard-C architecture,<sup><a href="#fn__6" id="fnt__6" class="fn_top">6)</a></sup> as the original complex-gate implementation is simpler.
+</div></li>
+<li class="level1"><div class="li">
+ The standard-C implementation of <code><span style='color:blue; '>gp</span></code> is nicer than the complex-gate one, in particular it does away with that ugly 4-input gate that may be absent from the gate library.
+</div></li>
+</ul>
+
+
+<p>
+The resulting circuit is as follows:
+</p>
+
+<p>
+<img src="circuit-buck-cg-decomposed-monot.png" class="mediacenter" alt="" />
+</p>
+<div class="wrap_important plugin_wrap">
+<p>
+Do not forget to verify this solution w.r.t. the original STG as described above for the complex-gate implementation! In theory, the synthesised implementation is correct-by-construction, but in practice tools have bugs <img src="../../lib/images/smileys/icon_sad.gif" class="icon" alt=":-(" />
+</p>
+</div>
+</div>
+
+<h3 id="logic_decomposition_and_technology_mapping">Logic decomposition and technology mapping</h3>
+<div class="level3">
+
+<p>
+Complex-gate and standard-C syntheses are oblivious to the gate library. Hence, the implementations they yield may be too large to be implemented by a single gate available in the gate library. Unfortunately, breaking up a gate into smaller ones, when performed naïvely, generally yields an incorrect circuit. In fact, logic decomposition in the context of speed-independent circuits is a very difficult problem, that cannot always be solved. Petrify and MPSat backend tools do a good job in many situations, but occasionally they fail to converge to a solution and a manual intervention by the designer is required.
+</p>
+
+<p>
+Currently the gate library called <code>petrify.lib</code> is used for technology mapping. The decomposed and mapped implementation of the buck STG can be synthesised using <em>Synthesis→Technology mapping [Petrify]</em> or <em>Synthesis→Technology mapping [MPSat]</em> menu. E.g. Petrify&#039;s solution is as follows (<span class="wrap_important ">note that solution is not unique and you may get a slightly different set of equations</span>):
+</p>
+<pre class="code">[gn] = zc&#039; uv&#039; gp_ack&#039;; 	   # gate nor3:combinational
+#PRAGMA: zero delay
+[1] = uv&#039;; 	   # gate inv:combinational
+#PRAGMA: zero delay
+[2] = gp&#039;; 	   # gate inv:combinational
+[gp] = [2]&#039; oc&#039; + [1]&#039; gn_ack&#039;; 	   # gate oai22:combinational</pre>
+
+<p>
+This solution corresponds to the original complex-gate implementation: <code><span style='color:blue; '>gn</span></code> is implemented by gate <code>nor3:combinational</code>, and <code><span style='color:blue; '>gp</span></code> is implemented by two inverters <code>inv:combinational</code> and gate <code>oai22:combinational</code>. The two <code>#PRAGMA</code>s state the assumption that the delays of the two inverters must be negligible. This is usually unproblematic as long as such input inverters are placed next to the main gate, but in some situations this assumption may be questionable; moreover, this assumption introduces extra constraints that have to be satisfied during placing and routing.
+</p>
+
+<p>
+Let us try to decompose the implementation of <code><span style='color:blue; '>gp</span></code> into gates/latches with at most two inputs. In the <em>Edit→Preferences</em> dialog, select <em>External tools→MPSat</em> and type <code>-g2</code> in the <em>Additional arguments</em> property. This will pass an extra command line option to MPSat, which will restrict it to gates/latches with at most two inputs. Then select <em>Synthesis→Technology mapping [MPSat]</em> to obtain the following implementation of <code><span style='color:blue; '>gp</span></code> (<span class="wrap_important ">note that solution is not unique and you may get a slightly different set of equations</span>):
+</p>
+<pre class="code">Signal gp (cost 72)
+Triggers (underapproximation): oc uv gn_ack
+Context: gp
+Equation: gn_ack&#039; (oc&#039; zc&#039; + uv)
+Gate rs_nor:asynch, sub-functions:
+	gn_ack + oc		or2:combinational (inversions: 00|0)
+	uv		delay:asynch (inversions: 0|0)</pre>
+<div class="wrap_important plugin_wrap">
+<p>
+Do not forget to delete the <code>-g2</code> option from the preferences, to prevent permanently restricting MPSat to 2-input gates!
+</p>
+</div>
+<p>
+This implementation of <code><span style='color:blue; '>gp</span></code> uses reset-dominant RS latch <code>rs_nor:asynch</code> and  gate <code>or2:combinational</code> (<code>delay:asynch</code> is just a wire — there is no need to insert an explicit delay). 
+</p>
+<div class="wrap_info plugin_wrap">
+<p>
+MPSat also finds a decomposition of <code><span style='color:blue; '>gn</span></code> into 2-input gates/latches, which is the same as the standard-C implementation considered above. However, the complex-gate implementation of <code><span style='color:blue; '>gn</span></code> was already good enough, and so we are only interested in decomposing the implementation of <code><span style='color:blue; '>gp</span></code>.
+</p>
+</div>
+<p>
+This circuit can be captured in Workcraft as follows:
+</p>
+
+<p>
+<img src="circuit-buck-cg-decomposed-rs.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+Note that the properties for the reset dominant RS latch are set as follows: <em>Render type</em> is <em>Box</em>, <em>Set function</em> is <code>R&#039;*S</code>, and <em>Reset function</em> is <code>R</code>.
+</p>
+
+<p>
+This solution has no input inverters and is implementable in most gate libraries.
+</p>
+<div class="wrap_important plugin_wrap">
+<p>
+Do not forget to verify this solution w.r.t. the original STG as described above for the complex-gate implementation! In theory, the synthesised implementation is correct-by-construction, but in practice tools have bugs <img src="../../lib/images/smileys/icon_sad.gif" class="icon" alt=":-(" />
+</p>
+</div>
 </div>
 
 <h2 id="solutions">Solutions</h2>
@@ -524,7 +728,7 @@ Download all the Workcraft models discussed in this tutorial here:
 </p>
 
 <p>
-<span class="wrap_download "><a href="buck.zip" class="media mediafile mf_zip" title="tutorial:synthesis:buck:buck.zip (26 KB)">Buck control models</a> (26.02 KiB, <acronym title="Modified: 2015-05-22 12:37.20">9h ago</acronym>)</span>
+<span class="wrap_download "><a href="buck.zip" class="media mediafile mf_zip" title="tutorial:synthesis:buck:buck.zip (37.9 KB)">Buck control models</a> (37.86 KiB, <acronym title="Modified: 2015-07-05 19:33.34">4w ago</acronym>)</span>
 </p>
 
 </div>
@@ -532,16 +736,20 @@ Download all the Workcraft models discussed in this tutorial here:
 <div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
 Here <code>$S</code> means the value of a signal, <code>&quot;gp&quot;</code> and <code>&quot;gn&quot;</code> are the names of the signals and <code>&amp;</code> is Boolean AND.</div>
 <div class="fn"><sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
-, <sup><a href="#fnt__3" id="fn__3" class="fn_bot">3)</a></sup> 
+Here <code>|</code> is Boolean OR.</div>
+<div class="fn"><sup><a href="#fnt__3" id="fn__3" class="fn_bot">3)</a></sup> 
+, <sup><a href="#fnt__4" id="fn__4" class="fn_bot">4)</a></sup> 
 Notice the use of <code>&#039;</code> symbol for negation.</div>
-<div class="fn"><sup><a href="#fnt__4" id="fn__4" class="fn_bot">4)</a></sup> 
+<div class="fn"><sup><a href="#fnt__5" id="fn__5" class="fn_bot">5)</a></sup> 
 If the file does not exist then its name is shown in red.</div>
+<div class="fn"><sup><a href="#fnt__6" id="fn__6" class="fn_bot">6)</a></sup> 
+In some situations, e.g. if there are only 2-input gates/latches in the gate library, this standard-C implementation may come useful.</div>
 </div>
 
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/synthesis/buck/start.txt</bdi> · Last modified: 2015/05/22 12:33 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/synthesis/buck/start.txt</bdi> · Last modified: 2015/07/31 22:41 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

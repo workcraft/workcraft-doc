@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/synthesis/celement/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/synthesis/celement/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:celement';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/05/22 22:14//';var JSINFO = {"id":"tutorial:synthesis:celement:start","namespace":"tutorial:synthesis:celement","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:celement';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/08/03 15:36//';var JSINFO = {"id":"tutorial:synthesis:celement:start","namespace":"tutorial:synthesis:celement","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:celement:start" /><input type="hidden" name="sectok" value="ea93f263b65d744b103e3127cdf9df42" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:celement:start" /><input type="hidden" name="sectok" value="dfeda2d5d2806a2bae6d1d2fc02d394f" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -236,7 +236,7 @@ Before proceeding to the synthesis of the C-element it is a good idea to verify 
 </p>
 
 <p>
-To verify the signal consistency (i.e. that the rising and falling phases of each signal alternate in all possible execution traces) select <em>Tools→Verification→Consistency [MPSat]</em> menu item. Similarly, for deadlock checking select <em>Tools→Verification→Deadlock [MPSat]</em>, and for output-persistency select <em>Tools→Verification→Output persistence (without dummied) [MPSat]</em> menu item.
+To verify the signal consistency (i.e. that the rising and falling phases of each signal alternate in all possible execution traces) select <em>Verification→Consistency [MPSat]</em> menu item. Similarly, for deadlock checking select <em>Verification→Deadlock [MPSat]</em>, and for output-persistency select <em>Verification→Output persistence (without dummied) [MPSat]</em> menu item.
 </p>
 
 <p>
@@ -249,11 +249,11 @@ If the specification violates any of these properties then a trace leading to th
 <div class="level2">
 
 <p>
-The STG specification can now be synthesised into an asynchronous circuit implementation either with Petrify or MPSat backend tools via <em>Tools→Synthesis</em> menu.
+The STG specification can now be synthesised into an asynchronous circuit implementation either with Petrify or MPSat backend tools via <em>Synthesis</em> menu.
 </p>
 
 <p>
-A complex gate solution obtained with Petrify (<em>Tools→Synthesis→Complex gate [Petrify]</em> menu item) is as follows: (<span class="wrap_important ">Note that solution is not unique and you may get a slightly different equation.</span>)
+A complex gate solution obtained with Petrify (<em>Synthesis→Complex gate [Petrify]</em> menu item) is as follows: (<span class="wrap_important ">Note that solution is not unique and you may get a slightly different equation.</span>)
 </p>
 <pre class="code">[out] = in2 (in1 + out) + in1 out;</pre>
 
@@ -280,9 +280,13 @@ Circuit designers use hardware description languages, such as <a href="http://en
 
 <h2 id="circuit_capturing">Circuit capturing</h2>
 <div class="level2">
-
+<div class="wrap_info plugin_wrap">
 <p>
-Create a new Digital Circuit work called <em>circuit-celement-cg</em> and capture the implementation suggested by Petrify in form of a gate-level netlist. <span class="wrap_info ">In the future versions of Workcraft the derivation of a circuit from the synthesis output will be automated, but for now please do it manually.</span>
+Workcraft can automatically derive a circuit from the synthesis output of Petrify. For this open the <em>Edit→Preferences…</em> window and under <em>Models→Digital Circuit</em> leaf enable the <em>Import synthesis result</em> checkbox. However, for the purpose of this exercise please capture the circuit schematics manually.
+</p>
+</div>
+<p>
+Create a new Digital Circuit work called <em>circuit-celement-cg</em> and capture the implementation suggested by Petrify in form of a gate-level netlist.
 </p>
 <ul>
 <li class="level1"><div class="li">
@@ -355,7 +359,7 @@ Create a new Digital Circuit work called <em>circuit-celement-cg</em> and captur
 <h4 id="optional_simplification">Optional simplification</h4>
 
 <p>
-You may want to tidy up the circuit schematic and make it more readable by adding forks into the wires. This can be done using the <strong>joint generator</strong> <img src="../../help/editor_tools-joint.png" class="media" title="[J] Joint" alt="[J] Joint" /> to create the wire split points and then connect wires to them. If you create a connection to/from a wire then a joint will be automatically inserted. This resultant circuit should look similar to the following diagram; this implementation can be downloaded <span class="wrap_download "><a href="circuit-celement-cg.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-cg.work (3.1 KB)">circuit-celement-cg.work</a> (3.09 KiB, <acronym title="Modified: 2015-05-22 11:54.30">10h ago</acronym>)</span>.
+You may want to tidy up the circuit schematic and make it more readable by adding forks into the wires. This can be done using the <strong>joint generator</strong> <img src="../../help/editor_tools-joint.png" class="media" title="[J] Joint" alt="[J] Joint" /> to create the wire split points and then connect wires to them. If you create a connection to/from a wire then a joint will be automatically inserted. This resultant circuit should look similar to the following diagram; this implementation can be downloaded <span class="wrap_download "><a href="circuit-celement-cg.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-cg.work (3.1 KB)">circuit-celement-cg.work</a> (3.09 KiB, <acronym title="Modified: 2015-05-22 11:54.30">2M ago</acronym>)</span>.
 </p>
 
 <p>
@@ -384,7 +388,7 @@ To conduct formal verification the circuit has to be converted into an STG. Norm
 </p>
 
 <p>
-Note that if the C-element&#039;s inputs are not restricted in any way then they can change in an unexpected manner and cause malfunction of the circuit. This can be confirmed by checking the circuit for hazards <em>Tools→Verification→Hazards [MPSat]</em> – the circuit has a hazard after the following trace: <code>0: in2+, in1+</code>.
+Note that if the C-element&#039;s inputs are not restricted in any way then they can change in an unexpected manner and cause malfunction of the circuit. This can be confirmed by checking the circuit for hazards <em>Verification→Hazards [MPSat]</em> – the circuit has a hazard after the following trace: <code>in2+, in1+</code>.
 </p>
 
 <p>
@@ -429,7 +433,7 @@ For example, you can feed the inverted value of C-element output to its inputs.
 </p>
 </div>
 <p>
-Repeat the verification procedure to check if the circuit is free of hazards under the well behaved environment. Also check the circuit for deadlocks and verify if it conforms to the environment specification. All these verification steps can be run via <em>Tools→Verification→Conformation, deadlock and hazard (reuse unfolding) [MPSat]</em> menu.
+Repeat the verification procedure to check if the circuit is free of hazards under the well behaved environment. Also check the circuit for deadlocks and verify if it conforms to the environment specification. All these verification steps can be run via <em>Verification→Conformation, deadlock and hazard (reuse unfolding) [MPSat]</em> menu.
 </p>
 
 <p>
@@ -437,7 +441,7 @@ Large gates like <code>AO222</code> may not be available in the technology libra
 </p>
 
 <p>
-Download the following candidate C-element implementation <span class="wrap_download "><a href="circuit-celement-decomposed.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-decomposed.work (3.8 KB)">circuit-celement-decomposed.work</a> (3.78 KiB, <acronym title="Modified: 2015-05-22 11:54.31">10h ago</acronym>)</span> and verify that it conforms to the STG specification and is free from deadlocks and hazards.
+Download the following candidate C-element implementation <span class="wrap_download "><a href="circuit-celement-decomposed.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-decomposed.work (3.8 KB)">circuit-celement-decomposed.work</a> (3.78 KiB, <acronym title="Modified: 2015-05-22 11:54.31">2M ago</acronym>)</span> and verify that it conforms to the STG specification and is free from deadlocks and hazards.
 </p>
 
 <p>
@@ -445,7 +449,7 @@ Download the following candidate C-element implementation <span class="wrap_down
 </p>
 
 <p>
-Note that the correctness of this implementation depends on the <em>isochronic forks assumption</em>: the difference in arrival times of a signal to the ends of a wire fork is negligible compared to any gate delay. If this assumption is violated, the above implementation can exhibit hazards. Download the following C-element implementation <span class="wrap_download "><a href="circuit-celement-decomposed-hazard.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-decomposed-hazard.work (3.9 KB)">circuit-celement-decomposed-hazard.work</a> (3.9 KiB, <acronym title="Modified: 2015-05-22 11:54.31">10h ago</acronym>)</span> where a delay in a wire fork is made explicit (modelled by a buffer). Formally verify this model, inspect the violation trace, and explain what can go wrong in it.
+Note that the correctness of this implementation depends on the <em>isochronic forks assumption</em>: the difference in arrival times of a signal to the ends of a wire fork is negligible compared to any gate delay. If this assumption is violated, the above implementation can exhibit hazards. Download the following C-element implementation <span class="wrap_download "><a href="circuit-celement-decomposed-hazard.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-decomposed-hazard.work (3.9 KB)">circuit-celement-decomposed-hazard.work</a> (3.9 KiB, <acronym title="Modified: 2015-05-22 11:54.31">2M ago</acronym>)</span> where a delay in a wire fork is made explicit (modelled by a buffer). Formally verify this model, inspect the violation trace, and explain what can go wrong in it.
 </p>
 
 <p>
@@ -462,7 +466,7 @@ Download all the Workcraft models discussed in this tutorial here:
 </p>
 
 <p>
-<span class="wrap_download "><a href="celement.zip" class="media mediafile mf_zip" title="tutorial:synthesis:celement:celement.zip (17.2 KB)">C-element models</a> (17.18 KiB, <acronym title="Modified: 2015-05-22 11:54.30">10h ago</acronym>)</span>
+<span class="wrap_download "><a href="celement.zip" class="media mediafile mf_zip" title="tutorial:synthesis:celement:celement.zip (17.2 KB)">C-element models</a> (17.17 KiB, <acronym title="Modified: 2015-06-15 10:30.09">1M ago</acronym>)</span>
 </p>
 
 </div>
@@ -470,7 +474,7 @@ Download all the Workcraft models discussed in this tutorial here:
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/synthesis/celement/start.txt</bdi> · Last modified: 2015/05/22 11:59 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/synthesis/celement/start.txt</bdi> · Last modified: 2015/07/31 22:42 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

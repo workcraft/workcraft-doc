@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/reach.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/reach"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/05/22 22:00//';var JSINFO = {"id":"help:reach","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/08/03 14:56//';var JSINFO = {"id":"help:reach","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:reach" /><input type="hidden" name="sectok" value="1dfbf8c9710489a7af1fb9605c69c5c0" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:reach" /><input type="hidden" name="sectok" value="ee9f8687cc78aef7920a3fa31bcdc968" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="reach.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="reach.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="reach.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -195,6 +195,9 @@ Built of English letters, digits and &#039;_&#039;, not starting with a digit, c
  <strong>string</strong> expression – Returns a string representation of the argument
 </div></li>
 <li class="level1"><div class="li">
+ <strong>len</strong> string – Returns the length of a string
+</div></li>
+<li class="level1"><div class="li">
  <strong>downclose</strong> event or <strong>downclose</strong> set_of_events – Downcloses an event or a set thereof, returning a set of events
 </div></li>
 <li class="level1"><div class="li">
@@ -219,7 +222,7 @@ Built of English letters, digits and &#039;_&#039;, not starting with a digit, c
  <strong>is_dummy</strong> signal – Checks if a signal is dummy
 </div></li>
 <li class="level1"><div class="li">
- <strong>is_local</strong> signal – Checks if a signal is local
+ <strong>is_local</strong> signal – Checks if a signal is local; equivalent to (<strong>is_output</strong> signal | <strong>is_internal</strong> signal)
 </div></li>
 <li class="level1"><div class="li">
  <strong>is_plus</strong> event or <strong>is_plus</strong> transition – Checks if an STG event or transition has a sign &#039;+&#039;
@@ -266,22 +269,22 @@ Built of English letters, digits and &#039;_&#039;, not starting with a digit, c
 <div class="level2">
 <ul>
 <li class="level1"><div class="li">
- &amp;, |, ^, →, ↔ – Boolean AND, OR, XOR, implication, and equivalence
+ &amp;, |, ^, -&gt;, &lt;-&gt; – Boolean AND, OR, XOR, implication, and equivalence
 </div></li>
 <li class="level1"><div class="li">
  +, -, *, /, % – Numerical operators as usual
 </div></li>
 <li class="level1"><div class="li">
- =, != – Equality and non-equality for non-Booleans, as long as the argument types agree; for Booleans use ↔ and ^ instead
+ =, != – Equality and non-equality for non-Booleans, as long as the argument types agree; for Booleans use &lt;-&gt; and ^ instead
 </div></li>
 <li class="level1"><div class="li">
- &lt;, ⇐, &gt;, &gt;= – Numerical comparisons and set inclusion
+ &lt;, &lt;=, &gt;, &gt;= – Numerical comparisons and set inclusion
 </div></li>
 <li class="level1"><div class="li">
  + – String concatenation
 </div></li>
 <li class="level1"><div class="li">
- +, *,  – Set union, intersection, and difference
+ +, *, \ – Set union, intersection, and difference
 </div></li>
 <li class="level1"><div class="li">
  element <strong>in</strong> set – Set membership
@@ -295,7 +298,7 @@ Built of English letters, digits and &#039;_&#039;, not starting with a digit, c
 <div class="level2">
 <ul>
 <li class="level1"><div class="li">
- string<strong>[</strong>number<strong>..</strong>number<strong>]</strong> – Returns a substring of a string
+ string<strong>[</strong>number<strong>..</strong>number<strong>]</strong> – Returns a substring of a string; either of the numbers can be omitted, in which case the beginning or the end of the string is substituted instead of it
 </div></li>
 <li class="level1"><div class="li">
  condition <strong>?</strong> expression <strong>:</strong> expression – Conditional expression, like in C/C++
@@ -360,7 +363,7 @@ Below the “s.t.” clause is optional:
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/reach.txt</bdi> · Last modified: 2014/11/30 18:14 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/reach.txt</bdi> · Last modified: 2015/06/03 22:39 by <bdi>victor</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

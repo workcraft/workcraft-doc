@@ -5,7 +5,7 @@
     <title>Workcraft - help:digital_circuit_plugin</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="help,digital circuit plugin"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="digital_circuit_plugin.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/digital_circuit_plugin.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/digital_circuit_plugin"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/05/22 21:59//';var JSINFO = {"id":"help:digital_circuit_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/08/03 15:10//';var JSINFO = {"id":"help:digital_circuit_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:digital_circuit_plugin" /><input type="hidden" name="sectok" value="f9286e0ae264cb9e14b89511871e3693" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:digital_circuit_plugin" /><input type="hidden" name="sectok" value="3342faff170cb229d0e911f744b85490" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="digital_circuit_plugin.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="digital_circuit_plugin.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="digital_circuit_plugin.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -100,7 +100,7 @@
 
 <h1 id="digital_circuit_plugin">Digital Circuit plugin</h1>
 <div class="level1">
-<div class="wrap_important plugin_wrap">
+<div class="wrap_tip plugin_wrap">
 <p>
 Familiarise yourself with <a href="toc_generic.html" class="wikilink1" title="help:toc_generic">Workcraft interface</a> to learn its common features that are available for all plugins.
 </p>
@@ -194,7 +194,7 @@ When the connection tool <img src="editor_tools-connect.png" class="media" title
 </p>
 
 <p>
-In order to reduce the number of arcs going from the same output pin (or an input port) and simplify the layout of the connection arc, a joint node is introduced. It can be created with a joint generator <img src="editor_tools-joint.png" class="media" title="[J] Joint" alt="[J] Joint" /> and acts as a fork, i.e. it allows one incoming connection and multiple outgoing connections.
+In order to reduce the number of arcs going from the same output pin (or an input port) and simplify the layout of the connection arc, one can “fork” the wires - just start a connection from an existing wire and a joint point will be automatically created. New connections can be also started from the existing joint points.
 </p>
 
 <p>
@@ -237,7 +237,7 @@ Verification of a digital circuit is usually made in the context of its environm
 </p>
 
 <p>
-When a verification task is issued via the <em>Tools→Verification</em> menu, the circuit is first translated into an STG that is subsequently composed with the STG of the environment. The resultant STG is used for verification of the desired properties:
+When a verification task is issued via the <em>Verification</em> menu, the circuit is first translated into an STG that is subsequently composed with the STG of the environment. The resultant STG is used for verification of the desired properties:
 </p>
 <ul>
 <li class="level1"><div class="li">
@@ -260,7 +260,7 @@ When a verification task is issued via the <em>Tools→Verification</em> menu, t
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/digital_circuit_plugin.txt</bdi> · Last modified: 2015/02/11 10:44 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/digital_circuit_plugin.txt</bdi> · Last modified: 2015/08/03 15:07 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

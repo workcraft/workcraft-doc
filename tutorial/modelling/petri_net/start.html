@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/petri_net/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/petri_net/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:petri_net';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/05/22 22:14//';var JSINFO = {"id":"tutorial:modelling:petri_net:start","namespace":"tutorial:modelling:petri_net","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:petri_net';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/08/03 15:35//';var JSINFO = {"id":"tutorial:modelling:petri_net:start","namespace":"tutorial:modelling:petri_net","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:petri_net:start" /><input type="hidden" name="sectok" value="fd8a1193036d6d5c168d20627b42f08a" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:petri_net:start" /><input type="hidden" name="sectok" value="7daf5da91752476b042c73ca5af2b211" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -188,11 +188,11 @@ Another scenario is possible when each philosopher takes only one of the forks (
 <div class="level2">
 
 <p>
-Various properties of a Petri net model can be verified using <em>punf</em> and <em>mpsat</em> as the backend tools (see overview of <a href="../../overview/backend_tools.html" class="wikilink1" title="overview:backend_tools">third-party tools</a> for more details). The tool interfaces available for Petri net verification are collected under <em>Tools→Verification</em> menu.
+Various properties of a Petri net model can be verified using <em>punf</em> and <em>mpsat</em> as the backend tools (see overview of <a href="../../overview/backend_tools.html" class="wikilink1" title="overview:backend_tools">third-party tools</a> for more details). The tool interfaces available for Petri net verification are collected under <em>Verification</em> menu.
 </p>
 
 <p>
-The easiest and most obvious property to check is that the model does not have a deadlock - choose the <em>Tools→Verification→Deadlock [MPSat]</em> menu item for this. A our dining philosophers model is not deadlock-free, this should result in the following error message with a trace leading to the deadlock (you can play in the simulator by clicking the <em>Play</em> button).
+The easiest and most obvious property to check is that the model does not have a deadlock - choose the <em>Verification→Deadlock [MPSat]</em> menu item for this. A our dining philosophers model is not deadlock-free, this should result in the following error message with a trace leading to the deadlock (you can play in the simulator by clicking the <em>Play</em> button).
 </p>
 
 <p>
@@ -204,7 +204,7 @@ Verification of custom properties is based on reachability analysis on the Petri
 </p>
 <ul>
 <li class="level1"><div class="li">
- Open <em>Custom property definition</em> window via <em>Tools→Verification→Custom properties [MPSat]…</em>.
+ Open <em>Custom property definition</em> window via <em>Verification→Custom properties [MPSat]…</em>.
 </div></li>
 <li class="level1"><div class="li">
  In <em>MPSat settings</em> set the <em>Mode</em> into <em>Reachability analysis</em> and the <em>Solution</em> into <em>minimise cost function</em>.
@@ -266,7 +266,7 @@ Download all the Workcraft models discussed in this section here:
 </p>
 
 <p>
-<span class="wrap_download "><a href="dining_philosophers.tar.gz" class="media mediafile mf_gz" title="tutorial:modelling:petri_net:dining_philosophers.tar.gz (14.7 KB)">Dining philosophers models</a> (14.74 KiB, <acronym title="Modified: 2014-06-20 22:28.15">11M ago</acronym>)</span>
+<span class="wrap_download "><a href="dining_philosophers.tar.gz" class="media mediafile mf_gz" title="tutorial:modelling:petri_net:dining_philosophers.tar.gz (14.7 KB)">Dining philosophers models</a> (14.74 KiB, <acronym title="Modified: 2014-06-20 22:28.15">1y ago</acronym>)</span>
 </p>
 
 </div>
@@ -274,7 +274,7 @@ Download all the Workcraft models discussed in this section here:
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/petri_net/start.txt</bdi> · Last modified: 2015/05/22 16:08 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/petri_net/start.txt</bdi> · Last modified: 2015/07/31 22:23 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

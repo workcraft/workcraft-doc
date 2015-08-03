@@ -5,7 +5,7 @@
     <title>Workcraft - help:stg_plugin</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="help,stg plugin"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="stg_plugin.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/stg_plugin.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/stg_plugin"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/05/22 22:00//';var JSINFO = {"id":"help:stg_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/08/03 15:11//';var JSINFO = {"id":"help:stg_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:stg_plugin" /><input type="hidden" name="sectok" value="64dda569877e21db535f3f8d7da7601b" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:stg_plugin" /><input type="hidden" name="sectok" value="1880e9b914d6e79807062764bde2af94" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="stg_plugin.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="stg_plugin.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="stg_plugin.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -100,7 +100,7 @@
 
 <h1 id="signal_transition_graph_plugin">Signal Transition Graph plugin</h1>
 <div class="level1">
-<div class="wrap_important plugin_wrap">
+<div class="wrap_tip plugin_wrap">
 <p>
 Familiarise yourself with <a href="toc_generic.html" class="wikilink1" title="help:toc_generic">Workcraft interface</a> to learn its common features that are available for all plugins.
 </p>
@@ -185,7 +185,7 @@ If no model elements are selected, then the property editor shows the attributes
 </p>
 
 <p>
-The STG transitions can be easily recognised by their color. By default the input transitions are red, output - blue, internal - green and dummies are black. This color scheme can be changed in the global settings  under the <em>Models→Signal Transition Graph</em> leaf of the preferences tree (accessible via <em>Tools→Preferences…</em> menu item).
+The STG transitions can be easily recognised by their color. By default the input transitions are red, output - blue, internal - green and dummies are black. This color scheme can be changed in the global settings  under the <em>Models→Signal Transition Graph</em> leaf of the preferences tree (accessible via <em>Edit→Preferences…</em> menu item).
 </p>
 
 <p>
@@ -270,7 +270,7 @@ Note that the simulation controls are extended with the signal state table. The 
 <div class="level2">
 
 <p>
-A number of STG properties can be verified via <em>Tools→Verification</em> menu.
+A number of STG properties can be verified via <em>Verification</em> menu.
 </p>
 <ul>
 <li class="level1"><div class="li">
@@ -330,29 +330,29 @@ The STG specification can be synthesised into Boolean equations by using <em>Pet
 
 
 <p>
-These synthesis options are available under the <em>Tools→Synthesis</em> menu:
+These synthesis options are available under the <em>Synthesis</em> menu:
 </p>
 <ul>
 <li class="level1"><div class="li">
- <em>Complex gate synthesis [MPSat]</em> - synthesise the STG in complex gates using <em>MPSat</em> backend tool.
+ <em>Complex gate [MPSat]</em> - synthesise the STG in complex gates using <em>MPSat</em> backend tool.
 </div></li>
 <li class="level1"><div class="li">
- <em>Complex gate synthesis [Petrify]</em> - synthesise the STG in complex gates using <em>Petrify</em> backend tool.
+ <em>Complex gate [Petrify]</em> - synthesise the STG in complex gates using <em>Petrify</em> backend tool.
 </div></li>
 <li class="level1"><div class="li">
- <em>Generalized C-element synthesis [MPSat]</em> - synthesise the STG in generalised C-elements using <em>MPSat</em> backend tool.
+ <em>Generalized C-element [MPSat]</em> - synthesise the STG in generalised C-elements using <em>MPSat</em> backend tool.
 </div></li>
 <li class="level1"><div class="li">
- <em>Generalized C-element synthesis [Petrify]</em> - synthesise the STG in generalised C-elements using <em>Petrify</em> backend tool.
+ <em>Generalized C-element [Petrify]</em> - synthesise the STG in generalised C-elements using <em>Petrify</em> backend tool.
 </div></li>
 <li class="level1"><div class="li">
- <em>Standard C-element synthesis [MPSat]</em> - synthesise the STG in standard C-elements using <em>MPSat</em> backend tool.
+ <em>Standard C-element [MPSat]</em> - synthesise the STG in standard C-elements using <em>MPSat</em> backend tool.
 </div></li>
 <li class="level1"><div class="li">
- <em>Technology mapping synthesis [MPSat]</em> - synthesise the STG for a library of available gates using <em>MPSat</em> backend tool.
+ <em>Technology mapping [MPSat]</em> - synthesise the STG for a library of available gates using <em>MPSat</em> backend tool.
 </div></li>
 <li class="level1"><div class="li">
- <em>Technology mapping synthesis [Petrify]</em> - synthesise the STG for a library of available gates using <em>Petrify</em> backend tool. The library of gates can be specified in the under <em>External tools→Petrify</em> leaf of the global preferences tree (available via <em>Edit→Preferences</em> menu).
+ <em>Technology mapping [Petrify]</em> - synthesise the STG for a library of available gates using <em>Petrify</em> backend tool. The library of gates can be specified in the under <em>Models→Digital Circuit</em> leaf of the global preferences tree (available via <em>Edit→Preferences</em> menu).
 </div></li>
 </ul>
 
@@ -370,7 +370,7 @@ Here is an example of synthesising a basic specification of an inverter with <em
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/stg_plugin.txt</bdi> · Last modified: 2015/02/11 10:49 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/stg_plugin.txt</bdi> · Last modified: 2015/08/03 15:07 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 
