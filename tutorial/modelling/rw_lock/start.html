@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Workcraft - tutorial:modelling:rw_lock:start</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="tutorial,modelling,rw lock,start"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
+<link rel="start" href="start.html"/>
+<link rel="contents" href="start.html" title="Sitemap"/>
+<link rel="alternate" type="application/rss+xml" title="Changes" />
+<link rel="alternate" type="application/rss+xml" title="Current namespace" />
+<link rel="edit" title="Edit this page" href="start.html"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="../../_export/xhtml/tutorial/modelling/rw_lock/start.xhtml"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/rw_lock/start.raw"/>
+<link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/rw_lock/start"/>
+<link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:rw_lock';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/05/22 22:14//';var JSINFO = {"id":"tutorial:modelling:rw_lock:start","namespace":"tutorial:modelling:rw_lock","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="../../favicon.ico" />
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export loggedIn    ">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+        <h1><a href="../../start.html"  title="Workcraft start page"><img src="../../logo.png" width="327" height="57" alt="" /></a></h1>
+    <br><br><br><br>
+    <div class="tools group">
+        <!-- USER TOOLS -->
+<!--
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="start.html"  class="action admin" rel="nofollow" title="Admin">Admin</a></li><li><a href="start.html"  class="action profile" rel="nofollow" title="Profile">Profile</a></li><li><a href="start.html"  class="action logout" rel="nofollow" title="Logout">Logout</a></li>                </ul>
+            </div>
+        -->
+
+        <!-- SEARCH TOOLS -->
+<!--
+        <div id="dokuwiki__searchtools">
+            <h3 class="a11y"></h3>
+            <form action="../../start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        </div>
+-->
+
+        <!-- SITE TOOLS -->
+<!--
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+                            <div class="mobileTools">
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:rw_lock:start" /><input type="hidden" name="sectok" value="af2450e69db6c77668deca30f94b264e" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                <ul>
+                    <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
+                    </div>
+    </div>
+-->
+
+    <!-- BREADCRUMBS -->
+        
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                <div class="pageId"><span>tutorial:modelling:rw_lock:start</span></div>
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#readwrite_lock">Read/write lock</a></div></li>
+<li class="level1"><div class="li"><a href="#idea_of_implementation">Idea of implementation</a></div></li>
+<li class="level1"><div class="li"><a href="#exercise_1modelling_a_writer-biased_rw_lock">Exercise 1: Modelling a writer-biased RW lock</a></div></li>
+<li class="level1"><div class="li"><a href="#exercise_2simulation_and_verification">Exercise 2: Simulation and verification</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 id="modelling_with_stgswriter-biased_readwrite_lock">Modelling with STGs: Writer-biased read/write lock</h1>
+<div class="level1">
+
+</div>
+
+<h2 id="readwrite_lock">Read/write lock</h2>
+<div class="level2">
+
+<p>
+A concurrency primitive called <em>read/write lock</em> (or <em>RW lock</em> for short) is often used to control access to a shared resource that can be read concurrently but written exclusively. Each client, when requesting access, specifies whether it is for writing or for reading – read/read concurrency is allowed, but read/write and write/write concurrency is forbidden. A client can be modelled by the following STG:
+</p>
+
+<p>
+<img src="stg-rw_1process.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+Note that:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ The client’s decision to enter reading or writing mode is modelled as a <em>free choice</em> between transitions <code>mode_r</code> and <code>mode_w</code>. These transitions are necessary: if they were contracted, the choice between <code><span style='color:green; '>r+</span></code> and <code><span style='color:green; '>w+</span></code> would be affected by the presence of tokens on other places (not shown in the above STG), making the choice non-free and thus changing the semantics in an undesirable way.
+</div></li>
+<li class="level1"><div class="li">
+ The actions of acquiring and releasing the RW lock in a particular mode must alternate, which is naturally modelled by the directed actions <code><span style='color:green; '>r+</span></code> and <code><span style='color:green; '>r-</span></code> (in the read mode) and <code><span style='color:green; '>w+</span></code> and <code><span style='color:green; '>w-</span></code> (in the write mode). This way the alternation of acquiring and releasing actions corresponds to the consistency of the STG.
+</div></li>
+</ul>
+
+
+</div>
+
+<h2 id="idea_of_implementation">Idea of implementation</h2>
+<div class="level2">
+
+<p>
+Suppose there are <em>N</em> clients, and from time to time some client indicates that it wishes to read or to write the resource. We create <em>N</em> ‘tickets’. A reader needs a single ticket to enter its critical section, whereas a writer needs all <em>N</em> tickets to enter its critical section. Having finished using the resource, the client returns the ticket(s) it had been granted, so that other clients can get them and access the resource. For example, the following STG models an RW lock for two clients.
+</p>
+
+<p>
+<img src="stg-rw.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+Unfortunately the above implementation is prone to <em>writer starvation</em> – the scenarios when there are always some readers executing their critical sections, and hence a writer is blocked for long time or even indefinitely. To prevent such scenarios, new readers should be prevented from entering their critical sections if there is a waiting writer. That is, a writer must first acquire a usual (i.e. non-RW) lock (competing with other writers) and indicate that there is a waiting writer to prevent new readers from entering their critical sections. Then this writer has to wait for all the existing readers to exit their critical sections, at which point it can acquire <em>N</em> tickets and enter its critical section. Such an implementation is called a <em>writer-biased RW lock</em>. A client’s model now becomes as follows.
+</p>
+
+<p>
+<img src="stg-rw_biased_1process.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+Note that the writer now has an extra transition <code>wait_r</code> to wait for the existing readers to exit their critical sections – this happens when all <em>N</em> tickets have been returned and this transition can consume them.
+</p>
+
+</div>
+
+<h2 id="exercise_1modelling_a_writer-biased_rw_lock">Exercise 1: Modelling a writer-biased RW lock</h2>
+<div class="level2">
+
+<p>
+The following STG provides a skeleton for the Writer-Biased RW lock for three clients (three is the minimum number of clients for the model to be interesting). Note that besides the places modelling tickets, there is a place <code>w_lock</code> modelling a lock for which the writers compete – in the final STG this place will become an arbitrating choice between transitions <code><span style='color:green; '>w1+</span></code>, <code><span style='color:green; '>w2+</span></code> and <code><span style='color:green; '>w3+</span></code>.
+</p>
+
+<p>
+<img src="stg-rw_biased_template.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+Download this STG <span class="wrap_download "><a href="stg-rw_biased_template.work" class="media mediafile mf_work" title="tutorial:modelling:rw_lock:stg-rw_biased_template.work (4.5 KB)">stg-rw_biased_template.work</a> (4.48 KiB, <acronym title="Modified: 2015-03-16 11:49.47">2M ago</acronym>)</span> and complete the model by providing the necessary arcs between the transitions of the clients and the places <code>w_lock</code> and those modelling the tickets.
+</p>
+
+</div>
+
+<h2 id="exercise_2simulation_and_verification">Exercise 2: Simulation and verification</h2>
+<div class="level2">
+
+<p>
+Simulate your model. Try to re-create the following scenarios:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ All three clients simultaneously access the resource for reading.
+</div></li>
+<li class="level1"><div class="li">
+ The first and second clients keep sending read requests and keep entering and exiting their critical sections in such a way that there is always at least one reader accessing the resource. Meanwhile, the third client makes a write request but cannot enter its critical section as there is always an active reader. (This scenario exhibits writer starvation and should be impossible in a Writer-Biased RW lock.)
+</div></li>
+<li class="level1"><div class="li">
+ The first client accesses the resource for reading. Then the second client makes a write request and starts to wait for the first client to exits its critical section. At this point the third client sends a read request but is prevented from entering the critical section. Eventually the first client exits its critical section and immediately sends another read request – but it is prevented from entering its critical section due to a waiting writer. Then the writer enters its critical section. After the writer exits its critical section, both waiting readers enter their critical sections.
+</div></li>
+</ul>
+
+
+<p>
+Verify the following properties of the model:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Deadlock-freeness.
+</div></li>
+<li class="level1"><div class="li">
+ The corresponding acquiring and releasing actions alternate in every execution. Hint: <span class="wrap_spoiler ">this is Consistency</span>.
+</div></li>
+<li class="level1"><div class="li">
+ There is a reachable state where all clients are accessing the resource for reading. Hint: <code><span class="wrap_spoiler ">$P&quot;CSr1&quot; &amp; $P&quot;CSr2&quot; &amp; $P&quot;CSr3&quot;</span></code>. Play the computed trace leading to such a state in the simulator. 
+</div></li>
+<li class="level1"><div class="li">
+ Whenever any client is accessing the resource for reading, no client (not even the reading client itself) is accessing it for writing. Hint: <code><span class="wrap_spoiler ">($P&quot;CSr1&quot; | $P&quot;CSr2&quot; | $P&quot;CSr3&quot;) &amp; ($P&quot;CSw1&quot; | $P&quot;CSw2&quot; | $P&quot;CSw3&quot;)</span></code>.
+</div></li>
+<li class="level1"><div class="li">
+ Whenever a client is accessing the resource for writing, no other client is accessing it for writing, and no client (not even the writing client itself) is accessing it for reading. This can be formulated as three properties, one per client. Hint: <code><span class="wrap_spoiler ">for the first client - $P&quot;CSw1&quot; &amp; ($P&quot;CSw2&quot; | $P&quot;CSw3&quot; | $P&quot;CSr1&quot; | $P&quot;CSr2&quot; | $P&quot;CSr3&quot;); for the other clients two similar properties can be written</span></code>.
+</div></li>
+<li class="level1"><div class="li">
+ Whenever there is a waiting or active writer, no reader is in its critical section. You can use the construction, e.g. <code>$S&quot;w1&quot;</code> to check that action <code><span style='color:green; '>w1</span></code> is asserted, i.e. the first writer is either waiting or active. Hint: <code><span class="wrap_spoiler ">($S&quot;w1&quot; | $S&quot;w2&quot; | $S&quot;w3&quot;) &amp; ($P&quot;CSr1&quot; | $P&quot;CSr2&quot; | $P&quot;CSr3&quot;)</span></code>. This property should not hold – play the violation trace in the simulator and explain why this is the case.
+</div></li>
+<li class="level1"><div class="li">
+ Whenever there is a waiting or active writer (i.e. there is no token on <code>w_lock</code>), no reader can enter its critical section (i.e. the transitions <code><span style='color:green; '>r1+</span></code>, <code><span style='color:green; '>r2+</span></code> and <code><span style='color:green; '>r3+</span></code> are disabled). You can use the construction, e.g. <code>@T&quot;r1+&quot;</code> to check the enabledness of transition <code><span style='color:green; '>r1+</span></code>. Hint: <code><span class="wrap_spoiler ">($S&quot;w1&quot; | $S&quot;w2&quot; | $S&quot;w3&quot;) &amp; (@T&quot;r1+&quot; | @T&quot;r2+&quot; | @T&quot;r3+&quot;); alternatively, ~$P&quot;w_lock&quot; &amp; (@T&quot;r1+&quot; | @T&quot;r2+&quot; | @T&quot;r3+&quot;)</span></code>.
+</div></li>
+</ul>
+
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+<!--
+                                    <div class="docInfo"><bdi>tutorial/modelling/rw_lock/start.txt</bdi> · Last modified: 2015/04/28 14:51 by <bdi>victor</bdi></div>
+                -->
+                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+<!--
+            <div id="dokuwiki__pagetools">
+                            <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action export_pdf" rel="nofollow" title="Export to PDF"><span>Export to PDF</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                </div>
+                        </div>
+-->
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <!--
+    <div class="buttons">
+                <a href="http://www.dokuwiki.org/donate" title="Donate" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="http://www.php.net" title="Powered by PHP" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="../../lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+    </div>
+-->
+
+<!--
+    <div class="userInfo">
+        Logged in as:: danil    </div>
+-->
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img  width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+</body>
+</html>
+

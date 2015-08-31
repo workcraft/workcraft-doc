@@ -12,11 +12,12 @@
 <link rel="contents" href="preferences-common.html" title="Sitemap"/>
 <link rel="alternate" type="application/rss+xml" title="Changes" />
 <link rel="alternate" type="application/rss+xml" title="Current namespace" />
+<link rel="edit" title="Edit this page" href="preferences-common.html"/>
 <link rel="alternate" type="text/html" title="Plain HTML" href="_export/xhtml/help/preferences-common.xhtml"/>
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/preferences-common.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/preferences-common"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var JSINFO = {"id":"help:preferences-common","namespace":"help"};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/08/03 14:56//';var JSINFO = {"id":"help:preferences-common","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -26,40 +27,45 @@
 
 <body>
     <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
-    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export     ">
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export loggedIn    ">
 
         
 <!-- ********** HEADER ********** -->
 <div id="dokuwiki__header"><div class="pad group">
 
         <h1><a href="start.html"  title="Workcraft start page"><img src="logo.png" width="327" height="57" alt="" /></a></h1>
-    
+    <br><br><br><br>
     <div class="tools group">
         <!-- USER TOOLS -->
+<!--
                     <div id="dokuwiki__usertools">
                 <h3 class="a11y">User Tools</h3>
                 <ul>
-                    <li><a href="preferences-common.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+                    <li><a href="preferences-common.html"  class="action admin" rel="nofollow" title="Admin">Admin</a></li><li><a href="preferences-common.html"  class="action profile" rel="nofollow" title="Profile">Profile</a></li><li><a href="preferences-common.html"  class="action logout" rel="nofollow" title="Logout">Logout</a></li>                </ul>
             </div>
-        
+        -->
+
         <!-- SEARCH TOOLS -->
+<!--
         <div id="dokuwiki__searchtools">
             <h3 class="a11y"></h3>
             <form action="start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        </div>
+-->
 
         <!-- SITE TOOLS -->
+<!--
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <li><a href="preferences-common.html"  class="action login" rel="nofollow" title="Login">Login</a></li>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:preferences-common" /><input type="hidden" name="sectok" value="ea320407818f5ec5a34103cd649278b6" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
-                                    </ul>
+                    <li><a href="preferences-common.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="preferences-common.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="preferences-common.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
     </div>
+-->
 
     <!-- BREADCRUMBS -->
-    
-    
+        
     <hr class="a11y" />
 </div></div><!-- /header -->
 
@@ -71,8 +77,22 @@
                 <div class="pageId"><span>help:preferences-common</span></div>
                 <div class="page group">
                                                             <!-- wikipage start -->
-                    
-<h1 class="sectionedit1" id="common_preferences">Common preferences</h1>
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#editor_settings">Editor settings</a></div></li>
+<li class="level1"><div class="li"><a href="#visual_settings">Visual settings</a></div></li>
+<li class="level1"><div class="li"><a href="#simulation_settings">Simulation settings</a></div></li>
+<li class="level1"><div class="li"><a href="#comment_settings">Comment settings</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 id="common_preferences">Common preferences</h1>
 <div class="level1">
 
 <p>
@@ -81,7 +101,7 @@ In <em>Common</em> section of the <em>Settings</em> window you can specify the d
 
 </div>
 
-<h2 class="sectionedit2" id="editor_settings">Editor settings</h2>
+<h2 id="editor_settings">Editor settings</h2>
 <div class="level2">
 
 <p>
@@ -101,14 +121,26 @@ In <em>Common</em> section of the <em>Settings</em> window you can specify the d
  <strong>Icon width (pixels, 8-256)</strong> - size of the pictograms for tool buttons. Icons are 24 pixels by default.
 </div></li>
 <li class="level1"><div class="li">
+ <strong>Number of recent files (0-99)</strong> - number of recently opened files to show under <em>File→Open recent</em> menu. By default is 10 recent files are shown.
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Model title style</strong> - display style for the work name in the editor panel title. Three options are possible: <em>minimal: Title</em>, <em>short: Title [MN]</em>, and <em>long: Title - Model Name</em>. Short display style is used by default.
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Names shown with absolute path</strong> - show the full hierarchical name of nodes. By default this option is switched off.
+</div></li>
+<li class="level1"><div class="li">
  <strong>Debug clipboard</strong> - switch on or off the propagation of copied part of the graph from the local clipboard into the system clipboard as an XML text. The XML represents the mathematical and visual aspects of the copied sub-graph. By default this feature is switched off.
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Open non-visual models (imported or transformed)</strong> - automatically open and layout non-visual models (e.g. imported from .g file or the results of transformations with external tools) in the editor. By default this feature is switched on.
 </div></li>
 </ul>
 
 
 </div>
 
-<h2 class="sectionedit3" id="visual_settings">Visual settings</h2>
+<h2 id="visual_settings">Visual settings</h2>
 <div class="level2">
 
 <p>
@@ -116,16 +148,25 @@ In <em>Common</em> section of the <em>Settings</em> window you can specify the d
 </p>
 <ul>
 <li class="level1"><div class="li">
- <strong>Base size (cm)</strong> - size of the nodes. It is 1.00cm by default.
+ <strong>Base size (cm)</strong> - size of the nodes. It is 1.00 by default.
 </div></li>
 <li class="level1"><div class="li">
  <strong>Stroke width (cm)</strong> - width of the node outlines. It is 0.10 by default
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Pivot size (cm)</strong> - size of the pivot marker of composed objects (e.g. pages and groups). It is 0.10 by default.
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Pivot stroke width (cm)</strong> - line width of the pivot marker. It is 0.02 by default
 </div></li>
 <li class="level1"><div class="li">
  <strong>Border color</strong> - color of the nodes outline. Default is black.
 </div></li>
 <li class="level1"><div class="li">
  <strong>Fill color</strong> - background color of the nodes. Default is white.
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Line spacing in multi-line text (ratio)</strong> - proportion of the vertical separation between the lines to the height of the largest characters. It is 0.30 by default.
 </div></li>
 <li class="level1"><div class="li">
  <strong>Show component labels</strong> - show or hide the textual labels associated with the nodes. The labels are visible by default. You can control the visibility of labels by clicking the corresponding small button in the top-left corner of the editor panel.
@@ -146,6 +187,21 @@ In <em>Common</em> section of the <em>Settings</em> window you can specify the d
  <strong>Name color</strong> - font color for the IDs of newly created nodes. The IDs are blue by default.
 </div></li>
 <li class="level1"><div class="li">
+ <strong>Minimal redraw interval (ms)</strong> - time interval between subsequent redraws of the editor panel. By default the editor is redrawn not more often than every 20ms.
+</div></li>
+</ul>
+
+
+</div>
+
+<h2 id="simulation_settings">Simulation settings</h2>
+<div class="level2">
+
+<p>
+<img src="preferences-common-simulation.png" class="mediacenter" title="Common comment preferences" alt="Common comment preferences" />
+</p>
+<ul>
+<li class="level1"><div class="li">
  <strong>Use enabled component foreground</strong> - highlight or not the outlines of enabled components, e.g. in simulation. The borders of enabled components are highlighted by default.
 </div></li>
 <li class="level1"><div class="li">
@@ -157,15 +213,12 @@ In <em>Common</em> section of the <em>Settings</em> window you can specify the d
 <li class="level1"><div class="li">
  <strong>Enabled component background</strong> - fill color of the enabled component. It is orange by default.
 </div></li>
-<li class="level1"><div class="li">
- <strong>Minimal redraw interval (ms)</strong> - time interval between subsequent redraws of the editor panel. By default the editor is redrawn not more often than every 20ms.
-</div></li>
 </ul>
 
 
 </div>
 
-<h2 class="sectionedit4" id="comment_settings">Comment settings</h2>
+<h2 id="comment_settings">Comment settings</h2>
 <div class="level2">
 
 <p>
@@ -194,20 +247,29 @@ In <em>Common</em> section of the <em>Settings</em> window you can specify the d
 
                     <!-- wikipage stop -->
                                     </div>
-
-                                            </div></div><!-- /content -->
+<!--
+                                    <div class="docInfo"><bdi>help/preferences-common.txt</bdi> · Last modified: 2015/05/22 17:40 by <bdi>danil</bdi></div>
+                -->
+                            </div></div><!-- /content -->
 
             <hr class="a11y" />
 
             <!-- PAGE ACTIONS -->
+<!--
             <div id="dokuwiki__pagetools">
+                            <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="preferences-common.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="preferences-common.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="preferences-common.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="preferences-common.html"  class="action export_pdf" rel="nofollow" title="Export to PDF"><span>Export to PDF</span></a></li><li><a href="preferences-common.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                </div>
                         </div>
+-->
         </div><!-- /wrapper -->
 
         
 <!-- ********** FOOTER ********** -->
 <div id="dokuwiki__footer"><div class="pad">
-    
+    <!--
     <div class="buttons">
                 <a href="http://www.dokuwiki.org/donate" title="Donate" ><img
             src="lib/tpl/dokuwiki-light-export/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
@@ -220,9 +282,12 @@ In <em>Common</em> section of the <em>Settings</em> window you can specify the d
         <a href="http://dokuwiki.org/" title="Driven by DokuWiki" ><img
             src="lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
     </div>
+-->
 
+<!--
     <div class="userInfo">
-            </div>
+        Logged in as:: danil    </div>
+-->
 </div></div><!-- /footer -->
 
     </div></div><!-- /site -->
