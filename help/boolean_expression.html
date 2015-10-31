@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/boolean_expression.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/boolean_expression"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/05/22 21:59//';var JSINFO = {"id":"help:boolean_expression","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/10/31 20:23//';var JSINFO = {"id":"help:boolean_expression","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:boolean_expression" /><input type="hidden" name="sectok" value="6126a5cfcaeda5d039046751d2a3018e" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:boolean_expression" /><input type="hidden" name="sectok" value="2e4a1dd97b32b38131c4fd84732d9cb3" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="boolean_expression.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="boolean_expression.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="boolean_expression.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -82,7 +82,20 @@
 <div class="level1">
 
 <p>
-The Boolean expressions are employed in <a href="cpog_plugin.html" class="wikilink1" title="help:cpog_plugin">Conditional Partial Order Graph plugin</a> to specify the graph conditions and in <a href="digital_circuit_plugin.html" class="wikilink1" title="help:digital_circuit_plugin">Digital Circuit plugin</a> to specify set/reset functions of circuit components. Workcraft recognises the following fairly standard syntax for the Boolean expressions:
+The Boolean expressions are employed in the following plugins:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <a href="cpog_plugin.html" class="wikilink1" title="help:cpog_plugin">Conditional Partial Order Graph</a> – to specify the graph conditions
+</div></li>
+<li class="level1"><div class="li">
+ <a href="digital_circuit_plugin.html" class="wikilink1" title="help:digital_circuit_plugin">Digital Circuit</a> – to specify set/reset functions of circuit components. 
+</div></li>
+</ul>
+
+
+<p>
+Workcraft recognises the following fairly standard syntax for the Boolean expressions:
 </p>
 <pre class="code">&lt;expression&gt; ::= &lt;term&gt; | &lt;term&gt; + &lt;expression&gt; | &lt;term&gt; ^ &lt;expression&gt; | &lt;expression&gt; =&gt; &lt;expression&gt;
 &lt;term&gt; ::= &lt;factor&gt;  | &lt;factor&gt; * &lt;term&gt;
@@ -132,7 +145,7 @@ Here are few examples of good Boolean expressions:
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/boolean_expression.txt</bdi> · Last modified: 2014/08/21 10:55 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/boolean_expression.txt</bdi> · Last modified: 2015/10/23 21:05 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

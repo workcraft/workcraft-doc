@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/preferences-common.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/preferences-common"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/08/03 14:56//';var JSINFO = {"id":"help:preferences-common","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/10/31 20:24//';var JSINFO = {"id":"help:preferences-common","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:preferences-common" /><input type="hidden" name="sectok" value="ea320407818f5ec5a34103cd649278b6" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:preferences-common" /><input type="hidden" name="sectok" value="324b94551b1ab5173c44351a2ebabcae" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="preferences-common.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="preferences-common.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="preferences-common.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -87,6 +87,7 @@
 <li class="level1"><div class="li"><a href="#visual_settings">Visual settings</a></div></li>
 <li class="level1"><div class="li"><a href="#simulation_settings">Simulation settings</a></div></li>
 <li class="level1"><div class="li"><a href="#comment_settings">Comment settings</a></div></li>
+<li class="level1"><div class="li"><a href="#debug_settings">Debug settings</a></div></li>
 </ul>
 </div>
 </div>
@@ -109,31 +110,28 @@ In <em>Common</em> section of the <em>Settings</em> window you can specify the d
 </p>
 <ul>
 <li class="level1"><div class="li">
- <strong>Background color</strong> - the color of the editor canvas. Default background is white.
+ <strong>Background color</strong> – the color of the editor canvas. Default background is white.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Show grid</strong> -  show or hide the adaptive grid in the editor panel. The grid is shown by default
+ <strong>Show grid</strong> – show or hide the adaptive grid in the editor panel. The grid is shown by default
 </div></li>
 <li class="level1"><div class="li">
- <strong>Show rulers</strong> - show or hide the rulers on left and top edges of the editor panel. The rulers are shown by default.
+ <strong>Show rulers</strong> – show or hide the rulers on left and top edges of the editor panel. The rulers are shown by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Icon width (pixels, 8-256)</strong> - size of the pictograms for tool buttons. Icons are 24 pixels by default.
+ <strong>Icon width (pixels, 8-256)</strong> – size of the pictograms for tool buttons. Icons are 24 pixels by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Number of recent files (0-99)</strong> - number of recently opened files to show under <em>File→Open recent</em> menu. By default is 10 recent files are shown.
+ <strong>Number of recent files (0-99)</strong> – number of recently opened files to show under <em>File→Open recent</em> menu. By default is 10 recent files are shown.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Model title style</strong> - display style for the work name in the editor panel title. Three options are possible: <em>minimal: Title</em>, <em>short: Title [MN]</em>, and <em>long: Title - Model Name</em>. Short display style is used by default.
+ <strong>Model title style</strong> – display style for the work name in the editor panel title. Three options are possible: <em>minimal: Title</em>, <em>short: Title [MN]</em>, and <em>long: Title - Model Name</em>. Short display style is used by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Names shown with absolute path</strong> - show the full hierarchical name of nodes. By default this option is switched off.
+ <strong>Names shown with absolute path</strong> – show the full hierarchical name of nodes. By default this option is switched off.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Debug clipboard</strong> - switch on or off the propagation of copied part of the graph from the local clipboard into the system clipboard as an XML text. The XML represents the mathematical and visual aspects of the copied sub-graph. By default this feature is switched off.
-</div></li>
-<li class="level1"><div class="li">
- <strong>Open non-visual models (imported or transformed)</strong> - automatically open and layout non-visual models (e.g. imported from .g file or the results of transformations with external tools) in the editor. By default this feature is switched on.
+ <strong>Open non-visual models (imported or transformed)</strong> – automatically open and layout non-visual models (e.g. imported from .g file or the results of transformations with external tools) in the editor. By default this feature is switched on.
 </div></li>
 </ul>
 
@@ -148,46 +146,46 @@ In <em>Common</em> section of the <em>Settings</em> window you can specify the d
 </p>
 <ul>
 <li class="level1"><div class="li">
- <strong>Base size (cm)</strong> - size of the nodes. It is 1.00 by default.
+ <strong>Base size (cm)</strong> – size of the nodes. It is 1.00 by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Stroke width (cm)</strong> - width of the node outlines. It is 0.10 by default
+ <strong>Stroke width (cm)</strong> – width of the node outlines. It is 0.10 by default
 </div></li>
 <li class="level1"><div class="li">
- <strong>Pivot size (cm)</strong> - size of the pivot marker of composed objects (e.g. pages and groups). It is 0.10 by default.
+ <strong>Pivot size (cm)</strong> – size of the pivot marker of composed objects (e.g. pages and groups). It is 0.10 by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Pivot stroke width (cm)</strong> - line width of the pivot marker. It is 0.02 by default
+ <strong>Pivot stroke width (cm)</strong> – line width of the pivot marker. It is 0.02 by default
 </div></li>
 <li class="level1"><div class="li">
- <strong>Border color</strong> - color of the nodes outline. Default is black.
+ <strong>Border color</strong> – color of the nodes outline. Default is black.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Fill color</strong> - background color of the nodes. Default is white.
+ <strong>Fill color</strong> – background color of the nodes. Default is white.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Line spacing in multi-line text (ratio)</strong> - proportion of the vertical separation between the lines to the height of the largest characters. It is 0.30 by default.
+ <strong>Line spacing in multi-line text (ratio)</strong> – proportion of the vertical separation between the lines to the height of the largest characters. It is 0.30 by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Show component labels</strong> - show or hide the textual labels associated with the nodes. The labels are visible by default. You can control the visibility of labels by clicking the corresponding small button in the top-left corner of the editor panel.
+ <strong>Show component labels</strong> – show or hide the textual labels associated with the nodes. The labels are visible by default. You can control the visibility of labels by clicking the corresponding small button in the top-left corner of the editor panel.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Label position</strong> - predefined label position for newly created nodes. The labels are positioned above the nodes by default.
+ <strong>Label position</strong> – predefined label position for newly created nodes. The labels are positioned above the nodes by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Label color</strong> - font color for the labels of newly created nodes. The labels are black by default.
+ <strong>Label color</strong> – font color for the labels of newly created nodes. The labels are black by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Show component names</strong> - show or hide the unique IDs of the nodes. The IDs are visible by default. You can control the visibility of node IDs by clicking the corresponding small button in the top-left corner of the editor panel.
+ <strong>Show component names</strong> – show or hide the unique IDs of the nodes. The IDs are visible by default. You can control the visibility of node IDs by clicking the corresponding small button in the top-left corner of the editor panel.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Name position</strong> - predefined position for IDs of newly created nodes. The IDs are positioned below the nodes by default.
+ <strong>Name position</strong> – predefined position for IDs of newly created nodes. The IDs are positioned below the nodes by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Name color</strong> - font color for the IDs of newly created nodes. The IDs are blue by default.
+ <strong>Name color</strong> – font color for the IDs of newly created nodes. The IDs are blue by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Minimal redraw interval (ms)</strong> - time interval between subsequent redraws of the editor panel. By default the editor is redrawn not more often than every 20ms.
+ <strong>Minimal redraw interval (ms)</strong> – time interval between subsequent redraws of the editor panel. By default the editor is redrawn not more often than every 20ms.
 </div></li>
 </ul>
 
@@ -202,16 +200,16 @@ In <em>Common</em> section of the <em>Settings</em> window you can specify the d
 </p>
 <ul>
 <li class="level1"><div class="li">
- <strong>Use enabled component foreground</strong> - highlight or not the outlines of enabled components, e.g. in simulation. The borders of enabled components are highlighted by default.
+ <strong>Use enabled component foreground</strong> – highlight or not the outlines of enabled components, e.g. in simulation. The borders of enabled components are highlighted by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Enabled component foreground</strong> - border color of the enabled component. It is orange by default.
+ <strong>Enabled component foreground</strong> – border color of the enabled component. It is orange by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Use enabled component background</strong> - highlight or not the background of enabled components, e.g. in simulation. The background of enabled components is highlighted by default.
+ <strong>Use enabled component background</strong> – highlight or not the background of enabled components, e.g. in simulation. The background of enabled components is highlighted by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Enabled component background</strong> - fill color of the enabled component. It is orange by default.
+ <strong>Enabled component background</strong> – fill color of the enabled component. It is orange by default.
 </div></li>
 </ul>
 
@@ -226,19 +224,40 @@ In <em>Common</em> section of the <em>Settings</em> window you can specify the d
 </p>
 <ul>
 <li class="level1"><div class="li">
- <strong>Base size (cm)</strong> - size of the empty comment field when first inserted in the graph editor. It is 1.00cm by default.
+ <strong>Base size (cm)</strong> – size of the empty comment field when first inserted in the graph editor. It is 1.00cm by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Stroke width (cm)</strong> - width of the dashed line around the textual note. It is 0.02cm by default.
+ <strong>Stroke width (cm)</strong> – width of the dashed line around the textual note. It is 0.02cm by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Text color</strong> - color of the textual note font. It is black by default.
+ <strong>Text color</strong> – color of the textual note font. It is black by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Border color</strong> - color of the dashed line around the textual note. It is grey by default.
+ <strong>Border color</strong> – color of the dashed line around the textual note. It is grey by default.
 </div></li>
 <li class="level1"><div class="li">
- <strong>Fill color</strong> - background color of the textual note. It is a tinge of light yellow by default.
+ <strong>Fill color</strong> – background color of the textual note. It is a tinge of light yellow by default.
+</div></li>
+</ul>
+
+
+</div>
+
+<h2 id="debug_settings">Debug settings</h2>
+<div class="level2">
+
+<p>
+<img src="preferences-common-debug.png" class="mediacenter" title="Common debug preferences" alt="Common debug preferences" />
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <strong>On modification copy model to clipboard</strong> – switch on or off the propagation of copied part of the graph from the local clipboard into the system clipboard as an XML text. The XML represents the mathematical and visual aspects of the copied sub-graph. By default this feature is switched off.
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Keep temporary files till application close</strong> – if this option is switched on, then all the temporary files for external tools are kept for analysis until Workcraft is closed (they are still removed on exit).
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Verbose log on file import</strong> – enable or disable the print out of detailed information about import from external file formats (e.g. Verilog and GenLib files) into the <em>Output</em> tab.
 </div></li>
 </ul>
 
@@ -248,7 +267,7 @@ In <em>Common</em> section of the <em>Settings</em> window you can specify the d
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/preferences-common.txt</bdi> · Last modified: 2015/05/22 17:40 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/preferences-common.txt</bdi> · Last modified: 2015/10/14 09:47 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

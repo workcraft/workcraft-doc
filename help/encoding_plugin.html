@@ -5,7 +5,7 @@
     <title>Workcraft - help:encoding_plugin</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="noindex,nofollow"/>
+<meta name="robots" content="index,follow"/>
 <meta name="keywords" content="help,encoding plugin"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="encoding_plugin.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/encoding_plugin.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/encoding_plugin"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/08/03 14:55//';var JSINFO = {"id":"help:encoding_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/10/31 20:24//';var JSINFO = {"id":"help:encoding_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:encoding_plugin" /><input type="hidden" name="sectok" value="549f1e649fc618e6f09bf4138e40a4d9" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:encoding_plugin" /><input type="hidden" name="sectok" value="e3711f00d0339be20d9296e6cbce54a6" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="encoding_plugin.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="encoding_plugin.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="encoding_plugin.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -152,7 +152,7 @@ In order to use one of the technique described in this tutorial, the user must m
  Target: which target the Boolean equations will be optimised for. In the case “Microcontroller” is selected, the solution which minimises the final controller will be chosen. Whereas, if “CPOG” is selected the encoding that minimise each Boolean formula associated to all the nodes and arcs of the compositional graph will be picked.
 </div></li>
 <li class="level1"><div class="li">
- Use ABC for logic synthesis: it allows the usage of ABC tool in order to map all the final equations with a specified technology library. This file should be in the genlib format, and must be addressed in the option of ScEnco (Edit → Preferences… → External tools → SCENCO → Gate library…). ABC is not included inside Workcraft&#039;s package. It should be downloaded and installed by the official website mentioned above.
+ Use ABC for logic synthesis: it allows the usage of ABC tool in order to map all the final equations with a specified technology library. This file should be in the <strong>genlib format</strong><sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup>, and must be addressed in the option of ScEnco (Edit → Preferences… → External tools → SCENCO → Gate library…). ABC is not included inside Workcraft&#039;s package. It should be downloaded and installed by the official website mentioned above.
 </div></li>
 <li class="level1"><div class="li">
  Verbose: all the output of ScEnco will be entirely displayed at the bottom of Workcraft.
@@ -205,7 +205,7 @@ Furthermore, you can control which SAT-solver is used for optimal encoding by na
 </p>
 <ul>
 <li class="level1"><div class="li">
- Paths to supported SAT solvers; currently <strong>minisat</strong><sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup> and <strong>clasp</strong><sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup> are supported. One of them needs to be installed.
+ Paths to supported SAT solvers; currently <strong>minisat</strong><sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup> and <strong>clasp</strong><sup><a href="#fn__3" id="fnt__3" class="fn_top">3)</a></sup> are supported. One of them needs to be installed.
 </div></li>
 <li class="level1"><div class="li">
  The preferred SAT solver.
@@ -242,15 +242,17 @@ The sequential encoding produces a CPOG with trivially encoded partial orders: t
 </div>
 <div class="footnotes">
 <div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
-Can be downloaded from <a href="http://minisat.se/" class="urlextern" title="http://minisat.se/"  rel="nofollow">http://minisat.se/</a></div>
+Described in <a href="http://www.eecs.berkeley.edu/~alanmi/publications/other/SIS_paper_genlib.pdf" class="urlextern" title="http://www.eecs.berkeley.edu/~alanmi/publications/other/SIS_paper_genlib.pdf"  rel="nofollow">http://www.eecs.berkeley.edu/~alanmi/publications/other/SIS_paper_genlib.pdf</a></div>
 <div class="fn"><sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
+Can be downloaded from <a href="http://minisat.se/" class="urlextern" title="http://minisat.se/"  rel="nofollow">http://minisat.se/</a></div>
+<div class="fn"><sup><a href="#fnt__3" id="fn__3" class="fn_bot">3)</a></sup> 
 Can be downloaded from <a href="http://www.cs.uni-potsdam.de/clasp/" class="urlextern" title="http://www.cs.uni-potsdam.de/clasp/"  rel="nofollow">http://www.cs.uni-potsdam.de/clasp/</a></div>
 </div>
 
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/encoding_plugin.txt</bdi> · Last modified: 2015/08/03 14:48 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/encoding_plugin.txt</bdi> · Last modified: 2015/08/04 13:52 by <bdi>alex_10</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

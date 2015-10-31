@@ -5,7 +5,7 @@
     <title>Workcraft - help:stg_plugin</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="noindex,nofollow"/>
+<meta name="robots" content="index,follow"/>
 <meta name="keywords" content="help,stg plugin"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="stg_plugin.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/stg_plugin.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/stg_plugin"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/08/03 15:11//';var JSINFO = {"id":"help:stg_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/10/31 20:25//';var JSINFO = {"id":"help:stg_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:stg_plugin" /><input type="hidden" name="sectok" value="1880e9b914d6e79807062764bde2af94" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:stg_plugin" /><input type="hidden" name="sectok" value="dcc46c4e4f76daf29a5f78f46acf747a" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="stg_plugin.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="stg_plugin.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="stg_plugin.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -86,7 +86,7 @@
 <li class="level1"><div class="li"><a href="#capturing">Capturing</a></div>
 <ul class="toc">
 <li class="level2"><div class="li"><a href="#node_generator_tools">Node generator tools</a></div></li>
-<li class="level2"><div class="li"><a href="#connection_tool">Connection tool</a></div></li>
+<li class="level2"><div class="li"><a href="#connection_tools">Connection tools</a></div></li>
 </ul>
 </li>
 <li class="level1"><div class="li"><a href="#editing">Editing</a></div></li>
@@ -136,12 +136,12 @@ Creation of places is similar to that of Petri net plugin, by using the place ge
 </p>
 <ul>
 <li class="level1"><div class="li">
- <img src="editor_tools-signal_transition.png" class="media" title="[T] Signal Transition" alt="[T] Signal Transition" />- <strong>signal transition generator</strong> <br/>
-- a tool for creating signal transitions with their rising and falling phases (denoted by <code>+</code> and <code>-</code> respectively after the signal name). This tool can also be activated by pressing <kbd>T</kbd>. 
+ <img src="editor_tools-signal_transition.png" class="media" title="[T] Signal Transition" alt="[T] Signal Transition" /> – <strong>signal transition generator</strong> <br/>
+– a tool for creating signal transitions with their rising and falling phases (denoted by <code>+</code> and <code>-</code> respectively after the signal name). This tool can also be activated by pressing <kbd>T</kbd>. 
 </div></li>
 <li class="level1"><div class="li">
- <img src="editor_tools-transition.png" class="media" title="[D] Dummy Transition" alt="[D] Dummy Transition" />- <strong>dummy transition generator</strong> <br/>
-- a tool for creating dummy transitions that do not belong to any signal and do not have rising or falling phase, but rather are used to simplify the structure of the STG. This tool can also be activated by pressing <kbd>D</kbd>.
+ <img src="editor_tools-transition.png" class="media" title="[D] Dummy Transition" alt="[D] Dummy Transition" /> – <strong>dummy transition generator</strong> <br/>
+– a tool for creating dummy transitions that do not belong to any signal and do not have rising or falling phase, but rather are used to simplify the structure of the STG. This tool can also be activated by pressing <kbd>D</kbd>.
 </div></li>
 </ul>
 
@@ -194,11 +194,21 @@ The STG transitions can be easily recognised by their color. By default the inpu
 
 </div>
 
-<h3 id="connection_tool">Connection tool</h3>
+<h3 id="connection_tools">Connection tools</h3>
 <div class="level3">
 
 <p>
-When the connection tool <img src="editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" /> is active you can connect places and transitions with arcs by first click the source node and then the destination node. This will create a straight line connection between the source and the destination nodes. You can also create a polyline connection by clicking the editor panel in the positions of <em>intermediate</em> points, before clicking the destination node.
+There are two types of arcs in STG plugin:
+</p>
+<ul>
+<li class="level1"><div class="li"> <em>producing/consuming arcs</em> – these can be created with the tool for directed connections <img src="editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" />;</div>
+</li>
+<li class="level1"><div class="li"> <em>read-arcs</em> – these can be created with the tool for undirected connections <img src="editor_tools-connect_undirected.png" class="media" title="[R] Read-arc" alt="[R] Read-arc" />. </div>
+</li>
+</ul>
+
+<p>
+When either of the connection tools is active you can connect places and transitions by first clicking the source node and then the destination node. This will create a straight line connection between the source and the destination nodes. You can also create a polyline connection by clicking the editor panel in the positions of <em>intermediate</em> points, before clicking the destination node.
 </p>
 
 <p>
@@ -206,11 +216,19 @@ If you hold <kbd>Ctrl</kbd> then the destination node becomes a source for the n
 </p>
 
 <p>
-Note that places can only be connected to transitions. If you attempt to connect two places, then a warning will be issued that connections is not valid. However, unlike Petri nets, the STG transitions can be connected to each other without an explicit place in between. This <em>shorthand</em> notation is used when a place has a single transition in its preset and a single transition in its postset. For simplicity such an implicit place is hidden and the arc is drawn directly between two transitions.
+Note that STG places cannot be connected to each other – if you attempt to connect two places, then a warning will be issued that connections is not valid. However, unlike Petri nets, the STG transitions can be connected to each other without an explicit place in between. This <em>shorthand</em> notation is used when a place has a single transition in its preset and a single transition in its postset. For simplicity such an implicit place is hidden and a directed arc is drawn directly between two transitions.
 </p>
 
 <p>
-<img src="stg-invalid_connection.png" class="mediacenter" title="Connecting STG nodes" alt="Connecting STG nodes" />
+<img src="stg-invalid_connection.png" class="mediacenter" title="Connecting STG nodes with producing/consuming arcs" alt="Connecting STG nodes with producing/consuming arcs" />
+</p>
+
+<p>
+Read-arcs can only connect places with transitions – if you attempt to connect two places or two transitions with a read-arc, then a warning about invalid connection will be issued. The semantics of a read-arc is that transition <em>reads</em> the marking of the place without consuming its tokens. Note the difference to a pair of consuming and producing arcs between the places and the transition (the former <em>takes</em> the token, and the latter <em>puts</em> it back into the place). 
+</p>
+
+<p>
+<img src="stg-invalid_read_arc.png" class="mediacenter" title="Connecting STG nodes with read-arcs" alt="Connecting STG nodes with read-arcs" />
 </p>
 
 </div>
@@ -240,10 +258,6 @@ The attributes of an implicit place, e.g. the number of tokens or its capacity, 
 </p>
 
 <p>
-<img src="stg-editing.png" class="mediacenter" title="Editing Petri net nodes" alt="Editing Petri net nodes" />
-</p>
-
-<p>
 Similar to all the other models, textual comments can be created by activating the <img src="editor_tools-text_note.png" class="media" title="[N] Text Note" alt="[N] Text Note" /> tool and clicking the editor panel in the position you want to put the text. Double-click on the note box to edit its text label in-place or do it through the property editor panel when the note is selected.
 </p>
 
@@ -270,7 +284,7 @@ Note that the simulation controls are extended with the signal state table. The 
 <div class="level2">
 
 <p>
-A number of STG properties can be verified via <em>Verification</em> menu.
+A number of STG properties can be verified via <em>Verification</em> menu:
 </p>
 <ul>
 <li class="level1"><div class="li">
@@ -289,10 +303,10 @@ A number of STG properties can be verified via <em>Verification</em> menu.
  <em>Output persistence (without dummies) [MPSat]</em> - verify the output signals of the STG are persistent (once enabled they do not get disabled until fired).
 </div></li>
 <li class="level1"><div class="li">
- <em>Unique State Coding [MPSat]</em> - verify the STG has Unique State Coding (USC).
+ <em>Conformation (without dummies) [MPSat]…</em> - check if this STG conforms to its environment STG (to be chosen in the file selection window).
 </div></li>
 <li class="level1"><div class="li">
- <em>Conformation (without dummies) [MPSat]…</em> - check if this STG conforms to its environment STG (to be chosen in the file selection window).
+ <em>Unique State Coding [MPSat]</em> - verify the STG has Unique State Coding (USC).
 </div></li>
 <li class="level1"><div class="li">
  <em>Custom properties [MPSat]…</em> - custom properties can be verified through formulation a reachability analysis problem using <a href="reach.html" class="wikilink1" title="help:reach">Reach language</a> in a specialised MPSat configuration window.
@@ -301,12 +315,33 @@ A number of STG properties can be verified via <em>Verification</em> menu.
 
 
 <p>
-If the verified property is not satisfied, then a trace (or a family of traces) leading to the violation is reported. The trace can be passed to the simulation tool (by clicking the <em>Play</em> button) for playback and analysis of the reasons leading to the violation.
+ Most of these are reachability properties, i.e. verify the if a “violating” state is reachable, In this case the the verified property is not satisfied and a trace (or a family of traces) leading to the violation is reported. The trace can be passed to the simulation tool (by clicking the <em>Play</em> button) for playback and analysis of the reasons leading to the violation.
 </p>
 
 <p>
 <img src="stg-verification.png" class="mediacenter" title="Verification for deadlock" alt="Verification for deadlock" />
 </p>
+
+<p>
+Checking for encoding conflicts (<em>Complete State Coding [MPSat]</em> and <em>Unique State Coding [MPSat]</em>) also provides the interface for visualisation of the <em>cores</em> of the encoding conflicts. This feature is demonstrated below for an STG of an A2D controller.
+</p>
+
+<p>
+<img src="stg-verification-csc_cores.png" class="mediacenter" title="Verification Complete State Coding (CSC)" alt="Verification Complete State Coding (CSC)" />
+</p>
+
+<p>
+A user can choose between two types of visualisation in the <em>Tool controls</em> panel:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <strong>Show selected core</strong> – individual cores in a selected sets of cores are highlighted in distinct colours (see example on the right). This feature can be useful for detailed analysis of the encoding conflicts to make an informed decision on how to manually resolve them.
+</div></li>
+<li class="level1"><div class="li">
+ <strong>Show core density map</strong> – the darker shades denote the higher density of the overlapping cores (example on the left). Usually it is advantageous to insert new signals in the areas where most cores overlap, thus eliminating more conflicts by a single signal. Note that the number of density map levels can be configured in the <em>Maximum number of core density map levels</em> property of <em>Signal Transition Graph</em> model under <em>Edit→Preferences…</em> menu (5 levels by default).
+</div></li>
+</ul>
+
 
 </div>
 
@@ -358,7 +393,7 @@ These synthesis options are available under the <em>Synthesis</em> menu:
 
 
 <p>
-Here is an example of synthesising a basic specification of an inverter with <em>Petrify</em> (equations on top of the Output window) and with <em>MPSat</em> (equation at the bottom of the Output window).
+Here is an example of complex gate synthesis of our example by <em>Petrify</em>. The last equation in the <em>Output</em> window suggests that this STG specification can be implemented by a wire (or a buffer).
 </p>
 
 <p>
@@ -370,7 +405,7 @@ Here is an example of synthesising a basic specification of an inverter with <em
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/stg_plugin.txt</bdi> · Last modified: 2015/08/03 15:07 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/stg_plugin.txt</bdi> · Last modified: 2015/10/15 09:57 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

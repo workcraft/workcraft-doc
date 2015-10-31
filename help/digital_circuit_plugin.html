@@ -5,7 +5,7 @@
     <title>Workcraft - help:digital_circuit_plugin</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="noindex,nofollow"/>
+<meta name="robots" content="index,follow"/>
 <meta name="keywords" content="help,digital circuit plugin"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="digital_circuit_plugin.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/digital_circuit_plugin.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/digital_circuit_plugin"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/08/03 15:10//';var JSINFO = {"id":"help:digital_circuit_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/10/31 20:23//';var JSINFO = {"id":"help:digital_circuit_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:digital_circuit_plugin" /><input type="hidden" name="sectok" value="3342faff170cb229d0e911f744b85490" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:digital_circuit_plugin" /><input type="hidden" name="sectok" value="4e3b22a2ba5608c42494e62ffb0e0d37" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="digital_circuit_plugin.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="digital_circuit_plugin.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="digital_circuit_plugin.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -128,7 +128,7 @@ In order to create a circuit model choose <em>File→Create work…</em> menu it
 <div class="level3">
 
 <p>
-The main building blocks of a digital circuit are functional components that can be created with the function generator <img src="editor_tools-function.png" class="media" title="[F] Function" alt="[F] Function" />. Initially a generated component has only a single output pin with neither set nor reset functions assigned. 
+The main building blocks of a digital circuit are functional components that can be created with the function generator <img src="editor_tools-function.png" class="media" title="[F] Function" alt="[F] Function" />. Initially a generated component has only a single output pin with neither set nor reset functions assigned. The set/reset functions should be specified by selecting the output pin and entering the corresponding <a href="boolean_expression.html" class="wikilink1" title="help:boolean_expression">Boolean expressions</a> in the <em>Set Function</em> and <em>Reset Function</em> entries of the property editor. 
 </p>
 
 <p>
@@ -136,17 +136,13 @@ The main building blocks of a digital circuit are functional components that can
 </p>
 
 <p>
-The set/reset functions should be specified by selecting the output pin and entering the corresponding <a href="boolean_expression.html" class="wikilink1" title="help:boolean_expression">Boolean expressions</a> in the <em>Set Function</em> and <em>Reset Function</em> entries of the property editor. New pins can be added through the <em>Add function</em> item of the popup menu that is accessible by right-clicking the component. 
+New pins can be added through the <em>Add output (EAST)</em> and <em>Add input (WEST)</em> items of the <em>Function component</em> popup menu (accessible by right-clicking the component). The pin name and type can be changed in the property editor – see <em>Name</em> and <em>I/O type</em> properties respectively.
 </p>
-
+<div class="wrap_info plugin_wrap">
 <p>
-<img src="circuit-function-many_outputs.png" class="mediacenter" title="Generating a new function" alt="Generating a new function" />
+Note that explicitly creating input pins is usually not required. When a <em>Set function</em> or <em>Reset function</em> is entered for an output pin, the missing input pins are automatically created for all the literals in the <a href="boolean_expression.html" class="wikilink1" title="help:boolean_expression">Boolean expressions</a>. Note that the input pins do not disappear if they become unneeded after modification of the set/reset functions. You may need to manually remove those pins by first selecting them and then pressing <kbd>Delete</kbd> button.
 </p>
-
-<p>
-By default the created pins are of <em>Output</em> type. This be changed to <em>Input</em> in the property editor - see <em>I/O type</em> entry. However, explicitly creating input pins is usually not required. When a set or reset function is entered for an output pin, the input pins are automatically created for all the literals in the <a href="boolean_expression.html" class="wikilink1" title="help:boolean_expression">Boolean expressions</a>. Note that the input pins do not disappear if they become unneeded after modification of the set/reset functions. You may need to manually remove those pins by first selecting them and then pressing <kbd>Delete</kbd> button.
-</p>
-
+</div>
 <p>
 A component visualisation is defined by its render type selected in the property editor, as follows:
 </p>
@@ -173,7 +169,7 @@ A component visualisation is defined by its render type selected in the property
 <div class="level3">
 
 <p>
-Other building blocks of a digital circuit are its primary input and output ports. These are used to interact with the circuit environment. The ports are created with the port generator <img src="editor_tools-port.png" class="media" title="[P] Input/Output port" alt="[P] Input/Output port" /> - just activate this editor tool and click the editor panel in a position you want to place the port. By default an output port is created, however, if you hold <kbd>Shift</kbd> while clicking the editor panel then an input port is created. Note that you can change the of existing port <em>I/O type</em> in the property editor too.
+Other building blocks of a digital circuit are its primary input and output ports. These are used to interact with the circuit environment. The ports are created with the port generator <img src="editor_tools-port.png" class="media" title="[P] Input/Output port" alt="[P] Input/Output port" /> – just activate this editor tool and click the editor panel in a position you want to place the port. By default an output port is created, however, if you hold <kbd>Shift</kbd> while clicking the editor panel then an input port is created. Note that you can change the of existing port <em>I/O type</em> in the property editor too.
 </p>
 
 <p>
@@ -194,7 +190,7 @@ When the connection tool <img src="editor_tools-connect.png" class="media" title
 </p>
 
 <p>
-In order to reduce the number of arcs going from the same output pin (or an input port) and simplify the layout of the connection arc, one can “fork” the wires - just start a connection from an existing wire and a joint point will be automatically created. New connections can be also started from the existing joint points.
+In order to reduce the number of arcs going from the same output pin (or an input port) and simplify the layout of the connection arc, one can “fork” the wires – just start a connection from an existing wire and a joint point will be automatically created. New connections can be also started from the existing joint points.
 </p>
 
 <p>
@@ -207,7 +203,7 @@ In order to reduce the number of arcs going from the same output pin (or an inpu
 <div class="level2">
 
 <p>
-For editing the model activate the selection tool <img src="editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />. All the standard editing features (select, drag-and-drop, delete, copy, undo, group, etc.) work the same - see generic help on <a href="tool_controls_panel.html#selection_controls" class="wikilink1" title="help:tool_controls_panel">Selection controls</a> and <a href="property_editor_panel.html" class="wikilink1" title="help:property_editor_panel">Property editor</a> for details. 
+For editing the model activate the selection tool <img src="editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />. All the standard editing features (select, drag-and-drop, delete, copy, undo, group, etc.) work the same – see generic help on <a href="tool_controls_panel.html#selection_controls" class="wikilink1" title="help:tool_controls_panel">Selection controls</a> and <a href="property_editor_panel.html" class="wikilink1" title="help:property_editor_panel">Property editor</a> for details. 
 </p>
 
 <p>
@@ -221,6 +217,10 @@ Similar to all the other models, textual comments can be created by activating t
 
 <p>
 For simulation of a Digital Circuit model activate the simulation tool <img src="editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" />. The enabled pins and ports are highlighted and can be activated by clicking them. The simulation tool controls provide the means for analysis and navigation through the simulation trace, see generic help on <a href="tool_controls_panel.html#simulation_controls" class="wikilink1" title="help:tool_controls_panel">Simulation controls</a> for details.
+</p>
+
+<p>
+<img src="circuit-simulation.png" class="mediacenter" title="Simulation" alt="Simulation" />
 </p>
 
 <p>
@@ -241,16 +241,16 @@ When a verification task is issued via the <em>Verification</em> menu, the circu
 </p>
 <ul>
 <li class="level1"><div class="li">
- <em>Conformation [MPSat]</em> - verify if the circuit conforms to the environment   specification.
+ <em>Conformation [MPSat]</em> – verify if the circuit conforms to the environment   specification.
 </div></li>
 <li class="level1"><div class="li">
- <em>Deadlock [MPSat]</em> - verify if the circuit is deadlock-free.
+ <em>Deadlock [MPSat]</em> – verify if the circuit is deadlock-free.
 </div></li>
 <li class="level1"><div class="li">
- <em>Hazard [MPSat]</em> - verify if the circuit is hazard-free.
+ <em>Hazard [MPSat]</em> – verify if the circuit is hazard-free.
 </div></li>
 <li class="level1"><div class="li">
- <em>Conformation, deadlock and hazard (reuse unfolding) [MPSat]</em> - verify if the circuit conforms to the environment specification and is free of deadlocks and hazards under the given environment.
+ <em>Conformation, deadlock and hazard (reuse unfolding) [MPSat]</em> – verify if the circuit conforms to the environment specification and is free of deadlocks and hazards under the given environment.
 </div></li>
 </ul>
 
@@ -260,7 +260,7 @@ When a verification task is issued via the <em>Verification</em> menu, the circu
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/digital_circuit_plugin.txt</bdi> · Last modified: 2015/08/03 15:07 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/digital_circuit_plugin.txt</bdi> · Last modified: 2015/10/14 14:50 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 
