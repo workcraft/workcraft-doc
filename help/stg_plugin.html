@@ -5,7 +5,7 @@
     <title>Workcraft - help:stg_plugin</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="help,stg plugin"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="stg_plugin.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/stg_plugin.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/stg_plugin"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/10/31 20:25//';var JSINFO = {"id":"help:stg_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/11/02 11:11//';var JSINFO = {"id":"help:stg_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:stg_plugin" /><input type="hidden" name="sectok" value="dcc46c4e4f76daf29a5f78f46acf747a" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:stg_plugin" /><input type="hidden" name="sectok" value="a97989eb66de8627fbb84e04f8a5aad1" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="stg_plugin.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="stg_plugin.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="stg_plugin.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -393,11 +393,15 @@ These synthesis options are available under the <em>Synthesis</em> menu:
 
 
 <p>
-Here is an example of complex gate synthesis of our example by <em>Petrify</em>. The last equation in the <em>Output</em> window suggests that this STG specification can be implemented by a wire (or a buffer).
+Here is an example of complex gate synthesis of our example by <em>Petrify</em>. The synthesis result in Verilog format are reported in the <em>Output</em> tab. By default this Verilog netlist is automatically converted into a <em>Digital Circuit</em> model. This behaviour can be controlled by <em>Import synthesis result</em> option of the Digital Circuit settings under <em>Edit→Preferences…</em> menu.
 </p>
 
 <p>
 <img src="stg-synthesis.png" class="mediacenter" title="Synthesis of the STG specification" alt="Synthesis of the STG specification" />
+</p>
+
+<p>
+In case of this example the complex gate implementation is just a buffer between the input <span style='color:red; '>in</span> and the output <span style='color:blue; '>out</span> pins. 
 </p>
 
 </div>
@@ -405,7 +409,7 @@ Here is an example of complex gate synthesis of our example by <em>Petrify</em>.
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/stg_plugin.txt</bdi> · Last modified: 2015/10/15 09:57 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/stg_plugin.txt</bdi> · Last modified: 2015/11/02 11:08 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 
