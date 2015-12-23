@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/phage_lambda/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/phage_lambda/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:phage_lambda';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/10/31 20:32//';var JSINFO = {"id":"tutorial:modelling:phage_lambda:start","namespace":"tutorial:modelling:phage_lambda","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:phage_lambda';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/12/23 22:41//';var JSINFO = {"id":"tutorial:modelling:phage_lambda:start","namespace":"tutorial:modelling:phage_lambda","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:phage_lambda:start" /><input type="hidden" name="sectok" value="edbd9625e11e7afafcafee7047eedd3f" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:phage_lambda:start" /><input type="hidden" name="sectok" value="88a7e64295357978f67dcbbc0411fd0d" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -131,7 +131,7 @@ Integration of the λ DNA into the host DNA requires the presence of <em>integra
 </p>
 
 <p>
-Unfortunately, asynchronous Boolean networks tend to have too much behaviour, not all of which is realisable in practice. Their behaviour also tends to have many non-converging choices when selecting the next state. In reality, many such choices are resolved statically, either by assuming that the environment of the biological system is slow (i.e. the system always has enough time to react to its changes), or by relative speeds of chemical reactions; that is, the behaviour in fact has much fewer choices than such models suggest. (This may explain why synchronous networks, which never have any choices, were often favoured over asynchronous ones, in spite of synchronous updates being biologically unrealistic.)
+Unfortunately, asynchronous Boolean networks tend to have too much behaviour, not all of which is realisable in practice. Their behaviour also tends to have many non-converging choices when selecting the next state. In reality, many such choices are resolved statically, either by assuming that the environment of the biological system is slow (i.e. the system always has enough time to react to changes in the environment), or by relative speeds of chemical reactions; that is, the behaviour in fact has much fewer choices than such models suggest. (This may explain why synchronous networks, which never have any choices, were often favoured over asynchronous ones, in spite of synchronous updates being biologically unrealistic.)
 </p>
 
 <p>
@@ -143,7 +143,7 @@ To address this problem, one can consider an asynchronous Boolean network in the
 </p>
 
 <p>
-Download this model: <span class="wrap_download "><a href="circuit-lambda.work" class="media mediafile mf_work" title="tutorial:modelling:phage_lambda:circuit-lambda.work (3.5 KB)">circuit-lambda.work</a> (3.47 KiB, <acronym title="Modified: 2015-05-22 16:45.32">5M ago</acronym>)</span>.
+Download this model: <span class="wrap_download "><a href="circuit-lambda.work" class="media mediafile mf_work" title="tutorial:modelling:phage_lambda:circuit-lambda.work (3.5 KB)">circuit-lambda.work</a> (3.47 KiB, <acronym title="Modified: 2015-05-22 16:45.32">7M ago</acronym>)</span>.
 </p>
 
 </div>
@@ -152,7 +152,7 @@ Download this model: <span class="wrap_download "><a href="circuit-lambda.work" 
 <div class="level2">
 
 <p>
-One can automatically convert this circuit to an STG using <em>Tools→Conversion→Signal Transition Graph</em>:
+One can automatically convert this circuit to an STG using <em>Conversion→Signal Transition Graph</em>:
 </p>
 
 <p>
@@ -218,7 +218,7 @@ These violations of output-persistency indicate the areas of the STG which requi
 </p>
 
 <p>
-For example, consider the first violation of output-persistency: <code><span style='color:green; '>Xis+</span></code> can be disabled by <code><span style='color:red; '>CI+</span></code>. By adding a pair of arcs from <code><span style='color:red; '>CI+</span></code> to the place <code>Xis=1</code> and back (shown in red below) one can ensure that <code><span style='color:red; '>CI+</span></code> is disabled whenever <code><span style='color:green; '>Xis+</span></code> is enabled:
+For example, consider the first violation of output-persistency: <code><span style='color:green; '>Xis+</span></code> can be disabled by <code><span style='color:red; '>CI+</span></code>. By adding a read arc from place <code>Xis=1</code> to <code><span style='color:red; '>CI+</span></code> (shown in red below) one can ensure that <code><span style='color:red; '>CI+</span></code> is disabled whenever <code><span style='color:green; '>Xis+</span></code> is enabled:
 </p>
 
 <p>
@@ -226,7 +226,7 @@ For example, consider the first violation of output-persistency: <code><span sty
 </p>
 
 <p>
-Similarly, one can resolve the other violations of output-persistency involving input <code><span style='color:red; '>CI</span></code>, see the six red arcs in the picture below:
+Similarly, one can resolve the other violations of output-persistency involving input <code><span style='color:red; '>CI</span></code> – see the arcs in red in the picture below:
 </p>
 
 <p>
@@ -234,7 +234,7 @@ Similarly, one can resolve the other violations of output-persistency involving 
 </p>
 
 <p>
-Interestingly, these transformations also resolve violation 10 (<code><span style='color:green; '>Int+</span></code> can no longer be disabled by <code><span style='color:green; '>CII-</span></code>), leaving only violations 7-9 in the amended model. Violations 7 and 8 show that excision (represented by transition <code><span style='color:blue; '>Intg−</span></code>) when <code><span style='color:green; '>Int</span></code> and <code><span style='color:green; '>Xis</span></code> are 1 can be pre-empted if <code><span style='color:green; '>Int−</span></code> or <code><span style='color:green; '>Xis−</span></code> fires first, whilst violation 9 shows that integration (represented by transition <code><span style='color:blue; '>Intg+</span></code>) can be pre-empted if <code><span style='color:green; '>Int−</span></code> fires first. These remaining output-persistency violations are at the very heart of the lysis-lysogeny switch in λ, which is a stochastic phenomenon in practice <a href="#refnotes:1:note1" name="refnotes:1:ref5" class="refnotes-ref note-popup">[1]</a>, and so are not resolved.
+Interestingly, these transformations also happen to resolve violation 10 (<code><span style='color:green; '>Int+</span></code> can no longer be disabled by <code><span style='color:green; '>CII-</span></code>); apparently, this violation occurs only in states that can be reached through the “messy” behaviour that has been now removed by the above transformations. This leaves only violations 7-9 in the amended model. Violations 7 and 8 show that excision (represented by transition <code><span style='color:blue; '>Intg−</span></code>) when <code><span style='color:green; '>Int</span></code> and <code><span style='color:green; '>Xis</span></code> are 1 can be pre-empted if <code><span style='color:green; '>Int−</span></code> or <code><span style='color:green; '>Xis−</span></code> fires first, whilst violation 9 shows that integration (represented by transition <code><span style='color:blue; '>Intg+</span></code>) can be pre-empted if <code><span style='color:green; '>Int−</span></code> fires first. These remaining output-persistency violations are at the very heart of the lysis-lysogeny switch in λ, which is a stochastic phenomenon in practice <a href="#refnotes:1:note1" name="refnotes:1:ref5" class="refnotes-ref note-popup">[1]</a>, and so are not resolved.
 </p>
 
 </div>
@@ -243,7 +243,7 @@ Interestingly, these transformations also resolve violation 10 (<code><span styl
 <div class="level2">
 
 <p>
-The above STG can now be simplified using <em>Tools→Conversion→Dummy contraction [Petrify]</em>, with the following result (manual layout was performed):
+The above STG can now be simplified using <em>Conversion→Net synthesis [Petrify]</em>, with the following result (manual layout was performed):
 </p>
 
 <p>
@@ -261,7 +261,7 @@ This model is much easier to understand than the original Boolean network, for s
 
 <ul>
 <li class="level1"><div class="li">
- <strong>Component 2</strong> (right) is a simple flip-flop for <code><span style='color:blue; '>Intg</span></code>, which is controlled by the values of <code><span style='color:green; '>Int</span></code> and <code><span style='color:green; '>Xis</span></code> in the first component. Note that the only connections between the two components are the pairs of arcs going in opposite directions between places of the former component and transitions of the latter one, i.e. the latter component accesses the former one in the read-only fashion and hence does not affect its behaviour.
+ <strong>Component 2</strong> (right) is a simple flip-flop for <code><span style='color:blue; '>Intg</span></code>, which is controlled by the values of <code><span style='color:green; '>Int</span></code> and <code><span style='color:green; '>Xis</span></code> in the first component. Note that the only connections between the two components are the read arcs between places of the former and transitions of the latter, i.e. the latter accesses the former in the read-only fashion and hence does not affect its behaviour.
 </div></li>
 </ul>
 
@@ -292,7 +292,7 @@ R. Banks, V. Khomenko, and L.J. Steggles: <em>A Case for Using Signal Transition
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/phage_lambda/start.txt</bdi> · Last modified: 2015/07/31 22:24 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/phage_lambda/start.txt</bdi> · Last modified: 2015/12/14 16:36 by <bdi>victor</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

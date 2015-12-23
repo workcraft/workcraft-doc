@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/stg/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/stg/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:stg';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/10/31 20:33//';var JSINFO = {"id":"tutorial:modelling:stg:start","namespace":"tutorial:modelling:stg","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:stg';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/12/23 22:41//';var JSINFO = {"id":"tutorial:modelling:stg:start","namespace":"tutorial:modelling:stg","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:stg:start" /><input type="hidden" name="sectok" value="6405712141512b54bd0b8a2e60e95d1e" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:stg:start" /><input type="hidden" name="sectok" value="d7869b1536499e4a97a21f8a84059d8a" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -114,7 +114,7 @@ In the exercises below you will use <em>Signal Transition Graphs</em> (STG). STG
  The actions are partitioned into <code><span style='color:red; '>inputs</span></code>, <code><span style='color:blue; '>outputs</span></code> and <code><span style='color:green; '>internal</span></code>; there are also <code><span style='color:black; '>dummy</span></code> transitions that do not correspond to any actions and serve for the convenience of modelling, e.g. one can “hide” a redundant action by replacing its transitions with dummies without otherwise changing the behaviour of the system.
 </div></li>
 <li class="level1"><div class="li">
- The actions have <em>directions</em>: <code>+</code>, <code>-</code>, or <code>~</code>; e.g. <code>a+</code> means action <code>a</code> is asserted and <code>a-</code> means it is withdrawn. Note that transitions of <code>a+</code> and <code>a-</code> must alternate in every execution – otherwise the model is ill-formed. The <code>~</code> is used for actions that do not have this assert/withdraw semantics.
+ The actions have <em>directions</em>: <code>+</code>, <code>-</code>, or <code>~</code>; e.g. <code>a+</code> means action <code>a</code> is asserted and <code>a-</code> means it is withdrawn. Note that transitions of <code>a+</code> and <code>a-</code> must alternate in every execution – otherwise the model is ill-formed. The <code>~</code> is used for actions that do not have this assert/withdraw semantics, and by default <code>~</code> is not displayed at the end of the action name.
 </div></li>
 </ul>
 
@@ -178,11 +178,11 @@ Directional actions (i.e. those with <code>+</code> or <code>-</code>) are used 
 </p>
 <div class="wrap_info wrap_column plugin_wrap" style="width: 100%;">
 <p>
-Note the choices between outputs, e.g. in the first DME element place <code>token1</code> is in the presents of <code><span style='color:blue; '>grant1+</span></code> and <code><span style='color:blue; '>move1to2~</span></code> transitions.
+Note the choices between outputs, e.g. in the first DME element place <code>token1</code> is in the presents of <code><span style='color:blue; '>grant1+</span></code> and <code><span style='color:blue; '>move1to2</span></code> transitions.
 </p>
 </div>
 <p>
-These two DME elements communicate by executing shared actions <code>moveXtoY~</code>. Hence, the model of the overall system can be constructed compositionally, using the <em>parallel composition</em> operation. This functionality is accessible via the <em>Tools→Composition→Parallel composition [PComp]</em> menu. In the dialog window (see below) tick the names of the files to be composed, and select <em>Outputs / Make dummy</em>. The latter will turn the fused transitions into dummies, as they represent internal workings of the system. 
+These two DME elements communicate by executing shared actions <code>moveXtoY</code>. Hence, the model of the overall system can be constructed compositionally, using the <em>parallel composition</em> operation. This functionality is accessible via the <em>Tools→Composition→Parallel composition [PComp]</em> menu. In the dialog window (see below) tick the names of the files to be composed, and select <em>Outputs / Make dummy</em>. The latter will turn the fused transitions into dummies, as they represent internal workings of the system. 
 </p>
 
 <p>
@@ -275,7 +275,7 @@ Verify the following custom properties of the model. Note that the tool checks i
 <div class="level2">
 
 <p>
-As noted in the previous exercise, the STG has redundant places and can be simplified. Use <em>Tools→Conversion→Net synthesis [Petrify]</em> to obtain the following simplified STG (manual layout was used to make it look similar to the previous STG):
+As noted in the previous exercise, the STG has redundant places and can be simplified. Use <em>Conversion→Net synthesis [Petrify]</em> to obtain the following simplified STG (manual layout was used to make it look similar to the previous STG):
 </p>
 
 <p>
@@ -283,7 +283,7 @@ As noted in the previous exercise, the STG has redundant places and can be simpl
 </p>
 
 <p>
-One can also contract the dummy transitions without changing the behaviour of the system, as they correspond to hidden internal actions – use the <em>Tools→Conversion→Dummy contraction [Petrify]</em> menu item. This completely hides the internal implementation of the system, as well as its distributed nature, leaving only its visible behaviour: The whole DME system is now abstracted to a single place controlling handshakes with the clients.
+One can also contract the dummy transitions without changing the behaviour of the system, as they correspond to hidden internal actions – use the <em>Conversion→Dummy contraction [Petrify]</em> menu item. This completely hides the internal implementation of the system, as well as its distributed nature, leaving only its visible behaviour: The whole DME system is now abstracted to a single place controlling handshakes with the clients.
 </p>
 
 <p>
@@ -295,7 +295,7 @@ One can also contract the dummy transitions without changing the behaviour of th
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/stg/start.txt</bdi> · Last modified: 2015/07/31 22:23 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/stg/start.txt</bdi> · Last modified: 2015/12/14 12:56 by <bdi>victor</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

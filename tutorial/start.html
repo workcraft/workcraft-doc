@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/tutorial/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/start"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/10/31 20:34//';var JSINFO = {"id":"tutorial:start","namespace":"tutorial","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/12/23 22:43//';var JSINFO = {"id":"tutorial:start","namespace":"tutorial","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:start" /><input type="hidden" name="sectok" value="d7bce45f7c4ab7a83ddd0a51d75d987d" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:start" /><input type="hidden" name="sectok" value="a82595564daa45f3819ea487901f617c" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -112,6 +112,9 @@ In these tutorials you will learn how to use <a href="http://en.wikipedia.org/wi
 <li class="level1"><div class="li">
  <a href="modelling/wagging/start.html" class="wikilink1" title="tutorial:modelling:wagging:start">Optimising Asynchronous Pipelines Using Wagging</a>
 </div></li>
+<li class="level1"><div class="li">
+ <a href="modelling/xmas/start.html" class="wikilink1" title="tutorial:modelling:xmas:start">Analysis and Verification of Communication Fabrics</a>
+</div></li>
 </ul>
 
 </div>
@@ -122,7 +125,7 @@ In these tutorials you will learn how to use <a href="http://en.wikipedia.org/wi
 <div class="level2">
 
 <p>
-A Signal Transition Graph (STG) is basically a <a href="http://en.wikipedia.org/wiki/Petri net" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/Petri net">Petri net</a> whose transitions are labelled with signal events. This makes STG a convenient formalism for specification, synthesis and verification of <a href="http://en.wikipedia.org/wiki/asynchronous circuit" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/asynchronous circuit">asynchronous circuits</a>. In this series of tutorials you will learn how to specify the intended behaviour of an asynchronous circuit using <a href="../overview/stg.html" class="wikilink1" title=":overview:stg">Signal Transition Graphs</a> plugin, synthesise its asynchronous implementation, capture the circuit schematic in <a href="../overview/digital_circuit.html" class="wikilink1" title=":overview:digital_circuit">Digital Circuit</a> plugin and formally verify it against the initial specification.
+A Signal Transition Graph (STG) is basically a <a href="http://en.wikipedia.org/wiki/Petri net" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/Petri net">Petri net</a> whose transitions are labelled with signal events. This makes STG a convenient formalism for specification, synthesis and verification of <a href="http://en.wikipedia.org/wiki/asynchronous circuit" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/asynchronous circuit">asynchronous circuits</a>. In this series of tutorials you will learn how to specify the intended behaviour of an asynchronous circuit using <a href="overview/stg.html" class="wikilink1" title="overview:stg">Signal Transition Graphs</a> plugin, synthesise its asynchronous implementation, capture the circuit schematic in <a href="overview/digital_circuit.html" class="wikilink1" title="overview:digital_circuit">Digital Circuit</a> plugin and formally verify it against the initial specification.
 </p>
 <div class="plugin_include_content plugin_include__tutorial:synthesis:toc" id="plugin_include__tutorial__synthesis__toc">
 <ul>
@@ -136,6 +139,10 @@ A Signal Transition Graph (STG) is basically a <a href="http://en.wikipedia.org/
 </div></li>
 <li class="level1"><div class="li">
  <a href="synthesis/vme/start.html" class="wikilink1" title="tutorial:synthesis:vme:start">Synthesis and verification of VME bus controller</a><br/>
+(advanced material for individual work)
+</div></li>
+<li class="level1"><div class="li">
+ <a href="synthesis/csc-resolution/start.html" class="wikilink1" title="tutorial:synthesis:csc-resolution:start">Resolution of encoding (CSC) conflicts</a><br/>
 (advanced material for individual work)
 </div></li>
 </ul>

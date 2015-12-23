@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:modelling:wagging:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="tutorial,modelling,wagging,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/wagging/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/wagging/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:wagging';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/08/03 15:35//';var JSINFO = {"id":"tutorial:modelling:wagging:start","namespace":"tutorial:modelling:wagging","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:wagging';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/12/23 22:41//';var JSINFO = {"id":"tutorial:modelling:wagging:start","namespace":"tutorial:modelling:wagging","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:wagging:start" /><input type="hidden" name="sectok" value="08b6b24e4b3d38c32caddab28f84b8a9" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:wagging:start" /><input type="hidden" name="sectok" value="ea97b31981a9e50d6200d16e16646e5e" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -157,9 +157,9 @@ Disadvantages of wagging:
 </div></li>
 </ul>
 
-<div class="wrap_info plugin_wrap">
+<div class="wrap_center wrap_round wrap_info plugin_wrap" style="width: 90%;">
 <p>
-Each slice of a wagging stage should contain at least one register to accept an incoming token. For efficiency reasons it is advantageous to have a register as the first element of the slice. This enables the token to propagate into the active slice with minimal delay and free the space for the next token.
+Each slice of a wagging stage should contain at least one register to accept an incoming token. For efficiency reasons it is advantageous to have a register as the first element of the slice – this enables the token to propagate into the active slice with the minimum delay and free the space for the next token.
 </p>
 </div>
 <p>
@@ -217,7 +217,7 @@ Now analyse the performance of this pipeline with the <strong>cycle analyser</st
 <p>
 <img src="dfs-basic-cycle-analysis-screenshot.png" class="mediacenter" alt="" />
 </p>
-<div class="wrap_info plugin_wrap">
+<div class="wrap_center wrap_round wrap_info plugin_wrap" style="width: 90%;">
 <p>
 By clicking on a cycle in the <em>Tool control</em> window one can highlight it in the model, with the bottleneck(s) of this cycle shown in red (if any). If no cycle is selected, the bottleneck(s) of the whole model are shown.
 </p>
@@ -229,9 +229,9 @@ The performance of this pipeline can be improved using wagging. Select the bottl
 <p>
 <img src="dfs-basic_2way_wagging-cycle-analysis-screenshot.png" class="mediacenter" alt="" />
 </p>
-<div class="wrap_info plugin_wrap">
+<div class="wrap_center wrap_round wrap_info plugin_wrap" style="width: 90%;">
 <p>
-Note that there are several cycles with infinite throughput - these are formed by the control structures which have 0 delays and can be ignored. Only the two cycles shown at the top are relevant - they correspond to the two branches formed due to wagging.
+Note that there are several cycles with infinite throughput – these are formed by the control structures which have 0 delays and can be ignored. Only the two cycles shown at the top are relevant – they correspond to the two branches formed due to wagging.
 </p>
 </div>
 <p>
@@ -252,17 +252,17 @@ The following ARISC pipeline was adapted from <a href="#refnotes:1:note4" name=
 </p>
 
 <p>
-Download this model: <span class="wrap_download "><a href="dfs-arisc.work" class="media mediafile mf_work" title="tutorial:modelling:wagging:dfs-arisc.work (3.9 KB)">dfs-arisc.work</a> (3.91 KiB, <acronym title="Modified: 2015-05-27 11:56.18">2M ago</acronym>)</span>.
+Download this model: <span class="wrap_download "><a href="dfs-arisc.work" class="media mediafile mf_work" title="tutorial:modelling:wagging:dfs-arisc.work (3.9 KB)">dfs-arisc.work</a> (3.91 KiB, <acronym title="Modified: 2015-05-27 11:56.18">6M ago</acronym>)</span>.
 </p>
 
 <p>
 Analyse this model using <strong>cycle analyser</strong> <img src="../../help/editor_tools-cycle_analyser.png" class="media" title="[A] Cycle analyser" alt="[A] Cycle analyser" /> tool. 
 </p>
-<div class="wrap_info plugin_wrap">
+<div class="wrap_center wrap_round wrap_info plugin_wrap" style="width: 90%;">
 <p>
 By default the <em>Tool control</em> window shows 10 cycles with the worst throughput – this is controlled by the <em>Cycle count</em> field in this window. You can increase this number to see all the cycles in the model.
 </p>
-</div><div class="wrap_important plugin_wrap">
+</div><div class="wrap_center wrap_round wrap_important plugin_wrap" style="width: 90%;">
 <p>
 The throughput of the whole pipeline is determined by the throughput of its slowest cycle, e.g. the throughput of the above pipeline is 0.105.
 </p>
@@ -309,7 +309,7 @@ K. T. Christensen, P. Jensen, P. Korger, J. Sparsø: <em>The design of an a
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/wagging/start.txt</bdi> · Last modified: 2015/05/28 21:42 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/wagging/start.txt</bdi> · Last modified: 2015/12/23 21:33 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

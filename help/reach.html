@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/reach.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/reach"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/08/03 14:56//';var JSINFO = {"id":"help:reach","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/12/23 22:28//';var JSINFO = {"id":"help:reach","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:reach" /><input type="hidden" name="sectok" value="ee9f8687cc78aef7920a3fa31bcdc968" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:reach" /><input type="hidden" name="sectok" value="c5000f866853eab496e5ef8d3adef7c0" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="reach.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="reach.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="reach.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -83,6 +83,8 @@
 <div>
 
 <ul class="toc">
+<li class="level1"><div class="li"><a href="#comments">Comments</a></div></li>
+<li class="level1"><div class="li"><a href="#type_system">Type system</a></div></li>
 <li class="level1"><div class="li"><a href="#constants">Constants</a></div></li>
 <li class="level1"><div class="li"><a href="#variables">Variables</a></div></li>
 <li class="level1"><div class="li"><a href="#unary_operators">Unary operators</a></div></li>
@@ -117,20 +119,81 @@ The language REACH is used for specifying reachability properties. This approach
 
 </div>
 
+<h2 id="comments">Comments</h2>
+<div class="level2">
+
+<p>
+C++-style comments are supported:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ from <strong>//</strong> to the end of the line
+</div></li>
+<li class="level1"><div class="li">
+ enclosed in <strong>/*…*/</strong> 
+</div></li>
+</ul>
+
+
+</div>
+
+<h2 id="type_system">Type system</h2>
+<div class="level2">
+
+<p>
+Each value belongs to one of the following types:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Boolean
+</div></li>
+<li class="level1"><div class="li">
+ integer
+</div></li>
+<li class="level1"><div class="li">
+ string
+</div></li>
+<li class="level1"><div class="li">
+ event of the unfolding prefix
+</div></li>
+<li class="level1"><div class="li">
+ condition of the unfolding prefix
+</div></li>
+<li class="level1"><div class="li">
+ place of the Petri net
+</div></li>
+<li class="level1"><div class="li">
+ transition of the Petri net
+</div></li>
+<li class="level1"><div class="li">
+ signal of the STG
+</div></li>
+<li class="level1"><div class="li">
+ set of <em>T</em> where <em>T</em> is a type (set of set of set … of <em>T</em> is allowed)
+</div></li>
+<li class="level1"><div class="li">
+ special type for the <strong>fail</strong> expression
+</div></li>
+</ul>
+
+
+<p>
+The types are never mentioned explicitly, but rather derived from the structure of the sub-expression.
+</p>
+
+</div>
+
 <h2 id="constants">Constants</h2>
 <div class="level2">
 <ul>
 <li class="level1"><div class="li">
- <strong>true</strong>, <strong>false</strong>
+ <strong>true</strong>, <strong>false</strong> are the two constants forming type Boolean
 </div></li>
 <li class="level1"><div class="li">
- integers
+ integer constants, e.g. 3, 10, -33
 </div></li>
 <li class="level1"><div class="li">
- strings (e.g. “Hello”)
-</div></li>
-<li class="level1"><div class="li">
- events, conditions, places, transitions, signals – cannot be directly specified, but returned by some operators, like C, E, P, T, S, etc.
+ C-style string constants enclosed in quotation marks (e.g. “Hello world!”)
 </div></li>
 </ul>
 
@@ -168,13 +231,13 @@ Built of English letters, digits and &#039;_&#039;, not starting with a digit, c
  <strong>E</strong> number – Finds an event by number
 </div></li>
 <li class="level1"><div class="li">
- <strong>P</strong> name or P number – Finds a place by name or number
+ <strong>P</strong> name or <strong>P</strong> number – Finds a place by name or number
 </div></li>
 <li class="level1"><div class="li">
- <strong>T</strong> name or T number – Finds a transition by name or number
+ <strong>T</strong> name or <strong>T</strong> number – Finds a transition by name or number
 </div></li>
 <li class="level1"><div class="li">
- <strong>S</strong> name or S number – Finds a signal by name or number
+ <strong>S</strong> name or <strong>S</strong> number – Finds a signal by name or number
 </div></li>
 <li class="level1"><div class="li">
  <strong>PP</strong> regular_expression – Finds a set of places whose names match the given regular expression
@@ -210,19 +273,19 @@ Built of English letters, digits and &#039;_&#039;, not starting with a digit, c
  <strong>is_cutoff</strong> event – Checks if an event is cut-off
 </div></li>
 <li class="level1"><div class="li">
- <strong>is_input</strong> signal – Checks if a signal is an input
+ <strong>is_input</strong> signal or <strong>is_input</strong> transition or <strong>is_input</strong> event – Checks if a signal, transition or event is an input
 </div></li>
 <li class="level1"><div class="li">
- <strong>is_output</strong> signal – Checks if a signal is an output
+ <strong>is_output</strong> signal or <strong>is_output</strong> transition or <strong>is_output</strong> event – Checks if a signal, transition or event is an output
 </div></li>
 <li class="level1"><div class="li">
- <strong>is_internal</strong> signal – Checks if a signal is internal
+ <strong>is_internal</strong> signal or <strong>is_internal</strong> transition or <strong>is_internal</strong> event – Checks if a signal, transition or event is internal
 </div></li>
 <li class="level1"><div class="li">
- <strong>is_dummy</strong> signal – Checks if a signal is dummy
+ <strong>is_dummy</strong> signal or <strong>is_dummy</strong> transition or <strong>is_dummy</strong> event – Checks if a signal, transition or event is dummy
 </div></li>
 <li class="level1"><div class="li">
- <strong>is_local</strong> signal – Checks if a signal is local; equivalent to (<strong>is_output</strong> signal | <strong>is_internal</strong> signal)
+ <strong>is_local</strong> signal or <strong>is_local</strong> transition or <strong>is_local</strong> event – Checks if a signal, transition or event is local; <strong>is_local</strong> <em>x</em> is equivalent to (<strong>is_output</strong> <em>x</em> | <strong>is_internal</strong> <em>x</em>)
 </div></li>
 <li class="level1"><div class="li">
  <strong>is_plus</strong> event or <strong>is_plus</strong> transition – Checks if an STG event or transition has a sign &#039;+&#039;
@@ -363,7 +426,7 @@ Below the “s.t.” clause is optional:
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/reach.txt</bdi> · Last modified: 2015/06/03 22:39 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>help/reach.txt</bdi> · Last modified: 2015/12/17 15:51 by <bdi>victor</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

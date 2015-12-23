@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/rw_lock/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/rw_lock/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:rw_lock';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/05/22 22:14//';var JSINFO = {"id":"tutorial:modelling:rw_lock:start","namespace":"tutorial:modelling:rw_lock","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:rw_lock';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/12/23 22:41//';var JSINFO = {"id":"tutorial:modelling:rw_lock:start","namespace":"tutorial:modelling:rw_lock","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:rw_lock:start" /><input type="hidden" name="sectok" value="af2450e69db6c77668deca30f94b264e" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:rw_lock:start" /><input type="hidden" name="sectok" value="97734be9d883899a050133e810c97f27" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -135,7 +135,7 @@ Suppose there are <em>N</em> clients, and from time to time some client indicate
 </p>
 
 <p>
-Unfortunately the above implementation is prone to <em>writer starvation</em> – the scenarios when there are always some readers executing their critical sections, and hence a writer is blocked for long time or even indefinitely. To prevent such scenarios, new readers should be prevented from entering their critical sections if there is a waiting writer. That is, a writer must first acquire a usual (i.e. non-RW) lock (competing with other writers) and indicate that there is a waiting writer to prevent new readers from entering their critical sections. Then this writer has to wait for all the existing readers to exit their critical sections, at which point it can acquire <em>N</em> tickets and enter its critical section. Such an implementation is called a <em>writer-biased RW lock</em>. A client’s model now becomes as follows.
+Unfortunately the above implementation is prone to <em>writer starvation</em> – the scenarios when there are always some readers executing their critical sections, and hence a writer is blocked for a long time or even indefinitely. To prevent such scenarios, new readers should be prevented from entering their critical sections if there is a waiting writer. That is, a writer must first acquire a usual (i.e. non-RW) lock (competing with other writers) and indicate that there is a waiting writer to prevent new readers from entering their critical sections. Then this writer has to wait for all the existing readers to exit their critical sections, at which point it can acquire <em>N</em> tickets and enter its critical section. Such an implementation is called a <em>writer-biased RW lock</em>. A client’s model now becomes as follows.
 </p>
 
 <p>
@@ -160,7 +160,7 @@ The following STG provides a skeleton for the Writer-Biased RW lock for three cl
 </p>
 
 <p>
-Download this STG <span class="wrap_download "><a href="stg-rw_biased_template.work" class="media mediafile mf_work" title="tutorial:modelling:rw_lock:stg-rw_biased_template.work (4.5 KB)">stg-rw_biased_template.work</a> (4.48 KiB, <acronym title="Modified: 2015-03-16 11:49.47">2M ago</acronym>)</span> and complete the model by providing the necessary arcs between the transitions of the clients and the places <code>w_lock</code> and those modelling the tickets.
+Download this STG <span class="wrap_download "><a href="stg-rw_biased_template.work" class="media mediafile mf_work" title="tutorial:modelling:rw_lock:stg-rw_biased_template.work (4.5 KB)">stg-rw_biased_template.work</a> (4.48 KiB, <acronym title="Modified: 2015-03-16 11:49.47">9M ago</acronym>)</span> and complete the model by providing the necessary arcs between the transitions of the clients and the places <code>w_lock</code> and those modelling the tickets.
 </p>
 
 </div>
@@ -217,7 +217,7 @@ Verify the following properties of the model:
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/rw_lock/start.txt</bdi> · Last modified: 2015/04/28 14:51 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/rw_lock/start.txt</bdi> · Last modified: 2015/12/14 13:29 by <bdi>victor</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

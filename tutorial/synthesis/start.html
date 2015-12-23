@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:synthesis:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="noindex,nofollow"/>
+<meta name="robots" content="index,follow"/>
 <meta name="keywords" content="tutorial,synthesis,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../_export/raw/tutorial/synthesis/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/synthesis/start"/>
 <link rel="stylesheet" type="text/css" href="../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/08/03 15:36//';var JSINFO = {"id":"tutorial:synthesis:start","namespace":"tutorial:synthesis","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/12/23 22:43//';var JSINFO = {"id":"tutorial:synthesis:start","namespace":"tutorial:synthesis","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:start" /><input type="hidden" name="sectok" value="bf8658455f356e13a0ca4458d5030f47" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:start" /><input type="hidden" name="sectok" value="1d9d05ef83e8bb60fe952dc588ca88b8" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -88,25 +88,34 @@ Familiarise yourself with the <a href="../help/stg_plugin.html" class="wikilink1
 <p>
 A Signal Transition Graph (STG) is basically a <a href="http://en.wikipedia.org/wiki/Petri net" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/Petri net">Petri net</a> whose transitions are labelled with signal events. This makes STG a convenient formalism for specification, synthesis and verification of <a href="http://en.wikipedia.org/wiki/asynchronous circuit" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/asynchronous circuit">asynchronous circuits</a>. In this series of tutorials you will learn how to specify the intended behaviour of an asynchronous circuit using <a href="../overview/stg.html" class="wikilink1" title="overview:stg">Signal Transition Graphs</a> plugin, synthesise its asynchronous implementation, capture the circuit schematic in <a href="../overview/digital_circuit.html" class="wikilink1" title="overview:digital_circuit">Digital Circuit</a> plugin and formally verify it against the initial specification.
 </p>
+<div class="plugin_include_content plugin_include__tutorial:synthesis:toc" id="plugin_include__tutorial__synthesis__toc">
 <ul>
 <li class="level1"><div class="li">
- <a href="celement/start.html" class="wikilink1" title="tutorial:synthesis:celement:start">Synthesis and verification of C-element</a> (basic circuit, detail explanation)
+ <a href="celement/start.html" class="wikilink1" title="tutorial:synthesis:celement:start">Synthesis and verification of C-element</a><br/>
+(basic circuit, detail explanation)
 </div></li>
 <li class="level1"><div class="li">
- <a href="buck/start.html" class="wikilink1" title="tutorial:synthesis:buck:start">Synthesis and verification of buck controller</a> (medium complexity with some hints)
+ <a href="buck/start.html" class="wikilink1" title="tutorial:synthesis:buck:start">Synthesis and verification of buck controller</a><br/>
+(medium complexity with some hints)
 </div></li>
 <li class="level1"><div class="li">
- <a href="vme/start.html" class="wikilink1" title="tutorial:synthesis:vme:start">Synthesis and verification of VME bus controller</a> (advanced material for individual work)
+ <a href="vme/start.html" class="wikilink1" title="tutorial:synthesis:vme:start">Synthesis and verification of VME bus controller</a><br/>
+(advanced material for individual work)
+</div></li>
+<li class="level1"><div class="li">
+ <a href="csc-resolution/start.html" class="wikilink1" title="tutorial:synthesis:csc-resolution:start">Resolution of encoding (CSC) conflicts</a><br/>
+(advanced material for individual work)
 </div></li>
 </ul>
 
+</div>
 
 </div>
 
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/synthesis/start.txt</bdi> · Last modified: 2015/08/03 15:08 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/synthesis/start.txt</bdi> · Last modified: 2015/10/26 14:07 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 
