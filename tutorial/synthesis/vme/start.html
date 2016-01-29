@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:synthesis:vme:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="tutorial,synthesis,vme,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/synthesis/vme/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/synthesis/vme/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:vme';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/10/31 20:34//';var JSINFO = {"id":"tutorial:synthesis:vme:start","namespace":"tutorial:synthesis:vme","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:vme';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/01/29 16:31//';var JSINFO = {"id":"tutorial:synthesis:vme:start","namespace":"tutorial:synthesis:vme","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:vme:start" /><input type="hidden" name="sectok" value="a8a53ef5d084d9dfa3e1d2c99ebba96c" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:vme:start" /><input type="hidden" name="sectok" value="03c321b9d8b1ddd3906755a127a2586e" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -84,7 +84,12 @@
 
 <ul class="toc">
 <li class="level1"><div class="li"><a href="#modelling">Modelling</a></div></li>
-<li class="level1"><div class="li"><a href="#validation_and_verification_of_the_stg_specification">Validation and verification of the STG specification</a></div></li>
+<li class="level1"><div class="li"><a href="#validation_and_formal_verification_of_the_stg_specification">Validation and formal verification of the STG specification</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#validation">Validation</a></div></li>
+<li class="level2"><div class="li"><a href="#formal_verification">Formal verification</a></div></li>
+</ul>
+</li>
 <li class="level1"><div class="li"><a href="#synthesis">Synthesis</a></div></li>
 <li class="level1"><div class="li"><a href="#verification_of_the_circuit_implementation">Verification of the circuit implementation</a></div></li>
 <li class="level1"><div class="li"><a href="#solutions">Solutions</a></div></li>
@@ -167,7 +172,7 @@ The result should be similar to the following STGs.
 </table></div>
 </div></div>
 <p>
-The two STGs describe the behaviour of the same circuit and need to be combined into one specification by merging their initial states. Create a new STG work called <em>stg-vme-read_write</em> and copy-paste the STGs from <em>stg-vme-read</em> and <em>stg-vme-write</em> works into it. Create a marked place <code>p1</code> that replaces the places <code>p1r</code> and <code>p1w</code>. Similarly, substitute the places <code>p2r</code> and <code>p2w</code> with a new marked place <code>p2</code>. The result should look as follows.
+The two STGs describe the behaviour of the same circuit and need to be combined into one specification by merging their initial states. Create a new STG work called <em>stg-vme-read_write</em> and copy-paste the STGs from <em>stg-vme-read</em> and <em>stg-vme-write</em> works into it. Merge places <code>p1r</code> and <code>p1w</code> into a single place by first selecting them (hold <kbd>Shift</kbd> and click them with the mouse) and then using the <em>Transformations→Merge selected places</em> menu item. Rename the resulting place to <code>p2</code>. The result should look as follows.
 </p>
 <div class="plugin_wrap"><div class="table sectionedit19"><table class="inline">
 	<tr class="row0">
@@ -177,15 +182,15 @@ The two STGs describe the behaviour of the same circuit and need to be combined 
 		<td class="col0 centeralign">  Combined STG for read and write scenarios  </td>
 	</tr>
 </table></div>
-</div><div class="wrap_info plugin_wrap">
+</div><div class="wrap_info wrap_center wrap_round plugin_wrap" style="width: 90%;">
 <p>
 Note that the place <code>p2</code> is a <em>controlled choice</em> whose decision is determined by the <em>free choice</em> place <code>p1</code>.
 </p>
-</div><div class="wrap_info plugin_wrap">
+</div><div class="wrap_info wrap_center wrap_round plugin_wrap" style="width: 90%;">
 <p>
 Note the concurrency between the transitions resetting the device (<code><span style='color:blue; '>lds-</span></code> and <code><span style='color:red; '>ldtack-</span></code>) and the new requests from the bus (<code><span style='color:red; '>dsr+</span></code> and <code><span style='color:red; '>dsw+</span></code>): A new request can arrive while the device is still resetting, thereby allowing concurrent operation of the bus and the device. This concurrency is the “meaning of life” of VME bus controller.
 </p>
-</div><div class="wrap_box plugin_wrap">
+</div><div class="wrap_box wrap_center wrap_round plugin_wrap" style="width: 90%;">
 <h4 id="optional_simplification">Optional simplification</h4>
 
 <p>
@@ -202,15 +207,25 @@ Once the initially marked places are merged, one can notice that transitions <co
 </div></div>
 </div>
 
-<h2 id="validation_and_verification_of_the_stg_specification">Validation and verification of the STG specification</h2>
+<h2 id="validation_and_formal_verification_of_the_stg_specification">Validation and formal verification of the STG specification</h2>
 <div class="level2">
+
+</div>
+
+<h3 id="validation">Validation</h3>
+<div class="level3">
 
 <p>
 Activate the <strong>simulation tool</strong> <img src="../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> and exercise the obtained STG model to better understand the behaviour of VME bus controller. Click one of the enabled signal transitions (they are highlighted in orange) to <em>fire</em> it. Note that the sequence of fired transitions is recorded in the simulation trace that is somewhat similar to the original timing diagram. Check that the simulation traces correspond to the intended behaviour of VME bus controller.
 </p>
 
+</div>
+
+<h3 id="formal_verification">Formal verification</h3>
+<div class="level3">
+
 <p>
-Verify the STG specification for the following properties using <em>Verification</em> menu:
+Verify that the STG specification satisfies the following properties using <em>Verification</em> menu:
 </p>
 <ul>
 <li class="level1"><div class="li">
@@ -220,16 +235,17 @@ Verify the STG specification for the following properties using <em>Verification
  Consistency
 </div></li>
 <li class="level1"><div class="li">
- Output persistence
-</div></li>
-<li class="level1"><div class="li">
- Complete State Coding (CSC)
+ Output persistency
 </div></li>
 </ul>
 
 
 <p>
-This STG does not have CSC, which means there are two reachable states that have the same value of all signals but enable different outputs. These states are said to be in <em>CSC conflict</em>. Specifications with CSC conflicts cannot be directly implemented as circuits. One way of resolving CSC conflicts is to insert new <span style='color:green; '>internal</span> signals into the STG. These internal signals add memory into the circuit helping it to trace the current state.
+These are basic soundness properties which should be satisfied by most models.
+</p>
+
+<p>
+Now check whether the STG satisfies the <em>Complete State Coding (CSC)</em> property using <em>Verification→Complete State Coding (all cores) [MPSat]</em> menu item. This STG does not have CSC, which means there are two reachable states that have the same value of all signals but enable different outputs. These states are said to be in <em>CSC conflict</em>. Specifications with CSC conflicts cannot be directly implemented as circuits. One way of resolving CSC conflicts is to insert new <span style='color:green; '>internal</span> signals into the STG. These internal signals add memory into the circuit helping it to trace the current state. More about CSC conflicts and resolving them can be found in <a href="../csc-resolution/start.html" class="wikilink1" title="tutorial:synthesis:csc-resolution:start">another tutorial</a>.
 </p>
 
 </div>
@@ -238,7 +254,7 @@ This STG does not have CSC, which means there are two reachable states that have
 <div class="level2">
 
 <p>
-Resolve the encoding conflict using Petrify via <em>Tools→Encoding conflicts→Resolve CSC conflicts [Petrify]</em> menu. Petrify will insert a new signal <code><span style='color:green; '>csc0</span></code> distinguishing between states that are in CSC conflict. The result could look like the following STG (<span class="wrap_important ">note that the solution is not unique and you may get a slightly different STG</span>):
+Resolve the CSC conflicts automatically using Petrify via <em>Tools→Encoding conflicts→Resolve CSC conflicts [Petrify]</em> menu. Petrify will insert a new internal signal <code><span style='color:green; '>csc0</span></code> distinguishing between states that are in CSC conflict. The result could look like the following STG (<span class="wrap_important ">note that the solution is not unique and you may get a slightly different STG</span>):
 </p>
 
 <p>
@@ -246,12 +262,12 @@ Resolve the encoding conflict using Petrify via <em>Tools→Encoding conflicts�
 </p>
 
 <p>
-The obtained STG specification has CSC and can now be synthesised into an asynchronous circuit implementation either with <em>Petrify</em> or <em>MPSat</em> backend tool. A complex gate solution obtained with <em>Petrify</em> is as follows (<span class="wrap_important ">note that the solution is not unique and you may get slightly different equations</span>):
+The obtained STG specification has CSC and can now be synthesised into an asynchronous circuit. A complex-gate solution obtained via <em>Synthesis→Complex gate [MPSat]</em> is as follows (<span class="wrap_important ">note that the solution is not unique and you may get slightly different one</span>):
 </p>
-<pre class="code">[d] = dsr ldtack csc0&#039; + dsw (csc0 + ldtack&#039;); 
-[dtack] = d&#039; dsr&#039; csc0&#039; + d dsw&#039;; 
-[lds] = csc0&#039;; 
-[csc0] = dsr&#039; d&#039; (dsw&#039; + csc0) + ldtack csc0; </pre>
+
+<p>
+<img src="circuit-vme-cg.png" class="mediacenter" title="Complex gate implementation" alt="Complex gate implementation" />
+</p>
 
 </div>
 
@@ -259,26 +275,22 @@ The obtained STG specification has CSC and can now be synthesised into an asynch
 <div class="level2">
 
 <p>
-Download the following complex-gate implementation of the VME bus controller <span class="wrap_download "><a href="circuit-vme-cg.work" class="media mediafile mf_work" title="tutorial:synthesis:vme:circuit-vme-cg.work (5 KB)">circuit-vme-cg.work</a> (4.99 KiB, <acronym title="Modified: 2015-05-22 13:00.23">5M ago</acronym>)</span>.
-</p>
-
-<p>
-<img src="circuit-vme-cg.png" class="mediacenter" title="Complex gate implementation" alt="Complex gate implementation" />
-</p>
-
-<p>
-Assign the original STG describing the contract with the environment to the circuit model. This can be achieved as follows:
+Make sure that the original STG describing the contract with the environment and the circuit model is set up:
 </p>
 <ul>
 <li class="level1"><div class="li">
  In the circuit editor make sure that no components are selected (click on the editor canvas).
 </div></li>
 <li class="level1"><div class="li">
- In the property editor choose the <em>Environment <abbr title="Uniform Resource Identifier">URI</abbr></em> property and select the work file with the original STG specification.
+ In the property editor the <em>Environment <abbr title="Uniform Resource Identifier">URI</abbr></em> property should point to the work file with the original STG specification.
 </div></li>
 </ul>
 
-
+<div class="wrap_center wrap_round wrap_important plugin_wrap" style="width: 90%;">
+<p>
+For circuits synthesised within Workcraft this property is automatically set up to the STG that was used for synthesis, i.e. in this case to the STG with internal signals inserted to resolve CSC conflicts. You should modify it to point to the original STG.
+</p>
+</div>
 <p>
 Use the <em>Verification</em> menu to verify that the circuit implementation is:
 </p>
@@ -294,7 +306,15 @@ Use the <em>Verification</em> menu to verify that the circuit implementation is:
 </div></li>
 </ul>
 
-<div class="wrap_hide plugin_wrap">
+
+<p>
+All these verification steps can be run via <em>Verification→Conformation, deadlock and hazard (reuse unfolding) [MPSat]</em> menu.
+</p>
+<div class="wrap_center wrap_round wrap_important plugin_wrap" style="width: 90%;">
+<p>
+In theory, synthesised circuits are correct-by-construction. In practice, the synthesis tools are very complicated and may have bugs, so formally verifying the circuits is essential. This is especially true if the circuit was edited manually.
+</p>
+</div><div class="wrap_hide plugin_wrap">
 <h4 id="optional">Optional</h4>
 
 <p>
@@ -311,7 +331,7 @@ Download all the Workcraft models discussed in this section here:
 </p>
 
 <p>
-<span class="wrap_download "><a href="vme.zip" class="media mediafile mf_zip" title="tutorial:synthesis:vme:vme.zip (27.7 KB)">VME bus controller models</a> (27.74 KiB, <acronym title="Modified: 2015-05-22 13:00.23">5M ago</acronym>)</span>
+<span class="wrap_download "><a href="vme.zip" class="media mediafile mf_zip" title="tutorial:synthesis:vme:vme.zip (25.8 KB)">VME bus controller models</a> (25.83 KiB, <acronym title="Modified: 2015-12-31 16:54.35">4w ago</acronym>)</span>
 </p>
 
 </div>
@@ -319,7 +339,7 @@ Download all the Workcraft models discussed in this section here:
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/synthesis/vme/start.txt</bdi> · Last modified: 2015/07/31 22:25 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/synthesis/vme/start.txt</bdi> · Last modified: 2016/01/27 09:33 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

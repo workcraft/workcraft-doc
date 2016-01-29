@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/fsm_pn/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/fsm_pn/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:fsm_pn';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/12/23 22:41//';var JSINFO = {"id":"tutorial:modelling:fsm_pn:start","namespace":"tutorial:modelling:fsm_pn","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:fsm_pn';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/01/29 16:30//';var JSINFO = {"id":"tutorial:modelling:fsm_pn:start","namespace":"tutorial:modelling:fsm_pn","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:fsm_pn:start" /><input type="hidden" name="sectok" value="3c7ddd32c1b519799e4529900ae61d20" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:fsm_pn:start" /><input type="hidden" name="sectok" value="4c27dab8a02c0c1a143f4627f660bb14" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -172,7 +172,7 @@ Pragmatically speaking, this Petri net model does not offer any advantage over t
 <div class="level3">
 
 <p>
-A better Petri net can often be obtained from the initial FSM model by the process called <em>synthesis.</em> It is a much more complicated procedure than the one outlined above, but it can be automated. Starting from the original FSM, synthesise a Petri net with the same reachability graph as this FSM using the <em>Conversion→Net synthesis [Petrify]</em> menu item. You can improve the layout manually. Note that transitions <code>pound</code> and <code>coke</code> as well as <code>pound</code> and <code>choc</code> are concurrent in this Petri net. 
+A better Petri net can often be obtained from the initial FSM model by the process called <em>synthesis.</em> It is a much more complicated procedure than the one outlined above, but it can be automated. Starting from the original FSM, synthesise a Petri net with the same reachability graph as this FSM using the <em>Conversion→Net synthesis [Petrify]</em> menu item. Note that the result is a Petri net with all places explicitly shown. To hide places with exactly one incoming and one outgoing arc one can convert the model to an STG via <em>Conversion→Signal Transition Graph</em>, and then use <em>Transformations→Make places implicit</em> menu item to hide such places, and <em>Transformations→Straighten connections (selected or all)</em> to make all the arcs in the model straight.  You can then further improve the layout manually, as shown below. Note that transitions <code>pound</code> and <code>coke</code> as well as <code>pound</code> and <code>choc</code> are now truly concurrent. 
 </p>
 
 <p>
@@ -197,7 +197,7 @@ Construct the reachability graph of this Petri net (<em>Conversion→Finite Stat
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/fsm_pn/start.txt</bdi> · Last modified: 2015/12/14 12:27 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/fsm_pn/start.txt</bdi> · Last modified: 2016/01/14 12:34 by <bdi>victor</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

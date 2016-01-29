@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/stg/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/stg/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:stg';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/12/23 22:41//';var JSINFO = {"id":"tutorial:modelling:stg:start","namespace":"tutorial:modelling:stg","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:stg';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/01/29 16:30//';var JSINFO = {"id":"tutorial:modelling:stg:start","namespace":"tutorial:modelling:stg","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:stg:start" /><input type="hidden" name="sectok" value="d7869b1536499e4a97a21f8a84059d8a" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:stg:start" /><input type="hidden" name="sectok" value="d64d98ce62801e04cb11dbea501dfb06" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -135,7 +135,7 @@ The aim of the exercises below is to model a system that guarantees <em>Distribu
 <p>
 From time to time, a client may wish to use the shared resource. To do that, it requests permission from the corresponding DME element by asserting <code><span style='color:red; '>req</span></code>: action <code><span style='color:red; '>req+</span></code> (note that from the point of view of the DME element this is an input, and so is shown in red). If the DME element does not hold the token, it has to wait for one. After the token has arrived (or if DME element has already been holding it), the DME element can grant the request to the client, by asserting <code><span style='color:blue; '>grant</span></code>: output action <code><span style='color:blue; '>grant+</span></code>. At this point the client knows that it is safe to enter the critical section and use the resource, as the other clients cannot be using it. Note that the DME element is not allowed to pass the token to the next DME element in the ring until the client notifies it that it has exited its critical section.
 </p>
-<div class="wrap_info plugin_wrap">
+<div class="wrap_center wrap_round wrap_tip plugin_wrap" style="width: 90%;">
 <p>
 A request from the client may arrive when the DME element is about to pass the token to the next DME element in the ring. Hence, the DME element has a <em>choice</em>: it can either grant the request holding the token for longer or to pass the token and grant the request on the next round – either behaviour is acceptable. This choice expresses <em>arbitration</em>, as the DME element arbitrates between the client’s request and the decision to pass the token – which of them was first. If these events happened close in time, an arbitrary decision is made. If the system is to be implemented as a circuit, it will inevitably enter a metastable state from time to time, and so one has to use a <em>Synchroniser</em>, a <em>Mutual Exclusion element</em> or a similar specialised circuitry that can handle metastability.
 </p>
@@ -143,7 +143,7 @@ A request from the client may arrive when the DME element is about to pass the t
 <p>
 Having finished using the resource, the client withdraws the request: input action <code><span style='color:red; '>req-</span></code>. In response, the DME element withdraws the grant: output action <code><span style='color:blue; '>grant-</span></code>. 
 </p>
-<div class="wrap_info plugin_wrap">
+<div class="wrap_center wrap_round wrap_tip plugin_wrap" style="width: 90%;">
 <p>
 The sequence of events <code><span style='color:red; '>req+</span></code>, <code><span style='color:blue; '>grant+</span></code>, <code><span style='color:red; '>req-</span></code>, <code><span style='color:blue; '>grant-</span></code> forms a so called 4-phase <em>handshake</em> – this is a very common mini-protocol in asynchronous systems.
 </p>
@@ -176,23 +176,19 @@ Model a DME system comprised of two DME elements. Start by creating STG models o
 <p>
 Directional actions (i.e. those with <code>+</code> or <code>-</code>) are used to interface clients, whereas passing of the token between DME elements is modelled abstractly by undirected (i.e. <code>~</code>) actions (these actions could be implemented by handshakes when the model is refined, but this is not required for this exercise). When place <code>CS1</code> or <code>CS2</code> is marked, the corresponding client executes its critical section. Note that short-hand notation is not used for these places, as they have special significance to the designer.
 </p>
-<div class="wrap_info wrap_column plugin_wrap" style="width: 100%;">
+<div class="wrap_center wrap_round wrap_tip plugin_wrap" style="width: 90%;">
 <p>
 Note the choices between outputs, e.g. in the first DME element place <code>token1</code> is in the presents of <code><span style='color:blue; '>grant1+</span></code> and <code><span style='color:blue; '>move1to2</span></code> transitions.
 </p>
 </div>
 <p>
-These two DME elements communicate by executing shared actions <code>moveXtoY</code>. Hence, the model of the overall system can be constructed compositionally, using the <em>parallel composition</em> operation. This functionality is accessible via the <em>Tools→Composition→Parallel composition [PComp]</em> menu. In the dialog window (see below) tick the names of the files to be composed, and select <em>Outputs / Make dummy</em>. The latter will turn the fused transitions into dummies, as they represent internal workings of the system. 
+These two DME elements communicate by executing shared actions <code>moveXtoY</code>. Hence, the model of the overall system can be constructed compositionally, using the <em>parallel composition</em> operation. This functionality is accessible via the <em>Tools→Composition→Parallel composition [PComp]</em> menu. In the dialog window (see below) tick the names of the files to be composed, and select <em>Outputs / Make dummy</em>. The latter will turn the fused transitions into dummies, as they represent internal workings of the system. <span class="wrap_important ">For this to work files <em>dme1.work</em> and <em>dme2.work</em> must be opened in the same instance of Workcraft.</span>
 </p>
 
 <p>
 <img src="parallel_composition_dialog-dme1_dme2.png" class="mediacenter" alt="" />
 </p>
-<div class="wrap_info plugin_wrap">
-<p>
-Note that the files <em>dme1.work</em> and <em>dme2.work</em> must be opened in the same instance of Workcraft.
-</p>
-</div>
+
 <p>
 The resulting STG model of the system should appear in a new tab. It is also shown below, after some manual editing to improve visual representation, in particular:
 </p>
@@ -295,7 +291,7 @@ One can also contract the dummy transitions without changing the behaviour of th
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/stg/start.txt</bdi> · Last modified: 2015/12/14 12:56 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/stg/start.txt</bdi> · Last modified: 2016/01/10 23:43 by <bdi>victor</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

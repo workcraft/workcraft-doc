@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/synthesis/celement/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/synthesis/celement/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:celement';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/12/23 22:42//';var JSINFO = {"id":"tutorial:synthesis:celement:start","namespace":"tutorial:synthesis:celement","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:celement';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/01/29 16:31//';var JSINFO = {"id":"tutorial:synthesis:celement:start","namespace":"tutorial:synthesis:celement","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:celement:start" /><input type="hidden" name="sectok" value="d12375b2582d2928c52f11645766eed3" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:celement:start" /><input type="hidden" name="sectok" value="8a358f1d27e284815109e7a8f356cbfb" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -350,7 +350,7 @@ Create a new Digital Circuit work called <em>circuit-celement-cg</em> and captur
 <h4 id="optional_simplification">Optional simplification</h4>
 
 <p>
-You may wish to tidy up the circuit schematic and make it more readable by adding wire forks. If you create a connection to/from a wire then a <strong>joint</strong> will be automatically inserted. This result should look as follows; this implementation can be downloaded here: <span class="wrap_download "><a href="circuit-celement-cg.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-cg.work (3.1 KB)">circuit-celement-cg.work</a> (3.09 KiB, <acronym title="Modified: 2015-05-22 11:54.30">7M ago</acronym>)</span>.
+You may wish to tidy up the circuit schematic and make it more readable by adding wire forks. If you create a connection to/from a wire then a <strong>joint</strong> will be automatically inserted. This result should look as follows; this implementation can be downloaded here: <span class="wrap_download "><a href="circuit-celement-cg.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-cg.work (3.1 KB)">circuit-celement-cg.work</a> (3.09 KiB, <acronym title="Modified: 2015-05-22 11:54.30">8M ago</acronym>)</span>.
 </p>
 
 <p>
@@ -437,7 +437,7 @@ Large gates like <code>AO222</code> may not be available in the technology libra
 </p>
 
 <p>
-Download the following C-element implementation due to Mayevsky <span class="wrap_download "><a href="circuit-celement-decomposed.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-decomposed.work (3.8 KB)">circuit-celement-decomposed.work</a> (3.78 KiB, <acronym title="Modified: 2015-05-22 11:54.31">7M ago</acronym>)</span> and verify that it conforms to the STG specification and is free from deadlocks and hazards.
+Download the following C-element implementation due to Mayevsky <span class="wrap_download "><a href="circuit-celement-decomposed.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-decomposed.work (3.8 KB)">circuit-celement-decomposed.work</a> (3.78 KiB, <acronym title="Modified: 2015-05-22 11:54.31">8M ago</acronym>)</span> and verify that it conforms to the STG specification and is free from deadlocks and hazards.
 </p>
 
 <p>
@@ -445,7 +445,7 @@ Download the following C-element implementation due to Mayevsky <span class="wra
 </p>
 
 <p>
-Note that the correctness of this implementation depends on the <em>isochronic forks assumption</em>: the difference in arrival times of a signal to the ends of a wire fork is negligible compared to any gate delay. If this assumption is violated, the above implementation can exhibit hazards. Download the following C-element implementation <span class="wrap_download "><a href="circuit-celement-decomposed-hazard.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-decomposed-hazard.work (3.9 KB)">circuit-celement-decomposed-hazard.work</a> (3.9 KiB, <acronym title="Modified: 2015-05-22 11:54.31">7M ago</acronym>)</span> where a delay in a wire fork is made explicit (modelled by a buffer). Formally verify this model, inspect the violation trace, and explain what can go wrong in it.
+Note that the correctness of this implementation depends on the <em>isochronic forks assumption</em>: the difference in arrival times of a signal to the ends of a wire fork is negligible compared to any gate delay. If this assumption is violated, the above implementation can exhibit hazards. Download the following C-element implementation <span class="wrap_download "><a href="circuit-celement-decomposed-hazard.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-decomposed-hazard.work (3.9 KB)">circuit-celement-decomposed-hazard.work</a> (3.9 KiB, <acronym title="Modified: 2015-05-22 11:54.31">8M ago</acronym>)</span> where a delay in a wire fork is made explicit (modelled by a buffer). Formally verify this model, inspect the violation trace, and explain what can go wrong in it.
 </p>
 
 <p>
@@ -462,7 +462,7 @@ Download all the Workcraft models discussed in this tutorial here:
 </p>
 
 <p>
-<span class="wrap_download "><a href="celement.zip" class="media mediafile mf_zip" title="tutorial:synthesis:celement:celement.zip (17.2 KB)">C-element models</a> (17.17 KiB, <acronym title="Modified: 2015-06-15 10:30.09">6M ago</acronym>)</span>
+<span class="wrap_download "><a href="celement.zip" class="media mediafile mf_zip" title="tutorial:synthesis:celement:celement.zip (17.2 KB)">C-element models</a> (17.17 KiB, <acronym title="Modified: 2015-06-15 10:30.09">7M ago</acronym>)</span>
 </p>
 
 </div>
@@ -470,7 +470,7 @@ Download all the Workcraft models discussed in this tutorial here:
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/synthesis/celement/start.txt</bdi> · Last modified: 2015/12/19 22:35 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/synthesis/celement/start.txt</bdi> · Last modified: 2016/01/27 09:33 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

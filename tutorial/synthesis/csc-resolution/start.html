@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:synthesis:csc-resolution:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="tutorial,synthesis,csc-resolution,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/synthesis/csc-resolution/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/synthesis/csc-resolution/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:csc-resolution';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/12/23 22:42//';var JSINFO = {"id":"tutorial:synthesis:csc-resolution:start","namespace":"tutorial:synthesis:csc-resolution","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:csc-resolution';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/01/29 16:31//';var JSINFO = {"id":"tutorial:synthesis:csc-resolution:start","namespace":"tutorial:synthesis:csc-resolution","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:csc-resolution:start" /><input type="hidden" name="sectok" value="3ed6b3e0992cb399036638be1fab43c5" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:csc-resolution:start" /><input type="hidden" name="sectok" value="f980eea895d24756e18beb525a06630e" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -108,19 +108,7 @@
 
 <h1 id="resolution_of_encoding_csc_conflicts">Resolution of encoding (CSC) conflicts</h1>
 <div class="level1">
-<div class="wrap_center wrap_round wrap_todo plugin_wrap" style="width: 60%;">
-<p>
-!!! UNDER CONSTRUCTION !!!
-</p>
 
-<p>
-!!! UNDER CONSTRUCTION !!!
-</p>
-
-<p>
-!!! UNDER CONSTRUCTION !!!
-</p>
-</div>
 <p>
 A common issue in synthesis of speed-independent circuits from <em>Signal Transition Graphs (STGs)</em> are <em>encoding conflicts</em>, a.k.a. <em>Complete State Coding (CSC) conflicts.</em> Detection and resolution of CSC conflicts is an important part of the design process.
 </p>
@@ -135,7 +123,7 @@ CSC conflicts arise when two semantically different (i.e. enabling different out
 </p>
 
 <p>
-<img src="stg-vme-read.png" class="mediacenter" title="Read phase of the VME bus controller" alt="Read phase of the VME bus controller" />
+<img src="stg-vme-read.svg" width="406" height="102" class="svgscaleinsert mediacenter" alt="Read phase of the VME bus controller">
 </p>
 
 <p>
@@ -143,7 +131,7 @@ One can see the conflicting states at the level of the <em>state graph</em> of t
 </p>
 
 <p>
-<img src="vme-read-sg.png" class="mediacenter" title="The state graph of the above VME bus controller STG" alt="The state graph of the above VME bus controller STG" />
+<img src="vme-read-sg.svg" width="557" height="445" class="svgscaleinsert mediacenter" alt="The state graph of the above VME bus controller STG">
 </p>
 
 <p>
@@ -160,7 +148,7 @@ In most practical cases CSC conflicts can be resolved automatically, via the <em
 </p>
 
 <p>
-<img src="stg-vme-read_resolved.png" class="mediacenter" title="The modified VME bus controller STG with an additional internal signal resolving the CSC conflict" alt="The modified VME bus controller STG with an additional internal signal resolving the CSC conflict" />
+<img src="stg-vme-read_resolved.svg" width="105" height="478" class="svgscaleinsert mediacenter" alt="The modified VME bus controller STG with an additional internal signal resolving the CSC conflict">
 </p>
 
 <p>
@@ -168,7 +156,7 @@ The state graph of this STG is shown below (after manual layout). Note that the 
 </p>
 
 <p>
-<img src="vme-read_resolved-sg.png" class="mediacenter" title="The state graph of the modified VME bus controller STG" alt="The state graph of the modified VME bus controller STG" />
+<img src="vme-read_resolved-sg.svg" width="544" height="445" class="svgscaleinsert mediacenter" alt="The state graph of the modified VME bus controller STG">
 </p>
 
 <p>
@@ -200,7 +188,7 @@ The total number of literals in the right-hand side of these equations is 8 – 
 </p>
 
 <p>
-<img src="circuit-vme-read_resolved.png" class="mediacenter" title="A complex-gate implementation of VME bus controller" alt="A complex-gate implementation of VME bus controller" />
+<img src="circuit-vme-read_resolved.svg" width="317" height="176" class="svgscaleinsert mediacenter" alt="A complex-gate implementation of VME bus controller">
 </p>
 
 </div>
@@ -209,11 +197,11 @@ The total number of literals in the right-hand side of these equations is 8 – 
 <div class="level4">
 
 <p>
-Download the following STG from <a href="#refnotes:1:note1" name="refnotes:1:ref1" class="refnotes-ref note-popup">[1]</a>: <span class="wrap_download "><a href="sram-master.work" class="media mediafile mf_work" title="tutorial:synthesis:csc-resolution:sram-master.work (9 KB)">SRAM controller (MASTER).</a> (9.02 KiB, <acronym title="Modified: 2015-11-10 22:05.59">1M ago</acronym>)</span>:
+Download the following STG from <a href="#refnotes:1:note1" name="refnotes:1:ref1" class="refnotes-ref note-popup">[1]</a>: <span class="wrap_download "><a href="sram-master.work" class="media mediafile mf_work" title="tutorial:synthesis:csc-resolution:sram-master.work (9 KB)">SRAM controller (MASTER).</a> (9.02 KiB, <acronym title="Modified: 2015-11-10 22:05.59">2M ago</acronym>)</span>:
 </p>
 
 <p>
-<img src="sram-master.png" class="mediacenter" title="STG specification of SRAM master controller" alt="STG specification of SRAM master controller" />
+<img src="sram-master.svg" width="527" height="399" class="svgscaleinsert mediacenter" alt="STG specification of SRAM master controller">
 </p>
 <ul>
 <li class="level1"><div class="li">
@@ -248,9 +236,9 @@ As explained above, the resolution of CSC conflicts is automated, and the tools 
 </div></li>
 </ul>
 
-<div class="wrap_alert wrap_round plugin_wrap">
+<div class="wrap_alert wrap_round wrap_center plugin_wrap" style="width: 90%;">
 <p>
-If you do not fall into any of the above categories, you should be content with automatic resolutions of encoding conflicts and skip the rest of this tutorial. Otherwise you are welcome to the shady world of tools&#039; internals, with many dark corners, strange heuristics, dangerous transformations, and unsavoury hacks…
+If you do not fall into any of the above categories, you should be content with automatic resolutions of encoding conflicts. Otherwise you are welcome to the shady world of tools&#039; internals, with many dark corners, strange heuristics, dangerous transformations, and unsavoury hacks…
 </p>
 </div>
 <p>
@@ -314,7 +302,7 @@ To illustrate these problems, consider the following examples. The following STG
 </p>
 
 <p>
-<img src="par4.png" class="mediacenter" title="4-way paralleliser" alt="4-way paralleliser" />
+<img src="par4.svg" width="264" height="293" class="svgscaleinsert mediacenter" alt="4-way paralleliser">
 </p>
 
 <p>
@@ -322,7 +310,7 @@ Though this STG is very small and comprehensible, due to high concurrency its st
 </p>
 
 <p>
-<img src="par4-sg.png" class="mediacenter" title="State graph of 4-way paralleliser" alt="State graph of 4-way paralleliser" />
+<img src="par4-sg.svg" width="7681" height="3809" class="svgscaleinsert mediacenter" alt="State graph of 4-way paralleliser">
 </p>
 
 <p>
@@ -330,7 +318,7 @@ The following STG specifies a part of an A2D converter <a href="#refnotes:1:note
 </p>
 
 <p>
-<img src="a2d.png" class="mediacenter" title="Part of an A2D converter" alt="Part of an A2D converter" />
+<img src="a2d.svg" width="273" height="424" class="svgscaleinsert mediacenter" alt="Part of an A2D converter">
 </p>
 
 <p>
@@ -338,7 +326,7 @@ The corresponding state graph is not particularly large, but there are several C
 </p>
 
 <p>
-<img src="a2d-sg.png" class="mediacenter" title="Stage graph of the A2D converter STG" alt="Stage graph of the A2D converter STG" />
+<img src="a2d-sg.svg" width="440" height="1005" class="svgscaleinsert mediacenter" alt="Stage graph of the A2D converter STG">
 </p>
 
 </div>
@@ -383,7 +371,7 @@ Note that this core has several important properties helping the user to underst
 <p>
 The core map for the 4-way paralleliser is as follows. Note that it is much more comprehensible than the state graph: Each concurrent branch has a single conflict core inside it, and one can resolve these cores e.g. by inserting the rising transitions of four new internal signals into these cores, and the corresponding falling transitions outside of these cores.
 </p>
-<div class="wrap_info wrap_round plugin_wrap">
+<div class="wrap_tip wrap_round wrap_center plugin_wrap" style="width: 90%;">
 <p>
 Each core is given a different colour. If there are several cores, it is possible to show any subset of them by selecting the required cores in the <em>Tool controls</em> panel.
 </p>
@@ -393,7 +381,7 @@ Each core is given a different colour. If there are several cores, it is possibl
 </p>
 
 <p>
-The core map corresponding to the A2D controller example is shown below on the left. Note that in this case there are five cores, some of which overlap (and so some of the transitions are highlighted with several colours as they belong to several cores). Core overlaps can be exploited during the resolution process – by inserting <code><span style='color:green; '>csc+</span></code> into the overlap of several cores one can destroy these cores, killing several birds with one stone. Furthermore, one can insert <code><span style='color:green; '>csc-</span></code> into some of the remaining cores, increasing thus the number of birds killed by the same stone.
+The core map corresponding to the A2D controller example is shown below on the left. Note that in this case there are five cores, some of which overlap (and so some of the transitions are highlighted with several colours as they belong to several cores). Core overlaps can be exploited during the resolution process – by inserting <code><span style='color:green; '>csc+</span></code> into the overlap of several cores one can destroy these cores, killing several birds with one stone. Furthermore, one can insert <code><span style='color:green; '>csc-</span></code> into some of the remaining cores, increasing thus the number of killed birds.
 </p>
 
 <p>
@@ -403,20 +391,20 @@ The core map corresponding to the A2D controller example is shown below on the l
 <p>
 When there are multiple overlapping cores, one can quickly identify the promising areas where a signal insertion (or some other transformation) would eliminate as many encoding conflicts as possible by considering the <em>core density map</em> – for the A2D controller example it is shown above on the right. The idea is to count how many cores a transition belongs to, and the higher this number is, the darker is the shade used to highlight this transition. The analogy is with a topographic map where darker shades show higher altitudes – the &#039;peaks&#039; with the darkest shade are good areas where a single signal insertion can eliminate the maximum number of cores. E.g. in the A2D controller example the highest peak is formed by the transitions <code><span style='color:red; '>Laf+</span></code>, <code><span style='color:blue; '>Ar-</span></code>, <code><span style='color:blue; '>Lr-</span></code> and <code><span style='color:red; '>Laf-</span></code> that belong to the same four cores. Hence inserting <code><span style='color:green; '>csc+</span></code> somewhere in this peak eliminates these four cores. The remaining core can be also eliminated if <code><span style='color:green; '>csc-</span></code> is inserted into it, i.e. all the encoding conflicts in this example can be resolved by a single signal insertion.
 </p>
-<div class="plugin_wrap"><div class="wrap_column wrap_half plugin_wrap"><div class="table sectionedit11"><table class="inline">
+<div class="plugin_wrap"><div class="wrap_column wrap_half plugin_wrap"><div class="table sectionedit9"><table class="inline">
 	<tr class="row0">
-		<td class="col0"><img src="a2d-csc-mpsat.png" class="mediacenter" alt="" /></td>
+		<td class="col0"><img src="a2d-csc-mpsat.svg" width="263" height="420" class="svgscaleinsert mediacenter" alt=""></td>
 	</tr>
 	<tr class="row1">
-		<td class="col0 centeralign">  MPSat solution  </td>
+		<td class="col0 centeralign">  MPSat&#039;s solution  </td>
 	</tr>
 </table></div>
-</div><div class="wrap_column wrap_half plugin_wrap"><div class="table sectionedit14"><table class="inline">
+</div><div class="wrap_column wrap_half plugin_wrap"><div class="table sectionedit12"><table class="inline">
 	<tr class="row0">
-		<td class="col0"><img src="a2d-csc-petrify.png" class="mediacenter" alt="" /></td>
+		<td class="col0"><img src="a2d-csc-petrify.svg" width="263" height="420" class="svgscaleinsert mediacenter" alt=""></td>
 	</tr>
 	<tr class="row1">
-		<td class="col0 centeralign">  Petrify solution  </td>
+		<td class="col0 centeralign">  Petrify&#039;s solution  </td>
 	</tr>
 </table></div>
 </div></div>
@@ -437,7 +425,7 @@ The above STGs show two alternative signal insertions resolving all the conflict
 <p>
 Note that MPSat&#039;s solution is smaller, but Petrify&#039;s solution has more concurrency.
 </p>
-<div class="wrap_tip wrap_round plugin_wrap">
+<div class="wrap_tip wrap_round wrap_center plugin_wrap" style="width: 90%;">
 <p>
 MPSat and Petrify are different back-end tools that perform the actual resolution of CSC conflicts. These tools use different methods and somewhat different cost functions, so it makes sense to try both of them and then choose the solution that better fits the designer&#039;s goals (in terms of area, performance, etc.).
 </p>
@@ -520,7 +508,7 @@ Examples and techniques for signal insertion have already been presented above. 
 </div></li>
 </ul>
 
-<div class="wrap_tip wrap_round plugin_wrap">
+<div class="wrap_tip wrap_round wrap_center plugin_wrap" style="width: 90%;">
 <p>
 When trying to resolve encoding conflicts by signal insertion you will be competing with the tools on their own field (as the contract with the environment is unchanged, no insight that is not already available to the tool is exploited), and so are unlikely to significantly improve the automatically generated solution. As an example, consider the (very simple) VME bus controller STG above. MPSat backend reports 18 (!) different ways of resolving the encoding conflict by inserting a single signal, and heuristically chooses the best one. How many of these can you find? For more complicated examples the number of ways to insert a signal grows very fast, and the tool will have an edge over the human designer.
 </p>
@@ -564,7 +552,7 @@ Severity level: <span style='color:orange; '>Antibiotic</span>
 <p>
 Another commonly used transformation for resolving CSC conflicts is <em>concurrency reduction</em> (CR) <a href="#refnotes:1:note6" name="refnotes:1:ref9" class="refnotes-ref note-popup">[6]</a>. The idea is to sequentialise some concurrent transitions in the STG by introducing new arcs, in such a way that some of the conflicted states become unreachable. This may or may not decrease the performance: note that the loss of concurrency may be more than offset by simpler logic in some cases.
 </p>
-<div class="wrap_important wrap_center wrap_round plugin_wrap">
+<div class="wrap_important wrap_center wrap_round plugin_wrap" style="width: 90%;">
 <p>
 This transformation may change the behaviour of the STG in significant ways, and break the contract with the environment! It is up to the designer to ensure that the modified STG still makes sense, and that the environment either can cope with the changed contract or is re-designed for the modified contract – the tools do not have sufficient information / capability to make these kinds of decisions.
 </p>
@@ -574,9 +562,9 @@ A possible CR resolving the encoding conflict in the VME bus controller is shown
 </p>
 
 <p>
-<img src="vme-cr-benign.png" class="mediacenter" title="VME bus controller: resolving the CSC conflict by concurrency reduction" alt="VME bus controller: resolving the CSC conflict by concurrency reduction" />
+<img src="stg-vme-read-cr-benign.svg" width="406" height="102" class="svgscaleinsert mediacenter" alt="VME bus controller: resolving the CSC conflict by concurrency reduction">
 </p>
-<div class="wrap_center wrap_round wrap_info plugin_wrap">
+<div class="wrap_center wrap_round wrap_tip plugin_wrap" style="width: 90%;">
 <p>
 The semantics of CR arcs coincides with that of usual arcs, but it is convenient for the designer to see which arcs were original and which were added later for various technical reasons, so CR arcs are highlighted as thick amber arcs.
 </p>
@@ -586,7 +574,7 @@ The state graph after this CR is shown below: Two of the formerly reachable stat
 </p>
 
 <p>
-<img src="vme-read-cr-sg.png" class="mediacenter" title="The state graph of the VME bus controller STG after concurrency reduction" alt="The state graph of the VME bus controller STG after concurrency reduction" />
+<img src="vme-read-cr-sg.svg" width="557" height="445" class="svgscaleinsert mediacenter" alt="The state graph of the VME bus controller STG after concurrency reduction">
 </p>
 
 <p>
@@ -610,13 +598,17 @@ All the other CRs are called <em>risky</em> – they require extra assumptions a
 <p>
 For example, the CR used in the VME bus controller STG above is innocuous: since the environment formerly was prepared to receive <code><span style='color:blue; '>lds-</span></code> and <code><span style='color:blue; '>dtack-</span></code> in any order, fixing this order to <code><span style='color:blue; '>lds-</span></code> → <code><span style='color:blue; '>dtack-</span></code> is harmless. An alternative (and highly problematic!) way to apply CR to resolve the conflict in VME bus controller is shown below. 
 </p>
-<div class="wrap_center wrap_round wrap_alert plugin_wrap">
+<div class="wrap_center wrap_round wrap_alert plugin_wrap" style="width: 90%;">
 <p>
-<img src="vme-cr-malignant.png" class="mediacenter" title="VME bus controller: resolving the CSC conflict by concurrency reduction" alt="VME bus controller: resolving the CSC conflict by concurrency reduction" />
+<img src="stg-vme-read-cr-malignant.svg" width="406" height="102" class="svgscaleinsert mediacenter" alt="VME bus controller: resolving the CSC conflict by concurrency reduction">
 </p>
 
 <p>
-This CR is <em>risky</em> (i.e. not <em>innocuous</em> according to the above definition) as it changes the contract with the environment in a dangerous way: the modified STG waits for the environment to supply <code><span style='color:red; '>ldtack-</span></code> before it can produce <code><span style='color:blue; '>dtack-</span></code>. If the environment in turn waits for <code><span style='color:blue; '>dtack-</span></code> before sending <code><span style='color:red; '>ldtack-</span></code> (e.g. because the designer next-door used CR to resolve some encoding conflicts in the environment without checking with you <img src="../../lib/images/smileys/icon_wink.gif" class="icon" alt=";-)" />), a deadlock ensues. However, even if that is not the case, there is a higher-level problem with this CR, which cannot be automatically detected even in principle: The applied CR pulls both <code><span style='color:blue; '>lds-</span></code> and <code><span style='color:red; '>ldtack-</span></code> into the core, which completely sequentialises the behaviour (the transitions become totally ordered) and <em>destroys the VME bus controller&#039;s purpose in life</em> (which is to ensure concurrent operation of the bus and the device interacting with the controller).
+This CR is <em>risky</em> (i.e. not <em>innocuous</em> according to the above definition) as it changes the contract with the environment in a dangerous way: the modified STG waits for the environment to supply <code><span style='color:red; '>ldtack-</span></code> before it can produce <code><span style='color:blue; '>dtack-</span></code>. If the environment in turn waits for <code><span style='color:blue; '>dtack-</span></code> before sending <code><span style='color:red; '>ldtack-</span></code> (e.g. because the designer next-door used a risky CR to resolve some encoding conflicts in the environment without checking with you <img src="../../lib/images/smileys/icon_wink.gif" class="icon" alt=";-)" />), a deadlock ensues.
+</p>
+
+<p>
+However, even if no deadlock has been introduced, there is a higher-level problem with this CR, which cannot be automatically detected even in principle: The applied CR pulls both <code><span style='color:blue; '>lds-</span></code> and <code><span style='color:red; '>ldtack-</span></code> into the core, which completely sequentialises the behaviour (the transitions become totally ordered) and <em>destroys the VME bus controller&#039;s purpose in life</em> (which is to ensure concurrent operation of the bus and the device interacting with the controller).
 </p>
 
 <p>
@@ -631,7 +623,7 @@ The following two schematic pictures show how to resolve encoding conflicts usin
 </p>
 
 <p>
-<img src="concurrency-reduction-simple.png" class="mediacenter" title="Core elimination by concurrency reduction." alt="Core elimination by concurrency reduction." />
+<img src="concurrency-reduction-simple.svg" width="295" height="144" class="svgscaleinsert mediacenter" alt="Core elimination by concurrency reduction.">
 </p>
 
 <p>
@@ -639,13 +631,13 @@ In the presence of choices, the CRs may be more complicated, as illustrated belo
 </p>
 
 <p>
-<img src="concurrency-reduction-choice.png" class="mediacenter" title="Core elimination by concurrency reduction in presence of a choice." alt="Core elimination by concurrency reduction in presence of a choice." />
+<img src="concurrency-reduction-choice.svg" width="328" height="178" class="svgscaleinsert mediacenter" alt="Core elimination by concurrency reduction in presence of a choice.">
 </p>
-
+<div class="wrap_hide plugin_wrap"><div class="wrap_center wrap_round wrap_info plugin_wrap" style="width: 90%;">
 <p>
-<img src="../../lib/images/smileys/fixme.gif" class="icon" alt="FIXME" /> [ explain the -r option of MPSat? ]
+CRs can be used (along with signal insertions) for automatic resolution of CSC conflicts – for that you need to provide an extra command line parameter <code>-r</code> to MPSat via <em>Edit→Preferences…→MPSat verification→Additional parameters</em>. <span class="wrap_important ">The resulting automatic solution has to be carefully reviewed by the designer, as MPSat does not discriminate between innocuous and risky CRs, and aggressively uses those that are most likely to reduce the number of literals; e.g. for the VME bus controller example it picks the risky CR that fully sequentialises the behaviour and violates the high-level purpose of the design.</span>
 </p>
-
+</div></div>
 <p>
 Four alternative ways to use CR to resolve the encoding conflicts in the A2D example are shown below – only one (any) of the four amber arcs is added. The reason any of these CRs resolves all the conflicts is interesting:
 </p>
@@ -670,7 +662,7 @@ Four alternative ways to use CR to resolve the encoding conflicts in the A2D exa
 [Ar] = Laf&#039; Lam&#039; (Ar + Ad&#039;); 
 [Lr] = ready&#039; (Ar Ad start + Laf) + Laf Ar; 
 [ready] = ready start + Laf; </pre>
-<div class="wrap_center wrap_round wrap_important plugin_wrap"><pre class="code">// risky CR: start- -&gt; Ar-; 11 literals
+<div class="wrap_center wrap_round wrap_important plugin_wrap" style="width: 90%;"><pre class="code">// risky CR: start- -&gt; Ar-; 11 literals
 [Ar] = (Laf&#039; start&#039; + Lam&#039; start) (Ar + Ad&#039;); 
 [Lr] = Ar (start Ad + Laf); 
 [ready] = Laf;</pre>
@@ -750,7 +742,7 @@ Considerations when using concurrency reduction:
 </div></li>
 </ul>
 
-<div class="wrap_center wrap_round wrap_tip plugin_wrap">
+<div class="wrap_center wrap_round wrap_tip plugin_wrap" style="width: 90%;">
 <p>
 CRs can be used for simplifying the logic, even when there are no encoding conflicts.
 </p>
@@ -761,14 +753,14 @@ CRs can be used for simplifying the logic, even when there are no encoding confl
 <div class="level4">
 
 <p>
-For the STG in Exercise 1:
+For the STG in <span class="curid"><a href="start.html#exercise_1" class="wikilink1" title="tutorial:synthesis:csc-resolution:start">Exercise 1</a></span> above:
 </p>
 <ul>
 <li class="level1"><div class="li">
- Manually resolve the encoding conflicts by concurrency reduction.
+ Manually resolve the encoding conflicts by concurrency reduction:
 </div><ul>
 <li class="level2"><div class="li">
- Think which events can be pulled into cores to break the balance.
+ Think which events can be pulled into the cores to break the balance.
 </div></li>
 <li class="level2"><div class="li">
  Use only innocuous CRs, as this tutorial does not provide sufficient information about the environment of this STG to vet risky CRs.
@@ -785,7 +777,7 @@ For the STG in Exercise 1:
  Once all the encoding conflicts are resolved, synthesise the complex-gate implementation and compare the number of literals with that in the solutions to previous exercises.
 </div></li>
 <li class="level1"><div class="li">
- Even after the encoding conflicts are resolved, use more innocuous CRs to improve the number of literals in the complex-gate implementation. You should be able to get a solution with 23 literals without much effort.
+ Even after the encoding conflicts are resolved, use more innocuous CRs to improve the number of literals in the complex-gate implementation. You should be able to get a solution with 23 literals without much effort. The number of literals can be found towards the end in the <em>Output</em> pane after the complex-gate synthesis has been performed.
 </div></li>
 </ul>
 
@@ -835,11 +827,11 @@ The above STG still has some encoding conflicts, but they can be resolved by ins
 [csc0] = csc0 (WE + B0) + done + flip&#039;; </pre>
 
 <p>
-However, by vigorously applying “understanding of the system” and “creativity”, the designers of this SRAM controllers observed that two signals in the environment, <code><span style='color:red; '>D0</span></code> and <code><span style='color:red; '>D1</span></code>, can help the implementation to trace its current state and get rid of the encoding conflicts (in fact, any of these signal would have been sufficient, but it is better to include them both for the reasons explained below). The STG had to be manually restructured to include these two signals:
+However, by vigorously applying “understanding of the system” and “creativity”, the designers of this SRAM controller observed that two signals in the environment, <code><span style='color:red; '>D0</span></code> and <code><span style='color:red; '>D1</span></code>, can help the implementation to trace its current state and get rid of the encoding conflicts (in fact, any of these signal would have been sufficient, but it is better to include them both for the reasons explained below). The STG had to be manually restructured to include these two signals:
 </p>
 
 <p>
-<img src="flip_slave_no_cr.png" class="mediacenter" title="A part of an SRAM controller (FlipSlave) with extra input signals added to resolve the encoding conflicts" alt="A part of an SRAM controller (FlipSlave) with extra input signals added to resolve the encoding conflicts" />
+<img src="flip_slave_no_cr.svg" width="501" height="562" class="svgscaleinsert mediacenter" alt="A part of an SRAM controller (FlipSlave) with extra input signals added to resolve the encoding conflicts">
 </p>
 
 <p>
@@ -853,7 +845,7 @@ Furthermore, one can simplify this implementation by applying two innocuous CRs 
 </p>
 
 <p>
-<img src="flip_slave_final.png" class="mediacenter" title="Using CRs to simplify the complex-gate implementation" alt="Using CRs to simplify the complex-gate implementation" />
+<img src="flip_slave_final.svg" width="501" height="562" class="svgscaleinsert mediacenter" alt="Using CRs to simplify the complex-gate implementation">
 </p>
 
 <p>
@@ -894,41 +886,167 @@ Considerations when adding extra inputs:
 <div class="level3">
 
 <p>
-Severity level: <img src="surgery.9d0ca6efc1ea9c4b35bb2ecf0b787c95.png" class="media" alt="" width="90" />
+Severity level: <img src="surgery.png" class="media" alt="" width="90" />
+</p>
+<div class="wrap_center wrap_round wrap_alert plugin_wrap" style="width: 90%;">
+<p>
+Timing assumptions offer the designer unlimited opportunities to shoot oneself in a foot.
+</p>
+</div>
+<p>
+Intuitively, <em>Relative Timing Assumptions (RTAs)</em> state, “This transition will fire faster than that one” (see Chapter 7 of <a href="#refnotes:1:note7" name="refnotes:1:ref15" class="refnotes-ref note-popup">[7]</a> – much of the material below comes from there). The difference from <em>Absolute Timing Assumptions (ATAs)</em> is that no specific delays (or intervals thereof) of events are assumed – just assumptions about the order of firing of concurrent transitions are made.
 </p>
 
 <p>
-<img src="../../lib/images/smileys/fixme.gif" class="icon" alt="FIXME" /> “This event will happen faster than that one”
+As an example, consider the VME bus controller STG. If the environment is known to be slow and <code><span style='color:red; '>dsr+</span></code> will definitely arrive after <code><span style='color:blue; '>lds-</span></code> fires (or this can be enforced by transistor sizing, etc.), one can synthesise the circuit with this assumption taken into account. In the picture below this RTA is illustrated by a red arc.
 </p>
 
 <p>
-<img src="../../lib/images/smileys/fixme.gif" class="icon" alt="FIXME" /> Relative vs. absolute timing assumptions, and their robustness
+<img src="stg-vme-read-rta.svg" width="406" height="102" class="svgscaleinsert mediacenter" alt="VME bus controller: resolving the CSC conflict using a relative timing assumption">
+</p>
+<div class="wrap_center wrap_round wrap_tip plugin_wrap" style="width: 90%;">
+<p>
+In contrast to concurrency reduction arcs, which are just regular STG arcs, RTA arcs have very different semantics. In particular, they do not add any triggers to their target transitions. Moreover, an arc&#039;s target can be a transition of an input signal, which was not possible for concurrency reductions.
+</p>
+</div>
+<p>
+The conventional state graphs can no longer adequately express the semantics of STGs with RTAs, and an extended formalism, called <em>lazy transition systems,</em> is explained in <a href="#refnotes:1:note7" name="refnotes:1:ref16" class="refnotes-ref note-popup">[7]</a>. The lazy transition system for the above STG is as follows. Note that due to the RTA one of the states involved in the CSC conflict has become unreachable, and the conflict has disappeared. The difference from the traditional state graphs is that the <em>firing region</em> of a signal can be a proper subset of its <em>enabling region,</em> i.e. there may be states where a signal is enabled but cannot fire due to timing. (In traditional state graphs the enabling and firing regions are always the same, and so there is no need to distinguish between them.) For example, <code><span style='color:red; '>dsr+</span></code> is enabled in states <code>s0_00000</code>, <code>s9_01000</code>, and <code>s11_01001</code>, but can only fire in the former two states due to the RTA. The dashed arc originating in <code>s11_01001</code> is called <em>lazy</em> and can never be taken (but it cannot be dropped, as it prevents <code><span style='color:blue; '>lds-</span></code> becoming a trigger of <code><span style='color:red; '>dsr+</span></code>, which would change the semantics). Lazy arcs do not have target states (and do not need them as they are never taken); in this example state <code>s2_11001_csc</code> is unreachable and so is not even a part of the lazy transition system.
 </p>
 
 <p>
-<img src="../../lib/images/smileys/fixme.gif" class="icon" alt="FIXME" /> Break speed-independence, and generally problematic
+<img src="vme-read-sg-rta.svg" width="557" height="445" class="svgscaleinsert mediacenter" alt="VME bus controller: The lazy transition system corresponding to the above STG with an RTA">
 </p>
 
 <p>
-<img src="../../lib/images/smileys/fixme.gif" class="icon" alt="FIXME" /> Similar to concurrency reductions, but the introduced arcs are special, in particular they don&#039;t trigger signals
+<strong>Examples of common RTAs:</strong>
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Detaching an input ‘bubble’ of a gate as an actual inverter. This is usually ok, provided that the maximum delay of an inverter is smaller than the minimum delay of any other gate and this inverter is placed next to the gate (avoiding thus a wire delay). Note that this imposes constraints on placing and routing. Unfortunately, the logic synthesis and technology mapping procedures often introduce such inverters with RTAs (there are good technical reasons for that). <span class="wrap_tip ">Note that in contrast to input bubbles, detaching an output ‘bubble’ does not break speed-independence and thus does not require any RTAs.</span>
+</div></li>
+<li class="level1"><div class="li">
+ “I know that my environment is slow” – this is often the case (with appropriate constraints on placing and routing), but one must be careful:
+</div><ul>
+<li class="level2"><div class="li">
+ the environment is often just another part of the circuit, and can be very fast;
+</div></li>
+<li class="level2"><div class="li">
+ the environment may be changed without your knowledge by the designer next-door (as explained above for concurrency reductions, but the effects become much more subtle now);
+</div></li>
+<li class="level2"><div class="li">
+ the delays in the environment may be significantly affected by all sorts of variations, like voltage, temperature, etc.
+</div></li>
+</ul>
+</li>
+<li class="level1"><div class="li">
+ “Three gates are always slower than one in my technology library”. This is usually ok, but one has to be careful with wire delays, and impose appropriate constraints on placing and routing.
+</div></li>
+</ul>
+
+
+<p>
+The rational for preferring RTAs over ATAs is that the precise timing is not known at this stage:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ STG specifications are often incomplete, e.g. internal signals need to be inserted to resolve CSC conflicts or break up large complex-gates to map them to the gates available in the given library.
+</div></li>
+<li class="level1"><div class="li">
+ Even after adding such signals, the precise absolute timing information is not available until technology mapping is complete. This leads to a chicken-and-egg problem: for efficiency, synthesis needs delay bounds, but delay bounds are unknown until synthesis is completed. In timed synthesis this problem is solved by iterating delay guessing and synthesis without guarantee of convergence.
+</div></li>
+<li class="level1"><div class="li">
+ Synthesis flows usually include transistor or gate sizing, buffer insertion and selection of various parameters like threshold voltage. A netlist can be sized differently depending on a given set of constraints, and the resulting delays may differ by an order of magnitude depending on the selected sizes and parameters.
+</div></li>
+<li class="level1"><div class="li">
+ Placement and routing may further change delays.
+</div></li>
+</ul>
+
+
+<p>
+Note that much of the above applies not just to ATAs but to RTAs too; however, RTAs are generally much easier to satisfy after logic synthesis than ATAs. RTAs are also less fragile than ATAs as gates&#039; delays often respond to some kinds of variation (e.g. temperature or voltage) in a similar way.  
 </p>
 
 <p>
-<img src="../../lib/images/smileys/fixme.gif" class="icon" alt="FIXME" /> Can “delay” inputs
+The synthesis flow with RTAs follows the paradigm, <em>assume and, if useful, guarantee</em>:
+</p>
+<ol>
+<li class="level1"><div class="li">
+ Heuristically guess a set of RTAs.
+</div></li>
+<li class="level1"><div class="li">
+ Synthesise the circuit under these RTAs.
+</div></li>
+<li class="level1"><div class="li">
+ Derive a subset of RTAs sufficient to guarantee the correctness of this circuit (some of the original RTAs may happen to be redundant for this particular circuit).
+</div></li>
+<li class="level1"><div class="li">
+ Perform transistor sizing and parameter selection to satisfy this subset of constraints.
+</div></li>
+<li class="level1"><div class="li">
+ If the latter is impossible, select a less stringent set of RTAs and try again.
+</div></li>
+</ol>
+
+<div class="wrap_center wrap_round wrap_important plugin_wrap" style="width: 90%;">
+<p>
+Though RTAs are less fragile than ATAs, they do break the speed-independence of the circuit. This introduces a number of problems, in particular:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ It is VERY easy to make a mistake. Such mistakes are often almost impossible to catch during simulation, as they would happen only in a narrow range of delays of inputs and other parameters like temperature, voltage, etc.
+</div></li>
+<li class="level1"><div class="li">
+ Even if the circuit is correct, it is much less robust to all sorts of variations, like temperature, manufacturing, voltage, etc.
+</div></li>
+<li class="level1"><div class="li">
+ RTAs are fragile and have to be re-checked every time even a minor modification is applied to the circuit.
+</div></li>
+<li class="level1"><div class="li">
+ The synthesis and verification flow for the speed-independent circuits implemented in Workcraft will not work for circuits with RTAs.
+</div></li>
+</ul>
+
+</div><div class="wrap_center wrap_round wrap_tip plugin_wrap" style="width: 90%;">
+<p>
+Currently Workcraft has no support for RTAs. They are supported by the Petrify back-end, and one can use them by exporting an STG from Workcraft via <em>File→Export→.g (Workcraft STG serialiser)</em> and then manually adding RTAs to the exported <code>.g</code> file and executing Petrify from the command line. (Petrify can automatically suggest RTAs – for this example it suggests the same RTA as the one shown in the picture.)
 </p>
 
 <p>
-<img src="../../lib/images/smileys/fixme.gif" class="icon" alt="FIXME" /> [VME example with TA delaying an input]
+For example, the following <code>.g</code> file was obtained by exporting the VME bus controller STG and manually adding the RTA (the line <code>.time lds-&lt;|dsr+</code> towards the end):
 </p>
+<pre class="code"># STG file generated by Workcraft -- http://workcraft.org/
+.model Untitled
+.inputs dsr ldtack
+.outputs d dtack lds
+.graph
+d+ dtack+
+d- dtack- lds-
+dsr+ lds+
+dsr- d-
+dtack+ dsr-
+dtack- dsr+
+lds+ ldtack+
+lds- ldtack-
+ldtack+ d+
+ldtack- lds+
+
+.time lds-&lt;|dsr+
+
+.marking {&lt;dtack-,dsr+&gt; &lt;ldtack-,lds+&gt;}
+.end</pre>
 
 <p>
-<img src="vme-ta.png" class="mediacenter" title="VME bus controller: resolving the CSC conflict by concurrency reduction" alt="VME bus controller: resolving the CSC conflict by concurrency reduction" />
+By feeding this file to Petrify, the following complex-gate implementation with 8 literals can be obtained:
 </p>
+<pre class="code">[d] = dsr lds ldtack; 
+[dtack] = d; 
+[lds] = dsr (ldtack&#039; + lds) + d; </pre>
 
 <p>
-<img src="../../lib/images/smileys/fixme.gif" class="icon" alt="FIXME" /> [State graph for the above]
+Note that the complex-gate implementation obtained above by signal insertion also had 8 literals, without any of the troubles and risks associated with RTAs. In general, however, RTAs can deliver some improvements in terms of area and/or performance, and the more aggressive these RTAs are, the bigger improvements are likely to be achieved, and the bigger are the associated troubles and risks.
 </p>
-
+</div>
 <p>
 Considerations when using timing assumptions:
 </p>
@@ -940,11 +1058,19 @@ Considerations when using timing assumptions:
  reduced state graph and so more don&#039;t-cares in minimisation tables, which may result in a better implementation <img src="../../lib/images/smileys/icon_smile.gif" class="icon" alt=":-)" />;
 </div></li>
 <li class="level1"><div class="li">
- break speed-independence of the circuit, so inherently fragile due to variability (manufacturing, temperature, voltage, etc.) <img src="../../lib/images/smileys/icon_sad.gif" class="icon" alt=":-(" />;
+ require deep understanding of theory and the circuit&#039;s behaviour – it is VERY easy to make a mistake, and such mistakes can be very difficult to catch by simulation as they will occur only in some corner cases <img src="../../lib/images/smileys/icon_sad.gif" class="icon" alt=":-(" />;
 </div></li>
 <li class="level1"><div class="li">
- require deep understanding of theory and the circuit&#039;s behaviour <img src="../../lib/images/smileys/icon_sad.gif" class="icon" alt=":-(" />;
+ break speed-independence of the circuit, so 
+</div><ul>
+<li class="level2"><div class="li">
+ cannot be verified using the standard speed-independent design flow and tools <img src="../../lib/images/smileys/icon_sad.gif" class="icon" alt=":-(" />;
 </div></li>
+<li class="level2"><div class="li">
+ inherently fragile due to variability (manufacturing, temperature, voltage, etc.) <img src="../../lib/images/smileys/icon_sad.gif" class="icon" alt=":-(" />;
+</div></li>
+</ul>
+</li>
 <li class="level1"><div class="li">
  introduce place &amp; route constraints, and need extensive validation <img src="../../lib/images/smileys/icon_sad.gif" class="icon" alt=":-(" />.
 </div></li>
@@ -957,29 +1083,12 @@ Considerations when using timing assumptions:
 <div class="level2">
 
 <p>
-Download all the Workcraft models discussed in this section here:
+The Workcraft models discussed in this tutorial can be downloaded here: <span class="wrap_download "><a href="csc-resolution.zip" class="media mediafile mf_zip" title="tutorial:synthesis:csc-resolution:csc-resolution.zip (220.2 KB)">CSC resolution models</a> (220.16 KiB, <acronym title="Modified: 2016-01-21 15:16.12">1w ago</acronym>)</span>
 </p>
-
-<p>
-<img src="../../lib/images/smileys/fixme.gif" class="icon" alt="FIXME" />
-
-&lt;wrap download&gt;{{CSC-resolution.zip|CSC resolution models}}&lt;/wrap&gt;
-
-</p>
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 </div>
+
 <div class="refnotes">
 <hr>
 <div class="notes">
@@ -1013,13 +1122,22 @@ D.J. Kinniment, B. Gao, A. Yakovlev, and F. Xia: <a href="http://dx.doi.org/10.1
 <span id="refnotes:1:note6:text">
 J. Cortadella, M. Kishinevsky, A. Kondratyev, L. Lavagno, and A. Yakovlev: <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.46.7861&amp;rep=rep1&amp;type=pdf" class="urlextern" title="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.46.7861&amp;rep=rep1&amp;type=pdf"  rel="nofollow">Automatic Handshake Expansion and Reshuffling Using Concurrency Reduction</a>. Proc. HWPN (1998) 86-110.
 </span></div>
+<div class="note left">
+<b><a name="refnotes:1:note7" class="nolink">[7]</a></b>
+<span id="refnotes:1:note7:text">
+J. Cortadella, M. Kishinevsky, A. Kondratyev, L. Lavagno, and A. Yakovlev: <a href="http://doi.org/10.1007/978-3-642-55989-1" class="urlextern" title="http://doi.org/10.1007/978-3-642-55989-1"  rel="nofollow">Logic Synthesis for Asynchronous Controllers and Interfaces</a>. Springer Series in Advanced Microelectronics, Vol. 8, 2002.
+</p>
+<div class="wrap_hide plugin_wrap">
+<p>
+[(CKBKLSTY_02&gt;J. Cortadella, M. Kishinevsky, S.M. Burns, A. Kondratyev, L. Lavagno, K.S. Stevens, A. Taubin, and A. Yakovlev: <a href="http://www.cadence.com/cn/cadence/cadence_labs/Documents/luciano_TCAD_2002_lazy.pdf" class="urlextern" title="http://www.cadence.com/cn/cadence/cadence_labs/Documents/luciano_TCAD_2002_lazy.pdf"  rel="nofollow">Lazy Transition Systems and Asynchronous Circuit Synthesis with Relative Timing Assumptions</a>. IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems 21(2) (2002) 109-130.
+</span></div>
 </div>
 </div>
 
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/synthesis/csc-resolution/start.txt</bdi> · Last modified: 2015/11/30 10:31 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/synthesis/csc-resolution/start.txt</bdi> · Last modified: 2016/01/27 09:34 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 
