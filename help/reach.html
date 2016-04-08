@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/reach.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/reach"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/01/29 16:16//';var JSINFO = {"id":"help:reach","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/04/08 18:26//';var JSINFO = {"id":"help:reach","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:reach" /><input type="hidden" name="sectok" value="ca080996db85fd18869457ba46543472" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:reach" /><input type="hidden" name="sectok" value="9c7e1a921a44106df181fae9307293ff" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="reach.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="reach.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="reach.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -86,7 +86,8 @@
 <li class="level1"><div class="li"><a href="#comments">Comments</a></div></li>
 <li class="level1"><div class="li"><a href="#type_system">Type system</a></div></li>
 <li class="level1"><div class="li"><a href="#constants">Constants</a></div></li>
-<li class="level1"><div class="li"><a href="#variables">Variables</a></div></li>
+<li class="level1"><div class="li"><a href="#names_identifiers">Names (identifiers)</a></div></li>
+<li class="level1"><div class="li"><a href="#pre-defined_names">Pre-defined names</a></div></li>
 <li class="level1"><div class="li"><a href="#unary_operators">Unary operators</a></div></li>
 <li class="level1"><div class="li"><a href="#binary_operators">Binary operators</a></div></li>
 <li class="level1"><div class="li"><a href="#ternary_operators">Ternary operators</a></div></li>
@@ -102,11 +103,11 @@
 <div class="level1">
 
 <p>
-The language REACH is used for specifying reachability properties. This approach has the following advantages:
+The language REACH is used for specifying reachability properties. Using a language for specifying properties has the following advantages:
 </p>
 <ul>
 <li class="level1"><div class="li">
- Custom properties can be easily and concisely speciﬁed
+ Custom properties can be easily and concisely speciﬁed.
 </div></li>
 <li class="level1"><div class="li">
  The user does not have to modify the model in any way, in particular the model does not have to be translated into an input language of some model checker.
@@ -208,12 +209,53 @@ The types are never mentioned explicitly, but rather derived from the structure 
 
 </div>
 
-<h2 id="variables">Variables</h2>
+<h2 id="names_identifiers">Names (identifiers)</h2>
 <div class="level2">
 
 <p>
 Built of English letters, digits and &#039;_&#039;, not starting with a digit, case sensitive.
 </p>
+
+</div>
+
+<h2 id="pre-defined_names">Pre-defined names</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li">
+ CONDITIONS – the set of conditions of the unfolding prefix, including the post-cut-off ones
+</div></li>
+<li class="level1"><div class="li">
+ EVENTS – the set of events of the unfolding prefix, including cut-offs
+</div></li>
+<li class="level1"><div class="li">
+ CUTOFFS – the set of cut-off events of the unfolding prefix
+</div></li>
+<li class="level1"><div class="li">
+ PLACES – the set of places of the Petri net
+</div></li>
+<li class="level1"><div class="li">
+ TRANSITIONS – the set of transitions of the Petri net
+</div></li>
+<li class="level1"><div class="li">
+ SIGNALS – the set of all signals of the STG
+</div></li>
+<li class="level1"><div class="li">
+ INPUTS – the set of input signals of the STG
+</div></li>
+<li class="level1"><div class="li">
+ OUTPUTS – the set of output signals of the STG
+</div></li>
+<li class="level1"><div class="li">
+ INTERNAL – the set of internal signals of the STG
+</div></li>
+<li class="level1"><div class="li">
+ DUMMY – the set of dummy signals of the STG
+</div></li>
+<li class="level1"><div class="li">
+ LOCAL – the set of local (i.e. output and internal) signals of the STG
+</div></li>
+</ul>
+
 
 </div>
 
@@ -434,7 +476,7 @@ Below the “s.t.” clause is optional:
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/reach.txt</bdi> · Last modified: 2016/01/08 13:29 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/reach.txt</bdi> · Last modified: 2016/03/01 22:10 by <bdi>victor</bdi></div>
                 -->
                             </div></div><!-- /content -->
 
@@ -446,7 +488,7 @@ Below the “s.t.” clause is optional:
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="reach.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="reach.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="reach.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="reach.html"  class="action export_pdf" rel="nofollow" title="Export to PDF"><span>Export to PDF</span></a></li><li><a href="reach.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                        <li><a href="reach.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="reach.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="reach.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="reach.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
                 </div>
                         </div>
 -->

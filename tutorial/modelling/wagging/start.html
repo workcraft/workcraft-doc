@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/wagging/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/wagging/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:wagging';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/01/29 16:31//';var JSINFO = {"id":"tutorial:modelling:wagging:start","namespace":"tutorial:modelling:wagging","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:wagging';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/04/08 18:42//';var JSINFO = {"id":"tutorial:modelling:wagging:start","namespace":"tutorial:modelling:wagging","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:wagging:start" /><input type="hidden" name="sectok" value="045e04814b1b61a3dd325bf9730dc75b" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:wagging:start" /><input type="hidden" name="sectok" value="5f4effc8b16b161580bb2a845db09911" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -252,7 +252,7 @@ The following ARISC pipeline was adapted from <a href="#refnotes:1:note4" name=
 </p>
 
 <p>
-Download this model: <span class="wrap_download "><a href="dfs-arisc.work" class="media mediafile mf_work" title="tutorial:modelling:wagging:dfs-arisc.work (3.9 KB)">dfs-arisc.work</a> (3.91 KiB, <acronym title="Modified: 2015-05-27 11:56.18">8M ago</acronym>)</span>.
+Download this model: <span class="wrap_download "><a href="dfs-arisc.work" class="media mediafile mf_work" title="tutorial:modelling:wagging:dfs-arisc.work (3.9 KB)">dfs-arisc.work</a> (3.91 KiB, <acronym title="Modified: 2015-05-27 11:56.18">10M ago</acronym>)</span>.
 </p>
 
 <p>
@@ -268,16 +268,10 @@ The throughput of the whole pipeline is determined by the throughput of its slow
 </p>
 </div>
 <p>
-Examine the cycles with the suboptimal throughput, and intelligently apply wagging to improve the performance of this pipeline. Try to increase the throughput from 0.105 to 0.125. Solution: <span class="wrap_spoiler ">Apply 4-way wagging to Data Mem. and 2-way wagging to Arith.</span>
+Examine the cycles with the suboptimal throughput, and intelligently apply wagging to improve the performance of this pipeline. Try to increase the throughput from 0.105 to 0.125. Solution: <span class="wrap_spoiler ">Apply 4-way wagging to Data Mem. and 2-way wagging to Arith. – in both cases include the preceding register.</span>
 </p>
 
-
-
-
-
-
-
-
+</div>
 
 </div>
 <div class="refnotes">
@@ -309,7 +303,7 @@ K. T. Christensen, P. Jensen, P. Korger, J. Sparsø: <em>The design of an a
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/wagging/start.txt</bdi> · Last modified: 2015/12/23 21:33 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/wagging/start.txt</bdi> · Last modified: 2016/03/30 21:46 by <bdi>victor</bdi></div>
                 -->
                             </div></div><!-- /content -->
 
@@ -321,7 +315,7 @@ K. T. Christensen, P. Jensen, P. Korger, J. Sparsø: <em>The design of an a
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action export_pdf" rel="nofollow" title="Export to PDF"><span>Export to PDF</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
                 </div>
                         </div>
 -->

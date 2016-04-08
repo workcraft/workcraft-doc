@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Workcraft - help:verification</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="help,verification"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
+<link rel="start" href="verification.html"/>
+<link rel="contents" href="verification.html" title="Sitemap"/>
+<link rel="alternate" type="application/rss+xml" title="Changes" />
+<link rel="alternate" type="application/rss+xml" title="Current namespace" />
+<link rel="edit" title="Edit this page" href="verification.html"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="_export/xhtml/help/verification.xhtml"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/verification.raw"/>
+<link rel="canonical" href="http://www.workcraft.org/help/verification"/>
+<link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/04/08 18:26//';var JSINFO = {"id":"help:verification","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export loggedIn    ">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+        <h1><a href="start.html"  title="Workcraft start page"><img src="logo.png" width="327" height="57" alt="" /></a></h1>
+    <br><br><br><br>
+    <div class="tools group">
+        <!-- USER TOOLS -->
+<!--
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="verification.html"  class="action admin" rel="nofollow" title="Admin">Admin</a></li><li><a href="verification.html"  class="action profile" rel="nofollow" title="Profile">Profile</a></li><li><a href="verification.html"  class="action logout" rel="nofollow" title="Logout">Logout</a></li>                </ul>
+            </div>
+        -->
+
+        <!-- SEARCH TOOLS -->
+<!--
+        <div id="dokuwiki__searchtools">
+            <h3 class="a11y"></h3>
+            <form action="start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        </div>
+-->
+
+        <!-- SITE TOOLS -->
+<!--
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+                            <div class="mobileTools">
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:verification" /><input type="hidden" name="sectok" value="72a008a574976acc05d297a078249485" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                <ul>
+                    <li><a href="verification.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="verification.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="verification.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
+                    </div>
+    </div>
+-->
+
+    <!-- BREADCRUMBS -->
+        
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                <div class="pageId"><span>help:verification</span></div>
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    
+<h1 id="verification_properties">Verification properties</h1>
+<div class="level1">
+
+</div>
+
+<h2 id="stg_properties">STG properties</h2>
+<div class="level2">
+
+<p>
+Most STGs should satisfy the following four properties (can be checked via <em>Verification</em> menu):
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <strong>Consistency</strong> –  for all signals <code>z</code>, <code>z+</code> and <code>z-</code> must alternate in each possible trace, always starting with the same sign. This is necessary for the encodings of the reachable states to be binary.
+</div></li>
+</ul>
+
+<ul>
+<li class="level1"><div class="li">
+ <strong>Deadlock-freeness</strong> – each reachable marking enables at least one transition.
+</div></li>
+</ul>
+
+<ul>
+<li class="level1"><div class="li">
+ <strong>Input properness</strong> – an input must not be triggered by an internal signal (as the environment must be oblivious to internal signals) and must not be disabled by a local (i.e. output or internal) signal; it is ok (and in fact common) for an input to be disabled by another input. This property can currently be verified only for STGs without dummy transitions.
+</div></li>
+</ul>
+
+<ul>
+<li class="level1"><div class="li">
+ <strong>Output persistence</strong> – a local signal must not be disabled by any other signal (such disabling would cause a hazard on the output of the gate producing this local signal). This property can currently be verified only for STGs without dummy transitions.
+</div></li>
+</ul>
+
+
+<p>
+The notable exceptions are MUTEX and WAIT – they violate output persistence. It is possible to model them by “factoring out” them into the environment, turning these violations into input/input conflicts which are ok.
+</p>
+
+<p>
+The user can specify custom properties using <a href="reach.html" class="wikilink1" title="help:reach">REACH language</a>. For example, a custom property that PMOS and NMOS are never ON at the same time is specified and verified in <a href="../tutorial/synthesis/buck/start.html#formal_verification" class="wikilink1" title="..:tutorial:synthesis:buck:start">buck tutorial</a>.
+</p>
+
+</div>
+
+<h2 id="circuit_properties">Circuit properties</h2>
+<div class="level2">
+
+<p>
+Most speed-independent circuits should satisfy the following properties (can be checked via <em>Verification</em> menu):
+</p>
+<ul>
+<li class="level1"><div class="li">
+ <strong>Conformation</strong> – the circuit will never break the environment by sending an output that the environment does not expect. In other words, if a circuit produces an output, say <code>z+</code>, a transition labelled by <code>z+</code> must be enabled in the environment STG.
+</div></li>
+</ul>
+
+<ul>
+<li class="level1"><div class="li">
+ <strong>Deadlock</strong> – in every reachable state the circuit or the environment (or both) can fire some transition.
+</div></li>
+</ul>
+
+<ul>
+<li class="level1"><div class="li">
+ <strong>Hazard</strong> – an excited gate in the circuit cannot be disabled. This is essentially output-persistence.
+</div></li>
+</ul>
+
+
+<p>
+Note that circuits must be verified with the STG modelling the environment, and during verification it is assumed that the environment fulfils its contract specified by this STG.
+</p>
+
+<p>
+Again, hazards in MUTEX and WAIT have to be handled specially – in Workcraft there is a gate property allowing to treat a gate as a part of the environment.
+</p>
+
+<p>
+These properties are rather weak – e.g. a circuit accepting all inputs and not producing any outputs conforms to any specification with the same signals! They do not constitute transcendental “correctness” – there is no such thing. So set your expectations accordingly – a circuit that passes all these verification checks can still be very wrong.
+</p>
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+<!--
+                                    <div class="docInfo"><bdi>help/verification.txt</bdi> · Last modified: 2016/03/22 11:26 by <bdi>victor</bdi></div>
+                -->
+                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+<!--
+            <div id="dokuwiki__pagetools">
+                            <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="verification.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="verification.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="verification.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="verification.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                </div>
+                        </div>
+-->
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <!--
+    <div class="buttons">
+                <a href="http://www.dokuwiki.org/donate" title="Donate" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="http://www.php.net" title="Powered by PHP" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+    </div>
+-->
+
+<!--
+    <div class="userInfo">
+        Logged in as:: danil    </div>
+-->
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img  width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+</body>
+</html>
+

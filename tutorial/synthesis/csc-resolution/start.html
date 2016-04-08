@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:synthesis:csc-resolution:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="noindex,nofollow"/>
+<meta name="robots" content="index,follow"/>
 <meta name="keywords" content="tutorial,synthesis,csc-resolution,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/synthesis/csc-resolution/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/synthesis/csc-resolution/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:csc-resolution';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/01/29 16:31//';var JSINFO = {"id":"tutorial:synthesis:csc-resolution:start","namespace":"tutorial:synthesis:csc-resolution","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:csc-resolution';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/04/08 18:42//';var JSINFO = {"id":"tutorial:synthesis:csc-resolution:start","namespace":"tutorial:synthesis:csc-resolution","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:csc-resolution:start" /><input type="hidden" name="sectok" value="f980eea895d24756e18beb525a06630e" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:csc-resolution:start" /><input type="hidden" name="sectok" value="c437774d81d9468f361713684e7c2d24" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -152,7 +152,7 @@ In most practical cases CSC conflicts can be resolved automatically, via the <em
 </p>
 
 <p>
-The state graph of this STG is shown below (after manual layout). Note that the binary encodings of the states have one extra bit now corresponding to the newly inserted signal (this is the last bit in the encodings). The two highlighted states correspond to the conflicted states of the original STG – one can see that now their encodings differ in the last bit and so the CSC conflict disappears. Intuitively, the newly inserted signal introduces extra memory into the circuit, helping it to trace its current state and disambiguate the previously conflicted states.
+The state graph of this STG is shown below (after manual layout). Note that the binary encodings of the states have one extra bit now corresponding to the newly inserted signal (this is the last bit in the encodings). The two highlighted states correspond to the conflicted states of the original STG – one can see that now their encodings differ in the last bit and so the CSC conflict disappears. Intuitively, the newly inserted signal introduces extra memory into the circuit, helping it to track its current state and disambiguate the previously conflicted states.
 </p>
 
 <p>
@@ -197,7 +197,7 @@ The total number of literals in the right-hand side of these equations is 8 – 
 <div class="level4">
 
 <p>
-Download the following STG from <a href="#refnotes:1:note1" name="refnotes:1:ref1" class="refnotes-ref note-popup">[1]</a>: <span class="wrap_download "><a href="sram-master.work" class="media mediafile mf_work" title="tutorial:synthesis:csc-resolution:sram-master.work (9 KB)">SRAM controller (MASTER).</a> (9.02 KiB, <acronym title="Modified: 2015-11-10 22:05.59">2M ago</acronym>)</span>:
+Download the following STG from <a href="#refnotes:1:note1" name="refnotes:1:ref1" class="refnotes-ref note-popup">[1]</a>: <span class="wrap_download "><a href="sram-master.work" class="media mediafile mf_work" title="tutorial:synthesis:csc-resolution:sram-master.work (9 KB)">SRAM controller (MASTER).</a> (9.02 KiB, <acronym title="Modified: 2015-11-10 22:05.59">4M ago</acronym>)</span>:
 </p>
 
 <p>
@@ -208,7 +208,7 @@ Download the following STG from <a href="#refnotes:1:note1" name="refnotes:1:ref
  Automatically resolve the encoding conflicts in it using the <em>Tools→Encoding conflicts→Resolve CSC conflicts [MPSat]</em> and <em>Tools→Encoding conflicts→Resolve CSC conflicts [Petrify]</em> menu items. Save the results as <code>sram-master-csc-mpsat.work</code> and <code>sram-master-csc-petrify.work</code>.
 </div></li>
 <li class="level1"><div class="li">
- Synthesise the complex-gate implementations of these two STGs, noting the number of literals in each case (can be found in the <em>Output</em> window).
+ Synthesise the complex-gate implementations of these two STGs, noting the number of literals in each case (can be found in the <em>Output</em> pane).
 </div></li>
 </ul>
 
@@ -427,7 +427,7 @@ Note that MPSat&#039;s solution is smaller, but Petrify&#039;s solution has more
 </p>
 <div class="wrap_tip wrap_round wrap_center plugin_wrap" style="width: 90%;">
 <p>
-MPSat and Petrify are different back-end tools that perform the actual resolution of CSC conflicts. These tools use different methods and somewhat different cost functions, so it makes sense to try both of them and then choose the solution that better fits the designer&#039;s goals (in terms of area, performance, etc.).
+MPSat and Petrify are different back-end tools that perform the actual resolution of CSC conflicts. These tools use different methods and somewhat different cost functions, so it makes sense to try them both and then choose the solution that better fits the designer&#039;s goals (in terms of area, performance, etc.).
 </p>
 </div>
 </div>
@@ -436,7 +436,7 @@ MPSat and Petrify are different back-end tools that perform the actual resolutio
 <div class="level2">
 
 <p>
-Below several ways of resolving encoding conflicts are outlined. They are all supported by tools, with various levels of automation. It is difficult to beat the tools on their own field, as they employ advanced techniques and use complicated cost functions that would be difficult for humans to compute. However, the human designer has information and capabilities that are not available to the tools, in particular the high-level understanding of the design, the possibility to change the contract between the circuit and the environment (and re-design the latter if required), etc. So you need to think “outside the box” to beat the tools.
+Below several ways of resolving encoding conflicts are outlined. They are supported by tools, with various levels of automation. It is difficult to beat the tools on their own field, as they employ advanced techniques and use complicated cost functions that would be difficult for humans to compute. However, the human designer has information and capabilities that are not available to the tools, in particular the high-level understanding of the design, the possibility to change the contract between the circuit and the environment (and re-design the latter if required), etc. So you need to think “outside the box” to beat the tools.
 </p>
 
 </div>
@@ -488,7 +488,7 @@ In addition to these, one should try to heuristically optimise the final impleme
  sequential insertions of transitions of <code><span style='color:green; '>csc</span></code> often result in a smaller circuit with less concurrency, whereas concurrent insertions result in a more concurrent operation at the expense of the area (it is important to note that this more concurrent operation does not necessarily improve the performance of the circuit, as the more complicated implementation imposes additional overheads);
 </div></li>
 <li class="level1"><div class="li">
- reducing the number of signals triggering or triggered by <code><span style='color:green; '>csc</span></code> often leads to a simpler implementation of <code><span style='color:green; '>csc</span></code> and those signals (one can also replace one or more triggers of some signal by <code><span style='color:green; '>csc</span></code>);
+ reducing the number of signals triggering or triggered by <code><span style='color:green; '>csc</span></code> often leads to a simpler implementation of <code><span style='color:green; '>csc</span></code> and those signals, as the trigger<strong>ing</strong> signals are always in the support of the gate implementing the trigger<strong>ed</strong> signal (e.g. one can try replacing one or more triggers of some signal by <code><span style='color:green; '>csc</span></code>, rather than adding <code><span style='color:green; '>csc</span></code> as an extra trigger);
 </div></li>
 <li class="level1"><div class="li">
  <em>locking</em> <code><span style='color:green; '>csc</span></code> with some existing signals (two signals are called <em>locked</em> if their transitions alternate in every execution).
@@ -519,7 +519,7 @@ When trying to resolve encoding conflicts by signal insertion you will be compet
 <div class="level4">
 
 <p>
-For the STG in Exercise 1:
+For the STG in <span class="curid"><a href="start.html#exercise_1" class="wikilink1" title="tutorial:synthesis:csc-resolution:start">Exercise 1</a></span>:
 </p>
 <ul>
 <li class="level1"><div class="li">
@@ -529,7 +529,7 @@ For the STG in Exercise 1:
  Meditate on the cores map and the core density map until you understand the causes of the encoding conflicts.
 </div></li>
 <li class="level1"><div class="li">
- Manually resolve the encoding conflicts by signal insertion as explained above. Make sure that no input is delayed by the newly introduced signals, and that the consistency is not violated – the latter can be verified with the help of <em>Verification→Consistency [MPSat]</em> menu item.
+ Manually resolve the encoding conflicts by signal insertion as explained above. Make sure that the essential STG correctness properties (consistency, deadlock freeness, input properness and output persistence) are still satisfied (these can be checked via <em>Verification→Consistency, deadlock freeness, input properness and output persistence (reuse unfolding) [MPSat]</em> menu item).
 </div></li>
 <li class="level1"><div class="li">
  After all the conflicts are resolved, synthesise the complex-gate implementation using the <em>Synthesis→Complex gate [MPSat]</em> menu item.
@@ -612,7 +612,7 @@ However, even if no deadlock has been introduced, there is a higher-level proble
 </p>
 
 <p>
-The complex-gate implementation has only 7 literals, which is smaller than any of the implementations above, but, as explained, it is totally useless (other then as an illustration of CR pitfalls).
+The complex-gate implementation below has only 7 literals, which is smaller than any of the implementations above, but, as explained, it is totally useless (other then as an illustration of CR pitfalls) and even dangerous due to the subtlety of the problem: It does look attractive and passes all the formal verification checks – so it is very easy even for an experienced designer to be seduced and damned (along with innocent colleagues) to many hours of hard labour trying to track down the cause of performance deterioration in the overall system to this pesky little circuit. Thus be on your guard against risky CRs, and firmly reject them unless explicitly approved by your <del>priest</del> line manager!
 </p>
 <pre class="code">[d] = dsr ldtack; 
 [dtack] = dtack ldtack + d; 
@@ -705,7 +705,7 @@ When choosing a concurrency reduction, one has to make sure that:
  the output-persistency is not violated;
 </div></li>
 <li class="level1"><div class="li">
- no deadlocks have been introduced (e.g. if concurrency reduction is used both to simplify the circuit and, independently, the environment then all the added arcs may accidentally form a loop leading to a deadlock due to circular waiting);
+ no deadlocks have been introduced (e.g. if risky CRs are used both to simplify the circuit and, independently, the environment then all the added arcs may accidentally form a loop leading to a deadlock due to circular waiting);
 </div></li>
 <li class="level1"><div class="li">
  the concurrency reduction resolves some of the CSC conflicts.
@@ -738,13 +738,13 @@ Considerations when using concurrency reduction:
  risky CRs can introduce deadlocks <img src="../../lib/images/smileys/icon_sad.gif" class="icon" alt=":-(" />;
 </div></li>
 <li class="level1"><div class="li">
- even when no deadlocks are introduced, risky CRs may drastically deteriorate the performance due to sequentialisation without the designer realising this (cf. the latter concurrency reduction in VME bus controller example above).
+ even when no deadlocks are introduced, risky CRs may drastically deteriorate the performance due to sequentialisation without the designer realising this (cf. the latter concurrency reduction in VME bus controller example above) <img src="../../lib/images/smileys/icon_sad.gif" class="icon" alt=":-(" />.
 </div></li>
 </ul>
 
 <div class="wrap_center wrap_round wrap_tip plugin_wrap" style="width: 90%;">
 <p>
-CRs can be used for simplifying the logic, even when there are no encoding conflicts.
+CRs can be used for simplifying the logic, even when there are no encoding conflicts. E.g. if several concurrent outputs are triggered by the same transition and have no other triggers, one can try various possible innocuous CRs between them to simplify the logic. E.g. in the VME bus controller STG above, after the conflicts have been resolved by inserting a new signal <code><span style='color:green; '>csc</span></code>, <code><span style='color:blue; '>d-</span></code> is the only trigger of concurrent output transitions <code><span style='color:blue; '>dtack-</span></code> and <code><span style='color:blue; '>lds-</span></code>, so one can try innocuous CRs <code><span style='color:blue; '>dtack-</span></code> → <code><span style='color:blue; '>lds-</span></code> and <code><span style='color:blue; '>lds-</span></code>→<code><span style='color:blue; '>dtack-</span></code> and see if any of them improves the circuit.
 </p>
 </div>
 </div>
@@ -770,6 +770,9 @@ For the STG in <span class="curid"><a href="start.html#exercise_1" class="wikili
 </div></li>
 <li class="level2"><div class="li">
  Do not forget to highlight the CRs by making the corresponding arcs amber and thick (with bigger arrowheads) by editing the properties of the corresponding arcs in the <em>Property editor</em>.
+</div></li>
+<li class="level2"><div class="li">
+ Do not forget to verify the modified STG as explained in <span class="curid"><a href="start.html#exercise_2" class="wikilink1" title="tutorial:synthesis:csc-resolution:start">Exercise 2</a></span>.
 </div></li>
 </ul>
 </li>
@@ -827,7 +830,7 @@ The above STG still has some encoding conflicts, but they can be resolved by ins
 [csc0] = csc0 (WE + B0) + done + flip&#039;; </pre>
 
 <p>
-However, by vigorously applying “understanding of the system” and “creativity”, the designers of this SRAM controller observed that two signals in the environment, <code><span style='color:red; '>D0</span></code> and <code><span style='color:red; '>D1</span></code>, can help the implementation to trace its current state and get rid of the encoding conflicts (in fact, any of these signal would have been sufficient, but it is better to include them both for the reasons explained below). The STG had to be manually restructured to include these two signals:
+However, by vigorously applying “understanding of the system” and “creativity”, the designers of this SRAM controller observed that two signals in the environment, <code><span style='color:red; '>D0</span></code> and <code><span style='color:red; '>D1</span></code>, can help the implementation to trace its current state and get rid of the encoding conflicts (in fact, any of these signals would have been sufficient, but it is better to include them both for the reasons explained below). The STG had to be manually restructured to include these two signals:
 </p>
 
 <p>
@@ -1083,12 +1086,12 @@ Considerations when using timing assumptions:
 <div class="level2">
 
 <p>
-The Workcraft models discussed in this tutorial can be downloaded here: <span class="wrap_download "><a href="csc-resolution.zip" class="media mediafile mf_zip" title="tutorial:synthesis:csc-resolution:csc-resolution.zip (220.2 KB)">CSC resolution models</a> (220.16 KiB, <acronym title="Modified: 2016-01-21 15:16.12">1w ago</acronym>)</span>
+The Workcraft models discussed in this tutorial can be downloaded here: <span class="wrap_download "><a href="csc-resolution.zip" class="media mediafile mf_zip" title="tutorial:synthesis:csc-resolution:csc-resolution.zip (220.2 KB)">CSC resolution models</a> (220.16 KiB, <acronym title="Modified: 2016-01-21 15:16.12">2M ago</acronym>)</span>
 </p>
-</div>
 
 </div>
 
+</div>
 <div class="refnotes">
 <hr>
 <div class="notes">
@@ -1137,7 +1140,7 @@ J. Cortadella, M. Kishinevsky, A. Kondratyev, L. Lavagno, and A. Yakovlev: <a hr
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/synthesis/csc-resolution/start.txt</bdi> · Last modified: 2016/01/27 09:34 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/synthesis/csc-resolution/start.txt</bdi> · Last modified: 2016/03/30 22:32 by <bdi>victor</bdi></div>
                 -->
                             </div></div><!-- /content -->
 
@@ -1149,7 +1152,7 @@ J. Cortadella, M. Kishinevsky, A. Kondratyev, L. Lavagno, and A. Yakovlev: <a hr
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action export_pdf" rel="nofollow" title="Export to PDF"><span>Export to PDF</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
                 </div>
                         </div>
 -->

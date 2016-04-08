@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/phage_lambda/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/phage_lambda/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:phage_lambda';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2015/12/23 22:41//';var JSINFO = {"id":"tutorial:modelling:phage_lambda:start","namespace":"tutorial:modelling:phage_lambda","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:phage_lambda';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/04/08 18:41//';var JSINFO = {"id":"tutorial:modelling:phage_lambda:start","namespace":"tutorial:modelling:phage_lambda","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:phage_lambda:start" /><input type="hidden" name="sectok" value="88a7e64295357978f67dcbbc0411fd0d" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:phage_lambda:start" /><input type="hidden" name="sectok" value="cd7420cbcae1ab3e289497ee11519ce1" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -143,7 +143,7 @@ To address this problem, one can consider an asynchronous Boolean network in the
 </p>
 
 <p>
-Download this model: <span class="wrap_download "><a href="circuit-lambda.work" class="media mediafile mf_work" title="tutorial:modelling:phage_lambda:circuit-lambda.work (3.5 KB)">circuit-lambda.work</a> (3.47 KiB, <acronym title="Modified: 2015-05-22 16:45.32">7M ago</acronym>)</span>.
+Download this model: <span class="wrap_download "><a href="circuit-lambda.work" class="media mediafile mf_work" title="tutorial:modelling:phage_lambda:circuit-lambda.work (3.5 KB)">circuit-lambda.work</a> (3.47 KiB, <acronym title="Modified: 2015-05-22 16:45.32">10M ago</acronym>)</span>.
 </p>
 
 </div>
@@ -270,7 +270,7 @@ This model is much easier to understand than the original Boolean network, for s
 After Component 1 has raised <code><span style='color:green; '>Int</span></code>, <code><span style='color:blue; '>Intg+</span></code> is able to fire representing the integration of the λ DNA into the host cell. Once Component 1 has raised both <code><span style='color:green; '>Int</span></code> and <code><span style='color:green; '>Xis</span></code>, <code><span style='color:blue; '>Intg</span></code> can freely oscillate, i.e., there are no stable states in the absence of immunity <a href="#refnotes:1:note1" name="refnotes:1:ref6" class="refnotes-ref note-popup">[1]</a>. Similarly, once the environment has raised <code><span style='color:red; '>CI</span></code>, Component 1 executes <code><span style='color:green; '>Xis−</span></code> concurrently with <code><span style='color:green; '>CII−</span></code> followed by <code><span style='color:green; '>Int−</span></code>; the outcomes of the arbitrations between <code><span style='color:blue; '>Intg+</span></code> and <code><span style='color:green; '>Int−</span></code> and between <code><span style='color:blue; '>Intg−</span></code> and <code><span style='color:green; '>Int−</span></code> or <code><span style='color:green; '>Xis−</span></code> determine the stable state of <code><span style='color:blue; '>Intg</span></code> in the presence of immunity. These arbitrations exactly correspond to the output-persistency violations 7-9 still remaining in the STG and not involving inputs.
 </p>
 
-
+</div>
 
 </div>
 <div class="refnotes">
@@ -287,12 +287,11 @@ R. Thomas and R. D’Ari: <em>Biological Feedback.</em> CRC Press (1990).
 R. Banks, V. Khomenko, and L.J. Steggles: <em>A Case for Using Signal Transition Graphs for Analysing and Refining Genetic Networks.</em> Proc. of MeCBIC&#039;08. ENTCS 227 (2009) 3-19. <a href="http://dx.doi.org/10.1016/j.entcs.2008.12.101" class="urlextern" title="http://dx.doi.org/10.1016/j.entcs.2008.12.101"  rel="nofollow">http://dx.doi.org/10.1016/j.entcs.2008.12.101</a>
 </span></div>
 </div>
-</div>
 
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/phage_lambda/start.txt</bdi> · Last modified: 2015/12/14 16:36 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/phage_lambda/start.txt</bdi> · Last modified: 2016/04/01 14:04 by <bdi>victor</bdi></div>
                 -->
                             </div></div><!-- /content -->
 
@@ -304,7 +303,7 @@ R. Banks, V. Khomenko, and L.J. Steggles: <em>A Case for Using Signal Transition
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action export_pdf" rel="nofollow" title="Export to PDF"><span>Export to PDF</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
                 </div>
                         </div>
 -->

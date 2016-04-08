@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:synthesis:celement:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="noindex,nofollow"/>
+<meta name="robots" content="index,follow"/>
 <meta name="keywords" content="tutorial,synthesis,celement,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/synthesis/celement/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/synthesis/celement/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:celement';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/01/29 16:31//';var JSINFO = {"id":"tutorial:synthesis:celement:start","namespace":"tutorial:synthesis:celement","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:celement';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/04/08 18:42//';var JSINFO = {"id":"tutorial:synthesis:celement:start","namespace":"tutorial:synthesis:celement","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:celement:start" /><input type="hidden" name="sectok" value="8a358f1d27e284815109e7a8f356cbfb" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:celement:start" /><input type="hidden" name="sectok" value="48e403fac3bc457b8a57cb4797b744f4" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -101,22 +101,14 @@
 <p>
 <a href="http://en.wikipedia.org/wiki/C-element" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/C-element">C-element</a> is a latch that synchronises the phases of its inputs. A symbol for a 2-input C-element and its timing diagram are shown in the figures below. Initially all the signals are in the low state. When both inputs <code>in1</code> and <code>in2</code> go high, the output <code>out</code> also switches to logical 1. It stays in this state until both inputs go low, at which stage the output switches to logical 0.
 </p>
-<div class="plugin_wrap"><div class="wrap_column wrap_third plugin_wrap"><div class="table sectionedit5"><table class="inline">
-	<tr class="row0">
-		<td class="col0"><img src="schematic-celement.png" class="mediacenter" alt="" /></td>
-	</tr>
-	<tr class="row1">
-		<td class="col0 centeralign">  Symbol  </td>
-	</tr>
-</table></div>
-</div><div class="wrap_column wrap_third plugin_wrap"><div class="table sectionedit8"><table class="inline">
-	<tr class="row0">
-		<td class="col0"><img src="td-celement.png" class="mediacenter" alt="" /></td>
-	</tr>
-	<tr class="row1">
-		<td class="col0 centeralign">  Timing diagram  </td>
-	</tr>
-</table></div>
+<div class="plugin_wrap"><div class="wrap_column plugin_wrap" style="width: 30%;">
+<p>
+<img src="schematic-celement.svg" width="106" height="27" class="svgscaleinsert mediacenter" alt="">
+</p>
+</div><div class="wrap_column plugin_wrap" style="width: 40%;">
+<p>
+<img src="td-celement.svg" width="174" height="70" class="svgscaleinsert mediacenter" alt="">
+</p>
 </div></div>
 </div>
 
@@ -124,7 +116,7 @@
 <div class="level2">
 
 <p>
-Let us model the C-element behaviour using the STG formalism. Create a new STG work called <em>stg-celement</em> and translate the sequence of events in the timing diagram into a sequence of STG transitions. Basically you need to create a signal transition for each event of the timing diagram and capture the causality between these events by means of directed arcs between signal transitions. Recreate the following STG model in Workcraft. 
+Let us model the C-element behaviour using the <em>Signal Transition Graph (STG)</em> formalism. Create a new STG work called <em>stg-celement</em> and translate the sequence of events in the timing diagram into a sequence of STG transitions. Basically you need to create a signal transition for each event of the timing diagram and capture the causality between these events by means of directed arcs between signal transitions. Recreate the following STG model in Workcraft. 
 </p>
 <p><a class="folder" href="#folded_1">Detailed instructions </a></p><div class="folded hidden" id="folded_1">
 <p>
@@ -132,7 +124,7 @@ Start with the reset phase of the C-element where <code>out-</code> event is cau
 </p>
 <ul>
 <li class="level1"><div class="li">
- Activate the <strong>signal transition generator</strong> <img src="../../help/editor_tools-signal_transition.png" class="media" title="[T] Signal Transition" alt="[T] Signal Transition" />. Pay attention to the hint at the bottom of the screen: <em>Click to create a falling (or rising with Ctrl) transition of an output (or input with Shift) signal</em>.
+ Activate the <strong>signal transition generator</strong> <img src="../../help/editor_tools-signal_transition.png" class="media" title="[T] Signal Transition" alt="[T] Signal Transition" />. Pay attention to the hint at the bottom of the screen: <em>Click to create a falling (or rising with <kbd>Ctrl</kbd>) transition of an output (or input with <kbd>Shift</kbd>) signal</em>.
 </div></li>
 <li class="level1"><div class="li">
  Click the Editor panel in the location where you want the <code>out-</code> transition to appear.
@@ -144,7 +136,7 @@ Start with the reset phase of the C-element where <code>out-</code> event is cau
  Create <code>in2-</code> transition the same way as <code>in1-</code>.
 </div></li>
 <li class="level1"><div class="li">
- Activate <strong>connection tool</strong> <img src="../../help/editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" />. Pay attention to the hints at the bottom of the screen. Initially the hint says <em>Click on the first component.</em> After the first component is chosen, the hint changes to <em>Click on the second component or create a node point. Hold Ctrl to connect continuously</em>.
+ Activate <strong>connection tool</strong> <img src="../../help/editor_tools-connect.png" class="media" title="[C] Connect" alt="[C] Connect" />. Pay attention to the hints at the bottom of the screen. Initially the hint says <em>Click on the first component.</em> After the first component is chosen, the hint changes to <em>Click on the second component or create a node point. Hold <kbd>Ctrl</kbd> to connect continuously</em>.
 </div></li>
 <li class="level1"><div class="li">
  Click <code>in1-</code>, move the mouse pointer to the <code>out-</code> transition and click again. A causality arc from <code>in1-</code> to <code>out-</code> will be created.
@@ -156,7 +148,7 @@ Start with the reset phase of the C-element where <code>out-</code> event is cau
 
 
 <p>
-<img src="stg-celement-step1.png" class="mediacenter" alt="" />
+<img src="stg-celement-step1.svg" width="98" height="89" class="svgscaleinsert mediacenter" alt="">
 </p>
 
 <p>
@@ -176,7 +168,7 @@ Similarly capture the set phase of the C-element:
 
 
 <p>
-<img src="stg-celement-step2.png" class="mediacenter" alt="" />
+<img src="stg-celement-step2.svg" width="239" height="89" class="svgscaleinsert mediacenter" alt="">
 </p>
 
 <p>
@@ -196,7 +188,7 @@ Now connect the set and reset portions of the specification:
 
 
 <p>
-<img src="stg-celement-step3.png" class="mediacenter" alt="" />
+<img src="stg-celement-step3.svg" width="239" height="116" class="svgscaleinsert mediacenter" alt="">
 </p>
 
 <p>
@@ -207,7 +199,7 @@ Finally, specify the initial state of the C-element in accordance to the startin
  Activate the <strong>selection tool</strong> <img src="../../help/editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />.
 </div></li>
 <li class="level1"><div class="li">
- Select the arc from <code>out-</code> to <code>in1+</code> and in the Property editor set the <em>Tokens</em> value to 1. Alternatively, hold <code>Ctrl</code> and double-click this arc.
+ Select the arc from <code>out-</code> to <code>in1+</code> and in the Property editor set the <em>Tokens</em> value to 1. Alternatively, hold <kbd>Ctrl</kbd> and double-click this arc.
 </div></li>
 <li class="level1"><div class="li">
  Similarly put a token on the arc from <code>out-</code> to <code>in2+</code>.
@@ -220,7 +212,7 @@ The resulting STG should look as follows.
 </p>
 
 <p>
-<img src="stg-celement.png" class="mediacenter" title="C-element STG model" alt="C-element STG model" />
+<img src="stg-celement.svg" width="239" height="116" class="svgscaleinsert mediacenter" alt="C-element STG model">
 </p>
 
 </div>
@@ -229,15 +221,11 @@ The resulting STG should look as follows.
 <div class="level2">
 
 <p>
-Activate the <strong>simulation tool</strong> <img src="../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> and exercise the obtained STG model. Click one of the enabled signal transitions (they are highlighted in orange) to <em>evaluate</em> the STG into the next state. Note that the sequence of fired transitions is recorded in the simulation trace that is somewhat similar to the original timing diagram. Check that the simulation traces correspond to the intended behaviour of C-element.
+Activate the <strong>simulation tool</strong> <img src="../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> and exercise the obtained STG model. Click one of the enabled signal transitions (they are highlighted in orange) to <em>fire</em> (or <em>execute</em>) it, which changes the <em>state</em> (or <em>marking</em>) of the STG. Note that the sequence of fired transitions is recorded in the simulation trace that is somewhat similar to the original timing diagram. Check that the simulation traces correspond to the intended behaviour of C-element.
 </p>
 
 <p>
-Before proceeding to the synthesis of the C-element it is a good idea to verify that its specification meets essential requirements, e.g. that it is consistent, free from deadlocks, and output-persistent.
-</p>
-
-<p>
-To verify the signal consistency (i.e. that the rising and falling phases of each signal alternate in all possible execution traces) select <em>Verification→Consistency [MPSat]</em> menu item. Similarly, for deadlock checking select <em>Verification→Deadlock [MPSat]</em>, and for output-persistency select <em>Verification→Output persistence (without dummies) [MPSat]</em> menu item.
+Before proceeding to the synthesis of the C-element it is a good idea to verify that its specification meets essential requirements, e.g. that it is consistent, free from deadlocks, input-proper and output-persistent. These properties can be checked via the <em>Verification</em> menu. Note that it is possible to check these properties either separately or jointly with a single click.
 </p>
 
 <p>
@@ -254,7 +242,7 @@ The STG specification can now be synthesised into an asynchronous circuit implem
 </p>
 
 <p>
-A complex-gate implementation obtained with Petrify (<em>Synthesis→Complex gate [Petrify]</em> menu item) appears in the Output panel towards the end and is as follows: (<span class="wrap_important ">Note that solution is not unique and you may get a slightly different equation.</span>)
+A complex-gate implementation obtained with Petrify (<em>Synthesis→Complex gate [Petrify]</em> menu item) appears in the Output panel towards the end and is as follows: (<span class="wrap_important ">Note that you may get a slightly different equation.</span>)
 </p>
 <pre class="code">[out] = in2 (in1 + out) + in1 out;</pre>
 
@@ -283,7 +271,7 @@ Circuit designers use hardware description languages, such as <a href="http://en
 <div class="level2">
 <div class="wrap_center wrap_round wrap_info plugin_wrap" style="width: 90%;">
 <p>
-Workcraft can automatically derive a circuit from the synthesis output of MPSat or Petrify. (This is controlled by the <em>Import synthesis result</em> checkbox the <em>Edit→Preferences…</em> window under the <em>Models→Digital Circuit</em> leaf, and is enabled by default.) However, for the purpose of this exercise you should capture the circuit schematics manually.
+Workcraft can automatically derive a circuit from the synthesis output of MPSat or Petrify. (This is controlled by the <em>Import synthesis result</em> checkbox the <em>Edit→Preferences…</em> window under the <em>Models→Digital Circuit</em> leaf, and is enabled by default.) However, for the purposes of this exercise you should capture the circuit schematics manually.
 </p>
 </div>
 <p>
@@ -306,7 +294,7 @@ Create a new Digital Circuit work called <em>circuit-celement-cg</em> and captur
 
 
 <p>
-<img src="circuit-celement-cg-step2.png" class="mediacenter" alt="" />
+<img src="circuit-celement-cg-step2.svg" width="136" height="80" class="svgscaleinsert mediacenter" alt="">
 </p>
 <ul>
 <li class="level1"><div class="li">
@@ -325,7 +313,7 @@ Create a new Digital Circuit work called <em>circuit-celement-cg</em> and captur
 
 
 <p>
-<img src="circuit-celement-cg-step3.png" class="mediacenter" alt="" />
+<img src="circuit-celement-cg-step3.svg" width="306" height="80" class="svgscaleinsert mediacenter" alt="">
 </p>
 <ul>
 <li class="level1"><div class="li">
@@ -344,17 +332,17 @@ Create a new Digital Circuit work called <em>circuit-celement-cg</em> and captur
 
 
 <p>
-<img src="circuit-celement-cg-step4.png" class="mediacenter" alt="" />
+<img src="circuit-celement-cg-step4.svg" width="306" height="115" class="svgscaleinsert mediacenter" alt="">
 </p>
 <div class="wrap_center wrap_round wrap_box plugin_wrap" style="width: 90%;">
 <h4 id="optional_simplification">Optional simplification</h4>
 
 <p>
-You may wish to tidy up the circuit schematic and make it more readable by adding wire forks. If you create a connection to/from a wire then a <strong>joint</strong> will be automatically inserted. This result should look as follows; this implementation can be downloaded here: <span class="wrap_download "><a href="circuit-celement-cg.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-cg.work (3.1 KB)">circuit-celement-cg.work</a> (3.09 KiB, <acronym title="Modified: 2015-05-22 11:54.30">8M ago</acronym>)</span>.
+You may wish to tidy up the circuit schematic and make it more readable by adding wire forks. If you create a connection to/from a wire then a <strong>joint</strong> will be automatically inserted. This result should look as follows; this implementation can be downloaded here: <span class="wrap_download "><a href="circuit-celement-cg.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-cg.work (3.1 KB)">circuit-celement-cg.work</a> (3.09 KiB, <acronym title="Modified: 2015-05-22 11:54.30">10M ago</acronym>)</span>.
 </p>
 
 <p>
-<img src="circuit-celement-cg-step5.png" class="mediacenter" alt="" />
+<img src="circuit-celement-cg.svg" width="331" height="98" class="svgscaleinsert mediacenter" alt="">
 </p>
 </div>
 </div>
@@ -371,11 +359,11 @@ Click one of the excited pins to toggle its logical value. Similar to the STG si
 </p>
 
 <p>
-To conduct formal verification the circuit has to be converted into an STG. Normally this is done silently by the tool, but it is possible to view the intermediate circuit-STG via <em>Conversion→Signal Transition Graph</em>. The resulting STG for this circuit is shown below. <span class="wrap_info ">Note that your layout may be slightly different and that this STG will not be required in the rest of the tutorial.</span>
+To conduct formal verification the circuit has to be converted into an STG. Normally this is done silently by the tool, but it is possible to view the intermediate circuit-STG via <em>Conversion→Signal Transition Graph</em>. The resulting STG for this circuit is shown below. <span class="wrap_important ">Note that your layout may be slightly different and that this STG will not be required in the rest of the tutorial.</span>
 </p>
 
 <p>
-<img src="stg-celement-circuit_stg.png" class="mediacenter" alt="" />
+<img src="stg-celement-circuit_stg.svg" width="381" height="141" class="svgscaleinsert mediacenter" alt="">
 </p>
 
 <p>
@@ -387,7 +375,7 @@ Play this trace to discover that indeed, at the end of it the output of the C-el
 </p>
 <div class="wrap_center wrap_round wrap_important plugin_wrap" style="width: 90%;">
 <p>
-The STG specification contains some information that is not available in the circuit, namely the behaviour of the environment. The circuit can work correctly only in an environment that respects its contract specified by the original STG. In other environments the circuit may exhibit hazards, deadlocks, etc. Therefore, during formal verification of the circuit one has to restrict its environment in such a way that the circuit only receives those inputs that are allowed by the STG specification. 
+The STG specification contains some information that is not available in the circuit, namely the behaviour of the environment. The circuit is guaranteed to work correctly only in an environment that respects its contract specified by the original STG. In other environments the circuit may exhibit hazards, deadlocks, etc. Therefore, during formal verification of the circuit one has to restrict its environment in such a way that the circuit only receives those inputs that are allowed by the STG specification. 
 </p>
 </div>
 <p>
@@ -420,7 +408,7 @@ For example, you can feed the inverted value of C-element output to its inputs.
 
 
 <p>
-<img src="circuit-celement-cg-step6.png" class="mediacenter" alt="" />
+<img src="circuit-celement-cg-step6.svg" width="0" height="0" class="svgscaleinsert mediacenter" alt="">
 </p>
 </div>
 <p>
@@ -437,19 +425,19 @@ Large gates like <code>AO222</code> may not be available in the technology libra
 </p>
 
 <p>
-Download the following C-element implementation due to Mayevsky <span class="wrap_download "><a href="circuit-celement-decomposed.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-decomposed.work (3.8 KB)">circuit-celement-decomposed.work</a> (3.78 KiB, <acronym title="Modified: 2015-05-22 11:54.31">8M ago</acronym>)</span> and verify that it conforms to the STG specification and is free from deadlocks and hazards.
+Download the following C-element implementation due to Mayevsky <span class="wrap_download "><a href="circuit-celement-decomposed.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-decomposed.work (3.8 KB)">circuit-celement-decomposed.work</a> (3.78 KiB, <acronym title="Modified: 2016-03-30 13:54.52">1w ago</acronym>)</span> and verify that it conforms to the STG specification and is free from deadlocks and hazards.
 </p>
 
 <p>
-<img src="circuit-celement-decomposed.png" class="mediacenter" alt="" />
+<img src="circuit-celement-decomposed.svg" width="437" height="141" class="svgscaleinsert mediacenter" alt="">
 </p>
 
 <p>
-Note that the correctness of this implementation depends on the <em>isochronic forks assumption</em>: the difference in arrival times of a signal to the ends of a wire fork is negligible compared to any gate delay. If this assumption is violated, the above implementation can exhibit hazards. Download the following C-element implementation <span class="wrap_download "><a href="circuit-celement-decomposed-hazard.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-decomposed-hazard.work (3.9 KB)">circuit-celement-decomposed-hazard.work</a> (3.9 KiB, <acronym title="Modified: 2015-05-22 11:54.31">8M ago</acronym>)</span> where a delay in a wire fork is made explicit (modelled by a buffer). Formally verify this model, inspect the violation trace, and explain what can go wrong in it.
+Note that the correctness of this implementation depends on the <em>isochronic forks assumption</em>: the difference in arrival times of a signal to the ends of a wire fork is negligible compared to any gate delay. If this assumption is violated, the above implementation can exhibit hazards. Download the following C-element implementation <span class="wrap_download "><a href="circuit-celement-decomposed-hazard.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-decomposed-hazard.work (4 KB)">circuit-celement-decomposed-hazard.work</a> (3.96 KiB, <acronym title="Modified: 2016-03-30 13:54.53">1w ago</acronym>)</span> where a delay in a wire fork is made explicit (modelled by a buffer). Formally verify this model, inspect the violation trace, and explain what can go wrong in it.
 </p>
 
 <p>
-<img src="circuit-celement-decomposed-hazard.png" class="mediacenter" alt="" />
+<img src="circuit-celement-decomposed-hazard.svg" width="437" height="141" class="svgscaleinsert mediacenter" alt="">
 </p>
 
 </div>
@@ -462,7 +450,7 @@ Download all the Workcraft models discussed in this tutorial here:
 </p>
 
 <p>
-<span class="wrap_download "><a href="celement.zip" class="media mediafile mf_zip" title="tutorial:synthesis:celement:celement.zip (17.2 KB)">C-element models</a> (17.17 KiB, <acronym title="Modified: 2015-06-15 10:30.09">7M ago</acronym>)</span>
+<span class="wrap_download "><a href="celement.zip" class="media mediafile mf_zip" title="tutorial:synthesis:celement:celement.zip (13.8 KB)">C-element models</a> (13.83 KiB, <acronym title="Modified: 2016-03-30 14:32.32">1w ago</acronym>)</span>
 </p>
 
 </div>
@@ -470,7 +458,7 @@ Download all the Workcraft models discussed in this tutorial here:
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/synthesis/celement/start.txt</bdi> · Last modified: 2016/01/27 09:33 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/synthesis/celement/start.txt</bdi> · Last modified: 2016/03/30 21:56 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 
@@ -482,7 +470,7 @@ Download all the Workcraft models discussed in this tutorial here:
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action export_pdf" rel="nofollow" title="Export to PDF"><span>Export to PDF</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
                 </div>
                         </div>
 -->

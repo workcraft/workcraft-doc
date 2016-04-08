@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/stg/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/stg/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:stg';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/01/29 16:30//';var JSINFO = {"id":"tutorial:modelling:stg:start","namespace":"tutorial:modelling:stg","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:stg';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/04/08 18:41//';var JSINFO = {"id":"tutorial:modelling:stg:start","namespace":"tutorial:modelling:stg","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:stg:start" /><input type="hidden" name="sectok" value="d64d98ce62801e04cb11dbea501dfb06" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:stg:start" /><input type="hidden" name="sectok" value="64a21c049ed287132c45bdb2d0cdfcbe" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -100,13 +100,13 @@ In the exercises below you will use <em>Signal Transition Graphs</em> (STG). STG
 </p>
 <ul>
 <li class="level1"><div class="li">
- Short-hand drawing conventions is used:
+ Short-hand drawing conventions are used:
 </div><ul>
 <li class="level2"><div class="li">
  Transition boxes are omitted – only labels (actions) are drawn.
 </div></li>
 <li class="level2"><div class="li">
- Places with one incoming and one outgoing arc are not shown – transition-to-transition arcs are drawn instead (a token is put directly on such an arc if the original place is marked).
+ Places with one incoming and one outgoing arc are normally not shown – transition-to-transition arcs are drawn instead (a token is put directly on such an arc if the original place is marked); this can be overridden for particular places if necessary.
 </div></li>
 </ul>
 </li>
@@ -197,7 +197,7 @@ The resulting STG model of the system should appear in a new tab. It is also sho
  The layout was manually modified to resemble the layout of the original STGs.
 </div></li>
 <li class="level1"><div class="li">
- Places <code>CS1</code>, <code>CS2</code>, <code>token1</code> and <code>token2</code> have one incoming and one outgoing arc, and so were not shown in the resulting composition. They can be made explicit by selecting the corresponding transition-to-transition arcs, clicking <em>Transformations→Make places explicit</em> and renaming.
+ Places <code>CS1</code>, <code>CS2</code>, <code>notoken1</code> and <code>notoken2</code> have one incoming and one outgoing arc, and so were not shown in the resulting composition. They can be made explicit by selecting the corresponding transition-to-transition arcs, clicking <em>Transformations→Make places explicit</em> and renaming.
 </div></li>
 <li class="level1"><div class="li">
  The dummy transitions were renamed to correspond to the <code>moveXtoY</code> transitions in the original STGs.
@@ -291,7 +291,7 @@ One can also contract the dummy transitions without changing the behaviour of th
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/stg/start.txt</bdi> · Last modified: 2016/01/10 23:43 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/stg/start.txt</bdi> · Last modified: 2016/03/30 21:42 by <bdi>victor</bdi></div>
                 -->
                             </div></div><!-- /content -->
 
@@ -303,7 +303,7 @@ One can also contract the dummy transitions without changing the behaviour of th
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action export_pdf" rel="nofollow" title="Export to PDF"><span>Export to PDF</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
                 </div>
                         </div>
 -->

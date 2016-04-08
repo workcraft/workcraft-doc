@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:synthesis:buck:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="noindex,nofollow"/>
+<meta name="robots" content="index,follow"/>
 <meta name="keywords" content="tutorial,synthesis,buck,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/synthesis/buck/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/synthesis/buck/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:buck';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/01/29 16:31//';var JSINFO = {"id":"tutorial:synthesis:buck:start","namespace":"tutorial:synthesis:buck","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:buck';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/04/08 18:42//';var JSINFO = {"id":"tutorial:synthesis:buck:start","namespace":"tutorial:synthesis:buck","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:buck:start" /><input type="hidden" name="sectok" value="4a3ea55cc48d7adc7b5f68bc60f992ad" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:buck:start" /><input type="hidden" name="sectok" value="5d9eb0ce853a36350e4a4aac4cf293cf" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -101,7 +101,7 @@
 <li class="level2"><div class="li"><a href="#formal_verification1">Formal verification</a></div></li>
 </ul>
 </li>
-<li class="level1"><div class="li"><a href="#exercise_5alternative_implementations">Exercise 5: Alternative implementations</a></div>
+<li class="level1"><div class="li"><a href="#exercise_5alternative_implementations_optional">Exercise 5: Alternative implementations (optional)</a></div>
 <ul class="toc">
 <li class="level2"><div class="li"><a href="#standard-c_implementation">Standard-C implementation</a></div></li>
 <li class="level2"><div class="li"><a href="#logic_decomposition_and_technology_mapping">Logic decomposition and technology mapping</a></div></li>
@@ -475,13 +475,25 @@ Activate the <strong>simulation tool</strong> <img src="../../help/editor_tools-
 </p>
 <div class="wrap_center wrap_round wrap_important plugin_wrap" style="width: 90%;">
 <p>
-Make sure that the initial values of all signals are as expected: <code><span style='color:blue; '>gn</span></code> and <code><span style='color:red; '>gn_ack</span></code> must be high, and the other signals must be low. Also, gate outputs are normally not excited at the initial state. Incorrect initial values of signals is a very common problem in manually edited circuits!
+Make sure that the initial values of all signals are as expected: <code><span style='color:blue; '>gn</span></code> and <code><span style='color:red; '>gn_ack</span></code> must be high, and the other signals must be low. Incorrect initial values of signals is a very common problem in manually edited circuits!
+</p>
+
+<p>
+Gate outputs should normally not be excited at the initial state, and at the STG level output and internal signals should normally not be enabled by the initial marking. The reason is that most asynchronous circuits produce outputs in response to input stimuli, and are otherwise quiescent. The exceptions are circuits like oscillators.
+</p>
+
+<p>
+Note however that in some synthesis modes where signal insertion is required (e.g. CSC resolution or logic decomposition with technology mapping) some of the newly inserted signals can be initially enabled, and the corresponding gates initially excited. In such a case the designer can change the initial marking of the system by firing these signals, until a quiescent initial marking is reached – this is always possible provided the initial marking of the original STG was quiescent. Maybe, one day the tools will do that automatically…
 </p>
 </div>
 <p>
 Click an excited pin to toggle its logical value – the circuit will evaluate to the next state where new set of signals will be enabled. The sequence of signal events is recorded in the simulation trace and can be subsequently replayed for analysing the circuit&#039;s behaviour.
 </p>
-
+<div class="wrap_center wrap_round wrap_tip plugin_wrap" style="width: 90%;">
+<p>
+During simulation the user is not bound by the contract specified by the original STG: The input ports are always excited and one can produce an input that would not be permitted by the STG. Hence the circuit may exhibit hazards and other problems that cannot occur in a correct environment. This is intentional, i.e. not a bug but a feature!
+</p>
+</div>
 </div>
 
 <h3 id="formal_verification1">Formal verification</h3>
@@ -501,7 +513,7 @@ In theory, synthesised circuits are correct-by-construction. In practice, the sy
 </div>
 </div>
 
-<h2 id="exercise_5alternative_implementations">Exercise 5: Alternative implementations</h2>
+<h2 id="exercise_5alternative_implementations_optional">Exercise 5: Alternative implementations (optional)</h2>
 <div class="level2">
 
 <p>
@@ -581,7 +593,7 @@ The circuit is now mapped – the gate labels correspond to the gate names in th
 </p>
 
 <p>
-Let us try to decompose the implementation of <code><span style='color:blue; '>gp</span></code> into gates/latches with at most two inputs. In the <em>Edit→Preferences</em> dialog, select <em>External tools→MPSat</em> and type <code>-g2</code> in the <em>Additional arguments</em> property. This will pass an extra command line option to MPSat, which will restrict it to gates/latches with at most two inputs. Then select <em>Synthesis→Technology mapping [MPSat]</em> to obtain the following implementation of <code><span style='color:blue; '>gp</span></code> (<span class="wrap_important ">note that solution is not unique and you may get a slightly different one</span>).
+Let us try to decompose the implementation of <code><span style='color:blue; '>gp</span></code> into gates/latches with at most two inputs. In the <em>Edit→Preferences</em> dialog, select <em>External tools→MPSat synthesis</em> and tick the <em>Edit additional parameters before every call</em> checkbox. Then select <em>Synthesis→Technology mapping [MPSat]</em>. A dialog box will pop up asking for extra command line parameters to pass to MPSat – type <code>-g2</code> to restrict MPSat to gates/latches with at most two inputs. The following implementation of <code><span style='color:blue; '>gp</span></code> can then be computed (<span class="wrap_important ">note that solution is not unique and you may get a slightly different one</span>).
 </p>
 <div class="wrap_center wrap_round wrap_info plugin_wrap" style="width: 90%;">
 <p>
@@ -597,15 +609,15 @@ Do not forget to verify this solution w.r.t. the original STG as described above
 </p>
 </div><div class="wrap_center wrap_round wrap_important plugin_wrap" style="width: 90%;">
 <p>
-Do not forget to delete the <code>-g2</code> option from the preferences, to avoid permanently restricting MPSat to 2-input gates!
+Do not forget to un-tick the <em>Edit additional parameters before every call</em> checkbox (unless you want to be prompted for extra parameters every time MPSat synthesis is invoked).
 </p>
 </div>
 <p>
-This solution has no input inverters, and so no timing assumptions have to be made. 
+This solution happens to have no input inverters, and so no timing assumptions have to be made. 
 </p>
 <div class="wrap_center wrap_round wrap_tip plugin_wrap" style="width: 90%;">
 <p>
-Note that this implementation of <code><span style='color:blue; '>gp</span></code> is not a standard-C implementation, as the signals on the inputs of the C-element are not mutually exclusive (even with inversions taken into account): All four possible combinations of these two values are reachable, i.e. these signals cannot be interpreted as set and (inverted) reset functions.
+Note that this implementation of <code><span style='color:blue; '>gp</span></code> is not a standard-C implementation, as the signals on the inputs of the C-element are not mutually exclusive (even with inversions taken into account): All four possible combinations of these two values are reachable, i.e. these signals cannot be interpreted as Set and (inverted) Reset functions.
 </p>
 </div>
 </div>
@@ -618,7 +630,7 @@ Download all the Workcraft models discussed in this tutorial here:
 </p>
 
 <p>
-<span class="wrap_download "><a href="buck.zip" class="media mediafile mf_zip" title="tutorial:synthesis:buck:buck.zip (38.4 KB)">Buck control models</a> (38.39 KiB, <acronym title="Modified: 2016-01-06 14:46.10">3w ago</acronym>)</span>
+<span class="wrap_download "><a href="buck.zip" class="media mediafile mf_zip" title="tutorial:synthesis:buck:buck.zip (44.4 KB)">Buck control models</a> (44.45 KiB, <acronym title="Modified: 2016-03-30 12:40.11">1w ago</acronym>)</span>
 </p>
 
 </div>
@@ -626,7 +638,7 @@ Download all the Workcraft models discussed in this tutorial here:
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/synthesis/buck/start.txt</bdi> · Last modified: 2016/01/27 09:32 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/synthesis/buck/start.txt</bdi> · Last modified: 2016/03/30 12:58 by <bdi>victor</bdi></div>
                 -->
                             </div></div><!-- /content -->
 
@@ -638,7 +650,7 @@ Download all the Workcraft models discussed in this tutorial here:
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action export_pdf" rel="nofollow" title="Export to PDF"><span>Export to PDF</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
                 </div>
                         </div>
 -->
