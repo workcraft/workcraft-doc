@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:synthesis:celement:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="tutorial,synthesis,celement,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/synthesis/celement/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/synthesis/celement/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:celement';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/04/08 18:42//';var JSINFO = {"id":"tutorial:synthesis:celement:start","namespace":"tutorial:synthesis:celement","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:celement';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/05/28 22:57//';var JSINFO = {"id":"tutorial:synthesis:celement:start","namespace":"tutorial:synthesis:celement","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,12 +57,12 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:celement:start" /><input type="hidden" name="sectok" value="48e403fac3bc457b8a57cb4797b744f4" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:celement:start" /><input type="hidden" name="sectok" value="09934c5b5ff4e347ba10e209eb0b6c60" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
-    </div>
 -->
+    </div>
 
     <!-- BREADCRUMBS -->
         
@@ -90,6 +90,7 @@
 <li class="level1"><div class="li"><a href="#verification_of_implementation">Verification of implementation</a></div></li>
 <li class="level1"><div class="li"><a href="#decomposed_implementation">Decomposed implementation</a></div></li>
 <li class="level1"><div class="li"><a href="#solutions">Solutions</a></div></li>
+<li class="level1"><div class="li"><a href="#feedback">Feedback</a></div></li>
 </ul>
 </div>
 </div>
@@ -225,6 +226,22 @@ Activate the <strong>simulation tool</strong> <img src="../../help/editor_tools-
 </p>
 
 <p>
+For example, simulate the following trace <code><span style='color:red; '>in2+</span>, <span style='color:red; '>in1+</span>, <span style='color:blue; '>out+</span>, <span style='color:red; '>in1-</span>, <span style='color:red; '>in2-</span>, <span style='color:blue; '>out-</span>, <span style='color:red; '>in1+</span>, <span style='color:red; '>in2+</span></code> – you can copy the trace to clipboard and paste it in simulation tool by pressing <img src="../../help/tool_controls-simulate-paste_trace.png" class="media" title="Paste from clipboard" alt="Paste from clipboard" />. Then use the generator of trace diagram <img src="../../help/tool_controls-simulate-generate_trace_diagram.png" class="media" title="Generate trace diagram" alt="Generate trace diagram" /> to convert the STG simulation trace to <em>Digital Timing Diagram</em> model. The produced timing diagram should resemble the initial informal specification and looks as follows.
+</p>
+
+<p>
+<img src="dtd-celement.svg" width="273" height="118" class="svgscaleinsert mediacenter" alt="C-element DTD model">
+</p>
+<div class="wrap_info wrap_center wrap_round plugin_wrap" style="width: 90%;">
+<p>
+The visibility and color of signals in the generated timing diagram are defined in <strong>Visible</strong> and <strong>Color</strong> columns of the signal state table, at the bottom of <strong>Tool controls</strong> for STG simulation tool. The order of signal waveforms is also defined in this table by rearranging (drag-and-drop) the signal rows.
+</p>
+
+<p>
+The timing diagram is built for the main simulation trace – <strong>Trace</strong> column. If the <strong>Trace</strong> is empty then the timing diagram generator will suggest to use <strong>Branch</strong> simulation results instead.
+</p>
+</div>
+<p>
 Before proceeding to the synthesis of the C-element it is a good idea to verify that its specification meets essential requirements, e.g. that it is consistent, free from deadlocks, input-proper and output-persistent. These properties can be checked via the <em>Verification</em> menu. Note that it is possible to check these properties either separately or jointly with a single click.
 </p>
 
@@ -338,7 +355,7 @@ Create a new Digital Circuit work called <em>circuit-celement-cg</em> and captur
 <h4 id="optional_simplification">Optional simplification</h4>
 
 <p>
-You may wish to tidy up the circuit schematic and make it more readable by adding wire forks. If you create a connection to/from a wire then a <strong>joint</strong> will be automatically inserted. This result should look as follows; this implementation can be downloaded here: <span class="wrap_download "><a href="circuit-celement-cg.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-cg.work (3.1 KB)">circuit-celement-cg.work</a> (3.09 KiB, <acronym title="Modified: 2015-05-22 11:54.30">10M ago</acronym>)</span>.
+You may wish to tidy up the circuit schematic and make it more readable by adding wire forks. If you create a connection to/from a wire then a <strong>joint</strong> will be automatically inserted. This result should look as follows; this implementation can be downloaded here: <span class="wrap_download "><a href="circuit-celement-cg.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-cg.work (3.1 KB)">circuit-celement-cg.work</a> (3.09 KiB)</span>.
 </p>
 
 <p>
@@ -355,7 +372,7 @@ Activate the <strong>simulation tool</strong> <img src="../../help/editor_tools-
 </p>
 
 <p>
-Click one of the excited pins to toggle its logical value. Similar to the STG simulation, the sequence of signal events is recorded in the simulation trace and can be subsequently replayed for analysing the circuit&#039;s behaviour.
+Click one of the excited pins to toggle its logical value. Similar to the STG simulation, the sequence of signal events is recorded in the simulation trace and can be subsequently replayed for analysing the circuit&#039;s behaviour or converted to a timing diagram for visualisation purpose.
 </p>
 
 <p>
@@ -425,7 +442,7 @@ Large gates like <code>AO222</code> may not be available in the technology libra
 </p>
 
 <p>
-Download the following C-element implementation due to Mayevsky <span class="wrap_download "><a href="circuit-celement-decomposed.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-decomposed.work (3.8 KB)">circuit-celement-decomposed.work</a> (3.78 KiB, <acronym title="Modified: 2016-03-30 13:54.52">1w ago</acronym>)</span> and verify that it conforms to the STG specification and is free from deadlocks and hazards.
+Download the following C-element implementation due to Mayevsky <span class="wrap_download "><a href="circuit-celement-decomposed.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-decomposed.work (3.8 KB)">circuit-celement-decomposed.work</a> (3.78 KiB)</span> and verify that it conforms to the STG specification and is free from deadlocks and hazards.
 </p>
 
 <p>
@@ -433,7 +450,7 @@ Download the following C-element implementation due to Mayevsky <span class="wra
 </p>
 
 <p>
-Note that the correctness of this implementation depends on the <em>isochronic forks assumption</em>: the difference in arrival times of a signal to the ends of a wire fork is negligible compared to any gate delay. If this assumption is violated, the above implementation can exhibit hazards. Download the following C-element implementation <span class="wrap_download "><a href="circuit-celement-decomposed-hazard.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-decomposed-hazard.work (4 KB)">circuit-celement-decomposed-hazard.work</a> (3.96 KiB, <acronym title="Modified: 2016-03-30 13:54.53">1w ago</acronym>)</span> where a delay in a wire fork is made explicit (modelled by a buffer). Formally verify this model, inspect the violation trace, and explain what can go wrong in it.
+Note that the correctness of this implementation depends on the <em>isochronic forks assumption</em>: the difference in arrival times of a signal to the ends of a wire fork is negligible compared to any gate delay. If this assumption is violated, the above implementation can exhibit hazards. Download the following C-element implementation <span class="wrap_download "><a href="circuit-celement-decomposed-hazard.work" class="media mediafile mf_work" title="tutorial:synthesis:celement:circuit-celement-decomposed-hazard.work (4 KB)">circuit-celement-decomposed-hazard.work</a> (3.96 KiB)</span> where a delay in a wire fork is made explicit (modelled by a buffer). Formally verify this model, inspect the violation trace, and explain what can go wrong in it.
 </p>
 
 <p>
@@ -450,15 +467,48 @@ Download all the Workcraft models discussed in this tutorial here:
 </p>
 
 <p>
-<span class="wrap_download "><a href="celement.zip" class="media mediafile mf_zip" title="tutorial:synthesis:celement:celement.zip (13.8 KB)">C-element models</a> (13.83 KiB, <acronym title="Modified: 2016-03-30 14:32.32">1w ago</acronym>)</span>
+<span class="wrap_download "><a href="celement.zip" class="media mediafile mf_zip" title="tutorial:synthesis:celement:celement.zip (13.8 KB)">C-element models</a> (13.83 KiB)</span>
 </p>
+
+</div>
+<div class="level1">
+<div class="plugin_include_content plugin_include__tutorial:feedback" id="plugin_include__tutorial__feedback">
+<div class="plugin_wrap">
+<h2 id="feedback">Feedback</h2>
+<form class="bureaucracy__plugin" id="bureaucracy__plugin1" enctype="multipart/form-data" method="post" action="start.html" accept-charset="utf-8"><div class="no">
+<input type="hidden" name="sectok" value="09934c5b5ff4e347ba10e209eb0b6c60" /><input type="hidden" name="id" value="tutorial:synthesis:celement:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
+<label><span>Name (optional)</span> <input type="text" name="bureaucracy[1]" class="edit" /></label>
+<label><span>Email (optional)</span> <input type="text" name="bureaucracy[2]" class="edit" /></label>
+<label class=" textareafield">
+    <span>Feedback <sup>*</sup></span>
+    <textarea name="bureaucracy[3]" id="" rows="10" cols="10" class="edit required&quot; required=&quot;required"></textarea>
+</label><input type="submit" value="Submit" class="button" />
+</fieldset>
+</div></form>
+</div><div class="wrap_hide plugin_wrap"><ul>
+<li class="level1"><div class="li">
+ As discussed in <a href="https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages" class="urlextern" title="https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages"  rel="nofollow">https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages</a>, by default, the headers in included pages start one level lower than the last header in the current page. This can be tweaked by adding an empty header above the include:\\<pre class="code">====== ======
+{{page&gt;:tutorial:feedback&amp;inline}}</pre>
+
+<p>
+
+</div></li>
+<li class="level1"><div class="li">
+ For offline help generation the content of <code>feedback</code> page should be temporary wrapped in <code>&lt;WRAP hide&gt;</code>. Note that the headers still propagate to the table of contents even if inside the hidden wrap. Therefore the <strong>Feedback</strong> title needs to be converted to something else, e.g. to code by adding two spaces in front.
+</p>
+
+</div></li>
+</ul>
+
+</div></div>
 
 </div>
 
                     <!-- wikipage stop -->
                                     </div>
+
 <!--
-                                    <div class="docInfo"><bdi>tutorial/synthesis/celement/start.txt</bdi> · Last modified: 2016/03/30 21:56 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/synthesis/celement/start.txt</bdi> · Last modified: 2016/05/26 17:59 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:synthesis:buck:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="tutorial,synthesis,buck,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/synthesis/buck/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/synthesis/buck/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:buck';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/04/08 18:42//';var JSINFO = {"id":"tutorial:synthesis:buck:start","namespace":"tutorial:synthesis:buck","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:buck';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/05/28 22:57//';var JSINFO = {"id":"tutorial:synthesis:buck:start","namespace":"tutorial:synthesis:buck","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,12 +57,12 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:buck:start" /><input type="hidden" name="sectok" value="5d9eb0ce853a36350e4a4aac4cf293cf" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:buck:start" /><input type="hidden" name="sectok" value="ccf3f34b92b3234e21a183d1a880e45b" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
-    </div>
 -->
+    </div>
 
     <!-- BREADCRUMBS -->
         
@@ -85,7 +85,7 @@
 <ul class="toc">
 <li class="level1"><div class="li"><a href="#exercise_1modelling">Exercise 1: Modelling</a></div>
 <ul class="toc">
-<li class="level2"><div class="li"><a href="#simplification">Simplification</a></div></li>
+<li class="level2"><div class="li"><a href="#simplification_optional">Simplification (optional)</a></div></li>
 </ul>
 </li>
 <li class="level1"><div class="li"><a href="#exercise_2validation_and_formal_verification_of_specification">Exercise 2: Validation and formal verification of specification</a></div>
@@ -108,6 +108,7 @@
 </ul>
 </li>
 <li class="level1"><div class="li"><a href="#solutions">Solutions</a></div></li>
+<li class="level1"><div class="li"><a href="#feedback">Feedback</a></div></li>
 </ul>
 </div>
 </div>
@@ -137,7 +138,7 @@ The operation of a buck is usually specified in an intuitive, but rather informa
 </p>
 
 <p>
-This specification reveals an alternation of the UV and OC conditions which are handled by switching the power regulating PMOS and NMOS transistors of the buck ON and OFF. Detection of the ZC condition after UV does not change this behaviour, however, if ZC is detected before UV then both the PMOS and NMOS transistors remain OFF until the UV event. 
+This specification shows the alternation of the UV and OC conditions which are handled by switching the power regulating PMOS and NMOS transistors of the buck ON and OFF. Detection of the ZC condition after UV does not change this behaviour, however, if ZC is detected before UV then both the PMOS and NMOS transistors remain OFF until the UV event. 
 </p>
 
 <p>
@@ -354,7 +355,7 @@ Note that this STG is <em>non-deterministic</em>, e.g. after <code><span style='
 </div>
 </div>
 
-<h3 id="simplification">Simplification</h3>
+<h3 id="simplification_optional">Simplification (optional)</h3>
 <div class="level3">
 
 <p>
@@ -393,7 +394,26 @@ Activate the <strong>simulation tool</strong> <img src="../../help/editor_tools-
 <div class="level3">
 
 <p>
-Before proceeding to the synthesis step verify the specification for <em>consistency</em> (i.e. that the rising and falling phases of each signal alternate in all possible execution traces), <em>deadlock-freeness</em> and <em>output-persistency.</em> All these properties can be checked simultaneously via the <em>Verification→Consistency, deadlock and output persitency (reuse unfolding) [MPSat]</em> menu item. 
+Before proceeding to the synthesis step verify that the STG specification satisfies the following properties using Verification menu: 
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Deadlock freeness – every reachable marking enables at least one transition. 
+</div></li>
+<li class="level1"><div class="li">
+ Consistency – the &#039;+&#039; and &#039;-&#039; transitions of every signal alternate in every execution, always starting with the same sign. 
+</div></li>
+<li class="level1"><div class="li">
+ Input properness – an input cannot be disabled by an output or internal signal, and cannot be triggered by an internal signal. 
+</div></li>
+<li class="level1"><div class="li">
+ Output persistency – an enabled output or internal signal cannot be disabled by any other signal. 
+</div></li>
+</ul>
+
+
+<p>
+These are basic soundness properties which should be satisfied by most models – Verification menu has an entry that can check all these properties with a single click. 
 </p>
 
 <p>
@@ -453,7 +473,7 @@ Petrify&#039;s complex-gate implementation can be obtained via <em>Complex gate 
 </p>
 
 <p>
-Note that the solution is not unique and you may get a slightly different one. In particular, instead of the NOR gate Petrify is likely to output an AND gate with three input ‘bubbles’ – this can be fixed by selecting the output pin of this gate (do not confuse with the output pin of the overall circuit!) and amending its <em>Set function</em> property to <code>(A + B + C)&#039;</code> (note the use of postfix <code>&#039;</code> for negation). Save this circuit with the name <em>circuit-buck-cg-petrify</em>. 
+Note that the solution is not unique and you may get a slightly different one. In particular, instead of the NOR gate Petrify is likely to output an AND gate with three input ‘bubbles’ – this can be fixed by selecting the output pin of this gate (do not confuse with the output pin of the overall circuit!) and amending its <em>Set function</em> property from <code>i1&#039; * i2&#039; * i3&#039;</code> to <code>(i1 + i2 + i3)&#039;</code> (note the use of postfix <code>&#039;</code> for negation). Save this circuit with the name <em>circuit-buck-cg-petrify</em>. 
 </p>
 <div class="wrap_center wrap_round wrap_info plugin_wrap" style="width: 90%;">
 <p>
@@ -576,7 +596,7 @@ Complex-gate and standard-C syntheses are oblivious to the gate library – the 
 </p>
 <div class="wrap_center wrap_round wrap_tip plugin_wrap" style="width: 90%;">
 <p>
-Workcraft provides several gate libraries in the GENLIB format, and the user can easily add a new library. 
+Workcraft provides several gate libraries in the <em>SIS genlib</em> format, and the user can easily add a new library. 
 The default library is <code>workcraft.lib</code>, and this library will be used below. However, it is possible to tell Workcraft to use another library by amending the <em>Gate library for technology mapping</em> setting in the <em>Edit→Preferences…</em> window under the <em>Digital Circuit</em> leaf. 
 </p>
 </div>
@@ -595,29 +615,25 @@ The circuit is now mapped – the gate labels correspond to the gate names in th
 <p>
 Let us try to decompose the implementation of <code><span style='color:blue; '>gp</span></code> into gates/latches with at most two inputs. In the <em>Edit→Preferences</em> dialog, select <em>External tools→MPSat synthesis</em> and tick the <em>Edit additional parameters before every call</em> checkbox. Then select <em>Synthesis→Technology mapping [MPSat]</em>. A dialog box will pop up asking for extra command line parameters to pass to MPSat – type <code>-g2</code> to restrict MPSat to gates/latches with at most two inputs. The following implementation of <code><span style='color:blue; '>gp</span></code> can then be computed (<span class="wrap_important ">note that solution is not unique and you may get a slightly different one</span>).
 </p>
-<div class="wrap_center wrap_round wrap_info plugin_wrap" style="width: 90%;">
-<p>
-MPSat also finds a decomposition of <code><span style='color:blue; '>gn</span></code> into 2-input gates/latches (as the <code>-g2</code> option prevents it from using the a 3-input NOR gate), which is essentially the same as the standard-C implementation considered above (but it is now mapped). However, the implementation of <code><span style='color:blue; '>gn</span></code> as a 3-input NOR gate is superior and thus has been retained.
-</p>
-</div>
+
 <p>
 <img src="circuit-buck-deco2-wc.svg" width="195" height="133" class="svgscaleinsert mediacenter" alt="">
 </p>
-<div class="wrap_center wrap_round wrap_important plugin_wrap" style="width: 90%;">
+<div class="wrap_center wrap_round wrap_info plugin_wrap" style="width: 90%;">
 <p>
-Do not forget to verify this solution w.r.t. the original STG as described above for the complex-gate implementation!
-</p>
-</div><div class="wrap_center wrap_round wrap_important plugin_wrap" style="width: 90%;">
-<p>
-Do not forget to un-tick the <em>Edit additional parameters before every call</em> checkbox (unless you want to be prompted for extra parameters every time MPSat synthesis is invoked).
+MPSat also finds a decomposition of <code><span style='color:blue; '>gn</span></code> into 2-input gates/latches (as the <code>-g2</code> option prevents it from using the a 3-input NOR gate), which is essentially the same as the standard-C implementation considered above (but it is now mapped). However, the implementation of <code><span style='color:blue; '>gn</span></code> as a 3-input NOR gate is superior and thus has been retained in the above circuit.
 </p>
 </div>
 <p>
-This solution happens to have no input inverters, and so no timing assumptions have to be made. 
+This solution happens to have no input inverters, and so no timing assumptions have to be made. Verify this circuit w.r.t. the original STG as described above for the complex-gate implementation.
 </p>
 <div class="wrap_center wrap_round wrap_tip plugin_wrap" style="width: 90%;">
 <p>
 Note that this implementation of <code><span style='color:blue; '>gp</span></code> is not a standard-C implementation, as the signals on the inputs of the C-element are not mutually exclusive (even with inversions taken into account): All four possible combinations of these two values are reachable, i.e. these signals cannot be interpreted as Set and (inverted) Reset functions.
+</p>
+</div><div class="wrap_center wrap_round wrap_important plugin_wrap" style="width: 90%;">
+<p>
+Do not forget to un-tick the <em>Edit additional parameters before every call</em> checkbox (unless you want to be prompted for extra parameters every time MPSat synthesis is invoked).
 </p>
 </div>
 </div>
@@ -630,15 +646,48 @@ Download all the Workcraft models discussed in this tutorial here:
 </p>
 
 <p>
-<span class="wrap_download "><a href="buck.zip" class="media mediafile mf_zip" title="tutorial:synthesis:buck:buck.zip (44.4 KB)">Buck control models</a> (44.45 KiB, <acronym title="Modified: 2016-03-30 12:40.11">1w ago</acronym>)</span>
+<span class="wrap_download "><a href="buck.zip" class="media mediafile mf_zip" title="tutorial:synthesis:buck:buck.zip (44.4 KB)">Buck control models</a> (44.45 KiB)</span>
 </p>
+
+</div>
+<div class="level1">
+<div class="plugin_include_content plugin_include__tutorial:feedback" id="plugin_include__tutorial__feedback">
+<div class="plugin_wrap">
+<h2 id="feedback">Feedback</h2>
+<form class="bureaucracy__plugin" id="bureaucracy__plugin1" enctype="multipart/form-data" method="post" action="start.html" accept-charset="utf-8"><div class="no">
+<input type="hidden" name="sectok" value="ccf3f34b92b3234e21a183d1a880e45b" /><input type="hidden" name="id" value="tutorial:synthesis:buck:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
+<label><span>Name (optional)</span> <input type="text" name="bureaucracy[1]" class="edit" /></label>
+<label><span>Email (optional)</span> <input type="text" name="bureaucracy[2]" class="edit" /></label>
+<label class=" textareafield">
+    <span>Feedback <sup>*</sup></span>
+    <textarea name="bureaucracy[3]" id="" rows="10" cols="10" class="edit required&quot; required=&quot;required"></textarea>
+</label><input type="submit" value="Submit" class="button" />
+</fieldset>
+</div></form>
+</div><div class="wrap_hide plugin_wrap"><ul>
+<li class="level1"><div class="li">
+ As discussed in <a href="https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages" class="urlextern" title="https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages"  rel="nofollow">https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages</a>, by default, the headers in included pages start one level lower than the last header in the current page. This can be tweaked by adding an empty header above the include:\\<pre class="code">====== ======
+{{page&gt;:tutorial:feedback&amp;inline}}</pre>
+
+<p>
+
+</div></li>
+<li class="level1"><div class="li">
+ For offline help generation the content of <code>feedback</code> page should be temporary wrapped in <code>&lt;WRAP hide&gt;</code>. Note that the headers still propagate to the table of contents even if inside the hidden wrap. Therefore the <strong>Feedback</strong> title needs to be converted to something else, e.g. to code by adding two spaces in front.
+</p>
+
+</div></li>
+</ul>
+
+</div></div>
 
 </div>
 
                     <!-- wikipage stop -->
                                     </div>
+
 <!--
-                                    <div class="docInfo"><bdi>tutorial/synthesis/buck/start.txt</bdi> · Last modified: 2016/03/30 12:58 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/synthesis/buck/start.txt</bdi> · Last modified: 2016/05/27 10:24 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

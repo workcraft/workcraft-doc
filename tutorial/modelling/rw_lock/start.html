@@ -5,8 +5,8 @@
     <title>Workcraft - tutorial:modelling:rw_lock:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
-<meta name="keywords" content="tutorial,modelling,rw lock,start"/>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="keywords" content="tutorial,modelling,rw_lock,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
 <link rel="contents" href="start.html" title="Sitemap"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/rw_lock/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/rw_lock/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:rw_lock';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/04/08 18:41//';var JSINFO = {"id":"tutorial:modelling:rw_lock:start","namespace":"tutorial:modelling:rw_lock","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:rw_lock';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/05/28 22:57//';var JSINFO = {"id":"tutorial:modelling:rw_lock:start","namespace":"tutorial:modelling:rw_lock","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,12 +57,12 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:rw_lock:start" /><input type="hidden" name="sectok" value="b9cfd7a1ceade693f32b3b6333685328" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:rw_lock:start" /><input type="hidden" name="sectok" value="3ae3b3dd4bb98735ad1eaa47fab03c7b" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
-    </div>
 -->
+    </div>
 
     <!-- BREADCRUMBS -->
         
@@ -87,6 +87,7 @@
 <li class="level1"><div class="li"><a href="#idea_of_implementation">Idea of implementation</a></div></li>
 <li class="level1"><div class="li"><a href="#exercise_1modelling_a_writer-biased_rw_lock">Exercise 1: Modelling a writer-biased RW lock</a></div></li>
 <li class="level1"><div class="li"><a href="#exercise_2simulation_and_verification">Exercise 2: Simulation and verification</a></div></li>
+<li class="level1"><div class="li"><a href="#feedback">Feedback</a></div></li>
 </ul>
 </div>
 </div>
@@ -160,7 +161,7 @@ The following STG provides a skeleton for the Writer-Biased RW lock for three cl
 </p>
 
 <p>
-Download this STG <span class="wrap_download "><a href="stg-rw_biased_template.work" class="media mediafile mf_work" title="tutorial:modelling:rw_lock:stg-rw_biased_template.work (4.5 KB)">stg-rw_biased_template.work</a> (4.48 KiB, <acronym title="Modified: 2015-03-16 11:49.47">1y ago</acronym>)</span> and complete the model by providing the necessary arcs between the transitions of the clients and the places <code>w_lock</code> and those modelling the tickets.
+Download this STG <span class="wrap_download "><a href="stg-rw_biased_template.work" class="media mediafile mf_work" title="tutorial:modelling:rw_lock:stg-rw_biased_template.work (4.5 KB)">stg-rw_biased_template.work</a> (4.48 KiB)</span> and complete the model by providing the necessary arcs between the transitions of the clients and the places <code>w_lock</code> and those modelling the tickets.
 </p>
 
 </div>
@@ -213,11 +214,44 @@ Verify the following properties of the model:
 
 
 </div>
+<div class="level1">
+<div class="plugin_include_content plugin_include__tutorial:feedback" id="plugin_include__tutorial__feedback">
+<div class="plugin_wrap">
+<h2 id="feedback">Feedback</h2>
+<form class="bureaucracy__plugin" id="bureaucracy__plugin1" enctype="multipart/form-data" method="post" action="start.html" accept-charset="utf-8"><div class="no">
+<input type="hidden" name="sectok" value="3ae3b3dd4bb98735ad1eaa47fab03c7b" /><input type="hidden" name="id" value="tutorial:modelling:rw_lock:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
+<label><span>Name (optional)</span> <input type="text" name="bureaucracy[1]" class="edit" /></label>
+<label><span>Email (optional)</span> <input type="text" name="bureaucracy[2]" class="edit" /></label>
+<label class=" textareafield">
+    <span>Feedback <sup>*</sup></span>
+    <textarea name="bureaucracy[3]" id="" rows="10" cols="10" class="edit required&quot; required=&quot;required"></textarea>
+</label><input type="submit" value="Submit" class="button" />
+</fieldset>
+</div></form>
+</div><div class="wrap_hide plugin_wrap"><ul>
+<li class="level1"><div class="li">
+ As discussed in <a href="https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages" class="urlextern" title="https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages"  rel="nofollow">https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages</a>, by default, the headers in included pages start one level lower than the last header in the current page. This can be tweaked by adding an empty header above the include:\\<pre class="code">====== ======
+{{page&gt;:tutorial:feedback&amp;inline}}</pre>
+
+<p>
+
+</div></li>
+<li class="level1"><div class="li">
+ For offline help generation the content of <code>feedback</code> page should be temporary wrapped in <code>&lt;WRAP hide&gt;</code>. Note that the headers still propagate to the table of contents even if inside the hidden wrap. Therefore the <strong>Feedback</strong> title needs to be converted to something else, e.g. to code by adding two spaces in front.
+</p>
+
+</div></li>
+</ul>
+
+</div></div>
+
+</div>
 
                     <!-- wikipage stop -->
                                     </div>
+
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/rw_lock/start.txt</bdi> · Last modified: 2016/03/30 21:43 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/rw_lock/start.txt</bdi> · Last modified: 2016/05/26 09:36 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

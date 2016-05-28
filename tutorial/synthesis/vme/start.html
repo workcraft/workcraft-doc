@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:synthesis:vme:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="tutorial,synthesis,vme,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/synthesis/vme/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/synthesis/vme/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:vme';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/04/08 18:42//';var JSINFO = {"id":"tutorial:synthesis:vme:start","namespace":"tutorial:synthesis:vme","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:vme';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/05/28 22:58//';var JSINFO = {"id":"tutorial:synthesis:vme:start","namespace":"tutorial:synthesis:vme","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,12 +57,12 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:vme:start" /><input type="hidden" name="sectok" value="30417479730c5d93aef57f0fdf0da539" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:vme:start" /><input type="hidden" name="sectok" value="bb84018969f2a4c36eda7c28c2670203" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
-    </div>
 -->
+    </div>
 
     <!-- BREADCRUMBS -->
         
@@ -92,18 +92,25 @@
 </li>
 <li class="level1"><div class="li"><a href="#synthesis">Synthesis</a></div></li>
 <li class="level1"><div class="li"><a href="#verification_of_the_circuit_implementation">Verification of the circuit implementation</a></div></li>
+<li class="level1"><div class="li"><a href="#initialisation">Initialisation</a></div></li>
 <li class="level1"><div class="li"><a href="#solutions">Solutions</a></div></li>
+<li class="level1"><div class="li"><a href="#feedback">Feedback</a></div></li>
 </ul>
 </div>
 </div>
 <!-- TOC END -->
+
+
 
 <h1 id="synthesis_and_verification_of_vme_bus_controller">Synthesis and verification of VME bus controller</h1>
 <div class="level1">
 
 <p>
 A controller for <a href="http://en.wikipedia.org/wiki/VME bus" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/VME bus">VME bus</a> provides an interface between a data bus and a slave device, as shown in the following diagram.
-<img src="schemetic-vme.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+<img src="schematic-vme.svg" width="306" height="163" class="svgscaleinsert mediacenter" alt="">
 </p>
 
 <p>
@@ -123,7 +130,7 @@ These two modes of VME control are captured by the following timing diagrams.
 </p>
 <div class="plugin_wrap"><div class="wrap_column wrap_half plugin_wrap"><div class="table sectionedit5"><table class="inline">
 	<tr class="row0">
-		<td class="col0"><img src="td-vme-read.png" class="mediacenter" alt="" /></td>
+		<td class="col0"><img src="td-vme-read.svg" width="270" height="113" class="svgscaleinsert mediacenter" alt=""></td>
 	</tr>
 	<tr class="row1">
 		<td class="col0 centeralign">  Timing diagram for the read mode  </td>
@@ -131,7 +138,7 @@ These two modes of VME control are captured by the following timing diagrams.
 </table></div>
 </div><div class="wrap_column wrap_half plugin_wrap"><div class="table sectionedit8"><table class="inline">
 	<tr class="row0">
-		<td class="col0"><img src="td-vme-write.png" class="mediacenter" alt="" /></td>
+		<td class="col0"><img src="td-vme-write.svg" width="270" height="113" class="svgscaleinsert mediacenter" alt=""></td>
 	</tr>
 	<tr class="row1">
 		<td class="col0 centeralign">  Timing diagram for the write mode  </td>
@@ -156,7 +163,7 @@ The result should be similar to the following STGs.
 </p>
 <div class="plugin_wrap"><div class="wrap_column wrap_half plugin_wrap"><div class="table sectionedit13"><table class="inline">
 	<tr class="row0">
-		<td class="col0"><img src="stg-vme-read.png" class="mediacenter" alt="" /></td>
+		<td class="col0"><img src="stg-vme-read.svg" width="135" height="300" class="svgscaleinsert mediacenter" alt=""></td>
 	</tr>
 	<tr class="row1">
 		<td class="col0 centeralign">  STG for read operation  </td>
@@ -164,7 +171,7 @@ The result should be similar to the following STGs.
 </table></div>
 </div><div class="wrap_column wrap_half plugin_wrap"><div class="table sectionedit16"><table class="inline">
 	<tr class="row0">
-		<td class="col0"><img src="stg-vme-write.png" class="mediacenter" alt="" /></td>
+		<td class="col0"><img src="stg-vme-write.svg" width="135" height="300" class="svgscaleinsert mediacenter" alt=""></td>
 	</tr>
 	<tr class="row1">
 		<td class="col0 centeralign">  STG for write operation  </td>
@@ -176,7 +183,7 @@ The two STGs describe the behaviour of the same circuit and need to be combined 
 </p>
 <div class="plugin_wrap"><div class="table sectionedit19"><table class="inline">
 	<tr class="row0">
-		<td class="col0"><img src="stg-vme-read_write.png" class="mediacenter" alt="" /></td>
+		<td class="col0"><img src="stg-vme-read_write.svg" width="290" height="300" class="svgscaleinsert mediacenter" alt=""></td>
 	</tr>
 	<tr class="row1">
 		<td class="col0 centeralign">  Combined STG for read and write scenarios  </td>
@@ -198,7 +205,7 @@ Once the initially marked places are merged, one can notice that transitions <co
 </p>
 <div class="plugin_wrap"><div class="table sectionedit28"><table class="inline">
 	<tr class="row0">
-		<td class="col0"><img src="stg-vme.png" class="mediacenter" alt="" /></td>
+		<td class="col0"><img src="stg-vme.svg" width="208" height="300" class="svgscaleinsert mediacenter" alt=""></td>
 	</tr>
 	<tr class="row1">
 		<td class="col0 centeralign">  Simplified STG for read and write scenarios  </td>
@@ -255,23 +262,47 @@ Now check whether the STG satisfies the <em>Complete State Coding (CSC)</em> pro
 
 <h2 id="synthesis">Synthesis</h2>
 <div class="level2">
-
+<div class="wrap_important wrap_center wrap_round plugin_wrap" style="width: 90%;">
 <p>
-Resolve the CSC conflicts automatically using Petrify via <em>Tools→Encoding conflicts→Resolve CSC conflicts [Petrify]</em> menu. Petrify will insert a new internal signal <code><span style='color:green; '>csc0</span></code> distinguishing between conflicting states. The result could look like the following STG (<span class="wrap_important ">note that the solution is not unique and you may get a slightly different STG</span>):
+Note that the synthesis solutions shown in this section are not unique and you may get a slightly different results.
+</p>
+</div>
+<p>
+Resolve the CSC conflicts automatically using Petrify via <em>Tools→Encoding conflicts→Resolve CSC conflicts [Petrify]</em> menu. Petrify will insert a new internal signal <code><span style='color:green; '>csc0</span></code> distinguishing between conflicting states. The result could look like the following STG:
 </p>
 
 <p>
-<img src="stg-vme-csc.png" class="mediacenter" alt="" />
+<img src="stg-vme-csc.svg" width="912" height="149" class="svgscaleinsert mediacenter" alt="">
 </p>
 
 <p>
-The obtained STG specification has CSC and can now be synthesised into an asynchronous circuit. A complex-gate solution obtained via <em>Synthesis→Complex gate [MPSat]</em> is as follows (<span class="wrap_important ">note that the solution is not unique and you may get a slightly different one</span>):
+The obtained STG specification has CSC and can now be synthesised into an asynchronous circuit. A complex-gate solution obtained via <em>Synthesis→Complex gate [MPSat]</em> is as follows <span class="wrap_download "><a href="circuit-vme-cg.work" class="media mediafile mf_work" title="tutorial:synthesis:vme:circuit-vme-cg.work (5.3 KB)">circuit-vme-cg.work</a> (5.33 KiB)</span>:
 </p>
 
 <p>
-<img src="circuit-vme-cg.png" class="mediacenter" title="Complex gate implementation" alt="Complex gate implementation" />
+<img src="circuit-vme-cg.svg" width="413" height="362" class="svgscaleinsert mediacenter" alt="Complex gate implementation">
 </p>
 
+<p>
+This solution uses complex gates that do not usually exist in real gate libraries. Such gates need to be decomposed, so they can be <em>mapped</em> into the existing library gates – this is done by technology mapping. Note that speed-independence of the circuit must be preserved during decomposition.
+</p>
+
+<p>
+The library of available gates can be passed to Workcraft in <em>SIS GenLib</em> format via <em>Digital circuit→Gate library for technology mapping</em> option in global settings (<em>Edit→Preferences…</em>). By default <code>libraries/workcraft.lib</code> is used. It defines a representative set of gates found in several modern gate libraries and also C-elements and uses a generalised naming convention for gates and pins.
+</p>
+
+<p>
+The results of technology mapping into <code>libraries/workcraft.lib</code> gate library via <em>Synthesis→Technology mapping [MPSat]</em> is as follows <span class="wrap_download "><a href="circuit-vme-tm.work" class="media mediafile mf_work" title="tutorial:synthesis:vme:circuit-vme-tm.work (9.3 KB)">circuit-vme-tm.work</a> (9.3 KiB)</span>:
+</p>
+
+<p>
+<img src="circuit-vme-tm.svg" width="832" height="712" class="svgscaleinsert mediacenter" alt="Technology mapping">
+</p>
+<div class="wrap_info wrap_center wrap_round plugin_wrap" style="width: 90%;">
+<p>
+A circuit can be exported to Verilog via <em>File→Export…→.v (Workcraft Verilog serialiser)</em> menu. By default the produced Verilog uses the names of gates and pins as they are defined in the GenLib file. These names can be substituted by providing a conversion file in <em>Digital Circuit→Substitution rules for export</em> global preferences. For example, <code>libraries/workcraft-tsmc_ghp.cnv</code> file has rules to convert <code>librarys/workcraft.lib</code> gates to match the naming convention of TSMC GHP library.
+</p>
+</div>
 </div>
 
 <h2 id="verification_of_the_circuit_implementation">Verification of the circuit implementation</h2>
@@ -326,6 +357,55 @@ Decompose one of the complex gates by splitting it into simple gates and verify 
 </div>
 </div>
 
+<h2 id="initialisation">Initialisation</h2>
+<div class="level2">
+
+<p>
+Initialisation (or reset) of a speed-independent circuit is a crucial part of the design process because a circuit can malfunction if its initial state is incorrect. There are several ways of circuit initialisation, that are usually used in combination:
+</p>
+<ul>
+<li class="level1"><div class="li">
+ Rely on the initial state of the circuit inputs that propagate through the logic gates to initialise the internal and output signals.
+</div></li>
+<li class="level1"><div class="li">
+ Substitute sequential gates with their set/reset counterparts that are initialised to <code>1</code>/<code>0</code> respectively.
+</div></li>
+<li class="level1"><div class="li">
+ Insert additional gates to explicitly initialise the internal and output signals.
+</div></li>
+</ul>
+
+
+<p>
+Use the <em>Initialisation analyser</em> <a href="../../help/editor_tools-initialisation_analysis.png_tutorial_synthesis_vme_start.html" class="media" title="help:editor_tools-initialisation_analysis.png"><img src="../../help/editor_tools-initialisation_analysis.png" class="media" title="[I] Initialisation analyser" alt="[I] Initialisation analyser" /></a> tool to decide how to properly reset the VME bus controller obtained by technology mapping.  
+</p>
+
+<p>
+The wires and pins whose initial state is guaranteed to be <code>0</code> or <code>1</code> are coloured <span style='color:blue; '>blue</span> or <span style='color:red; '>red</span> respectively; initially <em>undefined</em> wires and pins are not colourised.
+</p>
+
+<p>
+Let us assume that the circuit inputs are guaranteed to be in a correct state (all zeros) by the environment – click on each input port to indicate this. Those gates that are initialised correctly through the primary inputs are highlighted <span style='color:lime; '>green</span>.
+</p>
+
+<p>
+<img src="circuit-vme-tm-initialisation.png" class="mediacenter" alt="" />
+</p>
+
+<p>
+Now let us rely on C-element <code>U21</code> being explicitly reset – click its output pin to indicate this. Notice that the output pin has a diamond shape now. This is to visualise the forced initialisation of the gate output (e.g. by replacing it by a C-element with explicit reset).
+</p>
+
+<p>
+All the gates should be highlighted <span style='color:lime; '>green</span> now indicating that they are transitively initialised to the correct state.
+</p>
+<div class="wrap_center wrap_round wrap_info plugin_wrap" style="width: 90%;">
+<p>
+If there were initialisation conflicts, the problematic gates would be highlighted in <span style='color:orange; '>orange</span>.
+</p>
+</div>
+</div>
+
 <h2 id="solutions">Solutions</h2>
 <div class="level2">
 
@@ -334,15 +414,48 @@ Download all the Workcraft models discussed in this section here:
 </p>
 
 <p>
-<span class="wrap_download "><a href="vme.zip" class="media mediafile mf_zip" title="tutorial:synthesis:vme:vme.zip (25.8 KB)">VME bus controller models</a> (25.83 KiB, <acronym title="Modified: 2015-12-31 16:54.35">3M ago</acronym>)</span>
+<span class="wrap_download "><a href="vme.zip" class="media mediafile mf_zip" title="tutorial:synthesis:vme:vme.zip (32.9 KB)">VME bus controller models</a> (32.85 KiB)</span>
 </p>
+
+</div>
+<div class="level1">
+<div class="plugin_include_content plugin_include__tutorial:feedback" id="plugin_include__tutorial__feedback">
+<div class="plugin_wrap">
+<h2 id="feedback">Feedback</h2>
+<form class="bureaucracy__plugin" id="bureaucracy__plugin1" enctype="multipart/form-data" method="post" action="start.html" accept-charset="utf-8"><div class="no">
+<input type="hidden" name="sectok" value="bb84018969f2a4c36eda7c28c2670203" /><input type="hidden" name="id" value="tutorial:synthesis:vme:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
+<label><span>Name (optional)</span> <input type="text" name="bureaucracy[1]" class="edit" /></label>
+<label><span>Email (optional)</span> <input type="text" name="bureaucracy[2]" class="edit" /></label>
+<label class=" textareafield">
+    <span>Feedback <sup>*</sup></span>
+    <textarea name="bureaucracy[3]" id="" rows="10" cols="10" class="edit required&quot; required=&quot;required"></textarea>
+</label><input type="submit" value="Submit" class="button" />
+</fieldset>
+</div></form>
+</div><div class="wrap_hide plugin_wrap"><ul>
+<li class="level1"><div class="li">
+ As discussed in <a href="https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages" class="urlextern" title="https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages"  rel="nofollow">https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages</a>, by default, the headers in included pages start one level lower than the last header in the current page. This can be tweaked by adding an empty header above the include:\\<pre class="code">====== ======
+{{page&gt;:tutorial:feedback&amp;inline}}</pre>
+
+<p>
+
+</div></li>
+<li class="level1"><div class="li">
+ For offline help generation the content of <code>feedback</code> page should be temporary wrapped in <code>&lt;WRAP hide&gt;</code>. Note that the headers still propagate to the table of contents even if inside the hidden wrap. Therefore the <strong>Feedback</strong> title needs to be converted to something else, e.g. to code by adding two spaces in front.
+</p>
+
+</div></li>
+</ul>
+
+</div></div>
 
 </div>
 
                     <!-- wikipage stop -->
                                     </div>
+
 <!--
-                                    <div class="docInfo"><bdi>tutorial/synthesis/vme/start.txt</bdi> · Last modified: 2016/03/14 16:11 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/synthesis/vme/start.txt</bdi> · Last modified: 2016/05/28 20:33 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

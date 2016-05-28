@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:synthesis:csc-resolution:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="tutorial,synthesis,csc-resolution,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/synthesis/csc-resolution/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/synthesis/csc-resolution/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:csc-resolution';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/04/08 18:42//';var JSINFO = {"id":"tutorial:synthesis:csc-resolution:start","namespace":"tutorial:synthesis:csc-resolution","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:csc-resolution';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/05/28 22:58//';var JSINFO = {"id":"tutorial:synthesis:csc-resolution:start","namespace":"tutorial:synthesis:csc-resolution","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,12 +57,12 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:csc-resolution:start" /><input type="hidden" name="sectok" value="c437774d81d9468f361713684e7c2d24" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:csc-resolution:start" /><input type="hidden" name="sectok" value="9081d3b5edaedf05f40c5abe29dae218" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
-    </div>
 -->
+    </div>
 
     <!-- BREADCRUMBS -->
         
@@ -101,6 +101,7 @@
 </ul>
 </li>
 <li class="level1"><div class="li"><a href="#solutions">Solutions</a></div></li>
+<li class="level1"><div class="li"><a href="#feedback">Feedback</a></div></li>
 </ul>
 </div>
 </div>
@@ -197,7 +198,7 @@ The total number of literals in the right-hand side of these equations is 8 – 
 <div class="level4">
 
 <p>
-Download the following STG from <a href="#refnotes:1:note1" name="refnotes:1:ref1" class="refnotes-ref note-popup">[1]</a>: <span class="wrap_download "><a href="sram-master.work" class="media mediafile mf_work" title="tutorial:synthesis:csc-resolution:sram-master.work (9 KB)">SRAM controller (MASTER).</a> (9.02 KiB, <acronym title="Modified: 2015-11-10 22:05.59">4M ago</acronym>)</span>:
+Download the following STG from <a href="#refnotes:1:note1" name="refnotes:1:ref1" class="refnotes-ref note-popup">[1]</a>: <span class="wrap_download "><a href="sram-master.work" class="media mediafile mf_work" title="tutorial:synthesis:csc-resolution:sram-master.work (9 KB)">SRAM controller (MASTER).</a> (9.02 KiB)</span>:
 </p>
 
 <p>
@@ -463,7 +464,7 @@ When inserting a new internal signal, say <code><span style='color:green; '>csc<
  the consistency is not violated, i.e. the rising and falling edges of <code><span style='color:green; '>csc</span></code> alternate in every execution, always starting from the same edge;
 </div></li>
 <li class="level1"><div class="li">
- the output-persistency is not violated, i.e. <code><span style='color:green; '>csc</span></code> must not disable or be disabled by any other signal;
+ the output persistency is not violated, i.e. <code><span style='color:green; '>csc</span></code> must not disable or be disabled by any other signal;
 </div></li>
 <li class="level1"><div class="li">
  <code><span style='color:green; '>csc</span></code> resolves some encoding conflicts;
@@ -529,7 +530,7 @@ For the STG in <span class="curid"><a href="start.html#exercise_1" class="wikili
  Meditate on the cores map and the core density map until you understand the causes of the encoding conflicts.
 </div></li>
 <li class="level1"><div class="li">
- Manually resolve the encoding conflicts by signal insertion as explained above. Make sure that the essential STG correctness properties (consistency, deadlock freeness, input properness and output persistence) are still satisfied (these can be checked via <em>Verification→Consistency, deadlock freeness, input properness and output persistence (reuse unfolding) [MPSat]</em> menu item).
+ Manually resolve the encoding conflicts by signal insertion as explained above. Make sure that the essential STG correctness properties (consistency, deadlock freeness, input properness, and output persistency) are still satisfied (these can be checked via <em>Verification→Consistency, deadlock freeness, input properness and output persistency (reuse unfolding) [MPSat]</em> menu item).
 </div></li>
 <li class="level1"><div class="li">
  After all the conflicts are resolved, synthesise the complex-gate implementation using the <em>Synthesis→Complex gate [MPSat]</em> menu item.
@@ -702,7 +703,7 @@ When choosing a concurrency reduction, one has to make sure that:
  the added arc cannot accumulate unbounded number of tokens, i.e. the STG remains bounded;
 </div></li>
 <li class="level1"><div class="li">
- the output-persistency is not violated;
+ the output persistency is not violated;
 </div></li>
 <li class="level1"><div class="li">
  no deadlocks have been introduced (e.g. if risky CRs are used both to simplify the circuit and, independently, the environment then all the added arcs may accidentally form a loop leading to a deadlock due to circular waiting);
@@ -1086,11 +1087,55 @@ Considerations when using timing assumptions:
 <div class="level2">
 
 <p>
-The Workcraft models discussed in this tutorial can be downloaded here: <span class="wrap_download "><a href="csc-resolution.zip" class="media mediafile mf_zip" title="tutorial:synthesis:csc-resolution:csc-resolution.zip (220.2 KB)">CSC resolution models</a> (220.16 KiB, <acronym title="Modified: 2016-01-21 15:16.12">2M ago</acronym>)</span>
+The Workcraft models discussed in this tutorial can be downloaded here: <span class="wrap_download "><a href="csc-resolution.zip" class="media mediafile mf_zip" title="tutorial:synthesis:csc-resolution:csc-resolution.zip (220.2 KB)">CSC resolution models</a> (220.16 KiB)</span>
 </p>
 
 </div>
+<div class="level1">
+<div class="plugin_include_content plugin_include__tutorial:feedback" id="plugin_include__tutorial__feedback">
+<div class="plugin_wrap">
+<h2 id="feedback">Feedback</h2>
+<form class="bureaucracy__plugin" id="bureaucracy__plugin1" enctype="multipart/form-data" method="post" action="start.html" accept-charset="utf-8"><div class="no">
+<input type="hidden" name="sectok" value="9081d3b5edaedf05f40c5abe29dae218" /><input type="hidden" name="id" value="tutorial:synthesis:csc-resolution:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
+<label><span>Name (optional)</span> <input type="text" name="bureaucracy[1]" class="edit" /></label>
+<label><span>Email (optional)</span> <input type="text" name="bureaucracy[2]" class="edit" /></label>
+<label class=" textareafield">
+    <span>Feedback <sup>*</sup></span>
+    <textarea name="bureaucracy[3]" id="" rows="10" cols="10" class="edit required&quot; required=&quot;required"></textarea>
+</label><input type="submit" value="Submit" class="button" />
+</fieldset>
+</div></form>
+</div><div class="wrap_hide plugin_wrap"><ul>
+<li class="level1"><div class="li">
+ As discussed in <a href="https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages" class="urlextern" title="https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages"  rel="nofollow">https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages</a>, by default, the headers in included pages start one level lower than the last header in the current page. This can be tweaked by adding an empty header above the include:\\<pre class="code">====== ======
+{{page&gt;:tutorial:feedback&amp;inline}}</pre>
 
+<p>
+
+</div></li>
+<li class="level1"><div class="li">
+ For offline help generation the content of <code>feedback</code> page should be temporary wrapped in <code>&lt;WRAP hide&gt;</code>. Note that the headers still propagate to the table of contents even if inside the hidden wrap. Therefore the <strong>Feedback</strong> title needs to be converted to something else, e.g. to code by adding two spaces in front.
+</p>
+
+</div></li>
+</ul>
+
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
 </div>
 <div class="refnotes">
 <hr>
@@ -1139,8 +1184,9 @@ J. Cortadella, M. Kishinevsky, A. Kondratyev, L. Lavagno, and A. Yakovlev: <a hr
 
                     <!-- wikipage stop -->
                                     </div>
+
 <!--
-                                    <div class="docInfo"><bdi>tutorial/synthesis/csc-resolution/start.txt</bdi> · Last modified: 2016/03/30 22:32 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/synthesis/csc-resolution/start.txt</bdi> · Last modified: 2016/05/26 09:47 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

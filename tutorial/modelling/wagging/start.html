@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:modelling:wagging:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="tutorial,modelling,wagging,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/wagging/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/wagging/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:wagging';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/04/08 18:42//';var JSINFO = {"id":"tutorial:modelling:wagging:start","namespace":"tutorial:modelling:wagging","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:wagging';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/05/28 22:57//';var JSINFO = {"id":"tutorial:modelling:wagging:start","namespace":"tutorial:modelling:wagging","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,12 +57,12 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:wagging:start" /><input type="hidden" name="sectok" value="5f4effc8b16b161580bb2a845db09911" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:wagging:start" /><input type="hidden" name="sectok" value="a7eab68b4d9583f427ce4d8f6956f821" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
-    </div>
 -->
+    </div>
 
     <!-- BREADCRUMBS -->
         
@@ -87,6 +87,7 @@
 <li class="level1"><div class="li"><a href="#wagging">Wagging</a></div></li>
 <li class="level1"><div class="li"><a href="#exercise_1conceptual_risc_pipeline">Exercise 1: Conceptual RISC pipeline</a></div></li>
 <li class="level1"><div class="li"><a href="#exercise_2more_realistic_risc_pipeline">Exercise 2: More realistic RISC pipeline</a></div></li>
+<li class="level1"><div class="li"><a href="#feedback">Feedback</a></div></li>
 </ul>
 </div>
 </div>
@@ -176,7 +177,7 @@ Consider the following conceptual RISC pipeline. Recall that in asynchronous pip
 </p>
 
 <p>
-<img src="dfs-basic.png" class="mediacenter" alt="" />
+<img src="dfs-basic.svg" width="1084" height="118" class="svgscaleinsert mediacenter" alt="">
 </p>
 
 <p>
@@ -211,7 +212,7 @@ Simulate this model to get the feel of the <em>spread token semantics</em> <a h
 
 
 <p>
-Now analyse the performance of this pipeline with the <strong>cycle analyser</strong> <img src="../../help/editor_tools-cycle_analyser.png" class="media" title="[A] Cycle analyser" alt="[A] Cycle analyser" /> tool. In the <em>Tool controls</em> window one can see the result of the analysis: there is a single cycle with the estimated throughput 0.714. Indeed, the total delay of the pipeline is 1+1+1+3+1=7, and there are 5 tokens in it, so the throughput is 5/7≈0.714. Moreover, the bottleneck <code>MemAccess</code> is highlighted in red:
+Now analyse the performance of this pipeline with the <strong>cycle analyser</strong> <img src="../../help/editor_tools-cycle_analysis.png" class="media" title="[A] Cycle analyser" alt="[A] Cycle analyser" /> tool. In the <em>Tool controls</em> window one can see the result of the analysis: there is a single cycle with the estimated throughput 0.714. Indeed, the total delay of the pipeline is 1+1+1+3+1=7, and there are 5 tokens in it, so the throughput is 5/7≈0.714. Moreover, the bottleneck <code>MemAccess</code> is highlighted in red:
 </p>
 
 <p>
@@ -248,30 +249,68 @@ The following ARISC pipeline was adapted from <a href="#refnotes:1:note4" name=
 </p>
 
 <p>
-<img src="dfs-arisc.png" class="mediacenter" alt="" />
+<img src="dfs-arisc.svg" width="880" height="523" class="svgscaleinsert mediacenter" alt="">
 </p>
 
 <p>
-Download this model: <span class="wrap_download "><a href="dfs-arisc.work" class="media mediafile mf_work" title="tutorial:modelling:wagging:dfs-arisc.work (3.9 KB)">dfs-arisc.work</a> (3.91 KiB, <acronym title="Modified: 2015-05-27 11:56.18">10M ago</acronym>)</span>.
+Download this model: <span class="wrap_download "><a href="dfs-arisc.work" class="media mediafile mf_work" title="tutorial:modelling:wagging:dfs-arisc.work (3.9 KB)">dfs-arisc.work</a> (3.95 KiB)</span>.
 </p>
 
 <p>
-Analyse this model using <strong>cycle analyser</strong> <img src="../../help/editor_tools-cycle_analyser.png" class="media" title="[A] Cycle analyser" alt="[A] Cycle analyser" /> tool. 
+Analyse this model using <strong>cycle analyser</strong> <img src="../../help/editor_tools-cycle_analysis.png" class="media" title="[A] Cycle analyser" alt="[A] Cycle analyser" /> tool. 
 </p>
-<div class="wrap_center wrap_round wrap_info plugin_wrap" style="width: 90%;">
+<div class="wrap_center wrap_round wrap_tip plugin_wrap" style="width: 90%;">
 <p>
 By default the <em>Tool control</em> window shows 10 cycles with the worst throughput – this is controlled by the <em>Cycle count</em> field in this window. You can increase this number to see all the cycles in the model.
 </p>
 </div><div class="wrap_center wrap_round wrap_important plugin_wrap" style="width: 90%;">
 <p>
-The throughput of the whole pipeline is determined by the throughput of its slowest cycle, e.g. the throughput of the above pipeline is 0.105.
+The throughput of the whole pipeline is determined by the throughput of its slowest cycle, e.g. the throughput of the above pipeline is 0.154.
 </p>
 </div>
 <p>
-Examine the cycles with the suboptimal throughput, and intelligently apply wagging to improve the performance of this pipeline. Try to increase the throughput from 0.105 to 0.125. Solution: <span class="wrap_spoiler ">Apply 4-way wagging to Data Mem. and 2-way wagging to Arith. – in both cases include the preceding register.</span>
+Examine the cycles with the suboptimal throughput, and intelligently apply wagging to improve the performance of this pipeline. Try to increase the throughput to 0.2. Solution: <span class="wrap_spoiler ">Apply 4-way wagging to Data Mem. and 2-way wagging to Arith. – in both cases include the preceding register.</span>
 </p>
 
 </div>
+<div class="level1">
+<div class="plugin_include_content plugin_include__tutorial:feedback" id="plugin_include__tutorial__feedback">
+<div class="plugin_wrap">
+<h2 id="feedback">Feedback</h2>
+<form class="bureaucracy__plugin" id="bureaucracy__plugin1" enctype="multipart/form-data" method="post" action="start.html" accept-charset="utf-8"><div class="no">
+<input type="hidden" name="sectok" value="a7eab68b4d9583f427ce4d8f6956f821" /><input type="hidden" name="id" value="tutorial:modelling:wagging:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
+<label><span>Name (optional)</span> <input type="text" name="bureaucracy[1]" class="edit" /></label>
+<label><span>Email (optional)</span> <input type="text" name="bureaucracy[2]" class="edit" /></label>
+<label class=" textareafield">
+    <span>Feedback <sup>*</sup></span>
+    <textarea name="bureaucracy[3]" id="" rows="10" cols="10" class="edit required&quot; required=&quot;required"></textarea>
+</label><input type="submit" value="Submit" class="button" />
+</fieldset>
+</div></form>
+</div><div class="wrap_hide plugin_wrap"><ul>
+<li class="level1"><div class="li">
+ As discussed in <a href="https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages" class="urlextern" title="https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages"  rel="nofollow">https://www.dokuwiki.org/plugin:include#controlling_header_size_in_included_pages</a>, by default, the headers in included pages start one level lower than the last header in the current page. This can be tweaked by adding an empty header above the include:\\<pre class="code">====== ======
+{{page&gt;:tutorial:feedback&amp;inline}}</pre>
+
+<p>
+
+</div></li>
+<li class="level1"><div class="li">
+ For offline help generation the content of <code>feedback</code> page should be temporary wrapped in <code>&lt;WRAP hide&gt;</code>. Note that the headers still propagate to the table of contents even if inside the hidden wrap. Therefore the <strong>Feedback</strong> title needs to be converted to something else, e.g. to code by adding two spaces in front.
+</p>
+
+</div></li>
+</ul>
+
+</div></div>
+
+
+
+
+
+
+
+
 
 </div>
 <div class="refnotes">
@@ -302,8 +341,9 @@ K. T. Christensen, P. Jensen, P. Korger, J. Sparsø: <em>The design of an a
 
                     <!-- wikipage stop -->
                                     </div>
+
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/wagging/start.txt</bdi> · Last modified: 2016/03/30 21:46 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/wagging/start.txt</bdi> · Last modified: 2016/05/26 09:42 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 
