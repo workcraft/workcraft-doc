@@ -5,7 +5,7 @@
     <title>Workcraft - tutorial:modelling:petri_net:start</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="noindex,nofollow"/>
+<meta name="robots" content="index,follow"/>
 <meta name="keywords" content="tutorial,modelling,petri_net,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/petri_net/start.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/tutorial/modelling/petri_net/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:petri_net';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/05/28 22:57//';var JSINFO = {"id":"tutorial:modelling:petri_net:start","namespace":"tutorial:modelling:petri_net","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:petri_net';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/09/20 21:58//';var JSINFO = {"id":"tutorial:modelling:petri_net:start","namespace":"tutorial:modelling:petri_net","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:petri_net:start" /><input type="hidden" name="sectok" value="b739a5594ae983ba99abae0198c8ee3c" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:petri_net:start" /><input type="hidden" name="sectok" value="b44e78cca7188da3315b097298127805" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -83,21 +83,9 @@
 <div>
 
 <ul class="toc">
-<li class="level1"><div class="li"><a href="#modelling">Modelling</a></div>
-<ul class="toc">
-<li class="level2"><div class="li"><a href="#task_1">Task 1</a></div></li>
-</ul>
-</li>
-<li class="level1"><div class="li"><a href="#simulation">Simulation</a></div>
-<ul class="toc">
-<li class="level2"><div class="li"><a href="#task_2">Task 2</a></div></li>
-</ul>
-</li>
-<li class="level1"><div class="li"><a href="#verification">Verification</a></div>
-<ul class="toc">
-<li class="level2"><div class="li"><a href="#task_3">Task 3</a></div></li>
-</ul>
-</li>
+<li class="level1"><div class="li"><a href="#modelling">Modelling</a></div></li>
+<li class="level1"><div class="li"><a href="#simulation">Simulation</a></div></li>
+<li class="level1"><div class="li"><a href="#verification">Verification</a></div></li>
 <li class="level1"><div class="li"><a href="#solutions">Solutions</a></div></li>
 <li class="level1"><div class="li"><a href="#feedback">Feedback</a></div></li>
 </ul>
@@ -109,7 +97,7 @@
 <div class="level1">
 
 <p>
-In this tutorial we will use the famous <a href="http://en.wikipedia.org/wiki/Dining_philosophers_problem" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/Dining_philosophers_problem">Dining philosophers problem</a> to illustrate the power and convenience of the Petri nets. The problem states that there are five philosophers sitting around a table. Each philosopher either thinks or eats. There are five forks on the table shared among philosophers in such a way that each fork can be either used by a philosopher on its left or on its right. Before eating a philosopher tries to take both forks in some order. If a fork is already taken by a neighbouring philosopher, he will be waiting until the fork becomes available again. After eating, a philosopher returns to thinking while putting back both of his forks. 
+In this tutorial we will use the famous <a href="http://en.wikipedia.org/wiki/Dining_philosophers_problem" class="interwiki iw_wp" title="http://en.wikipedia.org/wiki/Dining_philosophers_problem">Dining philosophers problem</a> as an example of resource allocation problems where several processes compete for resources. It also illustrates the power and convenience of Petri nets as a formalism for modelling and analysis of such problems. There are five philosophers sitting around a table. Each philosopher either thinks or eats. There are five forks on the table shared among philosophers in such a way that each fork can be used by a philosopher either on its left or on its right. To eat a philosopher has to acquire both forks in some order. If a fork is already taken by a neighbouring philosopher, he will be waiting until the fork becomes available again. After eating, a philosopher returns to thinking while putting back both his forks. 
 </p>
 
 </div>
@@ -118,31 +106,13 @@ In this tutorial we will use the famous <a href="http://en.wikipedia.org/wiki/Di
 <div class="level2">
 
 <p>
-Petri nets is an ideal tool for formally modelling the dining philosophers problem. The behaviour of a single philosopher can be modelled with <code>take_left_fork</code>, <code>put_left_fork</code>, <code>take_right_fork</code>,  <code>put_right_fork</code>, <code>start_eating</code> and <code>start_thinking</code> transitions. The state of the philosopher is captured with a token in either the <code>eating</code> or <code>thinking</code> place and the availability of forks is determined by the presence of a token in <code>fork1_free</code> and <code>fork2_free</code> places respectively (the corresponding fork is on the table), as shown in the following Petri net. 
+The behaviour of a single philosopher can be modelled with <code>take_left_fork</code>, <code>put_left_fork</code>, <code>take_right_fork</code>,  <code>put_right_fork</code>, <code>start_eating</code> and <code>start_thinking</code> transitions. The state of the philosopher is captured with a token in either the <code>eating</code> or <code>thinking</code> place and the availability of forks is determined by the presence of a token in <code>fork1_free</code> and <code>fork2_free</code> places respectively (the corresponding fork is on the table), as shown in the following Petri net. 
 </p>
 
 <p>
-<img src="pn-philosopher.png" class="mediacenter" alt="" />
+<img src="philosopher.pn.svg" width="432" height="200" class="svgscaleinsert mediacenter" alt="">
 </p>
-
-<p>
-For simplicity let us model the problem with two philosophers and two forks only. In this case, the <code>fork1_free</code> and <code>fork2_free</code> are shared by the philosophers <em>A</em> and <em>B</em> as modelled by the following Petri net.
-</p>
-
-<p>
-<img src="pn-two_philosophers.png" class="mediacenter" alt="" />
-</p>
-<div class="wrap_box plugin_wrap">
-<h3 id="task_1">Task 1</h3>
-
-<p>
-Capture this Petri net within Workcraft. You may want to build a Petri net model of a single philosopher first, put it in a group, and then make use of copy-paste features to replicate the model for the other philosopher. Give the places and transitions some meaningful names, e.g. as in the Petri net above. As the names of places and transitions must be unique, we prepended the node names  with <em>A_</em> and <em>B_</em> prefixes to distinguish the models of philosophers <em>A</em> and <em>B</em> respectively.
-</p>
-
-<p>
-You can make use of the <em>Transformations→Merge selected places</em> to glue together the places representing the same forks.
-</p>
-</div><div class="wrap_tip plugin_wrap">
+<div class="wrap_hide wrap_round wrap_center plugin_wrap" style="width: 90%;">
 <p>
 Note the difference between the names and labels:
 </p>
@@ -156,48 +126,80 @@ Note the difference between the names and labels:
 </ul>
 
 </div>
+<p>
+For simplicity let us model the problem with two philosophers and two forks only. In this case, <code>fork1_free</code> and <code>fork2_free</code> are shared by the philosophers <code>north</code> and <code>south</code>, sitting at the North and South sides of the table respectively. This is modelled by the following Petri net.
+</p>
+
+<p>
+<img src="two_philosophers.pn.svg" width="567" height="461" class="svgscaleinsert mediacenter" alt="">
+</p>
+
+<p>
+Capture this Petri net within Workcraft as follows:
+</p>
+<ol>
+<li class="level1"><div class="li">
+ Build a Petri net model for a single dining philosopher.
+</div></li>
+<li class="level1"><div class="li">
+ Select the places and transitions representing the philosopher (exclude the <code>fork1_free</code> and <code>fork2_free</code> places) and combine them using the paging tool <img src="../../help/tool_controls-select-page.png" class="media" title="Combine selection into a page (Alt+G)" alt="Combine selection into a page (Alt+G)" />. The created <em>page</em> is our philosopher model.
+</div></li>
+<li class="level1"><div class="li">
+ Make use of copy-paste features to replicate the philosopher model. Name one of the pages <code>south</code> and the other <code>north</code>.
+</div></li>
+<li class="level1"><div class="li">
+ Rotate the <code>north</code> page using the rotation tool <img src="../../help/tool_controls-select-rotate_clockwise.png" class="media" title="Rotate clockwise (Ctrl+R)" alt="Rotate clockwise (Ctrl+R)" /> or <img src="../../help/tool_controls-select-rotate_counterclockwise.png" class="media" title="Rotate counterclockwise (Ctrl+Shift+R)" alt="Rotate counterclockwise (Ctrl+Shift+R)" />. Position the <code>north</code> and <code>south</code> pages opposite each other.
+</div></li>
+<li class="level1"><div class="li">
+ Share <code>fork1_free</code> and <code>fork2_free</code> places between the <code>south</code> and <code>north</code> philosophers by connection <code>fork_take_*</code> and <code>fork_put_*</code> transitions accordingly.
+</div></li>
+</ol>
+
+<div class="wrap_tip wrap_round wrap_center plugin_wrap" style="width: 90%;">
+<p>
+Note the difference between groups and pages.
+</p>
+<ul>
+<li class="level1"><div class="li"> Groups are just unnamed decorations for several nodes, while pages are named nodes containing other nodes.</div>
+</li>
+<li class="level1"><div class="li"> Nodes in different groups must have unique names.</div>
+</li>
+<li class="level1"><div class="li"> Pages provide namespaces for their included nodes, so nodes in different pages can have the same local name.</div>
+</li>
+</ul>
+</div>
 </div>
 
 <h2 id="simulation">Simulation</h2>
 <div class="level2">
 
 <p>
-Enter the simulation tool by pressing the <img src="../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> button and play with the dining philosophers model. Initially both forks are on the table and places <code>fork1_free</code> and <code>fork2_free</code> are marked. Each philosopher can take any of the forks - the corresponding <code>*_take_left_fork</code> and <code>*_take_right_fork</code> transitions are enabled for both philosophers. 
+Enter the simulation tool by pressing the <img src="../../help/editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" /> button and play with the dining philosophers model. Initially both forks are on the table and places <code>fork1_free</code> and <code>fork2_free</code> are marked. Each philosopher can take any of the forks - the <code>take_left_fork</code> and <code>take_right_fork</code> transitions are enabled for both <code>norht</code> and <code>south</code> philosophers. 
 </p>
 
 <p>
-If you allow the same philosopher to take both forks (e.g., by clicking transitions <code>A_take_left_fork</code> and <code>A_take_right_fork</code>), then he can eat, while the other philosopher thinks. When he is finished with the meal he enters the thinking state (click transition <code>A_start_thinking</code>) and returns the forks (click transitions <code>A_put_left_fork</code> and <code>A_put_right_fork</code>). This trace of transitions brings us to the initial state where the philosophers compete for the forks again.
+If you allow the same philosopher to take both forks (e.g., by clicking transitions <code>south/take_left_fork</code> and <code>south/take_right_fork</code>), then he can eat, while the other philosopher thinks. When he is finished with the meal he enters the thinking state (click transition <code>south/start_thinking</code>) and returns the forks (click transitions <code>south/put_left_fork</code> and <code>south/put_right_fork</code>). This trace of transitions brings us to the initial state where the philosophers compete for the forks again.
 </p>
 
 <p>
-Another scenario is possible when each philosopher takes only one of the forks (e.g. click transitions <code>A_take_left_fork</code> and <code>B_take_right_fork</code>)). This leads to a deadlock as the philosophers wait for each other to return the fork, but none of them can do it until they eat.
+Another scenario is possible when each philosopher takes only one of the forks (e.g. click transitions <code>south/take_left_fork</code> and <code>north/take_left_fork</code>)). This leads to a deadlock as the philosophers wait for each other to return the fork, but none of them can do it until they eat.
 </p>
-<div class="wrap_box plugin_wrap">
-<h3 id="task_2">Task 2</h3>
-<ul>
-<li class="level1"><div class="li">
- Simulate the above distinctive scenarios for dining philosophers. 
-</div></li>
-<li class="level1"><div class="li">
- Explore the navigation buttons in the <em>Control panel</em> and go back and forth through the trace of events in your simulation. 
-</div></li>
-<li class="level1"><div class="li">
- Try random simulation at different animation speeds.
-</div></li>
-</ul>
 
-</div>
+<p>
+Simulate the above distinctive scenarios for dining philosophers. Explore the navigation buttons in the <em>Control panel</em> and go back and forth through the trace of events in your simulation. Try random simulation at different animation speeds.
+</p>
+
 </div>
 
 <h2 id="verification">Verification</h2>
 <div class="level2">
 
 <p>
-Various properties of a Petri net model can be verified using <em>punf</em> and <em>mpsat</em> as the backend tools (see overview of <a href="../../overview/backend_tools.html" class="wikilink1" title="overview:backend_tools">third-party tools</a> for more details). The tool interfaces available for Petri net verification are collected under <em>Verification</em> menu.
+Various properties of a Petri net model can be verified using <em>Punf</em> and <em>MPSat</em> as the backend tools (see overview of <a href="../../overview/backend_tools.html" class="wikilink1" title="overview:backend_tools">third-party tools</a> for more details). The tool interfaces available for Petri net verification are collected under <em>Verification</em> menu.
 </p>
 
 <p>
-The easiest and most obvious property to check is that the model does not have a deadlock - choose the <em>Verification→Deadlock [MPSat]</em> menu item for this. A our dining philosophers model is not deadlock-free, this should result in the following error message with a trace leading to the deadlock (you can play in the simulator by clicking the <em>Play</em> button).
+The easiest and most obvious property to check is that the model does not have a deadlock – choose the <em>Verification→Deadlock [MPSat]</em> menu item for this. As our dining philosophers model is not deadlock-free, this should result in the following error message with a trace leading to the deadlock (you can analyse the trace in the simulator by clicking the <em>Play</em> button).
 </p>
 
 <p>
@@ -207,15 +209,15 @@ The easiest and most obvious property to check is that the model does not have a
 <p>
 Verification of custom properties is based on reachability analysis on the Petri net. For this a custom property should  be expressed in <a href="../../help/reach.html" class="wikilink1" title="help:reach">Reach language</a>. For example, you can try and verify that both philosophers cannot be eating at the same time:
 </p>
-<ul>
+<ol>
 <li class="level1"><div class="li">
- Open <em>Custom property definition</em> window via <em>Verification→Custom properties [MPSat]…</em>.
+ Open <em>Custom property</em> window via <em>Verification→Custom property [MPSat]…</em> menu.
 </div></li>
 <li class="level1"><div class="li">
- In <em>MPSat settings</em> set the <em>Mode</em> into <em>Reachability analysis</em> and the <em>Solution</em> into <em>minimise cost function</em>.
+ In <em>MPSat settings</em> section set the <em>Mode</em> into <em>Reachability analysis</em> and the <em>Solution</em> into <em>minimise cost function</em>.
 </div></li>
 <li class="level1"><div class="li">
- Enter the following Reach expression as the property predicate: <code>$P&quot;A_eating&quot; &amp; $P&quot;B_eating&quot;</code>.
+ Enter the following Reach expression as the property predicate: <code>$P&quot;north__eating&quot; &amp; $P&quot;south__eating&quot;</code>. Note that <code>__</code> (two underscores) is used as a hierarchy separator in Reach expression.
 </div></li>
 <li class="level1"><div class="li">
  Select <em>unsatisfiable</em> to denote that the property holds if predicate is unsatisfiable.
@@ -223,7 +225,7 @@ Verification of custom properties is based on reachability analysis on the Petri
 <li class="level1"><div class="li">
  Save this property as a preset for future use (<em>Save as…</em> button), e.g. under the name <em>simultaneous eating</em>.
 </div></li>
-</ul>
+</ol>
 
 
 <p>
@@ -236,19 +238,21 @@ Let us explain how to interpret the Reach predicate. Consider an expression <cod
 </p>
 
 <p>
-In our case, the expression <code>$P&quot;A_eating&quot; &amp; $P&quot;B_eating&quot;</code> tells MPSat to check if a state is reachable where both places <code>A_eating</code> and <code>B_eating</code> are marked with tokens, which corresponds to both philosophers eating at the same time. If such a marking is reachable, then our property is violated and a trace of Petri net transitions leading to this state is reported. If this Petri net marking is not reachable, then the property holds, as shown in the following screenshot.
+In our case, the expression <code>$P&quot;north__eating&quot; &amp; $P&quot;south__eating&quot;</code> tells MPSat to check if a state is reachable where both places <code>north/eating</code> and <code>south/eating</code> are marked with tokens, which corresponds to both philosophers eating at the same time. If such a marking is reachable, then our property is violated and a trace of Petri net transitions leading to this state is reported. If this Petri net marking is not reachable, then the property holds, as shown in the following screenshot.
 </p>
 
 <p>
 <img src="property_satisfied-two_philosophers-never_eat_simultaniously.png" class="mediacenter" alt="" />
 </p>
-<div class="wrap_tip plugin_wrap">
+<div class="wrap_tip wrap_round wrap_center plugin_wrap" style="width: 90%;">
 <p>
 Note that the Reach expression is usually formulated as the negation of the property one wants to check. If there is no reachable state satisfying this negation then the property itself is satisfied by all the reachable states.
 </p>
-</div><div class="wrap_box plugin_wrap">
-<h3 id="task_3">Task 3</h3>
-<ul>
+</div>
+<p>
+Complete the following tasks:
+</p>
+<ol>
 <li class="level1"><div class="li">
  Verify the model of dining philosophers for deadlocks. Simulate the trace leading to the deadlock. 
 </div></li>
@@ -256,11 +260,11 @@ Note that the Reach expression is usually formulated as the negation of the prop
  Modify the model in such a way that the deadlock is prevented (hint: <span class="wrap_spoiler ">force the philosophers to take the forks in particular order, one of them always takes the fork to his left first, while the other always takes the fork to his right first</span>).
 </div></li>
 <li class="level1"><div class="li">
- Verify that none of the philosophers can be eating with one of the forks still on the table (hint: <code><span class="wrap_spoiler ">($P&quot;A_eating&quot; | $P&quot;B_eating&quot;) &amp; ($P&quot;fork1_free&quot; | $P&quot;fork2_free&quot;)</span></code>).
+ Verify that none of the philosophers can be eating with one of the forks still on the table (hint: <code><span class="wrap_spoiler ">($P&quot;north__eating&quot; | $P&quot;south__eating&quot;) &amp; ($P&quot;fork1_free&quot; | $P&quot;fork2_free&quot;)</span></code>).
 </div></li>
-</ul>
+</ol>
 
-</div>
+
 </div>
 
 <h2 id="solutions">Solutions</h2>
@@ -271,7 +275,7 @@ Download all the Workcraft models discussed in this section here:
 </p>
 
 <p>
-<span class="wrap_download "><a href="dining_philosophers.tar.gz" class="media mediafile mf_gz" title="tutorial:modelling:petri_net:dining_philosophers.tar.gz (14.7 KB)">Dining philosophers models</a> (14.74 KiB)</span>
+<span class="wrap_download "><a href="dining_philosophers.zip" class="media mediafile mf_zip" title="tutorial:modelling:petri_net:dining_philosophers.zip (17.3 KB)">Dining philosophers models</a> (17.35 KiB)</span>
 </p>
 
 </div>
@@ -280,7 +284,7 @@ Download all the Workcraft models discussed in this section here:
 <div class="plugin_wrap">
 <h2 id="feedback">Feedback</h2>
 <form class="bureaucracy__plugin" id="bureaucracy__plugin1" enctype="multipart/form-data" method="post" action="start.html" accept-charset="utf-8"><div class="no">
-<input type="hidden" name="sectok" value="b739a5594ae983ba99abae0198c8ee3c" /><input type="hidden" name="id" value="tutorial:modelling:petri_net:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
+<input type="hidden" name="sectok" value="b44e78cca7188da3315b097298127805" /><input type="hidden" name="id" value="tutorial:modelling:petri_net:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
 <label><span>Name (optional)</span> <input type="text" name="bureaucracy[1]" class="edit" /></label>
 <label><span>Email (optional)</span> <input type="text" name="bureaucracy[2]" class="edit" /></label>
 <label class=" textareafield">
@@ -312,7 +316,7 @@ Download all the Workcraft models discussed in this section here:
                                     </div>
 
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/petri_net/start.txt</bdi> · Last modified: 2016/05/26 09:17 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/petri_net/start.txt</bdi> · Last modified: 2016/09/14 14:41 by <bdi>victor</bdi></div>
                 -->
                             </div></div><!-- /content -->
 
