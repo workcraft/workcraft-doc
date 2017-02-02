@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Workcraft - help:scripting</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="help,scripting"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
+<link rel="start" href="scripting.html"/>
+<link rel="contents" href="scripting.html" title="Sitemap"/>
+<link rel="alternate" type="application/rss+xml" title="Changes" />
+<link rel="alternate" type="application/rss+xml" title="Current namespace" />
+<link rel="edit" title="Edit this page" href="scripting.html"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="_export/xhtml/help/scripting.xhtml"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/scripting.raw"/>
+<link rel="canonical" href="http://www.workcraft.org/help/scripting"/>
+<link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/02/02 10:10//';var JSINFO = {"id":"help:scripting","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export loggedIn    ">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+        <h1><a href="start.html"  title="Workcraft start page"><img src="logo.png" width="327" height="57" alt="" /></a></h1>
+    <br><br><br><br>
+    <div class="tools group">
+        <!-- USER TOOLS -->
+<!--
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="scripting.html"  class="action admin" rel="nofollow" title="Admin">Admin</a></li><li><a href="scripting.html"  class="action profile" rel="nofollow" title="Profile">Profile</a></li><li><a href="scripting.html"  class="action logout" rel="nofollow" title="Logout">Logout</a></li>                </ul>
+            </div>
+        -->
+
+        <!-- SEARCH TOOLS -->
+<!--
+        <div id="dokuwiki__searchtools">
+            <h3 class="a11y"></h3>
+            <form action="start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        </div>
+-->
+
+        <!-- SITE TOOLS -->
+<!--
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+                            <div class="mobileTools">
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:scripting" /><input type="hidden" name="sectok" value="d04957dad14c5f7789ca6acf4fc667d5" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                <ul>
+                    <li><a href="scripting.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="scripting.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="scripting.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
+                    </div>
+-->
+    </div>
+
+    <!-- BREADCRUMBS -->
+        
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                <div class="pageId"><span>help:scripting</span></div>
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#file_operations">File operations</a></div></li>
+<li class="level1"><div class="li"><a href="#configuration">Configuration</a></div></li>
+<li class="level1"><div class="li"><a href="#command_execution">Command execution</a></div></li>
+<li class="level1"><div class="li"><a href="#miscileneous">Miscileneous</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 id="scripting_interface">Scripting interface</h1>
+<div class="level1">
+
+<p>
+Workcraft supports scripting using JavaScript language.
+</p>
+
+<p>
+The JavaScript can be passed as <code>script.js</code> file:
+</p>
+<pre class="code shell">./workcraft -nogui -exec:script.js</pre>
+
+<p>
+For a short JavaScript snippet it may be more convenient to pass it directly in the command line:
+</p>
+<pre class="code shell">./workcraft -nogui -exec:&lt;(echo 'JAVASCRIPT CODE')</pre>
+
+<p>
+Here is several examples of JavaScript code:
+</p>
+<pre class="code javascript"><span class="co1">// Mirror signals and untoggle transitions of STG model</span>
+inStg <span class="sy0">=</span> load<span class="br0">&#40;</span><span class="st0">&quot;in.stg.work&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+tmpStg <span class="sy0">=</span> executeCommand<span class="br0">&#40;</span>inStg<span class="sy0">,</span> <span class="st0">&quot;MirrorSignalTransformationCommand&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+outStg <span class="sy0">=</span> executeCommand<span class="br0">&#40;</span>tmpStg<span class="sy0">,</span> <span class="st0">&quot;PetrifyUntoggleConversionCommand&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+save<span class="br0">&#40;</span>outStg<span class="sy0">,</span> <span class="st0">&quot;out.stg.work&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+<pre class="code javascript"><span class="co1">// Complex gate implementation for basic buck controller</span>
+stg <span class="sy0">=</span> load<span class="br0">&#40;</span><span class="st0">&quot;buck.stg.work&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+circuit <span class="sy0">=</span> executeCommand<span class="br0">&#40;</span>stg<span class="sy0">,</span> <span class="st0">&quot;PetrifyComplexGateSynthesisCommand&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+save<span class="br0">&#40;</span>circuit<span class="sy0">,</span> <span class="st0">&quot;buck.circuit.work&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw5">export</span><span class="br0">&#40;</span>circuit<span class="sy0">,</span> <span class="st0">&quot;buck.v&quot;</span><span class="sy0">,</span> <span class="st0">&quot;VERILOG&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+<pre class="code javascript"><span class="co1">// Technology mapping of VME bus controller into Faraday library</span>
+<span class="co1">// (CSC conflict resolution with Petrify, synthesis with MPSat)</span>
+stg <span class="sy0">=</span> <span class="kw5">import</span><span class="br0">&#40;</span><span class="st0">&quot;vme.g&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+cscStg <span class="sy0">=</span> executeCommand<span class="br0">&#40;</span>stg<span class="sy0">,</span> <span class="st0">&quot;PetrifyCscConflictResolutionCommand&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+setConfigVar<span class="br0">&#40;</span><span class="st0">&quot;CircuitSettings.gateLibrary&quot;</span><span class="sy0">,</span> <span class="st0">&quot;path-to-genlib-faraday.lib&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+circuit <span class="sy0">=</span> executeCommand<span class="br0">&#40;</span>cscStg<span class="sy0">,</span> <span class="st0">&quot;MpsatTechnologyMappingSynthesisCommand&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw5">export</span><span class="br0">&#40;</span>circuit<span class="sy0">,</span> <span class="st0">&quot;vme.v&quot;</span><span class="sy0">,</span> <span class="st0">&quot;VERILOG&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+These examples use the following function shortcuts defined in <code>functions.js</code> resource file that is automatically read on Workcraft startup.
+</p>
+
+</div>
+
+<h2 id="file_operations">File operations</h2>
+<div class="level2">
+<ul>
+<li class="level"><div class="li">
+ <code>load(path)</code>  – load the work file <code>path</code> and return its <em>WorkspaceEntry</em>
+</div></li>
+<li class="level"><div class="li">
+ <code>import(path)</code> – import model from the file <code>path</code> and return its <em>WorkspaceEntry</em>; the model type is detected by the file extension
+</div><ul>
+<li class="level"><div class="li">
+ <code>.g</code> – <em>ASTG</em> file for a <em>STG</em> model
+</div></li>
+<li class="level"><div class="li">
+ <code>.sg</code> – <em>ASTG</em> file for a <em>FST</em> model
+</div></li>
+<li class="level"><div class="li">
+ <code>.v</code> – <em>Verilog netlist</em> file for a <em>circuit</em> model
+</div></li>
+</ul>
+</li>
+<li class="level"><div class="li">
+ <code>save(work, path)</code> – save the <em>WorkspaceEntry</em> <code>work</code> into a file <code>path</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>export(work, path, format)</code> – export the <em>WorkspaceEntry</em> <code>work</code> into a file <code>path</code> with the supported <code>format</code>:
+</div><ul>
+<li class="level"><div class="li">
+ <code>“SVG”</code> – export any visual model as a <em>Scalable Vector Graphics</em> <code>.svg</code> file
+</div></li>
+<li class="level"><div class="li">
+ <code>“PNG”</code> – export any visual model as a <em>Portable Network Graphics</em> <code>.png</code> file
+</div></li>
+<li class="level"><div class="li">
+ <code>“PDF”</code> – export any visual model as a <em>Portable Document Format</em> <code>.pdf</code> file
+</div></li>
+<li class="level"><div class="li">
+ <code>“PS”</code> – export any visual model as a <em>PostScript</em> <code>.ps</code> file
+</div></li>
+<li class="level"><div class="li">
+ <code>“EPS”</code> – export any visual model as an <em>Encapsulated PostScript</em> <code>.eps</code> file
+</div></li>
+<li class="level"><div class="li">
+ <code>“DOT”</code> – export any visual model as a <em>GraphViz</em> <code>.dot</code> file
+</div></li>
+<li class="level"><div class="li">
+ <code>“STG”</code> – export <em>STG</em> or <em>Petri net</em> model as an <em>ASTG</em> <code>.g</code> file
+</div></li>
+<li class="level"><div class="li">
+ <code>“SG”</code>  – export <em>FSM</em> or <em>FST</em> as an <em>ASTG</em> <code>.sg</code> file
+</div></li>
+<li class="level"><div class="li">
+ <code>“VERILOG”</code> – export <em>circuit</em> model as a <em>Verilog netlist</em> <code>.v</code> file
+</div></li>
+<li class="level"><div class="li">
+ <code>“SDC”</code> – export <em>circuit</em> model as a <em>Synopsys Design Constraints</em> <code>.sdc</code> file (work in progress)
+</div></li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+
+<h2 id="configuration">Configuration</h2>
+<div class="level2">
+<ul>
+<li class="level"><div class="li">
+ <code>setConfigVar(key, val)</code> – set the config variable <code>key</code> to value <code>val</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>getConfigVar(key)</code>  – return the value of config variable <code>key</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>saveConfig()</code>  – save settings into the default config file
+</div></li>
+<li class="level"><div class="li">
+ <code>loadConfig()</code>  – load settings from the default config file
+</div></li>
+</ul>
+
+
+</div>
+
+<h2 id="command_execution">Command execution</h2>
+<div class="level2">
+<ul>
+<li class="level"><div class="li">
+ <code>execFile(path)</code> – execute JavaScript file <code>path</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>execResource(name)</code> – execute JavaScript resource <code>name</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>runCommand(work, className)</code> – apply command <code>className</code> to <em>WorkspaceEntry</em> <code>work</code>, possibly as a background task
+</div></li>
+<li class="level"><div class="li">
+ <code>executeCommand(work, className)</code> – return a <em>WorkspaceEntry</em> which is the result of command <code>className</code> applied to <em>WorkspaceEntry</em> <code>work</code>; the following types of commands can be executed:
+</div><ul>
+<li class="level"><div class="li">
+ Transformation  – commands inherited from <code>AbstractTransformationCommand</code>, e.g.:
+</div><ul>
+<li class="level"><div class="li">
+ <code>“ExplicitPlaceTransformationCommand”</code> – make places of the <em>STG</em> model explicit
+</div></li>
+<li class="level"><div class="li">
+ <code>“MirrorSignalTransformationCommand”</code> – mirror signals of the <em>STG</em> model
+</div></li>
+<li class="level"><div class="li">
+ <code>“ReadArcToDualArcTransformationCommand”</code> – convert read-arcs of the <em>STG</em> or <em>PN</em> model to dual producing/consuming arcs
+</div></li>
+</ul>
+</li>
+<li class="level"><div class="li">
+ Layout – commands inherited from <code>AbstractLayoutCommand</code>, e.g.:
+</div><ul>
+<li class="level"><div class="li">
+ <code>“DotLayoutCommand”</code> – node positioning and connection shape calculated by <em>Graphviz</em> backend.
+</div></li>
+<li class="level"><div class="li">
+ <code>“CircuitLayoutCommand”</code> – position <em>circuit</em> components according to their ranking in the netlist connectivity graph
+</div></li>
+</ul>
+</li>
+<li class="level"><div class="li">
+ Conversion – commands inherited from <code>AbstractConversionCommand</code>, e.g.:
+</div><ul>
+<li class="level"><div class="li">
+ <code>“CircuitToStgConversionCommand”</code> – generate <em>STG</em> (circuit Petri net) for the <em>circuit</em> model
+</div></li>
+<li class="level"><div class="li">
+ <code>“StgToBinaryFstConversionCommand”</code> – build a binary-encoded <em>FST</em> model (state graph) for the <em>STG</em> model using <em>Petrify</em> backend
+</div></li>
+<li class="level"><div class="li">
+ <code>“PetrifyHideDummyConversionCommand”</code>  – hide dummies in the <em>STG</em> model using <em>Petrify</em> backend
+</div></li>
+</ul>
+</li>
+<li class="level"><div class="li">
+ Synthesis  – commands inherited from <code>AbstractSynthesisCommand</code>, e.g.:
+</div><ul>
+<li class="level"><div class="li">
+ <code>“PetrifyComplexGateSynthesisCommand”</code> – logic synthesis of the <em>STG</em> into a complex gate <em>circuit</em> using <em>Petrify</em> backend
+</div></li>
+<li class="level"><div class="li">
+ <code>“MpsatStandardCelementSynthesisCommand”</code> – logic synthesis of the <em>STG</em> into a standard C-element <em>circuit</em> implementation using <em>MPSat</em> backend
+</div></li>
+<li class="level"><div class="li">
+ <code>“MpsatTechnologyMappingSynthesisCommand”</code> – technology mapping of the <em>STG</em> into a <em>circuit</em> using <em>MPSat</em> backend
+</div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+
+<h2 id="miscileneous">Miscileneous</h2>
+<div class="level2">
+<ul>
+<li class="level"><div class="li">
+ <code>print(msg)</code> – output the message <code>msg</code> to <em>stdout</em>
+</div></li>
+<li class="level"><div class="li">
+ <code>println(msg)</code> – output the message <code>msg</code> to <em>stdout</em> and add a new line
+</div></li>
+<li class="level"><div class="li">
+ <code>printErr(msg)</code> – output the message <code>msg</code> to <em>stderr</em>
+</div></li>
+<li class="level"><div class="li">
+ <code>printlnErr(msg)</code> – output the message <code>msg</code> to <em>stderr</em> and add a new line
+</div></li>
+<li class="level"><div class="li">
+ <code>startGUI()</code> – start <abbr title="Graphical User Interface">GUI</abbr>
+</div></li>
+<li class="level"><div class="li">
+ <code>stopGUI()</code> or <code>shutdownGUI()</code> – stop <abbr title="Graphical User Interface">GUI</abbr>
+</div></li>
+<li class="level"><div class="li">
+ <code>quit()</code> or <code>exit()</code> or <code>shutdown()</code> – exit Workcraft
+</div></li>
+</ul>
+
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+<!--
+                                    <div class="docInfo"><bdi>help/scripting.txt</bdi> · Last modified: 2017/01/03 17:03 by <bdi>danil</bdi></div>
+                -->
+                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+<!--
+            <div id="dokuwiki__pagetools">
+                            <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="scripting.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="scripting.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="scripting.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="scripting.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                </div>
+                        </div>
+-->
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <!--
+    <div class="buttons">
+                <a href="http://www.dokuwiki.org/donate" title="Donate" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="http://www.php.net" title="Powered by PHP" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+    </div>
+-->
+
+<!--
+    <div class="userInfo">
+        Logged in as:: danil    </div>
+-->
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img  width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+</body>
+</html>
+

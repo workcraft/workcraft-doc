@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/stg_plugin.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/stg_plugin"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/05/28 21:42//';var JSINFO = {"id":"help:stg_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/02/02 10:11//';var JSINFO = {"id":"help:stg_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:stg_plugin" /><input type="hidden" name="sectok" value="9daeb54ed10630531efcb3ce6f018c9d" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:stg_plugin" /><input type="hidden" name="sectok" value="85afadc72c0eba23ce96ba6ef1593980" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="stg_plugin.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="stg_plugin.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="stg_plugin.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -115,7 +115,7 @@ This plugin is intended for capturing, simulation and verification of Signal Tra
 <div class="level2">
 
 <p>
-In order to create an STG model choose <em>File→Create work…</em> menu item. In the <em>New work</em> dialogue box select <em>Signal Transition Graph</em> as the model type. You may also want to give the work a meaningful name, e.g. <em>stg-test1</em>, otherwise it will be created under <em>Untitled</em> name. Click <em>OK</em> or press <kbd>Enter</kbd> to create the work.
+In order to create an STG model choose <em>File→Create work…</em> menu item and in the <em>New work</em> dialogue select <em>Signal Transition Graph</em> as the model type.
 </p>
 
 <p>
@@ -135,11 +135,11 @@ To capture an STG you just put its nodes (places, dummies and signal transitions
 Creation of places is similar to that of Petri net plugin, by using the place generator <img src="editor_tools-place.png" class="media" title="[P] Place" alt="[P] Place" /> – just click the editor panel in the position you want a new place to appear. However, the creation of transitions is a bit more complicated as there are two classes of transitions in this plugin with their respective node generator tools:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <img src="editor_tools-signal_transition.png" class="media" title="[T] Signal Transition" alt="[T] Signal Transition" /> – <strong>signal transition generator</strong> <br/>
 – a tool for creating signal transitions with their rising and falling phases (denoted by <code>+</code> and <code>-</code> respectively after the signal name). This tool can also be activated by pressing <kbd>T</kbd>. 
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <img src="editor_tools-transition.png" class="media" title="[D] Dummy Transition" alt="[D] Dummy Transition" /> – <strong>dummy transition generator</strong> <br/>
 – a tool for creating dummy transitions that do not belong to any signal and do not have rising or falling phase, but rather are used to simplify the structure of the STG. This tool can also be activated by pressing <kbd>D</kbd>.
 </div></li>
@@ -241,13 +241,13 @@ For editing the model activate the selection tool <img src="editor_tools-select.
 The only new feature is double clicking on a place:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Double-click on an empty place to mark it with a token. 
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Double-click a place marked with a token to remove the token. 
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  If a place has more than one token then double-clicking does not have any effect.
 </div></li>
 </ul>
@@ -299,28 +299,28 @@ The timing diagram is built for the main simulation trace – <strong>Trace</str
 A number of STG properties can be verified via <em>Verification</em> menu:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Complete State Coding [MPSat]</em> - verify the STG has Complete State Coding (CSC).
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Consistency [MPSat]</em> - verify that STG signals are consistent (rising and falling transitions of the same signal alternate in all possible traces).
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Deadlock [MPSat]</em> - verify if the STG is deadlock-free.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Normalcy [MPSat]</em> - check the normalcy property of the STG.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Output persistence (without dummies) [MPSat]</em> - verify the output signals of the STG are persistent (once enabled they do not get disabled until fired).
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Conformation (without dummies) [MPSat]…</em> - check if this STG conforms to its environment STG (to be chosen in the file selection window).
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Unique State Coding [MPSat]</em> - verify the STG has Unique State Coding (USC).
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Custom properties [MPSat]…</em> - custom properties can be verified through formulation a reachability analysis problem using <a href="reach.html" class="wikilink1" title="help:reach">Reach language</a> in a specialised MPSat configuration window.
 </div></li>
 </ul>
@@ -346,10 +346,10 @@ Checking for encoding conflicts (<em>Complete State Coding [MPSat]</em> and <em>
 A user can choose between two types of visualisation in the <em>Tool controls</em> panel:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <strong>Show selected core</strong> – individual cores in a selected sets of cores are highlighted in distinct colours (see example on the right). This feature can be useful for detailed analysis of the encoding conflicts to make an informed decision on how to manually resolve them.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <strong>Show core density map</strong> – the darker shades denote the higher density of the overlapping cores (example on the left). Usually it is advantageous to insert new signals in the areas where most cores overlap, thus eliminating more conflicts by a single signal. Note that the number of density map levels can be configured in the <em>Maximum number of core density map levels</em> property of <em>Signal Transition Graph</em> model under <em>Edit→Preferences…</em> menu (5 levels by default).
 </div></li>
 </ul>
@@ -364,13 +364,13 @@ A user can choose between two types of visualisation in the <em>Tool controls</e
 The STG specification can be synthesised into Boolean equations by using <em>Petrify</em> or <em>MPSat</em> as backend tools:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Petrify</em> is a tool for synthesis of Petri nets and asynchronous controllers. It explicitly enumerates all states reachable by the specification, encodes them with the vectors of signal values and derives the Boolean equations for the output signals. The full state space exploration limits the applicability of this tool to relatively compact asynchronous controllers (up to few dozens of signals). Apart from logic synthesis, Petrify is also capable of hazard-free decomposition and technology mapping of its solution into the library of available gates.
 </div></li>
 </ul>
 
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>MPSat</em> is a model checking and synthesis system that uses Petri net unfoldings as a means to avoid the explicit representation of the specification state space. It relies on SAT solver for the synthesis and verification tasks. MPSat does not (fully) support decomposition and technology mapping yet. On the other hand, MPSat enables verification of several predefined model properties (deadlock, CSC, USC, normalcy) and provides a <a href="reach.html" class="wikilink1" title="help:reach">Reach language</a> to verify custom properties.
 </div></li>
 </ul>
@@ -380,25 +380,25 @@ The STG specification can be synthesised into Boolean equations by using <em>Pet
 These synthesis options are available under the <em>Synthesis</em> menu:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Complex gate [MPSat]</em> - synthesise the STG in complex gates using <em>MPSat</em> backend tool.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Complex gate [Petrify]</em> - synthesise the STG in complex gates using <em>Petrify</em> backend tool.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Generalized C-element [MPSat]</em> - synthesise the STG in generalised C-elements using <em>MPSat</em> backend tool.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Generalized C-element [Petrify]</em> - synthesise the STG in generalised C-elements using <em>Petrify</em> backend tool.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Standard C-element [MPSat]</em> - synthesise the STG in standard C-elements using <em>MPSat</em> backend tool.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Technology mapping [MPSat]</em> - synthesise the STG for a library of available gates using <em>MPSat</em> backend tool.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Technology mapping [Petrify]</em> - synthesise the STG for a library of available gates using <em>Petrify</em> backend tool. The library of gates can be specified in the under <em>Models→Digital Circuit</em> leaf of the global preferences tree (available via <em>Edit→Preferences</em> menu).
 </div></li>
 </ul>
@@ -422,7 +422,7 @@ In case of this example the complex gate implementation is just a buffer between
                                     </div>
 
 <!--
-                                    <div class="docInfo"><bdi>help/stg_plugin.txt</bdi> · Last modified: 2016/05/25 14:19 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/stg_plugin.txt</bdi> · Last modified: 2017/02/02 09:51 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

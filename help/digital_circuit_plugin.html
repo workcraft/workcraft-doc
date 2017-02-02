@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/digital_circuit_plugin.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/digital_circuit_plugin"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/05/28 21:41//';var JSINFO = {"id":"help:digital_circuit_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/02/02 10:10//';var JSINFO = {"id":"help:digital_circuit_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:digital_circuit_plugin" /><input type="hidden" name="sectok" value="0df43e74f245a56dc96b09d9040f66c0" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:digital_circuit_plugin" /><input type="hidden" name="sectok" value="6a2372ae4c366f895b9e2786130f4922" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="digital_circuit_plugin.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="digital_circuit_plugin.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="digital_circuit_plugin.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -116,7 +116,7 @@ This plugin is intended for capturing, simulation and verification of asynchrono
 <div class="level2">
 
 <p>
-In order to create a circuit model choose <em>File→Create work…</em> menu item. In the <em>New work</em> dialogue box select <em>Digital Circuit</em> as the model type. You may also want to give the work a meaningful name, e.g. <em>circuit-test1</em>, otherwise it will be created under <em>Untitled</em> name. Click <em>OK</em> or press <kbd>Enter</kbd> to create the work.
+In order to create a circuit model choose <em>File→Create work…</em> menu item and in the <em>New work</em> dialogue select <em>Digital Circuit</em> as the model type.
 </p>
 
 <p>
@@ -148,22 +148,22 @@ Initially the output pins have neither set nor reset functions assigned. The set
 A component visualisation is defined by its <em>Render type</em> selected in the property editor, as follows:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Box</em> – the component is visualises as a box with explicitly named pins and their set and reset functions rendered next to them. This render type is convenient when a component has more than one output or its set/reset functions are too complex.
 </div></li>
 </ul>
 
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Gate</em> – the set and reset functions of a single component output are visualised using the traditional graphical mnemonics for Boolean operations. The obtained result is free of textual information (even the pins are not labelled) and therefore is usually easier to comprehend. Rendering a component as gate is convenient when it has a single output with relatively simple set/reset functions. This is the default rendering type with the following visualisation rules:
 </div><ul>
-<li class="level2"><div class="li">
+<li class="level"><div class="li">
  If both set and reset functions are specified then the component is rendered as a C-element. 
 </div></li>
-<li class="level2"><div class="li">
+<li class="level"><div class="li">
  If only the set function is specified, then the reset function is assumed to be complimentary and the component is rendered as a combinational gate (possibly with several layers of logic). 
 </div></li>
-<li class="level2"><div class="li">
+<li class="level"><div class="li">
  If the component cannot be rendered as a gate, e.g. because its set function is not empty or it has several output pins, then the <em>Box</em> visualisation is used.
 </div></li>
 </ul>
@@ -243,10 +243,10 @@ The state of circuit&#039;s signals is visualised by colouring the corresponding
 By default the circuit driver pins (input ports and the gate output contacts) are initialised to logical <code>0</code>. This may lead to some of the circuit internal signals being excited when the simulation begins, e.g. the output <code>out0</code> is <code>0</code>, but evaluates to <code>1</code> (first transition in the simulation trace). There are two ways to change the initial values to the circuit signals:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  A driver pin can be set to logical <code>1</code> by ticking the <em>Init to one</em> property of the pin.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Alternatively, in simulation mode, when a desired association of signal values is reached, this state can be saved as the initial state of the circuit by pressing this button – <img src="tool_controls-simulate-save_state.png" class="media" title="Save current state as initial" alt="Save current state as initial" />.
 </div></li>
 </ul>
@@ -277,16 +277,16 @@ Verification of a digital circuit is usually made in the context of its environm
 When a verification task is issued via the <em>Verification</em> menu, the circuit is first translated into an STG that is subsequently composed with the STG of the environment. The resultant STG is used for verification of the desired properties:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Conformation [MPSat]</em> – verify if the circuit conforms to the environment   specification.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Deadlock [MPSat]</em> – verify if the circuit is deadlock-free.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Hazard [MPSat]</em> – verify if the circuit is hazard-free.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Conformation, deadlock and hazard (reuse unfolding) [MPSat]</em> – verify if the circuit conforms to the environment specification and is free of deadlocks and hazards under the given environment.
 </div></li>
 </ul>
@@ -301,13 +301,13 @@ When a verification task is issued via the <em>Verification</em> menu, the circu
 Initialisation (or reset) of a speed-independent circuit is a crucial part of the design process because a circuit can malfunction if its initial state is incorrect. There are several ways of circuit initialisation, that are usually used in combination:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Rely on the initial state of the circuit inputs that propagate through the logic gates to initialise the internal and output signals.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Insert additional gates to explicitly initialise the internal and output signals.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Substitute sequential gates with their set/reset counterparts that are initialised to <code>1</code>/<code>0</code> respectively.
 </div></li>
 </ul>
@@ -361,7 +361,7 @@ The colours associated with logical levels and gate initialisation state can be 
                                     </div>
 
 <!--
-                                    <div class="docInfo"><bdi>help/digital_circuit_plugin.txt</bdi> · Last modified: 2016/05/28 21:29 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/digital_circuit_plugin.txt</bdi> · Last modified: 2017/02/02 09:54 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

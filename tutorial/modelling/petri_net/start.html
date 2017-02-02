@@ -195,7 +195,7 @@ Simulate the above distinctive scenarios for dining philosophers. Explore the na
 <div class="level2">
 
 <p>
-Various properties of a Petri net model can be verified using <em>Punf</em> and <em>MPSat</em> as the backend tools (see overview of <a href="../../overview/backend_tools.html" class="wikilink1" title="overview:backend_tools">third-party tools</a> for more details). The tool interfaces available for Petri net verification are collected under <em>Verification</em> menu.
+Various properties of a Petri net model can be verified using <em>Punf</em> and <em>MPSat</em> as the backend tools (see overview of <a href="../../../overview/backend_tools.html" class="wikilink1" title="overview:backend_tools">third-party tools</a> for more details). The tool interfaces available for Petri net verification are collected under <em>Verification</em> menu.
 </p>
 
 <p>
@@ -207,7 +207,7 @@ The easiest and most obvious property to check is that the model does not have a
 </p>
 
 <p>
-Verification of custom properties is based on reachability analysis on the Petri net. For this a custom property should  be expressed in <a href="../../help/reach.html" class="wikilink1" title="help:reach">Reach language</a>. For example, you can try and verify that both philosophers cannot be eating at the same time:
+Verification of custom properties is based on reachability analysis on the Petri net. For this a custom property should  be expressed in <a href="../../../help/reach.html" class="wikilink1" title="help:reach">Reach language</a>. For example, you can try and verify that both philosophers cannot be eating at the same time:
 </p>
 <ol>
 <li class="level1"><div class="li">
@@ -234,7 +234,7 @@ The result should be similar to the following screenshot.
 </p>
 
 <p>
-Let us explain how to interpret the Reach predicate. Consider an expression <code>$P&quot;place_name&quot;</code>. It instructs MPSat to check if a marking is reachable where the place <code>place_name</code> has a token. In basic cases one can apply logical operations and quantifiers (e.g. <code>&amp;</code>, <code>|</code>, <code>forall</code>, <code>existis</code>, etc.) to a marking which violates the property. For expressing more sophisticated properties refer to <a href="../../help/reach.html" class="wikilink1" title="help:reach">Reach language documentation</a>.
+Let us explain how to interpret the Reach predicate. Consider an expression <code>$P&quot;place_name&quot;</code>. It instructs MPSat to check if a marking is reachable where the place <code>place_name</code> has a token. In basic cases one can apply logical operations and quantifiers (e.g. <code>&amp;</code>, <code>|</code>, <code>forall</code>, <code>existis</code>, etc.) to a marking which violates the property. For expressing more sophisticated properties refer to <a href="../../../help/reach.html" class="wikilink1" title="help:reach">Reach language documentation</a>.
 </p>
 
 <p>

@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/verification.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/verification"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/05/28 21:42//';var JSINFO = {"id":"help:verification","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/02/02 10:11//';var JSINFO = {"id":"help:verification","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:verification" /><input type="hidden" name="sectok" value="e0cdf90b84878938194de5a7c141f835" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:verification" /><input type="hidden" name="sectok" value="d9cf80a495d9e353aa07a83bdae47724" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="verification.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="verification.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="verification.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -90,25 +90,25 @@
 Most STGs should satisfy the following four properties (can be checked via <em>Verification</em> menu):
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <strong>Consistency</strong> –  for all signals <code>z</code>, <code>z+</code> and <code>z-</code> must alternate in each possible trace, always starting with the same sign. This is necessary for the encodings of the reachable states to be binary.
 </div></li>
 </ul>
 
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <strong>Deadlock-freeness</strong> – each reachable marking enables at least one transition.
 </div></li>
 </ul>
 
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <strong>Input properness</strong> – an input must not be triggered by an internal signal (as the environment must be oblivious to internal signals) and must not be disabled by a local (i.e. output or internal) signal; it is ok (and in fact common) for an input to be disabled by another input. This property can currently be verified only for STGs without dummy transitions.
 </div></li>
 </ul>
 
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <strong>Output persistency</strong> – a local signal must not be disabled by any other signal (such disabling would cause a hazard on the output of the gate producing this local signal). This property can currently be verified only for STGs without dummy transitions.
 </div></li>
 </ul>
@@ -119,7 +119,7 @@ The notable exceptions are MUTEX and WAIT – they violate output persistency. I
 </p>
 
 <p>
-The user can specify custom properties using <a href="reach.html" class="wikilink1" title="help:reach">REACH language</a>. For example, a custom property that PMOS and NMOS are never ON at the same time is specified and verified in <a href="tutorial/synthesis/buck/start.html#formal_verification" class="wikilink1" title="tutorial:synthesis:buck:start">buck tutorial</a>.
+The user can specify custom properties using <a href="reach.html" class="wikilink1" title="help:reach">REACH language</a>. For example, a custom property that PMOS and NMOS are never ON at the same time is specified and verified in <a href="../tutorial/synthesis/buck/start.html#formal_verification" class="wikilink1" title="tutorial:synthesis:buck:start">buck tutorial</a>.
 </p>
 
 </div>
@@ -131,19 +131,19 @@ The user can specify custom properties using <a href="reach.html" class="wikilin
 Most speed-independent circuits should satisfy the following properties (can be checked via <em>Verification</em> menu):
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <strong>Conformation</strong> – the circuit will never break the environment by sending an output that the environment does not expect. In other words, if a circuit produces an output, say <code>z+</code>, a transition labelled by <code>z+</code> must be enabled in the environment STG.
 </div></li>
 </ul>
 
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <strong>Deadlock</strong> – in every reachable state the circuit or the environment (or both) can fire some transition.
 </div></li>
 </ul>
 
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <strong>Hazard</strong> – an excited gate in the circuit cannot be disabled. This is essentially output persistency.
 </div></li>
 </ul>

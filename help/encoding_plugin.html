@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/encoding_plugin.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/encoding_plugin"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/05/28 21:41//';var JSINFO = {"id":"help:encoding_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/02/02 10:10//';var JSINFO = {"id":"help:encoding_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:encoding_plugin" /><input type="hidden" name="sectok" value="d452cfbd1cb5804aa41452ee0e1dafca" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:encoding_plugin" /><input type="hidden" name="sectok" value="f9c96f3a8335202a7ca24e949dc6c494" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="encoding_plugin.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="encoding_plugin.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="encoding_plugin.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -132,13 +132,13 @@ The dialogue displayed for these three approaches is the same and depicted below
 This is accessible by the corresponding buttons. Before discussing about each features which these methods allow, it is worthwhile listing what each approach is about.
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Heuristic encoding: this a technique which aims at inspecting only the heuristically optimal solutions(according to a cost function empirically analysed during some research). It is scalable, and it might be applied to derive the compositional graph of a decently high number of graphs. 
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Exhaustive search: it attempts (when feasible) to explore the whole solution space associated to the partial orders selected. As the the number of the encodings depends on the graphs and on the opcodes available, it is not always possible to use this method.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Random search: randomly encodes all the partial orders that the user wants to work with. It might be useful also for demonstrative purposes.
 </div></li>
 </ul>
@@ -148,27 +148,27 @@ This is accessible by the corresponding buttons. Before discussing about each fe
 In order to use one of the technique described in this tutorial, the user must make sure to first have selected at least two partial orders composed and displayed in the dedicated workspace. After that, one may choose which approach to apply for the derivation of the CPOG.
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Target: which target the Boolean equations will be optimised for. In the case “Microcontroller” is selected, the solution which minimises the final controller will be chosen. Whereas, if “CPOG” is selected the encoding that minimise each Boolean formula associated to all the nodes and arcs of the compositional graph will be picked.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Use ABC for logic synthesis: it allows the usage of ABC tool in order to map all the final equations with a specified technology library. This file should be in the <strong>genlib format</strong><sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup>, and must be addressed in the option of ScEnco (Edit → Preferences… → External tools → SCENCO → Gate library…). ABC is not included inside Workcraft&#039;s package. It should be downloaded and installed by the official website mentioned above.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Verbose: all the output of ScEnco will be entirely displayed at the bottom of Workcraft.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Search range:
 </div><ul>
-<li class="level2"><div class="li">
+<li class="level"><div class="li">
  Number of solutions to generate: number of actual encodings generated at the beginning and compared to establish which one is the best fit for the compositional representation.Feature not available for Exhaustive approach.
 </div></li>
-<li class="level2"><div class="li">
+<li class="level"><div class="li">
  (slow)/(fast) radio buttons: if the slow option is selected, all the solutions generated will be synthesised and compared; if the other one is chosen only the ones which are supposed to be heuristically optimal (among the ones initially generated) will be synthesised and compared. Feature not available for Exhaustive approach.
 </div></li>
 </ul>
 </li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Custom encoding: in here, the user may set any constraints to the partial orders such as the number of bits to be using or the reservation of any bits. ScEnco will yet try to find the best solution, according to constraints set.
 </div></li>
 </ul>
@@ -191,10 +191,10 @@ Go to Encoding → SAT-based optimal encoding. This will create a new group with
 It is important to tune the encoding tool in order to produce results of desired quality. The tool window will allow you to set the following encoding parameters:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  The number of encoding variables (note that you need at least log<sub>2</sub>(N) variables to encode N scenarios).
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  The maximum number of 2-input gates in the combinational circuit computing all the conditions in the resulting Conditional Partial Order Graph.
 </div></li>
 </ul>
@@ -204,10 +204,10 @@ It is important to tune the encoding tool in order to produce results of desired
 Furthermore, you can control which SAT-solver is used for optimal encoding by navigating to Edit → Preferences… and locating the section related to the SCENCO plugin. You will be able to set the following parameters there:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Paths to supported SAT solvers; currently <strong>minisat</strong><sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup> and <strong>clasp</strong><sup><a href="#fn__3" id="fnt__3" class="fn_top">3)</a></sup> are supported. One of them needs to be installed.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  The preferred SAT solver.
 </div></li>
 </ul>

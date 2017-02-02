@@ -5,7 +5,7 @@
     <title>Workcraft - help:cpog_plugin</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="help,cpog_plugin"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="cpog_plugin.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/cpog_plugin.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/cpog_plugin"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/05/28 21:41//';var JSINFO = {"id":"help:cpog_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/02/02 10:10//';var JSINFO = {"id":"help:cpog_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:cpog_plugin" /><input type="hidden" name="sectok" value="8d308eb05646c9829836040b519b5bc8" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:cpog_plugin" /><input type="hidden" name="sectok" value="28a84b9a9cd827bcff681464bea8b337" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="cpog_plugin.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="cpog_plugin.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="cpog_plugin.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -116,7 +116,7 @@ The CPOG plugin provides support for the specification of a collection of behavi
 <div class="level2">
 
 <p>
-The plugin is currently only available for documents using the Conditional Partial Order Graph model. To create a new document of this kind click File → Create work… then select Conditional Partial Order Graph in the opened window and click OK. You can also give name to the created file as shown below.
+The plugin is currently only available for documents using the Conditional Partial Order Graph model. To create a new document of this kind click <em>File → Create work…</em> then select <em>Conditional Partial Order Graph</em> in the opened window and click <em>OK</em>.
 </p>
 
 <p>
@@ -162,16 +162,16 @@ Drawing scenarios graphically may be a tedious process, so we implemented an alt
 The following examples show simple algebraic expressions and describe the corresponding graphs:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <strong><code>a + b + c</code></strong> – this will insert a graph with three vertices labelled &#039;a&#039;, &#039;b&#039; and &#039;c&#039; and no arcs.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <strong><code>a -<strong></strong>&gt; b + c</code></strong> – this will insert a graph with three vertices a, b and c and an arc going from vertex a to vertex b.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <strong><code>a + (b + c) -<strong></strong>&gt; d</code></strong> – this will insert a graph with four vertices a, b, c and d and two arcs going from vertices b and c to vertex d.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Note that the <strong>+</strong> operator can be omitted for clarity, hence inserting the expression shown in the above screenshot will produce the following graph (after manual layout):
 </div></li>
 </ul>
@@ -207,10 +207,10 @@ Go to Encoding → SAT-based optimal encoding. This will create a new group with
 It is important to tune the encoding tool in order to produce results of desired quality. The tool window will allow you to set the following encoding parameters:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  The number of encoding variables (note that you need at least log<sub>2</sub>(N) variables to encode N scenarios).
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  The maximum number of 2-input gates in the combinational circuit computing all the conditions in the resulting Conditional Partial Order Graph.
 </div></li>
 </ul>
@@ -220,10 +220,10 @@ It is important to tune the encoding tool in order to produce results of desired
 Furthermore, you can control which SAT-solver is used for optimal encoding by navigating to Edit → Preferences… and locating the section related to the SCENCO plugin. You will be able to set the following parameters there:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Paths to supported SAT solvers; currently <strong>minisat</strong><sup><a href="#fn__3" id="fnt__3" class="fn_top">3)</a></sup> and <strong>clasp</strong><sup><a href="#fn__4" id="fnt__4" class="fn_top">4)</a></sup> are supported. One of them needs to be installed.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  The preferred SAT solver.
 </div></li>
 </ul>
@@ -233,10 +233,10 @@ Furthermore, you can control which SAT-solver is used for optimal encoding by na
 <div class="footnotes">
 <div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
 See the following two papers for more details:<ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  A. Mokhov, A. Yakovlev. <em>“Conditional Partial Order Graphs: Model, Synthesis and Application”</em>, IEEE Transactions on Computers, 2010, vol. 59, no. 11, pp. 1480-1493.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  A. Mokhov, A. Alekseyev, A. Yakovlev. <em>“Encoding of Processor Instruction Sets with Explicit Concurrency Control”</em>, Special Issue on Best Papers from ACSD&#039;2010 conference, IET Computers &amp; Digital Techniques, 2011, vol. 5, no. 6, pp. 427-439.
 </div></li>
 </ul>
@@ -254,7 +254,7 @@ Can be downloaded from <a href="http://www.cs.uni-potsdam.de/clasp/" class="urle
                                     </div>
 
 <!--
-                                    <div class="docInfo"><bdi>help/cpog_plugin.txt</bdi> · Last modified: 2015/08/03 15:07 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/cpog_plugin.txt</bdi> · Last modified: 2017/02/02 09:53 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 

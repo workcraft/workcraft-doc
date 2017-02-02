@@ -5,7 +5,7 @@
     <title>Workcraft - help:dfs_plugin</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="help,dfs_plugin"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="dfs_plugin.html"/>
@@ -17,7 +17,7 @@
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/dfs_plugin.raw"/>
 <link rel="canonical" href="http://www.workcraft.org/help/dfs_plugin"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2016/05/28 21:41//';var JSINFO = {"id":"help:dfs_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/02/02 10:10//';var JSINFO = {"id":"help:dfs_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -57,7 +57,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:dfs_plugin" /><input type="hidden" name="sectok" value="6b1295794a53cc434815555735350ced" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:dfs_plugin" /><input type="hidden" name="sectok" value="b598881f687f9de10ddeceab8cb05c76" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
                 <ul>
                     <li><a href="dfs_plugin.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="dfs_plugin.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="dfs_plugin.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -115,7 +115,7 @@ This plugin is intended for capturing, simulation and verification of Dataflow S
 <div class="level2">
 
 <p>
-In order to create a DFS model choose <em>File→Create work…</em> menu item. In the <em>New work</em> dialogue box select <em>Dataflow Structure</em> as the model type. You may also want to give the work a meaningful name, e.g. <em>dfs-test1</em>, otherwise it will be created as <em>Untitled</em> work. Click <em>OK</em> or press <kbd>Enter</kbd> to create the work.
+In order to create a DFS model choose <em>File→Create work…</em> menu item and in the <em>New work</em> dialogue select <em>Dataflow Structure</em> as the model type.
 </p>
 
 <p>
@@ -131,13 +131,13 @@ In order to create a DFS model choose <em>File→Create work…</em> menu item. 
 Dataflow Structures plugin supports 3 families of components:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Static components (logic and registers).
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Dynamic components (control, push and pop registers).
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  Counterflow components (logic and registers).
 </div></li>
 </ul>
@@ -156,42 +156,42 @@ Select the corresponding generator tool to create components of a needed type.
 The following terminology is used to describe the execution semantics of DFS model:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  A register component is <em>marked</em> if it has a token and a register is <em>empty</em> if it does not have a token.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  A logic component is <em>reset</em> if it has not evaluated its function yet and a logic component is <em>computed</em> if it has evaluated the function.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Preset</em> (<em>postset</em>) of a component is a set of components that are directly connected by its incoming (outgoing) arcs.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>R-preset</em> (<em>R-postset</em>) of a component is a set of registers in its preset/postset, transitive through logic components.
 </div></li>
 </ul>
 
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <img src="editor_tools-dfs-logic.png" class="media" title="[L] Logic" alt="[L] Logic" /> – <strong>logic generator</strong>  – for modelling combinational logic of dataflow pipelines. The logic evaluation rules are as follows:
 </div><ul>
-<li class="level2"><div class="li">
+<li class="level"><div class="li">
  A reset logic can compute if the following conditions are met:
 </div><ul>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  all logic components in its preset are computed;
 </div></li>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  all registers in its preset are marked.
 </div></li>
 </ul>
 </li>
-<li class="level2"><div class="li">
+<li class="level"><div class="li">
  A computed logic can reset if the following conditions are met:
 </div><ul>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  all logic components in its preset are reset;
 </div></li>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  all registers in its preset are empty.
 </div></li>
 </ul>
@@ -201,33 +201,33 @@ The following terminology is used to describe the execution semantics of DFS mod
 </ul>
 
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <img src="editor_tools-dfs-register.png" class="media" title="[R] Register" alt="[R] Register" /> – <strong>register generator</strong> – for modelling sequential elements of dataflow pipelines and data propagations as abstract tokens. The token propagation rules are as follows:
 </div><ul>
-<li class="level2"><div class="li">
+<li class="level"><div class="li">
  A token can propagate to an empty register if the following conditions are met: 
 </div><ul>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  all logic components in its preset are computed;
 </div></li>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  all registers in its R-preset are marked;
 </div></li>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  all registers in its R-postset are empty.
 </div></li>
 </ul>
 </li>
-<li class="level2"><div class="li">
+<li class="level"><div class="li">
  A token can leave a marked register if the following conditions are met:
 </div><ul>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  all logic components in its preset are reset;
 </div></li>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  all registers in its R-preset are empty;
 </div></li>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  all registers in its R-postset are marked.
 </div></li>
 </ul>
@@ -245,10 +245,10 @@ The above rules of token propagation define a so-called <em>spread token</em> ex
 Note that logic components can model <em>Early evaluation</em> – see the corresponding entry in the <em>Property editor</em>. An early evaluating logic component is denoted by <code>EE</code> label and its evaluation rules change as follows:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  A reset early evaluating logic can compute if any logic components in its preset is computed or any register in its preset is marked.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  A computed early evaluating logic can reset if any logic component in its preset is reset or any register in its preset is empty.
 </div></li>
 </ul>
@@ -267,41 +267,41 @@ As the name suggests, dynamic components enable the change of a  Dataflow Struct
 In addition to the terminology introduced for the static components, the dynamic components operate with two types of tokens: <em>True</em> or <em>False</em>. We use terms <em>T-marked</em> and <em>F-marked</em> to specify the state of a marked dynamic register. 
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <img src="editor_tools-dfs-control.png" class="media" title="[T] Control register" alt="[T] Control register" /> – <strong>control register generator</strong> – this register can hold a <em>True</em> or <em>False</em> token. The spread token execution semantics also applies here. The type of the stored token dynamically controls the propagation of tokens through the connected push and pop registers. The type of token that propagates into the control register depends on its <em>Synchronisation type</em> property (can be used to perform Boolean operation on the True and False tokens):
 </div><ul>
-<li class="level2"><div class="li">
+<li class="level"><div class="li">
  <strong>plain</strong> - the control register behaves similar to a C-element:
 </div><ul>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  if all incoming tokens are False, then the resultant token is also False;
 </div></li>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  if all incoming tokens are True, then the resultant token is also True;
 </div></li>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  if there is a mismatch among the types of incoming tokens, then the control register cannot accept a new token.
 </div></li>
 </ul>
 </li>
-<li class="level2"><div class="li">
+<li class="level"><div class="li">
  <strong>and</strong> - the control register behaves as an AND-gate:
 </div><ul>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  if all incoming tokens are True, then the resultant token is True;
 </div></li>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  otherwise the resultant token is False.
 </div></li>
 </ul>
 </li>
-<li class="level2"><div class="li">
+<li class="level"><div class="li">
  <strong>or</strong> - the control register behaves as an OR-gate:
 </div><ul>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  if all incoming tokens are False, then the resultant token is False;
 </div></li>
-<li class="level3"><div class="li">
+<li class="level"><div class="li">
  otherwise the resultant token is true.
 </div></li>
 </ul>
@@ -344,7 +344,7 @@ In a control register True and False tokens are depicted as empty circles with �
 The counterflow components are introduced to enable forward and backward flow of tokens. The forward flow is similar to the token propagation in standard static components, while the backward flow of tokens is used to inform the preceding components that their output is no longer needed. This so-called <em>counterflow</em> execution semantics is useful to model preemption and speculative execution.
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <img src="editor_tools-dfs-counterflow_logic.png" class="media" title="[K] Counterflow logic" alt="[K] Counterflow logic" /> – <strong>counterflow logic generator</strong>
 </div></li>
 </ul>
@@ -427,13 +427,13 @@ Note that simulation of a DFS model is just an abstraction over the simulation o
 Verification of a DFS model done via translation into an STG model and formulation of verification tasks in terms of the obtained STG. A DFS can be checked for deadlocks and hazards by choosing a corresponding item from <em>Verification</em> menu:
 </p>
 <ul>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Deadlock [MPSat]</em> - verify if the DFS model is deadlock-free.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Hazard [MPSat]</em> - verify if the DFS model is hazard-free.
 </div></li>
-<li class="level1"><div class="li">
+<li class="level"><div class="li">
  <em>Deadlock and hazard (reuse unfolding) [MPSat]</em> - verify if the DFS model is free from deadlocks and hazards.
 </div></li>
 </ul>
@@ -465,7 +465,7 @@ D. Sokolov, I. Poliakov, A. Yakovlev: <em>“Analysis of static data flow str
                                     </div>
 
 <!--
-                                    <div class="docInfo"><bdi>help/dfs_plugin.txt</bdi> · Last modified: 2015/12/01 11:35 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/dfs_plugin.txt</bdi> · Last modified: 2017/02/02 09:55 by <bdi>danil</bdi></div>
                 -->
                             </div></div><!-- /content -->
 
