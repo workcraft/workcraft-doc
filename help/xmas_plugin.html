@@ -2,10 +2,10 @@
 <html lang="en" dir="ltr" class="no-js">
 <head>
     <meta charset="utf-8" />
-    <title>Workcraft - help:xmas_plugin</title>
+    <title>help:xmas_plugin - Workcraft</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="noindex,nofollow"/>
+<meta name="robots" content="index,follow"/>
 <meta name="keywords" content="help,xmas_plugin"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="xmas_plugin.html"/>
@@ -15,18 +15,20 @@
 <link rel="edit" title="Edit this page" href="xmas_plugin.html"/>
 <link rel="alternate" type="text/html" title="Plain HTML" href="_export/xhtml/help/xmas_plugin.xhtml"/>
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/xmas_plugin.raw"/>
-<link rel="canonical" href="http://www.workcraft.org/help/xmas_plugin"/>
+<link rel="canonical" href="https://www.workcraft.org/help/xmas_plugin"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/02/02 10:11//';var JSINFO = {"id":"help:xmas_plugin","namespace":"help","plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<!--[if gte IE 9]><!-->
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/06/30 11:37//';var JSINFO = {"id":"help:xmas_plugin","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
+<!--<![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="shortcut icon" href="favicon.ico" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     </head>
 
 <body>
-    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
     <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki-light-export loggedIn    ">
 
         
@@ -34,14 +36,14 @@
 <div id="dokuwiki__header"><div class="pad group">
 
         <h1><a href="start.html"  title="Workcraft start page"><img src="logo.png" width="327" height="57" alt="" /></a></h1>
-    <br><br><br><br>
+    
     <div class="tools group">
         <!-- USER TOOLS -->
 <!--
                     <div id="dokuwiki__usertools">
                 <h3 class="a11y">User Tools</h3>
                 <ul>
-                    <li><a href="xmas_plugin.html"  class="action admin" rel="nofollow" title="Admin">Admin</a></li><li><a href="xmas_plugin.html"  class="action profile" rel="nofollow" title="Profile">Profile</a></li><li><a href="xmas_plugin.html"  class="action logout" rel="nofollow" title="Logout">Logout</a></li>                </ul>
+                    <li><a href="xmas_plugin.html"  class="action admin" rel="nofollow" title="Admin">Admin</a></li><li><a href="xmas_plugin.html"  class="action profile" rel="nofollow" title="Profile">Profile</a></li><li><a href="xmas_plugin.html"  class="action logout" rel="nofollow" title="Log Out">Log Out</a></li>                </ul>
             </div>
         -->
 
@@ -49,7 +51,7 @@
 <!--
         <div id="dokuwiki__searchtools">
             <h3 class="a11y"></h3>
-            <form action="start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        </div>
+            <form action="start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" placeholder="Search" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><button type="submit" title="Search">Search</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        </div>
 -->
 
         <!-- SITE TOOLS -->
@@ -57,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:xmas_plugin" /><input type="hidden" name="sectok" value="a9d137dbd07ee0c2080b60a70b8191ab" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Logout</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><input type="submit" value="&gt;" /></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:xmas_plugin" /><input type="hidden" name="sectok" value="82d4a695425d8f4f0229384268f8033b" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="xmas_plugin.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="xmas_plugin.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="xmas_plugin.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -65,7 +67,11 @@
     </div>
 
     <!-- BREADCRUMBS -->
-        
+<!--
+    -->
+
+
+
     <hr class="a11y" />
 </div></div><!-- /header -->
 
@@ -74,10 +80,12 @@
             
             <!-- ********** CONTENT ********** -->
             <div id="dokuwiki__content"><div class="pad group">
+                
                 <div class="pageId"><span>help:xmas_plugin</span></div>
+
                 <div class="page group">
                                                             <!-- wikipage start -->
-                    <!-- TOC START -->
+                    <div class="plugin_fastwiki_marker" style="display:none"></div><!-- TOC START -->
 <div id="dw__toc">
 <h3 class="toggle">Table of Contents</h3>
 <div>
@@ -118,7 +126,7 @@ Familiarise yourself with <a href="toc_generic.html" class="wikilink1" title="he
 </p>
 </div>
 <p>
-This plugin is intended for capturing, simulation and verification of xMAS Circuits. It supports all the conventional xMAS components and also a specialised Sync component. For simulation an xMAS model is automatically translated into a Signal Transition Graph (STG) that allows re-using the features of the <a href="stg_plugin.html" class="wikilink1" title="help:stg_plugin">STG plugin</a>. The verification tool supports different levels of analysis including deadlock analysis of the xMAS circuits and a relational level focussed on querying.
+This plugin is intended for capturing, simulation and verification of xMAS Circuits. It supports all the conventional xMAS components and also a specialised Sync component. For simulation an xMAS model is automatically translated into a Signal Transition Graph (<abbr title="Signal Transition Graph">STG</abbr>) that allows re-using the features of the <a href="stg_plugin.html" class="wikilink1" title="help:stg_plugin">STG plugin</a>. The verification tool supports different levels of analysis including deadlock analysis of the xMAS circuits and a relational level focussed on querying.
 </p>
 
 </div>
@@ -274,7 +282,7 @@ When the connection tool <img src="editor_tools-connect.png" class="media" title
 <div class="level2">
 
 <p>
-For model editing, activate the selection tool <img src="editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />. All the standard editing features (select, drag-and-drop, delete, copy, undo, group, etc.) work the same – see generic help on <a href="tool_controls_panel.html#selection_controls" class="wikilink1" title="help:tool_controls_panel">Selection controls</a> and <a href="property_editor_panel.html" class="wikilink1" title="help:property_editor_panel">Property editor</a> for details. 
+For model editing, activate the selection tool <img src="editor_tools-select.png" class="media" title="[S] Select" alt="[S] Select" />. All the standard editing features (select, drag-and-drop, delete, copy, undo, group, etc.) work the same – see generic help on <a href="tool_controls.html#selection_controls" class="wikilink1" title="help:tool_controls">Selection controls</a> and <a href="property_editor.html" class="wikilink1" title="help:property_editor">Property editor</a> for details. 
 </p>
 
 <p>
@@ -290,7 +298,7 @@ Similar to all the other models, textual comments can be created by activating t
 The Sync selection tool is selected from the Tools menu.
 For xMAS circuits that contain synchroniser components the Sync selection tool must be used for configuration of the synchronisers prior to verification. For GALS circuits synchronisers must be
 present in the design model and groupings must first have been made around all the basic primitive
-components in the design using the <a href="tool_controls_panel.html#selection_controls" class="wikilink1" title="help:tool_controls_panel">Selection controls</a> prior to configuration.
+components in the design using the <a href="tool_controls.html#selection_controls" class="wikilink1" title="help:tool_controls">Selection controls</a> prior to configuration.
 </p>
 
 </div>
@@ -351,7 +359,7 @@ used in the verification tool.
 <div class="level2">
 
 <p>
-For simulation of an xMAS Circuit model activate the simulation tool <img src="editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" />. The enabled components are highlighted and can be executed by clicking them. The simulation tool controls provide the means for analysis and navigation through the simulation trace, see generic help on <a href="tool_controls_panel.html#simulation_controls" class="wikilink1" title="help:tool_controls_panel">Simulation controls</a> for details.
+For simulation of an xMAS Circuit model activate the simulation tool <img src="editor_tools-simulate.png" class="media" title="[M] Simulate" alt="[M] Simulate" />. The enabled components are highlighted and can be executed by clicking them. The simulation tool controls provide the means for analysis and navigation through the simulation trace, see generic help on <a href="tool_controls.html#simulation_controls" class="wikilink1" title="help:tool_controls">Simulation controls</a> for details.
 </p>
 
 <p>
@@ -359,7 +367,7 @@ For simulation of an xMAS Circuit model activate the simulation tool <img src="e
 </p>
 
 <p>
-Note that simulation of an xMAS Circuit model is just an abstraction over the simulation of an automatically generated STG representation of the xMAS components.
+Note that simulation of an xMAS Circuit model is just an abstraction over the simulation of an automatically generated <abbr title="Signal Transition Graph">STG</abbr> representation of the xMAS components.
 </p>
 
 <p>
@@ -504,10 +512,10 @@ An example of the results of a query popup window relating to a <em>Source</em> 
 
                     <!-- wikipage stop -->
                                     </div>
-
 <!--
-                                    <div class="docInfo"><bdi>help/xmas_plugin.txt</bdi> · Last modified: 2017/02/02 09:55 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/xmas_plugin.txt</bdi> · Last modified: 2017/06/21 14:24 by <bdi>danil</bdi></div>
                 -->
+
                             </div></div><!-- /content -->
 
             <hr class="a11y" />
@@ -518,7 +526,7 @@ An example of the results of a query popup window relating to a <em>Source</em> 
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="xmas_plugin.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="xmas_plugin.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="xmas_plugin.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="xmas_plugin.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                        <li><a href="xmas_plugin.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="xmas_plugin.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="xmas_plugin.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href="xmas_plugin.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="xmas_plugin.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
                 </div>
                         </div>
 -->
@@ -527,11 +535,12 @@ An example of the results of a query popup window relating to a <em>Source</em> 
         
 <!-- ********** FOOTER ********** -->
 <div id="dokuwiki__footer"><div class="pad">
-    <!--
+<!--
+    
     <div class="buttons">
                 <a href="http://www.dokuwiki.org/donate" title="Donate" ><img
             src="lib/tpl/dokuwiki-light-export/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
-        <a href="http://www.php.net" title="Powered by PHP" ><img
+        <a href="http://php.net" title="Powered by PHP" ><img
             src="lib/tpl/dokuwiki-light-export/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
         <a href="http://validator.w3.org/check/referer" title="Valid HTML5" ><img
             src="lib/tpl/dokuwiki-light-export/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
@@ -540,9 +549,6 @@ An example of the results of a query popup window relating to a <em>Source</em> 
         <a href="http://dokuwiki.org/" title="Driven by DokuWiki" ><img
             src="lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
     </div>
--->
-
-<!--
     <div class="userInfo">
         Logged in as:: danil    </div>
 -->
@@ -551,7 +557,6 @@ An example of the results of a query popup window relating to a <em>Source</em> 
     </div></div><!-- /site -->
 
     <div class="no"><img  width="2" height="1" alt="" /></div>
-    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
-</body>
+    <div id="screen__mode" class="no"></div></body>
 </html>
 
