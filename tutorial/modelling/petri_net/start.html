@@ -5,7 +5,7 @@
     <title>tutorial:modelling:petri_net:start - Workcraft</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="tutorial,modelling,petri_net,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -15,10 +15,10 @@
 <link rel="edit" title="Edit this page" href="start.html"/>
 <link rel="alternate" type="text/html" title="Plain HTML" href="../../_export/xhtml/tutorial/modelling/petri_net/start.xhtml"/>
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/petri_net/start.raw"/>
-<link rel="canonical" href="https://www.workcraft.org/tutorial/modelling/petri_net/start"/>
+<link rel="canonical" href="https://workcraft.org/tutorial/modelling/petri_net/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:petri_net';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/06/30 12:04//';var JSINFO = {"id":"tutorial:modelling:petri_net:start","namespace":"tutorial:modelling:petri_net","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:petri_net';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/10/31 20:53//';var JSINFO = {"id":"tutorial:modelling:petri_net:start","namespace":"tutorial:modelling:petri_net","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:petri_net:start" /><input type="hidden" name="sectok" value="fa861199365d736b4ebd84bfe8e1b416" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:petri_net:start" /><input type="hidden" name="sectok" value="fcee71995e84f064c88fdfe461cff70f" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -185,11 +185,11 @@ Enter the simulation tool by pressing the <img src="../../help/editor_tools-simu
 </p>
 
 <p>
-If you allow the same philosopher to take both forks (e.g., by clicking transitions <code>south/take_left_fork</code> and <code>south/take_right_fork</code>), then he can eat, while the other philosopher thinks. When he is finished with the meal he enters the thinking state (click transition <code>south/start_thinking</code>) and returns the forks (click transitions <code>south/put_left_fork</code> and <code>south/put_right_fork</code>). This trace of transitions brings us to the initial state where the philosophers compete for the forks again.
+If you allow the same philosopher to take both forks (e.g., by clicking transitions <code>south.take_left_fork</code> and <code>south.take_right_fork</code>), then he can eat, while the other philosopher thinks. When he is finished with the meal he enters the thinking state (click transition <code>south.start_thinking</code>) and returns the forks (click transitions <code>south.put_left_fork</code> and <code>south.put_right_fork</code>). This trace of transitions brings us to the initial state where the philosophers compete for the forks again.
 </p>
 
 <p>
-Another scenario is possible when each philosopher takes only one of the forks (e.g. click transitions <code>south/take_left_fork</code> and <code>north/take_left_fork</code>)). This leads to a deadlock as the philosophers wait for each other to return the fork, but none of them can do it until they eat.
+Another scenario is possible when each philosopher takes only one of the forks (e.g. click transitions <code>south.take_left_fork</code> and <code>north.take_left_fork</code>)). This leads to a deadlock as the philosophers wait for each other to return the fork, but none of them can do it until they eat.
 </p>
 
 <p>
@@ -206,7 +206,7 @@ Various properties of a Petri net model can be verified using <em>Punf</em> and 
 </p>
 
 <p>
-The easiest and most obvious property to check is that the model does not have a deadlock – choose the <em>Verification→Deadlock [MPSat]</em> menu item for this. As our dining philosophers model is not deadlock-free, this should result in the following error message with a trace leading to the deadlock (you can analyse the trace in the simulator by clicking the <em>Play</em> button).
+The easiest and most obvious property to check is that the model does not have a deadlock – choose the <em>Verification→Deadlock freeness [MPSat]</em> menu item for this. As our dining philosophers model is not deadlock-free, this should result in the following error message with a trace leading to the deadlock (you can analyse the trace in the simulator by clicking the <em>Play</em> button).
 </p>
 
 <p>
@@ -224,7 +224,7 @@ Verification of custom properties is based on reachability analysis on the Petri
  In <em>MPSat settings</em> section set the <em>Mode</em> into <em>Reachability analysis</em> and the <em>Solution</em> into <em>minimise cost function</em>.
 </div></li>
 <li class="level"><div class="li">
- Enter the following Reach expression as the property predicate: <code>$P&quot;north__eating&quot; &amp; $P&quot;south__eating&quot;</code>. Note that <code>__</code> (two underscores) is used as a hierarchy separator in Reach expression.
+ Enter the following Reach expression as the property predicate: <code>$P&quot;north.eating&quot; &amp; $P&quot;south.eating&quot;</code>. Note that <code>.</code> is used as a hierarchy separator in Reach expression.
 </div></li>
 <li class="level"><div class="li">
  Select <em>unsatisfiable</em> to denote that the property holds if predicate is unsatisfiable.
@@ -245,7 +245,7 @@ Let us explain how to interpret the Reach predicate. Consider an expression <cod
 </p>
 
 <p>
-In our case, the expression <code>$P&quot;north__eating&quot; &amp; $P&quot;south__eating&quot;</code> tells MPSat to check if a state is reachable where both places <code>north/eating</code> and <code>south/eating</code> are marked with tokens, which corresponds to both philosophers eating at the same time. If such a marking is reachable, then our property is violated and a trace of Petri net transitions leading to this state is reported. If this Petri net marking is not reachable, then the property holds, as shown in the following screenshot.
+In our case, the expression <code>$P&quot;north.eating&quot; &amp; $P&quot;south.eating&quot;</code> tells MPSat to check if a state is reachable where both places <code>north.eating</code> and <code>south.eating</code> are marked with tokens, which corresponds to both philosophers eating at the same time. If such a marking is reachable, then our property is violated and a trace of Petri net transitions leading to this state is reported. If this Petri net marking is not reachable, then the property holds, as shown in the following screenshot.
 </p>
 
 <p>
@@ -267,7 +267,7 @@ Complete the following tasks:
  Modify the model in such a way that the deadlock is prevented (hint: <span class="wrap_spoiler ">force the philosophers to take the forks in particular order, one of them always takes the fork to his left first, while the other always takes the fork to his right first</span>).
 </div></li>
 <li class="level"><div class="li">
- Verify that none of the philosophers can be eating with one of the forks still on the table (hint: <code><span class="wrap_spoiler ">($P&quot;north__eating&quot; | $P&quot;south__eating&quot;) &amp; ($P&quot;fork1_free&quot; | $P&quot;fork2_free&quot;)</span></code>).
+ Verify that none of the philosophers can be eating with one of the forks still on the table (hint: <code><span class="wrap_spoiler ">($P&quot;north.eating&quot; | $P&quot;south.eating&quot;) &amp; ($P&quot;fork1_free&quot; | $P&quot;fork2_free&quot;)</span></code>).
 </div></li>
 </ol>
 
@@ -290,7 +290,7 @@ Download all the Workcraft models discussed in this section here:
 <div class="plugin_include_content plugin_include__tutorial:feedback" id="plugin_include__tutorial__feedback">
 <div class="wrap_hide plugin_wrap"><pre class="code">===== Feedback =====</pre>
 <form class="bureaucracy__plugin" id="bureaucracy__plugin1" enctype="multipart/form-data" method="post" action="start.html" accept-charset="utf-8"><div class="no">
-<input type="hidden" name="sectok" value="fa861199365d736b4ebd84bfe8e1b416" /><input type="hidden" name="id" value="tutorial:modelling:petri_net:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
+<input type="hidden" name="sectok" value="fcee71995e84f064c88fdfe461cff70f" /><input type="hidden" name="id" value="tutorial:modelling:petri_net:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
 <label><span>Name (optional)</span> <input type="text" name="bureaucracy[1]" class="edit" /></label>
 <label><span>Email (optional)</span> <input type="text" name="bureaucracy[2]" class="edit" /></label>
 <label class=" textareafield">
@@ -321,7 +321,7 @@ Download all the Workcraft models discussed in this section here:
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/petri_net/start.txt</bdi> · Last modified: 2017/03/06 14:54 (external edit)</div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/petri_net/start.txt</bdi> · Last modified: 2017/10/31 12:21 by <bdi>danil</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -334,7 +334,7 @@ Download all the Workcraft models discussed in this section here:
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href="start.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href="start.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Export Page (Siteexport)"><span>Export Page</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="start.html"  class="action siteexport_mapid" title="Show Map-ID"" data-mapid="start" onclick="copyMapIDToClipBoard.call(this); return false;"><span>Copy Map-ID: <span class="mapID" data-done="Done.">start</span></span></a></li>                    </ul>
                 </div>
                         </div>
 -->
@@ -367,4 +367,3 @@ Download all the Workcraft models discussed in this section here:
     <div class="no"><img  width="2" height="1" alt="" /></div>
     <div id="screen__mode" class="no"></div></body>
 </html>
-
