@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://workcraft.org/help/scripting"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/10/31 20:58//';var JSINFO = {"id":"help:scripting","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/11/01 11:30//';var JSINFO = {"id":"help:scripting","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:scripting" /><input type="hidden" name="sectok" value="3d4491af07e3311c921bc359b3cab44b" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:scripting" /><input type="hidden" name="sectok" value="5f9c8b87065e663e91004f08eaf87dcc" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="scripting.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="scripting.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="scripting.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -173,15 +173,31 @@ exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0
 <dd><pre class="code file javascript"><span class="co1">// Technology mapping of VME bus controller into Faraday library</span>
 <span class="co1">// (CSC conflict resolution with Petrify, synthesis with MPSat)</span>
 stgWork <span class="sy0">=</span> <span class="kw5">import</span><span class="br0">&#40;</span><span class="st0">&quot;vme.g&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>stgWork <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    eprint<span class="br0">&#40;</span><span class="st0">&quot;STG work loading failed!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
 <span class="kw1">if</span> <span class="br0">&#40;</span>checkStgCsc<span class="br0">&#40;</span>stgWork<span class="br0">&#41;</span> <span class="sy0">==</span> <span class="kw2">true</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
     cscStgWork <span class="sy0">=</span> stgWork<span class="sy0">;</span>
 <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
     cscStgWork <span class="sy0">=</span> resolveCscConflictPetrify<span class="br0">&#40;</span>stgWork<span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span>cscStgWork <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        eprint<span class="br0">&#40;</span><span class="st0">&quot;CSC conflict resolution failed!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
     save<span class="br0">&#40;</span>cscStgWork<span class="sy0">,</span> <span class="st0">'vme-csc.stg.work'</span><span class="br0">&#41;</span><span class="sy0">;</span>
 <span class="br0">&#125;</span>
 setConfigVar<span class="br0">&#40;</span><span class="st0">&quot;CircuitSettings.gateLibrary&quot;</span><span class="sy0">,</span> <span class="st0">&quot;path-to-genlib-faraday.lib&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
 tmCircuitWork <span class="sy0">=</span> synthTechnologyMappingMpsat<span class="br0">&#40;</span>cscStgWork<span class="br0">&#41;</span><span class="sy0">;</span>
-exportVerilog<span class="br0">&#40;</span>tmCircuitWork<span class="sy0">,</span> <span class="st0">&quot;vme.v&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>tmCircuitWork <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    eprint<span class="br0">&#40;</span><span class="st0">&quot;Circuit synthesis failed!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>checkCircuitCombined<span class="br0">&#40;</span>tmCircuitWork <span class="sy0">==</span> <span class="kw2">true</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    exportVerilog<span class="br0">&#40;</span>tmCircuitWork<span class="sy0">,</span> <span class="st0">&quot;vme.v&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+    eprint<span class="br0">&#40;</span><span class="st0">&quot;Circuit verification failed!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
 exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
 </dd></dl>
 
@@ -838,7 +854,7 @@ Commands specific for <abbr title="Signal Transition Graph">STG</abbr> models
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/scripting.txt</bdi> · Last modified: 2017/10/30 15:37 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/scripting.txt</bdi> · Last modified: 2017/11/01 11:28 by <bdi>danil</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
