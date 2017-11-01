@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://workcraft.org/help/preferences-common"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/10/31 22:21//';var JSINFO = {"id":"help:preferences-common","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/11/01 10:49//';var JSINFO = {"id":"help:preferences-common","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:preferences-common" /><input type="hidden" name="sectok" value="0f3ffe4419e4dd3b7b0869b32f1a092e" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:preferences-common" /><input type="hidden" name="sectok" value="eb74f83145e63584cd1a2d0917314648" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="preferences-common.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="preferences-common.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="preferences-common.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -96,6 +96,7 @@
 <li class="level1"><div class="li"><a href="#decoration">Decoration</a></div></li>
 <li class="level1"><div class="li"><a href="#editor">Editor</a></div></li>
 <li class="level1"><div class="li"><a href="#log">Log</a></div></li>
+<li class="level1"><div class="li"><a href="#signal">Signal</a></div></li>
 <li class="level1"><div class="li"><a href="#visual">Visual</a></div></li>
 </ul>
 </div>
@@ -106,7 +107,7 @@
 <div class="level1">
 
 <p>
-In <em>Common</em> section of the <em>Settings</em> window you can specify the defaults for the graph editor, visualisation of the nodes and the appearance of the text notes.
+In <em>Common</em> section of the <em>Preferences</em> window you can specify the defaults for the settings that are common across all models.
 </p>
 
 </div>
@@ -276,6 +277,33 @@ In <em>Common</em> section of the <em>Settings</em> window you can specify the d
 
 </div>
 
+<h2 id="signal">Signal</h2>
+<div class="level2">
+
+<p>
+<img src="preferences-common-signal.png" class="mediacenter" title="Common signal preferences" alt="Common signal preferences" />
+</p>
+<ul>
+<li class="level"><div class="li">
+ <strong>Input signal color</strong> – color of the input signal nodes, dark red by default.
+</div></li>
+<li class="level"><div class="li">
+ <strong>Output signal color</strong> – color of the output signal nodes, dark blue by default.
+</div></li>
+<li class="level"><div class="li">
+ <strong>Internal signal color</strong> – color of the internal signal nodes, dark green by default.
+</div></li>
+<li class="level"><div class="li">
+ <strong>Dummy color</strong> – color of the dummy nodes, black by default.
+</div></li>
+<li class="level"><div class="li">
+ <strong>Show signal toggle (~)</strong> – visibility of tilde symbol at the end of a toggle event. If is off by default.
+</div></li>
+</ul>
+
+
+</div>
+
 <h2 id="visual">Visual</h2>
 <div class="level2">
 
@@ -351,7 +379,7 @@ In <em>Common</em> section of the <em>Settings</em> window you can specify the d
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/preferences-common.txt</bdi> · Last modified: 2017/10/31 22:19 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/preferences-common.txt</bdi> · Last modified: 2017/11/01 10:34 by <bdi>danil</bdi></div>
                 -->
 
                             </div></div><!-- /content -->

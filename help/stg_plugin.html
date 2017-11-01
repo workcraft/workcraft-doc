@@ -5,7 +5,7 @@
     <title>help:stg_plugin - Workcraft</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="help,stg_plugin"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="stg_plugin.html"/>
@@ -15,10 +15,10 @@
 <link rel="edit" title="Edit this page" href="stg_plugin.html"/>
 <link rel="alternate" type="text/html" title="Plain HTML" href="_export/xhtml/help/stg_plugin.xhtml"/>
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/stg_plugin.raw"/>
-<link rel="canonical" href="https://www.workcraft.org/help/stg_plugin"/>
+<link rel="canonical" href="https://workcraft.org/help/stg_plugin"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/06/30 11:37//';var JSINFO = {"id":"help:stg_plugin","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/11/01 11:02//';var JSINFO = {"id":"help:stg_plugin","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:stg_plugin" /><input type="hidden" name="sectok" value="737e098776d10b683dd0d3db9a24991d" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:stg_plugin" /><input type="hidden" name="sectok" value="f7cee656254f18feab83d23758b3d853" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="stg_plugin.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="stg_plugin.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="stg_plugin.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -193,11 +193,11 @@ If no model elements are selected, then the property editor shows the attributes
 </p>
 
 <p>
-The <abbr title="Signal Transition Graph">STG</abbr> transitions can be easily recognised by their color. By default the input transitions are red, output - blue, internal - green and dummies are black. This color scheme can be changed in the global settings  under the <em>Models→Signal Transition Graph</em> leaf of the preferences tree (accessible via <em>Edit→Preferences…</em> menu item).
+The <abbr title="Signal Transition Graph">STG</abbr> transitions can be easily recognised by their color. By default the input transitions are red, output - blue, internal - green and dummies are black. This color scheme can be changed in the global preferences  under the <em>Common→Signal</em> leaf of the settings tree (accessible via <em>Edit→Preferences…</em> menu item).
 </p>
 
 <p>
-<img src="preferences-models-stg.png" class="mediacenter" title="Global settings for Signal Transition Graph plugin" alt="Global settings for Signal Transition Graph plugin" />
+<img src="preferences-common-signal.png" class="mediacenter" title="Common signal preferences" alt="Common signal preferences" />
 </p>
 
 </div>
@@ -429,7 +429,7 @@ In case of this example the complex gate implementation is just a buffer between
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/stg_plugin.txt</bdi> · Last modified: 2017/06/23 16:39 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/stg_plugin.txt</bdi> · Last modified: 2017/11/01 10:30 by <bdi>danil</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -442,7 +442,7 @@ In case of this example the complex gate implementation is just a buffer between
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="stg_plugin.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="stg_plugin.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="stg_plugin.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href="stg_plugin.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="stg_plugin.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                        <li><a href="stg_plugin.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="stg_plugin.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="stg_plugin.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href="stg_plugin.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="stg_plugin.html"  class="action siteexport_addpage" title="Export Page (Siteexport)"><span>Export Page</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="stg_plugin.html"  class="action siteexport_mapid" title="Show Map-ID"" data-mapid="stg_plugin" onclick="copyMapIDToClipBoard.call(this); return false;"><span>Copy Map-ID: <span class="mapID" data-done="Done.">stg_plugin</span></span></a></li>                    </ul>
                 </div>
                         </div>
 -->
@@ -475,4 +475,3 @@ In case of this example the complex gate implementation is just a buffer between
     <div class="no"><img  width="2" height="1" alt="" /></div>
     <div id="screen__mode" class="no"></div></body>
 </html>
-

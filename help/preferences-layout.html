@@ -5,7 +5,7 @@
     <title>help:preferences-layout - Workcraft</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="index,follow"/>
+<meta name="robots" content="noindex,nofollow"/>
 <meta name="keywords" content="help,preferences-layout"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="preferences-layout.html"/>
@@ -15,10 +15,10 @@
 <link rel="edit" title="Edit this page" href="preferences-layout.html"/>
 <link rel="alternate" type="text/html" title="Plain HTML" href="_export/xhtml/help/preferences-layout.xhtml"/>
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/preferences-layout.raw"/>
-<link rel="canonical" href="https://www.workcraft.org/help/preferences-layout"/>
+<link rel="canonical" href="https://workcraft.org/help/preferences-layout"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/06/30 11:37//';var JSINFO = {"id":"help:preferences-layout","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/11/01 10:49//';var JSINFO = {"id":"help:preferences-layout","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:preferences-layout" /><input type="hidden" name="sectok" value="e594cdc40db03f9c7d1d72d69ce91faa" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:preferences-layout" /><input type="hidden" name="sectok" value="10a46d74c1a19602137642b73536e75f" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="preferences-layout.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="preferences-layout.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="preferences-layout.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -90,12 +90,48 @@
 <div class="level1">
 
 <p>
-In <em>Layout</em> section of the <em>Settings</em> window you can configure the parameters of graph layouts generated by <em>GraphViz</em> tools and by assigning random values to the positions of graph nodes.
+In <em>Layout</em> section of the <em>Preferences</em> window you can configure the parameters of graph layout engines.
 </p>
 
 </div>
 
-<h2 id="dot_layout">Dot layout</h2>
+<h2 id="circuit">Circuit</h2>
+<div class="level2">
+
+<p>
+<img src="preferences-layout-circuit.png" class="mediacenter" title="Circuit layout preferences" alt="Circuit layout preferences" />
+</p>
+<ul>
+<li class="level"><div class="li">
+ <strong>Placement spacing horizontally</strong> – horizontal space between components. Default is 5.00.
+</div></li>
+<li class="level"><div class="li">
+ <strong>Placement spacing vertically</strong> – vertical spacing between components. Default is 2.00.
+</div></li>
+<li class="level"><div class="li">
+ <strong>Routing margins for obstacles</strong> – margin around components. Default is 1.00.
+</div></li>
+<li class="level"><div class="li">
+ <strong>Routing margins for obstacles in busy locations</strong> – margin around components in cluttered locations. Default is 0.50.
+</div></li>
+<li class="level"><div class="li">
+ <strong>Routing margins for wires</strong> – spacing between wires. Default is 1.00.
+</div></li>
+<li class="level"><div class="li">
+ <strong>Routing major snapping</strong> – major step for the snapping grid. Default is 1.00.
+</div></li>
+<li class="level"><div class="li">
+ <strong>Routing minor snapping</strong> – minor step for the snapping grid. Default is 0.50.
+</div></li>
+<li class="level"><div class="li">
+ <strong>Debug routing</strong> – visualisation of the routing information. It is off by default.
+</div></li>
+</ul>
+
+
+</div>
+
+<h2 id="dot">Dot</h2>
 <div class="level2">
 
 <p>
@@ -113,7 +149,7 @@ In <em>Layout</em> section of the <em>Settings</em> window you can configure the
 
 </div>
 
-<h2 id="random_layout">Random layout</h2>
+<h2 id="random">Random</h2>
 <div class="level2">
 
 <p>
@@ -134,7 +170,7 @@ In <em>Layout</em> section of the <em>Settings</em> window you can configure the
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/preferences-layout.txt</bdi> · Last modified: 2017/03/06 14:54 (external edit)</div>
+                                    <div class="docInfo"><bdi>help/preferences-layout.txt</bdi> · Last modified: 2017/11/01 10:46 by <bdi>danil</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -147,7 +183,7 @@ In <em>Layout</em> section of the <em>Settings</em> window you can configure the
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="preferences-layout.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="preferences-layout.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="preferences-layout.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href="preferences-layout.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="preferences-layout.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                        <li><a href="preferences-layout.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="preferences-layout.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="preferences-layout.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href="preferences-layout.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="preferences-layout.html"  class="action siteexport_addpage" title="Export Page (Siteexport)"><span>Export Page</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="preferences-layout.html"  class="action siteexport_mapid" title="Show Map-ID"" data-mapid="preferences-layout" onclick="copyMapIDToClipBoard.call(this); return false;"><span>Copy Map-ID: <span class="mapID" data-done="Done.">preferences-layout</span></span></a></li>                    </ul>
                 </div>
                         </div>
 -->
@@ -180,4 +216,3 @@ In <em>Layout</em> section of the <em>Settings</em> window you can configure the
     <div class="no"><img  width="2" height="1" alt="" /></div>
     <div id="screen__mode" class="no"></div></body>
 </html>
-
