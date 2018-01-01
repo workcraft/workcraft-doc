@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://workcraft.org/help/scripting"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/11/01 11:30//';var JSINFO = {"id":"help:scripting","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2018/01/01 21:55//';var JSINFO = {"id":"help:scripting","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:scripting" /><input type="hidden" name="sectok" value="5f9c8b87065e663e91004f08eaf87dcc" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:scripting" /><input type="hidden" name="sectok" value="b350ea5e1c4a6de7d20b9a6e04ea79b8" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="scripting.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="scripting.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="scripting.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -91,22 +91,25 @@
 <div>
 
 <ul class="toc">
-<li class="level1"><div class="li"><a href="#help">Help</a></div></li>
-<li class="level1"><div class="li"><a href="#text_output">Text output</a></div></li>
-<li class="level1"><div class="li"><a href="#gui_and_exit">GUI and exit</a></div></li>
-<li class="level1"><div class="li"><a href="#file_operations">File operations</a></div></li>
-<li class="level1"><div class="li"><a href="#configuration">Configuration</a></div></li>
-<li class="level1"><div class="li"><a href="#command_execution">Command execution</a></div>
+<li class="level1"><div class="li"><a href="#modes_of_script_execution">Modes of script execution</a></div></li>
+<li class="level1"><div class="li"><a href="#special_symbols_in_file_names">Special symbols in file names</a></div></li>
+<li class="level1"><div class="li"><a href="#functions_and_variables">Functions and variables</a></div>
 <ul class="toc">
-<li class="level2"><div class="li"><a href="#conversion_commands_--_applied_to_the_given_work_and_produce_a_new_work">Conversion commands -- applied to the given work and produce a new work</a></div></li>
-<li class="level2"><div class="li"><a href="#statistics_commands_--_produce_a_statistics_string_for_the_given_work">Statistics commands -- produce a statistics string for the given work</a></div></li>
-<li class="level2"><div class="li"><a href="#synthesis_commands_--_applied_to_the_given_work_and_return_a_new_work">Synthesis commands -- applied to the given work and return a new work</a></div></li>
-<li class="level2"><div class="li"><a href="#layout_commands_--_modify_the_given_work">Layout commands -- modify the given work</a></div></li>
-<li class="level2"><div class="li"><a href="#verification_commands_--_applied_to_the_given_work_and_return_a_boolean_outcome_of_the_check">Verification commands -- applied to the given work and return a Boolean outcome of the check</a></div></li>
-<li class="level2"><div class="li"><a href="#transformation_commands_modify_the_given_work">Transformation commands (modify the given work)</a></div></li>
+<li class="level2"><div class="li"><a href="#help">Help</a></div></li>
+<li class="level2"><div class="li"><a href="#text_output">Text output</a></div></li>
+<li class="level2"><div class="li"><a href="#gui_and_exit">GUI and exit</a></div></li>
+<li class="level2"><div class="li"><a href="#global_variables">Global variables</a></div></li>
+<li class="level2"><div class="li"><a href="#workspace_functions">Workspace functions</a></div></li>
+<li class="level2"><div class="li"><a href="#file_operations">File operations</a></div></li>
+<li class="level2"><div class="li"><a href="#configuration">Configuration</a></div></li>
+<li class="level2"><div class="li"><a href="#command_execution">Command execution</a></div></li>
 </ul>
 </li>
-<li class="level1"><div class="li"><a href="#global_variables">Global variables</a></div></li>
+<li class="level1"><div class="li"><a href="#script_examples">Script examples</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#basic">Basic</a></div></li>
+<li class="level2"><div class="li"><a href="#advanced">Advanced</a></div></li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -116,7 +119,16 @@
 <div class="level1">
 
 <p>
-Workcraft supports scripting using JavaScript language in two modes:
+Workcraft supports scripting using JavaScript language.
+</p>
+
+</div>
+
+<h2 id="modes_of_script_execution">Modes of script execution</h2>
+<div class="level2">
+
+<p>
+Two modes of script execution are supported:
 </p>
 <ul>
 <li class="level"><div class="li">
@@ -147,68 +159,48 @@ In Bash shell, for a short JavaScript snippet, it may be more convenient to pass
 </p>
 <pre class="code shell">workcraft -nogui -exec:&lt;(echo 'JAVASCRIPT CODE')</pre>
 
+</div>
+
+<h2 id="special_symbols_in_file_names">Special symbols in file names</h2>
+<div class="level2">
+
 <p>
-Here is several examples of JavaScript code:
+If you have to use a backslash symbol <code>\</code> in your script, e.g. in a Windows file path, then do not forget to escape it. Also if the file path contains spaces or other suspicious symbols, then put this path in quotes in the command line.
+</p>
+
+<p>
+For example, if you want to run a script <em>“C:\Workcraft Projects\test1.js”</em> that loads a model from <em>“C:\Workcraft Projects\models\test1.work”</em> and save its statistics in <em>“C:\Temp\test1.txt”</em>, then the Windows command line would look like this (notice the quotes around the paths with spaces):
+</p>
+<pre class="code shell">workcraft.bat -dir:&quot;C:\Workcraft Projects&quot; -exec:&quot;C:\Workcraft Projects\test1.js&quot;</pre>
+
+<p>
+and the script would be as follows (notice the double backslashes):
 </p>
 <dl class="file">
-<dt><a href="_export/code/help/scripting/codeblock.3.code" title="Download Snippet" class="mediafile mf_js">stg-transform.js</a></dt>
-<dd><pre class="code file javascript"><span class="co1">// Mirror signals and untoggle transitions of STG model</span>
-inStgWork <span class="sy0">=</span> load<span class="br0">&#40;</span><span class="st0">&quot;in.stg.work&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
-transformStgMirrorSignal<span class="br0">&#40;</span>inStg<span class="br0">&#41;</span><span class="sy0">;</span>
-outStgWork <span class="sy0">=</span> convertStgUntoggle<span class="br0">&#40;</span>inStg<span class="br0">&#41;</span><span class="sy0">;</span>
-save<span class="br0">&#40;</span>outStgWork<span class="sy0">,</span> <span class="st0">&quot;out.stg.work&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
-exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
-</dd></dl>
-<dl class="file">
-<dt><a href="_export/code/help/scripting/codeblock.4.code" title="Download Snippet" class="mediafile mf_js">buck-synth.js</a></dt>
-<dd><pre class="code file javascript"><span class="co1">// Complex gate implementation for basic buck controller</span>
-stgWork <span class="sy0">=</span> load<span class="br0">&#40;</span><span class="st0">&quot;buck.stg.work&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
-circuitWork <span class="sy0">=</span> synthComplexGatePetrify<span class="br0">&#40;</span>stgWork<span class="br0">&#41;</span><span class="sy0">;</span>
-save<span class="br0">&#40;</span>circuitWork<span class="sy0">,</span> <span class="st0">&quot;buck.circuit.work&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
-exportVerilog<span class="br0">&#40;</span>circuitWork<span class="sy0">,</span> <span class="st0">&quot;buck.v&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
-exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
-</dd></dl>
-<dl class="file">
-<dt><a href="_export/code/help/scripting/codeblock.5.code" title="Download Snippet" class="mediafile mf_js">vme-synth.js</a></dt>
-<dd><pre class="code file javascript"><span class="co1">// Technology mapping of VME bus controller into Faraday library</span>
-<span class="co1">// (CSC conflict resolution with Petrify, synthesis with MPSat)</span>
-stgWork <span class="sy0">=</span> <span class="kw5">import</span><span class="br0">&#40;</span><span class="st0">&quot;vme.g&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
-<span class="kw1">if</span> <span class="br0">&#40;</span>stgWork <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
-    eprint<span class="br0">&#40;</span><span class="st0">&quot;STG work loading failed!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
-    exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
-<span class="br0">&#125;</span>
-<span class="kw1">if</span> <span class="br0">&#40;</span>checkStgCsc<span class="br0">&#40;</span>stgWork<span class="br0">&#41;</span> <span class="sy0">==</span> <span class="kw2">true</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
-    cscStgWork <span class="sy0">=</span> stgWork<span class="sy0">;</span>
-<span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
-    cscStgWork <span class="sy0">=</span> resolveCscConflictPetrify<span class="br0">&#40;</span>stgWork<span class="br0">&#41;</span><span class="sy0">;</span>
-    <span class="kw1">if</span> <span class="br0">&#40;</span>cscStgWork <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
-        eprint<span class="br0">&#40;</span><span class="st0">&quot;CSC conflict resolution failed!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
-        exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
-    <span class="br0">&#125;</span>
-    save<span class="br0">&#40;</span>cscStgWork<span class="sy0">,</span> <span class="st0">'vme-csc.stg.work'</span><span class="br0">&#41;</span><span class="sy0">;</span>
-<span class="br0">&#125;</span>
-setConfigVar<span class="br0">&#40;</span><span class="st0">&quot;CircuitSettings.gateLibrary&quot;</span><span class="sy0">,</span> <span class="st0">&quot;path-to-genlib-faraday.lib&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
-tmCircuitWork <span class="sy0">=</span> synthTechnologyMappingMpsat<span class="br0">&#40;</span>cscStgWork<span class="br0">&#41;</span><span class="sy0">;</span>
-<span class="kw1">if</span> <span class="br0">&#40;</span>tmCircuitWork <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
-    eprint<span class="br0">&#40;</span><span class="st0">&quot;Circuit synthesis failed!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
-    exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
-<span class="br0">&#125;</span>
-<span class="kw1">if</span> <span class="br0">&#40;</span>checkCircuitCombined<span class="br0">&#40;</span>tmCircuitWork <span class="sy0">==</span> <span class="kw2">true</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
-    exportVerilog<span class="br0">&#40;</span>tmCircuitWork<span class="sy0">,</span> <span class="st0">&quot;vme.v&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
-<span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
-    eprint<span class="br0">&#40;</span><span class="st0">&quot;Circuit verification failed!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
-<span class="br0">&#125;</span>
+<dt><a href="_export/code/help/scripting/codeblock.4.code" title="Download Snippet" class="mediafile mf_js">test1.js</a></dt>
+<dd><pre class="code file javascript">work <span class="sy0">=</span> load<span class="br0">&#40;</span><span class="st0">&quot;models<span class="es0">\\</span>test1.work&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+stat <span class="sy0">=</span> statModel<span class="br0">&#40;</span>work<span class="br0">&#41;</span><span class="sy0">;</span>
+write<span class="br0">&#40;</span>stat<span class="sy0">,</span> <span class="st0">&quot;C:<span class="es0">\\</span>Temp<span class="es0">\\</span>test1.txt&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
 exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
 </dd></dl>
 
 <p>
-These examples use the following function shortcuts defined in <code>functions.js</code> resource file that is automatically read on Workcraft startup.
+Here the <em>“models\test1.work”</em> is relative to the working directory <em>“C:\Workcraft Projects”</em>, while the file <em>“C:\Temp\test1.txt”</em> is specified by its absolute path.
 </p>
 
 </div>
 
-<h2 id="help">Help</h2>
+<h2 id="functions_and_variables">Functions and variables</h2>
 <div class="level2">
+
+<p>
+Here is a list of predefined wrapper functions, partitioned into categories, and global variables available for scripting.
+</p>
+
+</div>
+
+<h3 id="help">Help</h3>
+<div class="level3">
 <ul>
 <li class="level"><div class="li">
  <code>help(substring)</code> – output all the helper functions whose name contains the given <code>substring</code>
@@ -224,14 +216,14 @@ These examples use the following function shortcuts defined in <code>functions.j
 
 </div>
 
-<h2 id="text_output">Text output</h2>
-<div class="level2">
+<h3 id="text_output">Text output</h3>
+<div class="level3">
 <ul>
 <li class="level"><div class="li">
- <code>print(msg)</code> – output <code>msg</code> to <em>stdout</em> and add a new line
+ <code>print(msg)</code> – output <code>msg</code> to <em>stdout</em> and add a newline
 </div></li>
 <li class="level"><div class="li">
- <code>eprint(msg)</code> – output <code>msg</code> to <em>stderr</em> and add a new line
+ <code>eprint(msg)</code> – output <code>msg</code> to <em>stderr</em> and add a newline
 </div></li>
 <li class="level"><div class="li">
  <code>write(text, fileName)</code> – write <code>text</code> to a file <code>fileName</code> (relative to the working directory) or to <em>stdout</em> if <code>fileName</code> is skipped
@@ -239,10 +231,23 @@ These examples use the following function shortcuts defined in <code>functions.j
 </ul>
 
 
+<p>
+Note that conventional Java print functions can be also used, e.g. if you need to output text without adding a newline:
+</p>
+<ul>
+<li class="level"><div class="li">
+ <code>System.out.print(text)</code> – output <code>text</code> to <em>stdout</em>
+</div></li>
+<li class="level"><div class="li">
+ <code>System.err.print(text)</code> – output <code>text</code> to <em>stderr</em>
+</div></li>
+</ul>
+
+
 </div>
 
-<h2 id="gui_and_exit">GUI and exit</h2>
-<div class="level2">
+<h3 id="gui_and_exit">GUI and exit</h3>
+<div class="level3">
 <ul>
 <li class="level"><div class="li">
  <code>startGUI()</code> – start <abbr title="Graphical User Interface">GUI</abbr>
@@ -258,8 +263,57 @@ These examples use the following function shortcuts defined in <code>functions.j
 
 </div>
 
-<h2 id="file_operations">File operations</h2>
-<div class="level2">
+<h3 id="global_variables">Global variables</h3>
+<div class="level3">
+<ul>
+<li class="level"><div class="li">
+ <code>args</code> – command line parameters passed to Workcraft; these can be iterated over as follows: <code>for each (arg in args) {…}</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>framework</code> – the Workcraft framework singleton
+</div></li>
+<li class="level"><div class="li">
+ <code>workspaceEntry</code> – the current work 
+</div></li>
+<li class="level"><div class="li">
+ <code>modelEntry</code> – the current model entry, a shortcut to <code>workspaceEntry.getModelEntry()</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>visualModel</code> – the current visual model, a shortcut to <code>modelEntry.getVisualModel()</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>mathModel</code> – the current math model, a shortcut to <code>modelEntry.getMathModel()</code>
+</div></li>
+</ul>
+
+
+</div>
+
+<h3 id="workspace_functions">Workspace functions</h3>
+<div class="level3">
+<ul>
+<li class="level"><div class="li">
+ <code>getWorks()</code> – return an iterable array of loaded works
+</div></li>
+<li class="level"><div class="li">
+ <code>getWorkFile(work)</code> – return a file object for the specified <code>work</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>getModelDescriptor(work)</code> – return a model descriptor string for the specified <code>work</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>getModelTitle(work)</code> – return a model title string for the specified <code>work</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>setModelTitle(work, title)</code> – set the model title of the specified <code>work</code> to the <code>title</code> string
+</div></li>
+</ul>
+
+
+</div>
+
+<h3 id="file_operations">File operations</h3>
+<div class="level3">
 <ul>
 <li class="level"><div class="li">
  <code>load(fileName)</code>  – load a model from the given work file <code>fileName</code> and return its work
@@ -319,8 +373,8 @@ These examples use the following function shortcuts defined in <code>functions.j
 
 </div>
 
-<h2 id="configuration">Configuration</h2>
-<div class="level2">
+<h3 id="configuration">Configuration</h3>
+<div class="level3">
 <ul>
 <li class="level"><div class="li">
  <code>setConfigVar(key, val)</code> – set the config variable <code>key</code> to value <code>val</code>
@@ -339,8 +393,8 @@ These examples use the following function shortcuts defined in <code>functions.j
 
 </div>
 
-<h2 id="command_execution">Command execution</h2>
-<div class="level2">
+<h3 id="command_execution">Command execution</h3>
+<div class="level3">
 <ul>
 <li class="level"><div class="li">
  <code>execFile(fileName)</code> – execute JavaScript with the given <code>fileName</code>
@@ -356,8 +410,8 @@ These examples use the following function shortcuts defined in <code>functions.j
 
 </div>
 
-<h3 id="conversion_commands_--_applied_to_the_given_work_and_produce_a_new_work">Conversion commands -- applied to the given work and produce a new work</h3>
-<div class="level3">
+<h4 id="conversion_commands_--_applied_to_the_given_work_and_produce_a_new_work">Conversion commands -- applied to the given work and produce a new work</h4>
+<div class="level4">
 <ul>
 <li class="level"><div class="li">
  Conversion between different model types (sorted alphabetically)
@@ -449,8 +503,8 @@ These examples use the following function shortcuts defined in <code>functions.j
 
 </div>
 
-<h3 id="statistics_commands_--_produce_a_statistics_string_for_the_given_work">Statistics commands -- produce a statistics string for the given work</h3>
-<div class="level3">
+<h4 id="statistics_commands_--_produce_a_statistics_string_for_the_given_work">Statistics commands -- produce a statistics string for the given work</h4>
+<div class="level4">
 <ul>
 <li class="level"><div class="li">
  <code>statModel(work)</code> – node and arc count for the model <code>work</code> (all model types are supported)
@@ -469,8 +523,8 @@ These examples use the following function shortcuts defined in <code>functions.j
 
 </div>
 
-<h3 id="synthesis_commands_--_applied_to_the_given_work_and_return_a_new_work">Synthesis commands -- applied to the given work and return a new work</h3>
-<div class="level3">
+<h4 id="synthesis_commands_--_applied_to_the_given_work_and_return_a_new_work">Synthesis commands -- applied to the given work and return a new work</h4>
+<div class="level4">
 <ul>
 <li class="level"><div class="li">
  Logic synthesis of Circuits from STGs using Petrify backend
@@ -514,8 +568,8 @@ These examples use the following function shortcuts defined in <code>functions.j
 
 </div>
 
-<h3 id="layout_commands_--_modify_the_given_work">Layout commands -- modify the given work</h3>
-<div class="level3">
+<h4 id="layout_commands_--_modify_the_given_work">Layout commands -- modify the given work</h4>
+<div class="level4">
 <ul>
 <li class="level"><div class="li">
  <code>layoutModelDot(work)</code> – position nodes and shape the arcs using of the model <code>work</code> using <em>Graphviz</em> backend
@@ -537,8 +591,8 @@ These examples use the following function shortcuts defined in <code>functions.j
 
 </div>
 
-<h3 id="verification_commands_--_applied_to_the_given_work_and_return_a_boolean_outcome_of_the_check">Verification commands -- applied to the given work and return a Boolean outcome of the check</h3>
-<div class="level3">
+<h4 id="verification_commands_--_applied_to_the_given_work_and_return_a_boolean_outcome_of_the_check">Verification commands -- applied to the given work and return a Boolean outcome of the check</h4>
+<div class="level4">
 <ul>
 <li class="level"><div class="li">
 Commands specific for Graph models
@@ -662,8 +716,8 @@ Commands specific for <abbr title="Signal Transition Graph">STG</abbr> models
 
 </div>
 
-<h3 id="transformation_commands_modify_the_given_work">Transformation commands (modify the given work)</h3>
-<div class="level3">
+<h4 id="transformation_commands_modify_the_given_work">Transformation commands (modify the given work)</h4>
+<div class="level4">
 <ul>
 <li class="level"><div class="li">
  Generic commands applicable to all models
@@ -831,30 +885,88 @@ Commands specific for <abbr title="Signal Transition Graph">STG</abbr> models
 
 </div>
 
-<h2 id="global_variables">Global variables</h2>
+<h2 id="script_examples">Script examples</h2>
 <div class="level2">
-<ul>
-<li class="level"><div class="li">
- <code>framework</code> – the Workcraft framework singleton
-</div></li>
-<li class="level"><div class="li">
- <code>workspaceEntry</code> – the current work 
-</div></li>
-<li class="level"><div class="li">
- <code>visualModel</code> – the current visual model
-</div></li>
-<li class="level"><div class="li">
- <code>mathModel</code> – the current math model
-</div></li>
-</ul>
 
+</div>
+
+<h3 id="basic">Basic</h3>
+<div class="level3">
+<dl class="file">
+<dt><a href="_export/code/help/scripting/codeblock.5.code" title="Download Snippet" class="mediafile mf_js">stg-transform.js</a></dt>
+<dd><pre class="code file javascript"><span class="co1">// Mirror signals and untoggle transitions of STG model</span>
+inStgWork <span class="sy0">=</span> load<span class="br0">&#40;</span><span class="st0">&quot;in.stg.work&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+transformStgMirrorSignal<span class="br0">&#40;</span>inStg<span class="br0">&#41;</span><span class="sy0">;</span>
+outStgWork <span class="sy0">=</span> convertStgUntoggle<span class="br0">&#40;</span>inStg<span class="br0">&#41;</span><span class="sy0">;</span>
+save<span class="br0">&#40;</span>outStgWork<span class="sy0">,</span> <span class="st0">&quot;out.stg.work&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</dd></dl>
+<dl class="file">
+<dt><a href="_export/code/help/scripting/codeblock.6.code" title="Download Snippet" class="mediafile mf_js">buck-synth.js</a></dt>
+<dd><pre class="code file javascript"><span class="co1">// Complex gate implementation for basic buck controller</span>
+stgWork <span class="sy0">=</span> load<span class="br0">&#40;</span><span class="st0">&quot;buck.stg.work&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+circuitWork <span class="sy0">=</span> synthComplexGatePetrify<span class="br0">&#40;</span>stgWork<span class="br0">&#41;</span><span class="sy0">;</span>
+save<span class="br0">&#40;</span>circuitWork<span class="sy0">,</span> <span class="st0">&quot;buck.circuit.work&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+exportVerilog<span class="br0">&#40;</span>circuitWork<span class="sy0">,</span> <span class="st0">&quot;buck.v&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</dd></dl>
+<dl class="file">
+<dt><a href="_export/code/help/scripting/codeblock.7.code" title="Download Snippet" class="mediafile mf_js">workspace-info.js</a></dt>
+<dd><pre class="code file javascript"><span class="kw1">for</span> each <span class="br0">&#40;</span>work <span class="kw1">in</span> getWorks<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    s <span class="sy0">=</span> work.<span class="me1">getTitle</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    print<span class="br0">&#40;</span><span class="st0">&quot;Info for &quot;</span> <span class="sy0">+</span> s<span class="br0">&#41;</span><span class="sy0">;</span>
+    print<span class="br0">&#40;</span><span class="st0">&quot;  * Descriptor: &quot;</span> <span class="sy0">+</span> getModelDescriptor<span class="br0">&#40;</span>work<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    print<span class="br0">&#40;</span><span class="st0">&quot;  * File: &quot;</span> <span class="sy0">+</span> getWorkFile<span class="br0">&#40;</span>work<span class="br0">&#41;</span>.<span class="me1">getName</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    setModelTitle<span class="br0">&#40;</span>work<span class="sy0">,</span> s.<span class="me1">toUpperCase</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    print<span class="br0">&#40;</span><span class="st0">&quot;  * Title: &quot;</span> <span class="sy0">+</span> getModelTitle<span class="br0">&#40;</span>work<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+</div>
+
+<h3 id="advanced">Advanced</h3>
+<div class="level3">
+<dl class="file">
+<dt><a href="_export/code/help/scripting/codeblock.8.code" title="Download Snippet" class="mediafile mf_js">synth.js</a></dt>
+<dd><pre class="code file javascript"><span class="co1">// Technology mapping of the specified .g files whose names are passed without extension, as follows:</span>
+<span class="co1">// workcraft -dir:WORKING_DIRECTORY_PATH -exec:synth.js TEST1 TEST2</span>
+setConfigVar<span class="br0">&#40;</span><span class="st0">&quot;CircuitSettings.gateLibrary&quot;</span><span class="sy0">,</span> <span class="st0">&quot;path-to-genlib-file&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">for</span> each <span class="br0">&#40;</span>name <span class="kw1">in</span> args<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    stgWork <span class="sy0">=</span> <span class="kw5">import</span><span class="br0">&#40;</span>name <span class="sy0">+</span> <span class="st0">&quot;.g&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span>stgWork <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        eprint<span class="br0">&#40;</span><span class="st0">&quot;STG work loading failed!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span>checkStgCsc<span class="br0">&#40;</span>stgWork<span class="br0">&#41;</span> <span class="sy0">==</span> <span class="kw2">true</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        cscStgWork <span class="sy0">=</span> stgWork<span class="sy0">;</span>
+    <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+        cscStgWork <span class="sy0">=</span> resolveCscConflictPetrify<span class="br0">&#40;</span>stgWork<span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="kw1">if</span> <span class="br0">&#40;</span>cscStgWork <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            eprint<span class="br0">&#40;</span><span class="st0">&quot;CSC conflict resolution failed!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+            exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="br0">&#125;</span>
+        save<span class="br0">&#40;</span>cscStgWork<span class="sy0">,</span> <span class="st0">'vme-csc.stg.work'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+    tmCircuitWork <span class="sy0">=</span> synthTechnologyMappingMpsat<span class="br0">&#40;</span>cscStgWork<span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span>tmCircuitWork <span class="sy0">==</span> <span class="kw2">null</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        eprint<span class="br0">&#40;</span><span class="st0">&quot;Circuit synthesis failed!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+    <span class="kw1">if</span> <span class="br0">&#40;</span>checkCircuitCombined<span class="br0">&#40;</span>tmCircuitWork <span class="sy0">==</span> <span class="kw2">true</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        exportVerilog<span class="br0">&#40;</span>tmCircuitWork<span class="sy0">,</span> name <span class="sy0">+</span> <span class="st0">&quot;.v&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+        eprint<span class="br0">&#40;</span><span class="st0">&quot;Circuit verification failed!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</dd></dl>
 
 </div>
 
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/scripting.txt</bdi> · Last modified: 2017/11/01 11:28 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/scripting.txt</bdi> · Last modified: 2018/01/01 20:55 by <bdi>danil</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
