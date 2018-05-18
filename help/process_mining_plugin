@@ -15,12 +15,12 @@
 <link rel="edit" title="Edit this page" href="/help/process_mining_plugin?do=edit"/>
 <link rel="alternate" type="text/html" title="Plain HTML" href="/_export/xhtml/help/process_mining_plugin"/>
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="/_export/raw/help/process_mining_plugin"/>
-<link rel="stylesheet" type="text/css" href="/lib/exe/css.php?t=dokuwiki-light&amp;tseed=963778ff62436b3cd89ee1eb632e5dc7"/>
+<link rel="stylesheet" type="text/css" href="/lib/exe/css.php?t=dokuwiki-light&amp;tseed=5e345091e1637b01a273bab91c8362ef"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/06/30 11:37//';var JSINFO = {"id":"help:process_mining_plugin","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light"},"move_renameokay":false,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2018/05/18 16:18//';var JSINFO = {"id":"help:process_mining_plugin","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light"},"act":"show","ajax":"ajax","move_renameokay":false,"plugin_slider":{"width":800,"mode":"horizontal","infiniteLoop":true,"hideControlOnEnd":false,"speed":500,"easing":null,"slideMargin":0,"startSlide":0,"randomStart":false,"captions":false,"ticker":false,"tickerHover":false,"adaptiveHeight":false,"adaptiveHeightSpeed":500,"video":false,"useCSS":true,"preloadImages":"visible","responsive":true,"pager":true,"pagerType":"full","pagerShortSeparator":"\/","controls":true,"nextText":"Next","prevText":"Prev","autoControls":false,"startText":"Start","stopText":"Stop","autoControlsCombine":false,"auto":false,"pause":4000,"autoStart":true,"autoDirection":"next","autoHover":false,"autoDelay":0,"minSlides":1,"maxSlides":1,"moveSlides":0,"slideWidth":0,"touchEnabled":true,"swipeThreshold":50,"oneToOneTouch":true,"preventDefaultSwipeX":true,"preventDefaultSwipeY":false},"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="/lib/exe/jquery.php?tseed=23f888679b4f1dc26eef34902aca964f"></script>
-<script type="text/javascript" charset="utf-8" src="/lib/exe/js.php?t=dokuwiki-light&amp;tseed=963778ff62436b3cd89ee1eb632e5dc7&amp;template=dokuwiki-light"></script>
+<script type="text/javascript" charset="utf-8" src="/lib/exe/js.php?t=dokuwiki-light&amp;tseed=5e345091e1637b01a273bab91c8362ef&amp;template=dokuwiki-light"></script>
 <!--<![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="shortcut icon" href="/_media/favicon.ico" />
@@ -41,7 +41,7 @@
                     <div id="dokuwiki__usertools">
                 <h3 class="a11y">User Tools</h3>
                 <ul>
-                    <li><a href="/help/process_mining_plugin?do=admin"  class="action admin" rel="nofollow" title="Admin">Admin</a></li><li><a href="/help/process_mining_plugin?do=profile"  class="action profile" rel="nofollow" title="Profile">Profile</a></li><li><a href="/help/process_mining_plugin?do=logout&amp;sectok=f1d235d8ef9bca961898cb5fdff324f6"  class="action logout" rel="nofollow" title="Log Out">Log Out</a></li>                </ul>
+                    <li><a href="/help/process_mining_plugin?do=admin"  class="action admin" rel="nofollow" title="Admin">Admin</a></li><li><a href="/help/process_mining_plugin?do=profile"  class="action profile" rel="nofollow" title="Profile">Profile</a></li><li><a href="/help/process_mining_plugin?do=logout&amp;sectok=e265037af454b1a93ec03fe8f3479aa4"  class="action logout" rel="nofollow" title="Log Out">Log Out</a></li>                </ul>
             </div>
         
         <!-- SEARCH TOOLS -->
@@ -53,7 +53,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:process_mining_plugin" /><input type="hidden" name="sectok" value="f1d235d8ef9bca961898cb5fdff324f6" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Create this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:process_mining_plugin" /><input type="hidden" name="sectok" value="e265037af454b1a93ec03fe8f3479aa4" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Create this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="/help/process_mining_plugin?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="/help/process_mining_plugin?do=media&amp;ns=help"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="/help/process_mining_plugin?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -100,7 +100,7 @@ You&#039;ve followed a link to a topic that doesn&#039;t exist yet. If permissio
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="/help/process_mining_plugin?do=edit"  class="action create" accesskey="e" rel="nofollow" title="Create this page [E]"><span>Create this page</span></a></li><li><a href="/help/process_mining_plugin?do=revisions"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="/help/process_mining_plugin?do=backlink"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href=""><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="/help/process_mining_plugin?do=siteexport_addpage"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                        <li><a href="/help/process_mining_plugin?do=edit"  class="action create" accesskey="e" rel="nofollow" title="Create this page [E]"><span>Create this page</span></a></li><li><a href="/help/process_mining_plugin?do=revisions"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="/help/process_mining_plugin?do=backlink"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href=""><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="/help/process_mining_plugin?do=siteexport_addpage"  class="action siteexport_addpage" title="Export Page (Siteexport)"><span>Export Page</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href=""  class="action siteexport_mapid" title="Show Map-ID"" data-mapid="process_mining_plugin" onclick="copyMapIDToClipBoard.call(this); return false;"><span>Copy Map-ID: <span class="mapID" data-done="Done.">process_mining_plugin</span></span></a></li>                    </ul>
                 </div>
                         </div>
         </div><!-- /wrapper -->
@@ -127,7 +127,6 @@ You&#039;ve followed a link to a topic that doesn&#039;t exist yet. If permissio
 
     </div></div><!-- /site -->
 
-    <div class="no"><img src="/lib/exe/indexer.php?id=help%3Aprocess_mining_plugin&amp;1498822636" width="2" height="1" alt="" /></div>
+    <div class="no"><img src="/lib/exe/indexer.php?id=help%3Aprocess_mining_plugin&amp;1526660328" width="2" height="1" alt="" /></div>
     <div id="screen__mode" class="no"></div></body>
 </html>
-

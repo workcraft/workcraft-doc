@@ -15,10 +15,10 @@
 <link rel="edit" title="Edit this page" href="start.html"/>
 <link rel="alternate" type="text/html" title="Plain HTML" href="../../_export/xhtml/tutorial/modelling/rw_lock/start.xhtml"/>
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/modelling/rw_lock/start.raw"/>
-<link rel="canonical" href="https://www.workcraft.org/tutorial/modelling/rw_lock/start"/>
+<link rel="canonical" href="https://workcraft.org/tutorial/modelling/rw_lock/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:rw_lock';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/06/30 12:04//';var JSINFO = {"id":"tutorial:modelling:rw_lock:start","namespace":"tutorial:modelling:rw_lock","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:rw_lock';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2018/05/18 16:10//';var JSINFO = {"id":"tutorial:modelling:rw_lock:start","namespace":"tutorial:modelling:rw_lock","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_slider":{"width":800,"mode":"horizontal","infiniteLoop":true,"hideControlOnEnd":false,"speed":500,"easing":null,"slideMargin":0,"startSlide":0,"randomStart":false,"captions":false,"ticker":false,"tickerHover":false,"adaptiveHeight":false,"adaptiveHeightSpeed":500,"video":false,"useCSS":true,"preloadImages":"visible","responsive":true,"pager":true,"pagerType":"full","pagerShortSeparator":"\/","controls":true,"nextText":"Next","prevText":"Prev","autoControls":false,"startText":"Start","stopText":"Stop","autoControlsCombine":false,"auto":false,"pause":4000,"autoStart":true,"autoDirection":"next","autoHover":false,"autoDelay":0,"minSlides":1,"maxSlides":1,"moveSlides":0,"slideWidth":0,"touchEnabled":true,"swipeThreshold":50,"oneToOneTouch":true,"preventDefaultSwipeX":true,"preventDefaultSwipeY":false},"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:rw_lock:start" /><input type="hidden" name="sectok" value="19ba5e4a74f1b78faa69dfe4069528f1" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:rw_lock:start" /><input type="hidden" name="sectok" value="9e10f86c8980068400896e67f992338d" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -113,7 +113,7 @@ A concurrency primitive called <em>read/write lock</em> (or <em>RW lock</em> for
 </p>
 
 <p>
-<img src="stg-rw_1process.png" class="mediacenter" alt="" />
+<img src="rw_1process.svg" width="109" height="244" class="svgscaleinsert mediacenter" alt="">
 </p>
 
 <p>
@@ -139,7 +139,7 @@ Suppose there are <em>N</em> clients, and from time to time some client indicate
 </p>
 
 <p>
-<img src="stg-rw.png" class="mediacenter" alt="" />
+<img src="rw.svg" width="356" height="229" class="svgscaleinsert mediacenter" alt="">
 </p>
 
 <p>
@@ -147,7 +147,7 @@ Unfortunately the above implementation is prone to <em>writer starvation</em> �
 </p>
 
 <p>
-<img src="stg-rw_biased_1process.png" class="mediacenter" alt="" />
+<img src="rw_biased_1process.svg" width="119" height="279" class="svgscaleinsert mediacenter" alt="">
 </p>
 
 <p>
@@ -164,11 +164,11 @@ The following <abbr title="Signal Transition Graph">STG</abbr> provides a skelet
 </p>
 
 <p>
-<img src="stg-rw_biased_template.png" class="mediacenter" alt="" />
+<img src="rw_biased_template.svg" width="566" height="469" class="svgscaleinsert mediacenter" alt="">
 </p>
 
 <p>
-Download this <abbr title="Signal Transition Graph">STG</abbr> <span class="wrap_download "><a href="stg-rw_biased_template.work" class="media mediafile mf_work" title="tutorial:modelling:rw_lock:stg-rw_biased_template.work (4.5 KB)">stg-rw_biased_template.work</a> (4.48 KiB)</span> and complete the model by providing the necessary arcs between the transitions of the clients and the places <code>w_lock</code> and those modelling the tickets.
+Download this <abbr title="Signal Transition Graph">STG</abbr> <span class="wrap_download "><a href="stg-rw_biased_template.work" class="media mediafile mf_work" title="tutorial:modelling:rw_lock:stg-rw_biased_template.work (4.5 KB)">stg-rw_biased_template.work</a> (4 KiB)</span> and complete the model by providing the necessary arcs between the transitions of the clients and the places <code>w_lock</code> and those modelling the tickets.
 </p>
 
 </div>
@@ -225,7 +225,7 @@ Verify the following properties of the model:
 <div class="plugin_include_content plugin_include__tutorial:feedback" id="plugin_include__tutorial__feedback">
 <div class="wrap_hide plugin_wrap"><pre class="code">===== Feedback =====</pre>
 <form class="bureaucracy__plugin" id="bureaucracy__plugin1" enctype="multipart/form-data" method="post" action="start.html" accept-charset="utf-8"><div class="no">
-<input type="hidden" name="sectok" value="19ba5e4a74f1b78faa69dfe4069528f1" /><input type="hidden" name="id" value="tutorial:modelling:rw_lock:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
+<input type="hidden" name="sectok" value="9e10f86c8980068400896e67f992338d" /><input type="hidden" name="id" value="tutorial:modelling:rw_lock:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
 <label><span>Name (optional)</span> <input type="text" name="bureaucracy[1]" class="edit" /></label>
 <label><span>Email (optional)</span> <input type="text" name="bureaucracy[2]" class="edit" /></label>
 <label class=" textareafield">
@@ -256,7 +256,7 @@ Verify the following properties of the model:
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/modelling/rw_lock/start.txt</bdi> · Last modified: 2017/03/06 14:54 (external edit)</div>
+                                    <div class="docInfo"><bdi>tutorial/modelling/rw_lock/start.txt</bdi> · Last modified: 2017/11/23 16:45 by <bdi>victor</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -269,7 +269,7 @@ Verify the following properties of the model:
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href="start.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href="start.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Export Page (Siteexport)"><span>Export Page</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="start.html"  class="action siteexport_mapid" title="Show Map-ID"" data-mapid="start" onclick="copyMapIDToClipBoard.call(this); return false;"><span>Copy Map-ID: <span class="mapID" data-done="Done.">start</span></span></a></li>                    </ul>
                 </div>
                         </div>
 -->
@@ -302,4 +302,3 @@ Verify the following properties of the model:
     <div class="no"><img  width="2" height="1" alt="" /></div>
     <div id="screen__mode" class="no"></div></body>
 </html>
-

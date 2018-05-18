@@ -15,10 +15,10 @@
 <link rel="edit" title="Edit this page" href="verification.html"/>
 <link rel="alternate" type="text/html" title="Plain HTML" href="_export/xhtml/help/verification.xhtml"/>
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="_export/raw/help/verification.raw"/>
-<link rel="canonical" href="https://www.workcraft.org/help/verification"/>
+<link rel="canonical" href="https://workcraft.org/help/verification"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/06/30 11:37//';var JSINFO = {"id":"help:verification","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2018/05/18 16:18//';var JSINFO = {"id":"help:verification","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_slider":{"width":800,"mode":"horizontal","infiniteLoop":true,"hideControlOnEnd":false,"speed":500,"easing":null,"slideMargin":0,"startSlide":0,"randomStart":false,"captions":false,"ticker":false,"tickerHover":false,"adaptiveHeight":false,"adaptiveHeightSpeed":500,"video":false,"useCSS":true,"preloadImages":"visible","responsive":true,"pager":true,"pagerType":"full","pagerShortSeparator":"\/","controls":true,"nextText":"Next","prevText":"Prev","autoControls":false,"startText":"Start","stopText":"Stop","autoControlsCombine":false,"auto":false,"pause":4000,"autoStart":true,"autoDirection":"next","autoHover":false,"autoDelay":0,"minSlides":1,"maxSlides":1,"moveSlides":0,"slideWidth":0,"touchEnabled":true,"swipeThreshold":50,"oneToOneTouch":true,"preventDefaultSwipeX":true,"preventDefaultSwipeY":false},"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:verification" /><input type="hidden" name="sectok" value="b0a60dbcdb17970012da8f532a0eccfe" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:verification" /><input type="hidden" name="sectok" value="8e24747d3d88bd09273283675fe7ca15" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="verification.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="verification.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="verification.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -117,14 +117,16 @@ Most STGs should satisfy the following four properties (can be checked via <em>V
 
 <ul>
 <li class="level"><div class="li">
- <strong>Output persistency</strong> – a local signal must not be disabled by any other signal (such disabling would cause a hazard on the output of the gate producing this local signal). This property can currently be verified only for STGs without dummy transitions.
+ <strong>Output persistency</strong> – a local signal must not be disabled by any other signal (such disabling would cause a hazard on the output of the gate producing this local signal). This property can currently be verified only for STGs without dummy transitions. (The notable exceptions are MUTEX and WAIT – they violate output persistency. It is possible to model them by “factoring out” them into the environment, turning these violations into input/input conflicts which are ok.)
 </div></li>
 </ul>
 
+<ul>
+<li class="level"><div class="li">
+ <strong>Mutex place implementability</strong> – surrounding signals of an <em>arbitrating choice</em> place that is tagged as a <em>mutex</em> must follow the MUTEX protocol. (In this case the place can be implemented by a MUTEX that can correctly handle the metastable behaviour associated with arbitration.)
+</div></li>
+</ul>
 
-<p>
-The notable exceptions are MUTEX and WAIT – they violate output persistency. It is possible to model them by “factoring out” them into the environment, turning these violations into input/input conflicts which are ok.
-</p>
 
 <p>
 The user can specify custom properties using <a href="reach.html" class="wikilink1" title="help:reach">REACH language</a>. For example, a custom property that PMOS and NMOS are never ON at the same time is specified and verified in <a href="tutorial/synthesis/buck/start.html#formal_verification" class="wikilink1" title="tutorial:synthesis:buck:start">buck tutorial</a>.
@@ -174,7 +176,7 @@ These properties are rather weak – e.g. a circuit accepting all inputs and not
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/verification.txt</bdi> · Last modified: 2017/05/23 21:28 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/verification.txt</bdi> · Last modified: 2018/05/09 18:26 by <bdi>danil</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -187,7 +189,7 @@ These properties are rather weak – e.g. a circuit accepting all inputs and not
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="verification.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="verification.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="verification.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href="verification.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="verification.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                        <li><a href="verification.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="verification.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="verification.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href="verification.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="verification.html"  class="action siteexport_addpage" title="Export Page (Siteexport)"><span>Export Page</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="verification.html"  class="action siteexport_mapid" title="Show Map-ID"" data-mapid="verification" onclick="copyMapIDToClipBoard.call(this); return false;"><span>Copy Map-ID: <span class="mapID" data-done="Done.">verification</span></span></a></li>                    </ul>
                 </div>
                         </div>
 -->
@@ -220,4 +222,3 @@ These properties are rather weak – e.g. a circuit accepting all inputs and not
     <div class="no"><img  width="2" height="1" alt="" /></div>
     <div id="screen__mode" class="no"></div></body>
 </html>
-

@@ -15,10 +15,10 @@
 <link rel="edit" title="Edit this page" href="start.html"/>
 <link rel="alternate" type="text/html" title="Plain HTML" href="../../_export/xhtml/tutorial/synthesis/decomposition/start.xhtml"/>
 <link rel="alternate" type="text/plain" title="Wiki Markup" href="../../_export/raw/tutorial/synthesis/decomposition/start.raw"/>
-<link rel="canonical" href="https://www.workcraft.org/tutorial/synthesis/decomposition/start"/>
+<link rel="canonical" href="https://workcraft.org/tutorial/synthesis/decomposition/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:decomposition';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2017/06/30 12:04//';var JSINFO = {"id":"tutorial:synthesis:decomposition:start","namespace":"tutorial:synthesis:decomposition","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:decomposition';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2018/05/18 16:10//';var JSINFO = {"id":"tutorial:synthesis:decomposition:start","namespace":"tutorial:synthesis:decomposition","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_slider":{"width":800,"mode":"horizontal","infiniteLoop":true,"hideControlOnEnd":false,"speed":500,"easing":null,"slideMargin":0,"startSlide":0,"randomStart":false,"captions":false,"ticker":false,"tickerHover":false,"adaptiveHeight":false,"adaptiveHeightSpeed":500,"video":false,"useCSS":true,"preloadImages":"visible","responsive":true,"pager":true,"pagerType":"full","pagerShortSeparator":"\/","controls":true,"nextText":"Next","prevText":"Prev","autoControls":false,"startText":"Start","stopText":"Stop","autoControlsCombine":false,"auto":false,"pause":4000,"autoStart":true,"autoDirection":"next","autoHover":false,"autoDelay":0,"minSlides":1,"maxSlides":1,"moveSlides":0,"slideWidth":0,"touchEnabled":true,"swipeThreshold":50,"oneToOneTouch":true,"preventDefaultSwipeX":true,"preventDefaultSwipeY":false},"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:decomposition:start" /><input type="hidden" name="sectok" value="bd051a4e35406d28f31095d4c06dd70a" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:decomposition:start" /><input type="hidden" name="sectok" value="9a19d67fa8bf59a33a44316ece1eb9ce" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -115,7 +115,7 @@ In this tutorial we revisit the <a href="../buck/start.html" class="wikilink1" t
 </p>
 
 <p>
-One of the common mistakes of novice designers is attempting to create a single monolithic <abbr title="Signal Transition Graph">STG</abbr> capturing the behaviour of the whole circuit. This is infeasible for all but tiny circuits with a handful of signals. The main learning objective of this tutorial is the use of <em>hierarchical decomposition</em> of the system into modules of manageable size, so that:
+A common mistake of novice designers is to attempt creating a single monolithic <abbr title="Signal Transition Graph">STG</abbr> capturing the behaviour of the whole circuit. This is infeasible for all but tiny circuits with a handful of signals. The main learning objective of this tutorial is the use of <em>hierarchical decomposition</em> of the system into modules of manageable size, so that:
 </p>
 <ul>
 <li class="level"><div class="li">
@@ -145,7 +145,7 @@ The controller switches the power regulating PMOS and NMOS transistors ON and OF
 </p>
 
 <p>
-To prevent a short circuit, PMOS and NMOS must not be ON at the same time. This should be guarantied by observing the <code><span style='color:red; '>gp_ack</span></code> and <code><span style='color:red; '>gn_ack</span></code> signals, which indicate when the power transistor threshold levels (<code>Th_pmos</code> and <code>Th_nmos</code>) are crossed.
+To prevent a short circuit, PMOS and NMOS must not be ON at the same time. This should be guarantied by observing the <code><span style='color:red; '>gp_ack</span></code> and <code><span style='color:red; '>gn_ack</span></code> signals, which indicate when the power transistor threshold levels (<code>V_pmos</code> and <code>V_nmos</code>) are crossed.
 </p>
 
 <p>
@@ -153,7 +153,7 @@ The expected behaviour of a buck can be informally specified as follows:
 </p>
 <ul>
 <li class="level"><div class="li">
- While <code><span style='color:red; '>uv</span></code> is low – wait in tri-state (i.e. both PMOS and NMOS power regulating transistors are OFF).
+ While <code><span style='color:red; '>uv</span></code> is low – wait in <a href="https://en.wikipedia.org/wiki/Three-state_logic" class="interwiki iw_wp" title="https://en.wikipedia.org/wiki/Three-state_logic">tri-state</a> (i.e. both PMOS and NMOS power regulating transistors are OFF).
 </div></li>
 <li class="level"><div class="li">
  While <code><span style='color:red; '>uv</span></code> is high – keep performing cycles of charging:
@@ -196,7 +196,7 @@ One can notice two distinctive tasks for the controller: selecting the mode of o
 </p>
 
 <p>
-Note that signals <code><span style='color:red; '>uv</span></code>, <code><span style='color:red; '>oc</span></code>, and <code><span style='color:red; '>zc</span></code> are produced by the analogue part of the buck and thus may be non-persistent. In order to prevent unexpected changes, they have to be sanitised using special analog-to-asynchronous (A2A) components:
+Note that signals <code><span style='color:red; '>uv</span></code>, <code><span style='color:red; '>oc</span></code>, and <code><span style='color:red; '>zc</span></code> are produced by the analogue part of the buck and thus may be non-persistent. In order to prevent unexpected changes, they have to be sanitised using special <a href="../../a2a/start.html" class="wikilink1" title="a2a:start">analog-to-asynchronous (A2A) components</a>:
 </p>
 
 <p>
@@ -229,10 +229,10 @@ For <code><span style='color:red; '>uv</span></code>, however, both rising and f
 </p>
 <ul>
 <li class="level"><div class="li">
- after <code><span style='color:red; '>ctrl+</span></code> it waits for <code><span style='color:red; '>sig+</span></code> and latches it as stable <code><span style='color:blue; '>san</span>=1</code>;
+ after <code><span style='color:red; '>ctrl+</span></code> it waits for <code><span style='color:red; '>sig</span>=1</code> (may miss short spikes) and latches it as stable <code><span style='color:blue; '>san</span>=1</code>;
 </div></li>
 <li class="level"><div class="li">
- after <code><span style='color:red; '>ctrl-</span></code> it waits for <code><span style='color:red; '>sig-</span></code> and latches it as stable <code><span style='color:blue; '>san</span>=0</code>.
+ after <code><span style='color:red; '>ctrl-</span></code> it waits for <code><span style='color:red; '>sig</span>=0</code> (may miss short spikes) and latches it as stable <code><span style='color:blue; '>san</span>=0</code>.
 </div></li>
 </ul>
 
@@ -371,7 +371,7 @@ It is possible to insert such reset transitions automatically, with the view to 
 </p>
 </div>
 <p>
-The <abbr title="Signal Transition Graph">STG</abbr> below shows one possible way of inserting <code><span style='color:red; '>oc-</span></code> and <code><span style='color:red; '>zc-</span></code>.
+The <abbr title="Signal Transition Graph">STG</abbr> below shows one possible way of inserting <code><span style='color:red; '>oc-</span></code> and <code><span style='color:red; '>zc-</span></code>. <span class="wrap_tip ">Note that this exercise is not about circuit optimisation; in practice, one would try to use the flexibility in inserting these signals to simplify the resulting circuit.</span>
 </p>
 
 <p>
@@ -405,11 +405,11 @@ For <code>CYCLE</code> we also need to verify the implementability of the choice
 </p>
 
 <p>
-For <code>CHARGE</code> module we also need to verify the custom property that the power regulating PMOS and NMOS transistors are never ON at the same time, as explained in <a href="../buck/start.html" class="wikilink1" title="tutorial:synthesis:buck:start">basic buck tutorial</a>.
+For <code>CHARGE</code> module we also need to verify the custom property that the power regulating PMOS and NMOS transistors are never ON at the same time, as explained in the <a href="../buck/start.html" class="wikilink1" title="tutorial:synthesis:buck:start">basic buck tutorial</a>.
 </p>
 
 <p>
-When decomposing a system into smaller modules, there is a new type of problem: One module might produce an output unexpected by another module at that moment. For example, <code>CYCLE</code> could fire <code><span style='color:blue; '>chrg_req+</span></code> output transition at a moment when <code>CHARGE</code> is not in a state that enables its <code><span style='color:red; '>chrg_req+</span></code> input transition. Hence one should verify that the modules <em>conform</em> to each other using the <em>Verification</em>→<em>Conformation (without dummies) [MPSat]…</em> menu. In our case we need to check that <code>CYCLE</code> <abbr title="Signal Transition Graph">STG</abbr> conforms to <code>CHARGE</code> <abbr title="Signal Transition Graph">STG</abbr> and vice versa (i.e. two checks are required).
+When decomposing a system into smaller modules, there is a new type of problem: One module might produce an output unexpected by another module at that moment. For example, <code>CYCLE</code> could potentially fire <code><span style='color:blue; '>chrg_req+</span></code> output transition at a moment when <code>CHARGE</code> is not in a state that enables its <code><span style='color:red; '>chrg_req+</span></code> input transition. Hence one should verify that the modules <em>conform</em> to each other using the <em>Verification</em>→<em>Conformation (without dummies) [MPSat]…</em> menu. In our case we need to check that <code>CYCLE</code> <abbr title="Signal Transition Graph">STG</abbr> conforms to <code>CHARGE</code> <abbr title="Signal Transition Graph">STG</abbr> and vice versa (i.e. two checks are required).
 </p>
 
 </div>
@@ -438,7 +438,7 @@ Technology mapping of <code>CHARGE</code> module using Petrify backend yields th
 </p>
 
 <p>
-Note that automatic circuit layout (accessible via <em>Tools</em>→<em>Graph layout</em>→<em>Circuit placement and routing</em>) will not be as good as the above diagram. You may want to tidy it up manually (make use of <em>Split joint</em> and <em>Straighten connection</em> commands in the popup menu) or download <span class="wrap_download "><a href="charge-tm.circuit.work" class="media mediafile mf_work" title="tutorial:synthesis:decomposition:charge-tm.circuit.work (7 KB)">charge-tm.circuit.work</a> (7.03 KiB)</span>.
+Note that automatic circuit layout (accessible via <em>Tools</em>→<em>Graph layout</em>→<em>Circuit placement and routing</em>) will not be as good as the above diagram. You may want to tidy it up manually (make use of <em>Split joint</em> and <em>Straighten connection</em> commands in the popup menu) or download <span class="wrap_download "><a href="charge-tm.circuit.work" class="media mediafile mf_work" title="tutorial:synthesis:decomposition:charge-tm.circuit.work (7 KB)">charge-tm.circuit.work</a> (7 KiB)</span>.
 </p>
 
 <p>
@@ -459,7 +459,7 @@ Download all the Workcraft models discussed in this tutorial here:
 </p>
 
 <p>
-<span class="wrap_download "><a href="decomposition.zip" class="media mediafile mf_zip" title="tutorial:synthesis:decomposition:decomposition.zip (39.3 KB)">Decomposed buck controller models</a> (39.32 KiB)</span>
+<span class="wrap_download "><a href="decomposition.zip" class="media mediafile mf_zip" title="tutorial:synthesis:decomposition:decomposition.zip (39.3 KB)">Decomposed buck controller models</a> (39 KiB)</span>
 </p>
 
 </div>
@@ -467,7 +467,7 @@ Download all the Workcraft models discussed in this tutorial here:
 <div class="plugin_include_content plugin_include__tutorial:feedback" id="plugin_include__tutorial__feedback">
 <div class="wrap_hide plugin_wrap"><pre class="code">===== Feedback =====</pre>
 <form class="bureaucracy__plugin" id="bureaucracy__plugin1" enctype="multipart/form-data" method="post" action="start.html" accept-charset="utf-8"><div class="no">
-<input type="hidden" name="sectok" value="bd051a4e35406d28f31095d4c06dd70a" /><input type="hidden" name="id" value="tutorial:synthesis:decomposition:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
+<input type="hidden" name="sectok" value="9a19d67fa8bf59a33a44316ece1eb9ce" /><input type="hidden" name="id" value="tutorial:synthesis:decomposition:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
 <label><span>Name (optional)</span> <input type="text" name="bureaucracy[1]" class="edit" /></label>
 <label><span>Email (optional)</span> <input type="text" name="bureaucracy[2]" class="edit" /></label>
 <label class=" textareafield">
@@ -498,7 +498,7 @@ Download all the Workcraft models discussed in this tutorial here:
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/synthesis/decomposition/start.txt</bdi> · Last modified: 2017/05/14 09:43 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/synthesis/decomposition/start.txt</bdi> · Last modified: 2018/02/01 15:05 by <bdi>victor</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -511,7 +511,7 @@ Download all the Workcraft models discussed in this tutorial here:
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href="start.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Add page"><span>Export Page</span></a></li>                    </ul>
+                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href="start.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Export Page (Siteexport)"><span>Export Page</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="start.html"  class="action siteexport_mapid" title="Show Map-ID"" data-mapid="start" onclick="copyMapIDToClipBoard.call(this); return false;"><span>Copy Map-ID: <span class="mapID" data-done="Done.">start</span></span></a></li>                    </ul>
                 </div>
                         </div>
 -->
@@ -544,4 +544,3 @@ Download all the Workcraft models discussed in this tutorial here:
     <div class="no"><img  width="2" height="1" alt="" /></div>
     <div id="screen__mode" class="no"></div></body>
 </html>
-
