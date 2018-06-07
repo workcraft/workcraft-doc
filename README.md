@@ -1,6 +1,6 @@
 # workcraft-doc
 
-![Repo Size](https://reposs.herokuapp.com/?path=workcraft/workcraft-doc&color=lightgray)
+![Repo size](https://img.shields.io/github/repo-size/workcraft/workcraft-doc.svg)
 
 Snapshots of Workcraft user documentation from the
 following sources:
