@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://workcraft.org/tutorial/modelling/rw_lock/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:rw_lock';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2018/05/18 16:10//';var JSINFO = {"id":"tutorial:modelling:rw_lock:start","namespace":"tutorial:modelling:rw_lock","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_slider":{"width":800,"mode":"horizontal","infiniteLoop":true,"hideControlOnEnd":false,"speed":500,"easing":null,"slideMargin":0,"startSlide":0,"randomStart":false,"captions":false,"ticker":false,"tickerHover":false,"adaptiveHeight":false,"adaptiveHeightSpeed":500,"video":false,"useCSS":true,"preloadImages":"visible","responsive":true,"pager":true,"pagerType":"full","pagerShortSeparator":"\/","controls":true,"nextText":"Next","prevText":"Prev","autoControls":false,"startText":"Start","stopText":"Stop","autoControlsCombine":false,"auto":false,"pause":4000,"autoStart":true,"autoDirection":"next","autoHover":false,"autoDelay":0,"minSlides":1,"maxSlides":1,"moveSlides":0,"slideWidth":0,"touchEnabled":true,"swipeThreshold":50,"oneToOneTouch":true,"preventDefaultSwipeX":true,"preventDefaultSwipeY":false},"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:modelling:rw_lock';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2018/07/28 19:43//';var JSINFO = {"id":"tutorial:modelling:rw_lock:start","namespace":"tutorial:modelling:rw_lock","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_slider":{"width":800,"mode":"horizontal","infiniteLoop":true,"hideControlOnEnd":false,"speed":500,"easing":null,"slideMargin":0,"startSlide":0,"randomStart":false,"captions":false,"ticker":false,"tickerHover":false,"adaptiveHeight":false,"adaptiveHeightSpeed":500,"video":false,"useCSS":true,"preloadImages":"visible","responsive":true,"pager":true,"pagerType":"full","pagerShortSeparator":"\/","controls":true,"nextText":"Next","prevText":"Prev","autoControls":false,"startText":"Start","stopText":"Stop","autoControlsCombine":false,"auto":false,"pause":4000,"autoStart":true,"autoDirection":"next","autoHover":false,"autoDelay":0,"minSlides":1,"maxSlides":1,"moveSlides":0,"slideWidth":0,"touchEnabled":true,"swipeThreshold":50,"oneToOneTouch":true,"preventDefaultSwipeX":true,"preventDefaultSwipeY":false},"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:rw_lock:start" /><input type="hidden" name="sectok" value="9e10f86c8980068400896e67f992338d" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:modelling:rw_lock:start" /><input type="hidden" name="sectok" value="52799b21d8e02a2dcfd466ce00d51584" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -113,7 +113,7 @@ A concurrency primitive called <em>read/write lock</em> (or <em>RW lock</em> for
 </p>
 
 <p>
-<img src="rw_1process.svg" width="109" height="244" class="svgscaleinsert mediacenter" alt="">
+<img src="rw_1process.svg" width="109" height="244" class="svgscaleinsert mediacenter" alt="tutorial:modelling:rw_lock:rw_1process.svg">
 </p>
 
 <p>
@@ -139,7 +139,7 @@ Suppose there are <em>N</em> clients, and from time to time some client indicate
 </p>
 
 <p>
-<img src="rw.svg" width="356" height="229" class="svgscaleinsert mediacenter" alt="">
+<img src="rw.svg" width="356" height="229" class="svgscaleinsert mediacenter" alt="tutorial:modelling:rw_lock:rw.svg">
 </p>
 
 <p>
@@ -147,7 +147,7 @@ Unfortunately the above implementation is prone to <em>writer starvation</em> â€
 </p>
 
 <p>
-<img src="rw_biased_1process.svg" width="119" height="279" class="svgscaleinsert mediacenter" alt="">
+<img src="rw_biased_1process.svg" width="119" height="279" class="svgscaleinsert mediacenter" alt="tutorial:modelling:rw_lock:rw_biased_1process.svg">
 </p>
 
 <p>
@@ -164,7 +164,7 @@ The following <abbr title="Signal Transition Graph">STG</abbr> provides a skelet
 </p>
 
 <p>
-<img src="rw_biased_template.svg" width="566" height="469" class="svgscaleinsert mediacenter" alt="">
+<img src="rw_biased_template.svg" width="566" height="469" class="svgscaleinsert mediacenter" alt="tutorial:modelling:rw_lock:rw_biased_template.svg">
 </p>
 
 <p>
@@ -225,7 +225,7 @@ Verify the following properties of the model:
 <div class="plugin_include_content plugin_include__tutorial:feedback" id="plugin_include__tutorial__feedback">
 <div class="wrap_hide plugin_wrap"><pre class="code">===== Feedback =====</pre>
 <form class="bureaucracy__plugin" id="bureaucracy__plugin1" enctype="multipart/form-data" method="post" action="start.html" accept-charset="utf-8"><div class="no">
-<input type="hidden" name="sectok" value="9e10f86c8980068400896e67f992338d" /><input type="hidden" name="id" value="tutorial:modelling:rw_lock:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
+<input type="hidden" name="sectok" value="52799b21d8e02a2dcfd466ce00d51584" /><input type="hidden" name="id" value="tutorial:modelling:rw_lock:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
 <label><span>Name (optional)</span> <input type="text" name="bureaucracy[1]" class="edit" /></label>
 <label><span>Email (optional)</span> <input type="text" name="bureaucracy[2]" class="edit" /></label>
 <label class=" textareafield">
