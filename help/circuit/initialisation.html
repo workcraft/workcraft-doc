@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://workcraft.org/help/circuit/initialisation"/>
 <link rel="stylesheet" type="text/css" href="../lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help:circuit';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2018/10/31 22:04//';var JSINFO = {"id":"help:circuit:initialisation","namespace":"help:circuit","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_slider":{"width":800,"mode":"horizontal","infiniteLoop":true,"hideControlOnEnd":false,"speed":500,"easing":null,"slideMargin":0,"startSlide":0,"randomStart":false,"captions":false,"ticker":false,"tickerHover":false,"adaptiveHeight":false,"adaptiveHeightSpeed":500,"video":false,"useCSS":true,"preloadImages":"visible","responsive":true,"pager":true,"pagerType":"full","pagerShortSeparator":"\/","controls":true,"nextText":"Next","prevText":"Prev","autoControls":false,"startText":"Start","stopText":"Stop","autoControlsCombine":false,"auto":false,"pause":4000,"autoStart":true,"autoDirection":"next","autoHover":false,"autoDelay":0,"minSlides":1,"maxSlides":1,"moveSlides":0,"slideWidth":0,"touchEnabled":true,"swipeThreshold":50,"oneToOneTouch":true,"preventDefaultSwipeX":true,"preventDefaultSwipeY":false},"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help:circuit';var SIG=' --- //[[support@workcraft.org| ]] 2019/06/01 11:30//';var JSINFO = {"id":"help:circuit:initialisation","namespace":"help:circuit","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:circuit:initialisation" /><input type="hidden" name="sectok" value="0af3f4ff520f3c74fc303ad174806443" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:circuit:initialisation" /><input type="hidden" name="sectok" value="4d7df7997795efd971120ec03b95b794" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="initialisation.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="initialisation.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="initialisation.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -125,15 +125,12 @@ There are several ways of circuit initialisation that can be used in combination
 
 
 <p>
-<em>Initialisation analyser</em> <img src="editor_tools-initialisation_analysis.png" class="media" title="[I] Initialisation analyser" alt="[I] Initialisation analyser" /> tool is designed to aid the decision of how to reset these modules. The tool uses <em>Init to one</em> and <em>Forced init</em> properties of circuit signals (i.e. primary input ports and output pins of circuit components):
+<em>Initialisation analyser</em> <img src="editor_tools-initialisation_analysis.png" class="media" title="[I] Initialisation analyser" alt="[I] Initialisation analyser" /> tool is designed to aid the decision of how to reset a speed-independent circuit. The tool uses <em>Init to one</em> and <em>Forced init</em> properties of circuit signals (i.e. primary input ports and output pins of circuit components):
 </p>
 <ul>
 <li class="level"><div class="li">
  <em>Init to one</em> property defines the initial state of the signal. If a circuit is synthesised by one of the backend tools, then the initial state of all its signals is set automatically. However, if the circuit is manually altered, then the designer is responsible for specifying the initial states of the signals.
 </div></li>
-</ul>
-
-<ul>
 <li class="level"><div class="li">
  <em>Forced init</em> property defines if the signal is known to be in a correct initial state. For a primary input it means the environment takes care of initialising the signal to its expected state.  For a  component output pin it means that the necessary circuitry will be added to properly initialise that pin.
 </div></li>
@@ -141,15 +138,28 @@ There are several ways of circuit initialisation that can be used in combination
 
 
 <p>
-These properties can be viewed and modified in the <em>Property editor</em> when an input port or an output pin is selected. Note that selecting a single-output component (i.e. a gate) also reveals these properties of its only output pin.
+These properties can be viewed and modified in the <em>Property editor</em> when an input port or an output pin is selected. Note that selecting a single-output component (i.e. a gate) also reveals these properties of its only output pin. Note that <em>zero delay</em> gates hide <em>Force init</em> property as these gates should not be modified.
 </p>
 
 <p>
-<em>Initialisation analyser</em> uses these properties as follows. It considers the signals whose <em>Forced init</em> property is set as <em>initialised</em>, while the remaining signals are assumed as <em>uninitialised</em>. The tool tries to evaluate each <em>uninitialised</em> signal on the <em>Init to one</em> property of <em>initialised</em> signals. If the Boolean value of a signal can be derived, then it is said to have <em>propagated initial state</em> and the signal is also considered <em>initialised</em>. The tool repeats evaluation of <em>uninitialised</em> signals until no further progress can be made, i.e. no new <em>initialised</em> signals can be obtained. At this stage, if some signals are still <em>uninitialised</em> it means <em>Forced init</em> property of the circuit signals needs to be adjusted, until all the signals are successfully initialised. 
+<em>Initialisation analyser</em> uses these properties as follows. It considers the signals whose <em>Forced init</em> property is set as <em>initialised</em>, while the remaining signals are assumed as <em>uninitialised</em>. The tool tries to evaluate each <em>uninitialised</em> signal on the <em>Init to one</em> property of <em>initialised</em> signals. If the Boolean value of a signal can be derived, then it is said to have <em>propagated initial state</em> and the signal is also considered <em>initialised</em>. The tool repeats evaluation of <em>uninitialised</em> signals until no further progress can be made, i.e. no new <em>initialised</em> signals can be obtained. At this stage, if some signals are still <em>uninitialised</em> it means <em>Forced init</em> property of the circuit signals needs to be adjusted, until all the signals are successfully initialised.
 </p>
 
 <p>
-If the propagated initial state of a signal does not match its <em>Init to one</em> property, then the signal is said to have <em>initialisation conflict</em> – this often indicates a mistake, e.g. incorrect initial value of the signal. However, there are legitimate situations where such conflicts can occur – most likely such a signal needs to be explicitly initialised by setting its <em>Forced init</em> property.
+Sometimes the correct initial state of a signal cannot be achieved and the signal is said to have <em>initialisation problem</em>. There are two sources of initialisation problems:
+</p>
+<ul>
+<li class="level"><div class="li">
+ <em>Conflict of initialisation</em>, which happens when the propagated initial state of a signal does not match its <em>Init to one</em> property. This often indicates a mistake, e.g. incorrect initial value of the signal, however, there are legitimate situations where such conflicts can occur.
+</div></li>
+<li class="level"><div class="li">
+ <em>Unreachable initial state</em>, which happens with sequential (self-dependent) signals whose expected initial state cannot be reached by assigning the component inputs.
+</div></li>
+</ul>
+
+
+<p>
+In both cases such a problematic signal needs to be explicitly initialised by setting its <em>Forced init</em> property.
 </p>
 
 <p>
@@ -161,42 +171,74 @@ If the propagated initial state of a signal does not match its <em>Init to one</
 </p>
 
 <p>
-By default the highlighting scheme is as follows (the colours can be adjusted in the preferences of digital circuit model – see <em>Edit→Preferences…→Models→Digital Circuit</em>):
+By default the highlighting scheme for circuit components is as follows (the colours can be adjusted in the preferences of digital circuit model – see <em>Edit→Preferences…→Decoration→Analysis</em>):
 </p>
 <ul>
-<li class="level1"><div class="li"> The wires and pins of <em>initialised</em> signals are coloured <span style='color:red; '>red</span> (if <em>Init to one</em> property is set) or <span style='color:blue; '>blue</span> (if <em>Init to one</em> is not set). Wires and pins of <em>uninitialised</em> signals are coloured black.</div>
-</li>
-<li class="level1"><div class="li"> Components whose initial state cannot be determined via propagation of <em>forced</em> signals are not highlighted (i.e. remain white).</div>
-</li>
-<li class="level1"><div class="li"> In case of initialisation conflicts, the problematic gates are highlighted <span style='color:magenta; '> magenta</span>.</div>
-</li>
-<li class="level1"><div class="li"> Output pins whose <em>Forced init</em> property is set are visualised by diamond shape and their components  are highlighted <span style='color:orange; '>orange</span>.</div>
-</li>
-<li class="level1"><div class="li"> Correctly initialised components are highlighted <span style='color:lime; '>green</span>.</div>
-</li>
+<li class="level"><div class="li">
+ Components whose initial state cannot be determined via propagation of <em>forced</em> signals are not highlighted (i.e. remain white).
+</div></li>
+<li class="level"><div class="li">
+ Zero delay components, which must not be modified by reset insertion, are highlighted <span style='color:grey; '> grey</span>.
+</div></li>
+<li class="level"><div class="li">
+ Components with initialisation problems (conflict of initialisation or unreachable initial state) are highlighted <span style='color:magenta; '> magenta</span>.
+</div></li>
+<li class="level"><div class="li">
+ Components whose pins have <em>Forced init</em> property set are highlighted <span style='color:orange; '>orange</span>.
+</div></li>
+<li class="level"><div class="li">
+ Correctly initialised components are highlighted <span style='color:lime; '>green</span>.
+</div></li>
 </ul>
+
+
+<p>
+The pins and ports are coloured according to their initialisation state (<span style='color:red; '>red</span> for high level and <span style='color:blue; '>blue</span> for low level), as follows:
+</p>
+<ul>
+<li class="level"><div class="li">
+ The pin outline color indicates the <em>expected</em> initialisation state defined by the <em>Init to one</em> property, while its background color reflects the actual <em>propagated</em> initialisation state. In case of a mismatch (the propagated value differs from the expected one) the problematic pin can be easily identified by its different outline and background colours.
+</div></li>
+<li class="level"><div class="li">
+ Output pins whose <em>Forced init</em> property is set are visualised by diamond shape. The initial state of such pins is forced to the <em>expected</em> value, according to their <em>Init to one</em> property.
+</div></li>
+</ul>
+
+
+<p>
+The color scheme for wires is as follows:
+</p>
+<ul>
+<li class="level"><div class="li">
+ Wires of <em>uninitialised</em> signals are coloured black.
+</div></li>
+<li class="level"><div class="li">
+ Wires of <em>initialised</em> signals are coloured <span style='color:red; '>red</span> or <span style='color:blue; '>blue</span> according to their initial state.
+</div></li>
+</ul>
+
 
 <p>
 <em>Force init pins</em> table enumerates the pins whose <em>Forced init</em> property is set. Note that <em>Forced init</em> property of a signal can be toggled while in <em>Initialisation analyser</em> tool by clicking the corresponding input port, output pin, or a gate. This enables convenient exploration of possible reset strategies. The tool also provides several ways of changing <em>Force init</em> property for a group of contacts:
 </p>
 <ul>
 <li class="level"><div class="li">
- <img src="tool_controls-initialisation-clear_all.png" class="media" title="Clear force init from all input ports and component outputs" alt="Clear force init from all input ports and component outputs" /> - Unset <em>Forced init</em> property for all input ports and component outputs.
+ <img src="tool_controls-initialisation-input_port.png" class="media" title="Force init all input ports (environment responsibility)" alt="Force init all input ports (environment responsibility)" /> - Tag <em>Forced init</em> property for all input ports. Note that it is the environment responsibility to guarantee the correct initialisation of primary inputs whose <em>Forced init</em> property is set.
 </div></li>
 <li class="level"><div class="li">
- <img src="tool_controls-initialisation-input_port.png" class="media" title="Toggle force init for all input ports (environment responsibility)" alt="Toggle force init for all input ports (environment responsibility)" /> - Toggle <em>Forced init</em> property for all input ports. Note that it is the environment responsibility to guarantee the correct initialisation of primary inputs whose <em>Forced init</em> property is set.
+ <img src="tool_controls-initialisation-problematic.png" class="media" title="Force init output pins with problematic initial state" alt="Force init output pins with problematic initial state" /> - Tag <em>Forced init</em> property for all output pins with problematic initial state.
 </div></li>
 <li class="level"><div class="li">
- <img src="tool_controls-initialisation-self_loop.png" class="media" title="Toggle force init for all self-loops" alt="Toggle force init for all self-loops" /> - Toggle <em>Forced init</em> property for all component outputs with self-loops.
+ <img src="tool_controls-initialisation-sequential.png" class="media" title="Force init output pins of sequential gates" alt="Force init output pins of sequential gates" /> - Tag <em>Forced init</em> property for output pins of all sequential gates.
 </div></li>
 <li class="level"><div class="li">
- <img src="tool_controls-initialisation-sequential_gate.png" class="media" title="Toggle force init for all sequential gates" alt="Toggle force init for all sequential gates" /> - Toggle <em>Forced init</em> property for outputs of all sequential gates.
+ <img src="tool_controls-initialisation-tag_necessary.png" class="media" title="Auto-append force init pins as necessary to complete initialisation" alt="Auto-append force init pins as necessary to complete initialisation" /> - Set <em>Forced init</em> property of output pins as necessary to complete initialisation of the circuit.
 </div></li>
 <li class="level"><div class="li">
- <img src="tool_controls-initialisation-untag_redundant.png" class="media" title="Remove force init from pins if redundant for initialisation" alt="Remove force init from pins if redundant for initialisation" /> - Unset <em>Forced init</em> property of the component outputs if they are redundant for the circuit initialisation.
+ <img src="tool_controls-initialisation-untag_redundant.png" class="media" title="Auto-discard force init pins that are redundant for initialisation" alt="Auto-discard force init pins that are redundant for initialisation" /> - Clear <em>Forced init</em> property of output pins that are redundant for the circuit initialisation.
 </div></li>
 <li class="level"><div class="li">
- <img src="tool_controls-initialisation-tag_necessary.png" class="media" title="Add force init to pins if necessary to complete initialisation" alt="Add force init to pins if necessary to complete initialisation" /> - Set <em>Forced init</em> property of component outputs as necessary to complete initialisation of the circuit.
+ <img src="tool_controls-initialisation-clear_all.png" class="media" title="Clear all force init ports and pins" alt="Clear all force init ports and pins" /> - Clear <em>Forced init</em> property for all input ports and output pins.
 </div></li>
 </ul>
 
@@ -222,7 +264,7 @@ Circuit initialisation comprises three steps:
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/circuit/initialisation.txt</bdi> · Last modified: 2018/10/31 14:51 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/circuit/initialisation.txt</bdi> · Last modified: 2019/05/31 15:31 by <bdi>danil</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -259,7 +301,7 @@ Circuit initialisation comprises three steps:
             src="../lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
     </div>
     <div class="userInfo">
-        Logged in as:: danil    </div>
+        Logged in as:: workcraft    </div>
 -->
 </div></div><!-- /footer -->
 
