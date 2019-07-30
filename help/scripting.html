@@ -5,7 +5,7 @@
     <title>help:scripting - Workcraft</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="noindex,nofollow"/>
+<meta name="robots" content="index,follow"/>
 <meta name="keywords" content="help,scripting"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="scripting.html"/>
@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://workcraft.org/help/scripting"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2018/10/31 22:05//';var JSINFO = {"id":"help:scripting","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_slider":{"width":800,"mode":"horizontal","infiniteLoop":true,"hideControlOnEnd":false,"speed":500,"easing":null,"slideMargin":0,"startSlide":0,"randomStart":false,"captions":false,"ticker":false,"tickerHover":false,"adaptiveHeight":false,"adaptiveHeightSpeed":500,"video":false,"useCSS":true,"preloadImages":"visible","responsive":true,"pager":true,"pagerType":"full","pagerShortSeparator":"\/","controls":true,"nextText":"Next","prevText":"Prev","autoControls":false,"startText":"Start","stopText":"Stop","autoControlsCombine":false,"auto":false,"pause":4000,"autoStart":true,"autoDirection":"next","autoHover":false,"autoDelay":0,"minSlides":1,"maxSlides":1,"moveSlides":0,"slideWidth":0,"touchEnabled":true,"swipeThreshold":50,"oneToOneTouch":true,"preventDefaultSwipeX":true,"preventDefaultSwipeY":false},"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[support@workcraft.org| ]] 2019/07/30 12:25//';var JSINFO = {"id":"help:scripting","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:scripting" /><input type="hidden" name="sectok" value="d2e2d412b71f959ab7c4eeb9cdacacc8" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:scripting" /><input type="hidden" name="sectok" value="8b94498c73a73d3eb308bf20a69d949c" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="scripting.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="scripting.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="scripting.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -119,7 +119,7 @@
 <div class="level1">
 
 <p>
-Workcraft supports scripting using JavaScript language.
+Workcraft supports scripting using JavaScript language. Here is the scripting <abbr title="Application Programming Interface">API</abbr> and several example scripts.
 </p>
 
 </div>
@@ -135,7 +135,7 @@ Two modes of script execution are supported:
  Interactively, by entering the script commands in the <em>Javascript</em> tab and pressing <kbd class="__keyboard">Ctrl</kbd>+<kbd class="__keyboard">Enter</kbd> to execute them. The output of the commands is redirected to the <em>Output</em> tab.
 </div></li>
 <li class="level"><div class="li">
- In batch mode, by passing the script file name after the <code>-exec:</code> command line parameter.
+ In batch mode, by passing the script file name or a one-liner script after the <code>-exec:</code> command line parameter.
 </div></li>
 </ul>
 
@@ -143,21 +143,17 @@ Two modes of script execution are supported:
 <p>
 For batch mode it is often convenient to start Workcraft without <abbr title="Graphical User Interface">GUI</abbr> and without reading/writing configuration files. This is achieved by using <code>-nogui</code> and <code>-noconfig</code> command line parameter  as follows (We presume that Workcraft home is in the search PATH and the platform-specific <code>.sh</code>/<code>.bat</code> extension of Workcraft runner is omitted):
 </p>
-<pre class="code shell">workcraft -nogui -noconfig -exec:SCRIPT_FILE_NAME</pre>
-
-<p>
-Note that the script file name should include the path to the file, either absolute or relative to the Workcraft home directory (where <code>workcraft</code> starter script is located).
-</p>
+<pre class="code shell">workcraft -nogui -noconfig -exec:SCRIPT</pre>
 
 <p>
 If a script contains file operation commands, such as loading work files or exporting the models, then all the file names in these commands are relative to the <em>working directory</em>. By default this coincides with Workcraft home, however, an alternative working directory can be passed after the <code>-dir:</code> command line parameter, as follows:
 </p>
-<pre class="code shell">workcraft -nogui -noconfig -exec:SCRIPT_FILE_NAME -dir:WORKING_DIRECTORY_PATH</pre>
+<pre class="code shell">workcraft -nogui -noconfig -exec:SCRIPT -dir:PATH</pre>
 
 <p>
-In Bash shell, for a short JavaScript snippet, it may be more convenient to pass it directly in the command line, as a <em>process substitution</em> form of redirection:
+For a short JavaScript snippet, it may be more convenient to pass it directly in the command line <span class="wrap_info ">since <strong>v3.2.3</strong></span>:
 </p>
-<pre class="code shell">workcraft -nogui -exec:&lt;(echo 'JAVASCRIPT CODE')</pre>
+<pre class="code shell">workcraft -nogui -exec:&quot;JAVASCRIPT CODE&quot;</pre>
 
 </div>
 
@@ -169,9 +165,9 @@ If you have to use a backslash symbol <code>\</code> in your script, e.g. in a W
 </p>
 
 <p>
-For example, if you want to run a script <em>“C:\Workcraft Projects\test1.js”</em> that loads a model from <em>“C:\Workcraft Projects\models\test1.work”</em> and saves statistics in <em>“C:\Temp\test1.txt”</em>, then the Windows command line would look like this (notice the quotes around the paths with spaces):
+For example, if you want to run a script <em>“C:\Workcraft Projects\scripts\test1.js”</em> that loads a model from <em>“C:\Workcraft Projects\models\test1.work”</em> and saves statistics in <em>“C:\Temp\test1.txt”</em>, then the Windows command line would look like this (notice the quotes around the paths with spaces):
 </p>
-<pre class="code shell">workcraft.bat -dir:&quot;C:\Workcraft Projects&quot; -exec:&quot;C:\Workcraft Projects\test1.js&quot;</pre>
+<pre class="code shell">workcraft.bat -nogui -dir:&quot;C:\Workcraft Projects&quot; -exec:&quot;scripts\test1.js&quot;</pre>
 
 <p>
 and the script would be as follows (notice the double backslashes):
@@ -185,7 +181,7 @@ exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0
 </dd></dl>
 
 <p>
-Here the <em>“models\test1.work”</em> is relative to the working directory <em>“C:\Workcraft Projects”</em>, while the file <em>“C:\Temp\test1.txt”</em> is specified by its absolute path.
+Notice that <em>“scripts\test1.js”</em> and <em>“models\test1.work”</em> are relative to the working directory <em>“C:\Workcraft Projects”</em>, while the file <em>“C:\Temp\test1.txt”</em> is specified by its absolute path.
 </p>
 
 </div>
@@ -306,6 +302,12 @@ Note that conventional Java print functions can be also used, e.g. if you need t
 </div></li>
 <li class="level"><div class="li">
  <code>setModelTitle(work, title)</code> – set the model title of the specified <code>work</code> to the <code>title</code> string
+</div></li>
+<li class="level"><div class="li">
+ <code>closeWork(work)</code> – close the specified <code>work</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>closeAllWorks()</code> – close all the open works
 </div></li>
 </ul>
 
@@ -675,6 +677,9 @@ Commands specific for <abbr title="Signal Transition Graph">STG</abbr> models
 <li class="level"><div class="li">
  <code>checkStgOutputPersistency(work)</code> – check the <abbr title="Signal Transition Graph">STG</abbr> <code>work</code> for output persistency
 </div></li>
+<li class="level"><div class="li">
+ <code>checkStgNwayConformation(null)</code> – check all the open <abbr title="Signal Transition Graph">STG</abbr> works for N-way conformation (<code>null</code> should be passed as the parameter) <span class="wrap_info ">since <strong>v3.2.3</strong></span>
+</div></li>
 </ul>
 </li>
 </ul>
@@ -683,6 +688,12 @@ Commands specific for <abbr title="Signal Transition Graph">STG</abbr> models
 <li class="level"><div class="li">
  Commands specific for Circuit models
 </div><ul>
+<li class="level"><div class="li">
+ <code>setCircuitEnvironment(work, env)</code> – set <code>env</code> <abbr title="Signal Transition Graph">STG</abbr> file or work as environment for Circuit <code>work</code> <span class="wrap_info ">since <strong>v3.2.3</strong></span>
+</div></li>
+<li class="level"><div class="li">
+ <code>getCircuitEnvironment(work)</code> – get environment <abbr title="Signal Transition Graph">STG</abbr> file for Circuit <code>work</code> <span class="wrap_info ">since <strong>v3.2.3</strong></span>
+</div></li>
 <li class="level"><div class="li">
  <code>checkCircuitCombined(work)</code> – combined check of the Circuit <code>work</code> for conformation to environment, deadlock freeness, and output persistency
 </div></li>
@@ -792,31 +803,57 @@ Commands specific for <abbr title="Signal Transition Graph">STG</abbr> models
 
 <ul>
 <li class="level"><div class="li">
- Commands specific for reset insertion in Circuit models
+ Commands specific for reset insertion in Circuit models  <span class="wrap_info ">since <strong>v3.2.2</strong>, change in <strong>v3.2.3</strong></span>
 </div><ul>
 <li class="level"><div class="li">
- <code>resetCircuitClearForceInit(work)</code> – clear force init for all input ports and output pins in the Circuit <code>work</code>
+ <code>insertCircuitResetActiveHigh(work)</code> – insert active-high reset into the Circuit <code>work</code>
 </div></li>
 <li class="level"><div class="li">
- <code>resetCircuitForceInitInputPorts(work)</code> – force init all input ports in the Circuit <code>work</code> (environment must initialise them)
+ <code>insertCircuitResetActiveLow(work)</code> – insert active-low reset into the Circuit <code>work</code>
 </div></li>
 <li class="level"><div class="li">
- <code>resetCircuitForceInitSelfLoops(work)</code> – force init all self-loops in the Circuit <code>work</code>
+ <code>tagCircuitForceInitAutoAppend(work)</code> – auto-append force init pins as necessary to complete initialisation of the Circuit <code>work</code>
 </div></li>
 <li class="level"><div class="li">
- <code>resetCircuitForceInitSequentialGates(work)</code> - force init all sequential gates in the Circuit <code>work</code>
+ <code>tagCircuitForceInitAutoDiscard(work)</code> – auto-remove force init pins that are redundant for initialisation of the Circuit <code>work</code>
 </div></li>
 <li class="level"><div class="li">
- <code>resetCircuitProcessNecessaryForceInitPins(work)</code> – add force init to pins if necessary to complete initialisation of the Circuit <code>work</code>
+ <code>tagCircuitForceInitClearAll(work)</code> – clear all force init input ports and output pins in the Circuit <code>work</code>
 </div></li>
 <li class="level"><div class="li">
- <code>resetCircuitProcessRedundantForceInitPins(work)</code> – remove force init from pins if redundant for initialisation of the Circuit <code>work</code>
+ <code>tagCircuitForceInitInputPorts(work)</code> – force init all input ports in the Circuit <code>work</code> (environment must initialise them)
 </div></li>
 <li class="level"><div class="li">
- <code>resetCircuitInsertActiveHigh(work)</code> – insert active-high reset into the Circuit <code>work</code>
+ <code>tagCircuitForceInitProblematicPins(work)</code> – force init output pins with problematic initial state in the Circuit <code>work</code>
 </div></li>
 <li class="level"><div class="li">
- <code>resetCircuitInsertActiveLow(work)</code> – insert active-low reset into the Circuit <code>work</code>
+ <code>tagCircuitForceInitSequentialPins(work)</code> - force init output pins of sequential gates in the Circuit <code>work</code>
+</div></li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li class="level"><div class="li">
+ Commands specific for loop breaking and scan insertion in Circuit models <span class="wrap_info ">since <strong>v3.2.3</strong></span>
+</div><ul>
+<li class="level"><div class="li">
+ <code>insertCircuitScan(work)</code> – insert scan for path breaker components into the Circuit <code>work</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>insertCircuitTestableGates(work)</code> – insert testable buffers/inverters for path breaker components in the Circuit <code>work</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>tagCircuitPathBreakerAutoAppend(work)</code> – auto-append path breaker pins as necessary to complete cycle breaking in the Circuit <code>work</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>tagCircuitPathBreakerAutoDiscard(work)</code> – auto-discard path breaker pins that are redundant for cycle breaking in the Circuit <code>work</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>tagCircuitPathBreakerClearAll(work)</code> – clear all path breaker pins in the Circuit <code>work</code>
+</div></li>
+<li class="level"><div class="li">
+ <code>tagCircuitPathBreakerSelfloopPins(work)</code> – path breaker output pins within self-loops in the Circuit <code>work</code>
 </div></li>
 </ul>
 </li>
@@ -993,7 +1030,8 @@ exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0
 <div class="level3">
 <dl class="code">
 <dt><a href="_export/code/help/scripting/codeblock.8.code" title="Download Snippet" class="mediafile mf_js">synth.js</a></dt>
-<dd><pre class="code javascript"><span class="co1">// Technology mapping of the specified .g files whose names are passed without extension, as follows:</span>
+<dd><pre class="code javascript"><span class="co1">// Technology mapping of the specified .g files whose names are passed</span>
+<span class="co1">// without extension, as follows:</span>
 <span class="co1">// workcraft -dir:WORKING_DIRECTORY_PATH -exec:synth.js TEST1 TEST2</span>
 setConfigVar<span class="br0">&#40;</span><span class="st0">&quot;CircuitSettings.gateLibrary&quot;</span><span class="sy0">,</span> <span class="st0">&quot;path-to-genlib-file&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
 <span class="kw1">for</span> each <span class="br0">&#40;</span>name <span class="kw1">in</span> args<span class="br0">&#41;</span> <span class="br0">&#123;</span>
@@ -1028,15 +1066,16 @@ exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0
 <dl class="code">
 <dt><a href="_export/code/help/scripting/codeblock.9.code" title="Download Snippet" class="mediafile mf_js">reset.js</a></dt>
 <dd><pre class="code javascript"><span class="co1">// Define circuit initialisation scheme and insert active-low reset</span>
+<span class="co1">// (requires Workcraft v3.2.3 or newer)</span>
 work <span class="sy0">=</span> load<span class="br0">&#40;</span><span class="st0">&quot;test-tm.circuit.work&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
 <span class="kw1">if</span> <span class="br0">&#40;</span>checkCircuitCombined<span class="br0">&#40;</span>work<span class="br0">&#41;</span> <span class="sy0">!=</span> <span class="kw2">true</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
     eprint<span class="br0">&#40;</span><span class="st0">&quot;Circuit verification failed&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
     exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
 <span class="br0">&#125;</span>
-resetCircuitClearForceInit<span class="br0">&#40;</span>work<span class="br0">&#41;</span><span class="sy0">;</span>
-resetCircuitForceInitInputPorts<span class="br0">&#40;</span>work<span class="br0">&#41;</span><span class="sy0">;</span>
-resetCircuitProcessNecessaryForceInitPins<span class="br0">&#40;</span>work<span class="br0">&#41;</span><span class="sy0">;</span>
-resetCircuitInsertActiveLow<span class="br0">&#40;</span>work<span class="br0">&#41;</span><span class="sy0">;</span>
+tagCircuitForceInitClearAll<span class="br0">&#40;</span>work<span class="br0">&#41;</span><span class="sy0">;</span>
+tagCircuitForceInitInputPorts<span class="br0">&#40;</span>work<span class="br0">&#41;</span><span class="sy0">;</span>
+tagCircuitForceInitAutoAppend<span class="br0">&#40;</span>work<span class="br0">&#41;</span><span class="sy0">;</span>
+insertCircuitResetActiveLow<span class="br0">&#40;</span>work<span class="br0">&#41;</span><span class="sy0">;</span>
 <span class="kw1">if</span> <span class="br0">&#40;</span>checkCircuitReset<span class="br0">&#40;</span>work<span class="br0">&#41;</span> <span class="sy0">!=</span> <span class="kw2">true</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
     eprint<span class="br0">&#40;</span><span class="st0">&quot;Circuit cannot be reset to the required initial state&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
     exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
@@ -1054,7 +1093,7 @@ exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/scripting.txt</bdi> · Last modified: 2018/10/30 20:58 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/scripting.txt</bdi> · Last modified: 2019/07/01 08:55 by <bdi>danil</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -1067,7 +1106,7 @@ exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="scripting.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="scripting.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="scripting.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href="scripting.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="scripting.html"  class="action siteexport_addpage" title="Export Page (Siteexport)"><span>Export Page</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="scripting.html"  class="action siteexport_mapid" title="Show Map-ID"" data-mapid="scripting" onclick="copyMapIDToClipBoard.call(this); return false;"><span>Copy Map-ID: <span class="mapID" data-done="Done.">scripting</span></span></a></li>                    </ul>
+                        <li><a href="scripting.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="scripting.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="scripting.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="scripting.html"  class="action export_pdf" rel="nofollow" title="Export to PDF"><span>Export to PDF</span></a></li><li class="plugin_move_page"><a href="scripting.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="scripting.html"  class="action siteexport_addpage" title="Export Page (Siteexport)"><span>Export Page</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="scripting.html"  class="action siteexport_mapid" title="Show Map-ID"" data-mapid="scripting" onclick="copyMapIDToClipBoard.call(this); return false;"><span>Copy Map-ID: <span class="mapID" data-done="Done.">scripting</span></span></a></li>                    </ul>
                 </div>
                         </div>
 -->
@@ -1091,7 +1130,7 @@ exit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0
             src="lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
     </div>
     <div class="userInfo">
-        Logged in as:: danil    </div>
+        Logged in as:: workcraft    </div>
 -->
 </div></div><!-- /footer -->
 

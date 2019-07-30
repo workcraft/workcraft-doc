@@ -5,7 +5,7 @@
     <title>tutorial:synthesis:buck:start - Workcraft</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="noindex,nofollow"/>
+<meta name="robots" content="index,follow"/>
 <meta name="keywords" content="tutorial,synthesis,buck,start"/>
 <link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="start.html"/>
@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://workcraft.org/tutorial/synthesis/buck/start"/>
 <link rel="stylesheet" type="text/css" href="../../lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:buck';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2018/10/31 22:46//';var JSINFO = {"id":"tutorial:synthesis:buck:start","namespace":"tutorial:synthesis:buck","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_slider":{"width":800,"mode":"horizontal","infiniteLoop":true,"hideControlOnEnd":false,"speed":500,"easing":null,"slideMargin":0,"startSlide":0,"randomStart":false,"captions":false,"ticker":false,"tickerHover":false,"adaptiveHeight":false,"adaptiveHeightSpeed":500,"video":false,"useCSS":true,"preloadImages":"visible","responsive":true,"pager":true,"pagerType":"full","pagerShortSeparator":"\/","controls":true,"nextText":"Next","prevText":"Prev","autoControls":false,"startText":"Start","stopText":"Stop","autoControlsCombine":false,"auto":false,"pause":4000,"autoStart":true,"autoDirection":"next","autoHover":false,"autoDelay":0,"minSlides":1,"maxSlides":1,"moveSlides":0,"slideWidth":0,"touchEnabled":true,"swipeThreshold":50,"oneToOneTouch":true,"preventDefaultSwipeX":true,"preventDefaultSwipeY":false},"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='tutorial:synthesis:buck';var SIG=' --- //[[support@workcraft.org| ]] 2019/07/30 12:26//';var JSINFO = {"id":"tutorial:synthesis:buck:start","namespace":"tutorial:synthesis:buck","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:buck:start" /><input type="hidden" name="sectok" value="e8ce0b2f48c09a60940b0543b6d11f28" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="../..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="tutorial:synthesis:buck:start" /><input type="hidden" name="sectok" value="1b4977bc4e4d500ab9a472c2e66fa16b" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -151,7 +151,11 @@ This specification shows the alternation of the UV and OC conditions which are h
 <p>
 It is important to note that in order to avoid a short-circuit the PMOS and NMOS transistors of the buck must never be ON at the same time.
 </p>
-
+<div class="wrap_center wrap_round wrap_important plugin_wrap" style="width: 90%;">
+<p>
+For simplicity, this design assumes that the UV condition is resolved within one cycle of charging. A more realistic buck design is described in the <a href="../decomposition/start.html" class="wikilink1" title="tutorial:synthesis:decomposition:start">Hierarchical design of a realistic buck controller</a> tutorial.
+</p>
+</div>
 </div>
 
 <h2 id="exercise_1modelling">Exercise 1: Modelling</h2>
@@ -368,7 +372,7 @@ The <abbr title="Signal Transition Graph">STG</abbr> combining all three scenari
 </p>
 <div class="wrap_center wrap_round wrap_tip plugin_wrap" style="width: 90%;">
 <p>
-Note that this <abbr title="Signal Transition Graph">STG</abbr> is <em>non-deterministic</em>, e.g. after <code><span style='color:red; '>uv+</span></code> fires the <abbr title="Signal Transition Graph">STG</abbr> can end up in either of the two possible states. Non-determinism is common in scenario-based modelling, and can be very powerful and expressive. Occasionally, the scenarios may impose conflicting requirements on the system (e.g. two scenarios may have a common prefix, with one of them requiring and the other forbidding the circuit to produce a particular output after this prefix). Such conflicting requirements can be detected during verification. In this model, however, the scenarios are compatible.
+Note that this <abbr title="Signal Transition Graph">STG</abbr> is <em>non-deterministic</em>, e.g. after <code><span style='color:red; '>uv+</span></code> fires the <abbr title="Signal Transition Graph">STG</abbr> can end up in either of the two possible states. Non-determinism is common in scenario-based modelling, and can be very powerful and expressive. Occasionally, the scenarios may impose conflicting requirements on the system: Two scenarios may have a common prefix, with one of them requiring and the other forbidding the circuit to produce a particular output after this prefix. Such conflicting requirements can be detected during verification – use <em>Verification→Output determinacy [MPSat]</em> menu item to check that in this model the scenarios are compatible. This property trivially holds for deterministic STGs, but if your <abbr title="Signal Transition Graph">STG</abbr> has non-determinism due to dummies or non-deterministic choices then it is a good idea to verify <a href="../../../help/verification.html" class="wikilink1" title="help:verification">output determinacy</a>.
 </p>
 </div>
 </div>
@@ -596,6 +600,10 @@ By selecting the complex-gate implementation of <code><span style='color:blue; '
 </p>
 <div class="wrap_center wrap_round wrap_important plugin_wrap" style="width: 90%;">
 <p>
+This circuit was obtained by synthesising both comple-gate and standard-C implementations in Workcraft, and then combining them (by copying and pasting the gate implementing <code><span style='color:blue; '>gn</span></code> and manual editing).
+</p>
+
+<p>
 Do not forget to verify this circuit w.r.t. the original <abbr title="Signal Transition Graph">STG</abbr> as described above for the complex-gate implementation!
 </p>
 </div>
@@ -605,7 +613,7 @@ Do not forget to verify this circuit w.r.t. the original <abbr title="Signal Tra
 <div class="level3">
 
 <p>
-Complex-gate and standard-C syntheses are oblivious to the gate library – the implementations they yield are Boolean functions of arbitrary complexity. These functions are often too large to be implemented by a single gate available in the gate library. Unfortunately, breaking up a complex-gate into smaller ones, when performed naïvely, generally yields an incorrect circuit – this happens due to the delays associated with the outputs of the newly introduced gates. In fact, logic decomposition in the context of speed-independent circuits is a very difficult problem, that cannot always be solved. Petrify and MPSat backend tools do a good job in many situations, but occasionally they fail to converge to a solution and a manual intervention by the designer is required.
+Complex-gate and standard-C syntheses are oblivious to the gate library – the implementations they yield are Boolean functions of arbitrary complexity. These functions are often too large to be implemented by a single gate available in the gate library. Unfortunately, breaking up a complex-gate into smaller ones, when performed naïvely, generally yields an incorrect circuit – this happens due to the delays associated with the outputs of the newly introduced gates. In fact, logic decomposition in the context of speed-independent circuits (see the <a href="../technology_mapping/start.html" class="wikilink1" title="tutorial:synthesis:technology_mapping:start">Logic decomposition and technology mapping</a> tutorial) is a very difficult problem, that cannot always be solved. Petrify and MPSat backend tools do a good job in many situations, but occasionally they fail to converge to a solution and a manual intervention by the designer is required.
 </p>
 <div class="wrap_center wrap_round wrap_tip plugin_wrap" style="width: 90%;">
 <p>
@@ -634,7 +642,7 @@ Let us try to decompose the implementation of <code><span style='color:blue; '>g
 </p>
 <div class="wrap_center wrap_round wrap_info plugin_wrap" style="width: 90%;">
 <p>
-MPSat also finds a decomposition of <code><span style='color:blue; '>gn</span></code> into 2-input gates/latches (as the <code>-g2</code> option prevents it from using the a 3-input NOR gate), which is essentially the same as the standard-C implementation considered above (but it is now mapped). However, the implementation of <code><span style='color:blue; '>gn</span></code> as a 3-input NOR gate is superior and thus has been retained in the above circuit.
+MPSat also finds a decomposition of <code><span style='color:blue; '>gn</span></code> into 2-input gates/latches (as the <code>-g2</code> option prevents it from using the a 3-input NOR gate), which is essentially the same as the standard-C implementation considered above (but it is now mapped). However, the implementation of <code><span style='color:blue; '>gn</span></code> as a 3-input NOR gate is superior and thus has been retained in the above circuit (by copying and pasting its complex-gate implementation and manual editing).
 </p>
 </div>
 <p>
@@ -667,7 +675,7 @@ Download all the Workcraft models discussed in this tutorial here:
 <div class="plugin_include_content plugin_include__tutorial:feedback" id="plugin_include__tutorial__feedback">
 <div class="wrap_hide plugin_wrap"><pre class="code">===== Feedback =====</pre>
 <form class="bureaucracy__plugin" id="bureaucracy__plugin1" enctype="multipart/form-data" method="post" action="start.html" accept-charset="utf-8"><div class="no">
-<input type="hidden" name="sectok" value="e8ce0b2f48c09a60940b0543b6d11f28" /><input type="hidden" name="id" value="tutorial:synthesis:buck:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
+<input type="hidden" name="sectok" value="1b4977bc4e4d500ab9a472c2e66fa16b" /><input type="hidden" name="id" value="tutorial:synthesis:buck:start" /><input type="hidden" name="bureaucracy[$$id]" value="1" /><fieldset ><legend>Comments or suggestions for improving this tutorial</legend>
 <label><span>Name (optional)</span> <input type="text" name="bureaucracy[1]" class="edit" /></label>
 <label><span>Email (optional)</span> <input type="text" name="bureaucracy[2]" class="edit" /></label>
 <label class=" textareafield">
@@ -698,7 +706,7 @@ Download all the Workcraft models discussed in this tutorial here:
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>tutorial/synthesis/buck/start.txt</bdi> · Last modified: 2018/10/31 21:22 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>tutorial/synthesis/buck/start.txt</bdi> · Last modified: 2018/12/18 14:53 by <bdi>victor</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -711,7 +719,7 @@ Download all the Workcraft models discussed in this tutorial here:
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href="start.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Export Page (Siteexport)"><span>Export Page</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="start.html"  class="action siteexport_mapid" title="Show Map-ID"" data-mapid="start" onclick="copyMapIDToClipBoard.call(this); return false;"><span>Copy Map-ID: <span class="mapID" data-done="Done.">start</span></span></a></li>                    </ul>
+                        <li><a href="start.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="start.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="start.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="start.html"  class="action export_pdf" rel="nofollow" title="Export to PDF"><span>Export to PDF</span></a></li><li class="plugin_move_page"><a href="start.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="start.html"  class="action siteexport_addpage" title="Export Page (Siteexport)"><span>Export Page</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="start.html"  class="action siteexport_mapid" title="Show Map-ID"" data-mapid="start" onclick="copyMapIDToClipBoard.call(this); return false;"><span>Copy Map-ID: <span class="mapID" data-done="Done.">start</span></span></a></li>                    </ul>
                 </div>
                         </div>
 -->
@@ -735,7 +743,7 @@ Download all the Workcraft models discussed in this tutorial here:
             src="../../lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
     </div>
     <div class="userInfo">
-        Logged in as:: danil    </div>
+        Logged in as:: workcraft    </div>
 -->
 </div></div><!-- /footer -->
 

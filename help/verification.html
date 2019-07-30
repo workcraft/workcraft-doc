@@ -5,7 +5,7 @@
     <title>help:verification - Workcraft</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <meta name="generator" content="DokuWiki"/>
-<meta name="robots" content="noindex,nofollow"/>
+<meta name="robots" content="index,follow"/>
 <meta name="keywords" content="help,verification"/>
 <link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="Workcraft"/>
 <link rel="start" href="verification.html"/>
@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://workcraft.org/help/verification"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[danilovesky@gmail.com|Danil Sokolov]] 2018/10/31 22:05//';var JSINFO = {"id":"help:verification","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_slider":{"width":800,"mode":"horizontal","infiniteLoop":true,"hideControlOnEnd":false,"speed":500,"easing":null,"slideMargin":0,"startSlide":0,"randomStart":false,"captions":false,"ticker":false,"tickerHover":false,"adaptiveHeight":false,"adaptiveHeightSpeed":500,"video":false,"useCSS":true,"preloadImages":"visible","responsive":true,"pager":true,"pagerType":"full","pagerShortSeparator":"\/","controls":true,"nextText":"Next","prevText":"Prev","autoControls":false,"startText":"Start","stopText":"Stop","autoControlsCombine":false,"auto":false,"pause":4000,"autoStart":true,"autoDirection":"next","autoHover":false,"autoDelay":0,"minSlides":1,"maxSlides":1,"moveSlides":0,"slideWidth":0,"touchEnabled":true,"swipeThreshold":50,"oneToOneTouch":true,"preventDefaultSwipeX":true,"preventDefaultSwipeY":false},"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[support@workcraft.org| ]] 2019/07/30 12:25//';var JSINFO = {"id":"help:verification","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:verification" /><input type="hidden" name="sectok" value="a4f75f5ce73b63f3e031d62c54ace9c0" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:verification" /><input type="hidden" name="sectok" value="975eba28886346d0383959389f072ebf" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="verification.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="verification.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="verification.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -123,11 +123,26 @@ Most STGs should satisfy the following properties (can be checked via <em>Verifi
 
 <ul>
 <li class="level"><div class="li">
- <strong>Mutex place implementability</strong> – surrounding signals of an <em>arbitrating choice</em> place that is tagged as a <em>mutex</em> must follow the MUTEX protocol. (In this case the place can be implemented by a MUTEX that can correctly handle the metastable behaviour associated with arbitration.)
+ <strong>Mutex place implementability</strong> – surrounding signals of an <em>arbitrating choice</em> place that is tagged as a <em>mutex</em> must follow the MUTEX protocol. (In this case the place can be implemented by a MUTEX that can correctly handle the metastable behaviour associated with arbitration.) Essentially, Worckcraft looks at the transitions around a mutex place, and tries to work out which signals are the grants and which signals are the requests. Then it tries to verify whether the grants can be correctly implemented by a mutex taking the requests (and no other signals!) as inputs. E.g. suppose the tool speculates that the requests are r1 and r2 and the grants are g1 and g2. Then it formally verifies the following properties, where ⇒ is logic implication and <code>nxt</code> is the next-state function of a signal, i.e. <code>nxt(g1) = g1 xor enabled(g1)</code>:
 </div></li>
 </ul>
 
-<ul>
+<div class="wrap_center wrap_round wrap_box plugin_wrap" style="width: 90%;"><pre class="code"> // if r1 is high and g2 is low than g1 is either
+ // already high or enabled to become high
+ r1&amp;~g2 ⇒ nxt(g1)
+ // if r1 is low then g1 is either low or enabled to become low
+ ~r1 ⇒ ~nxt(g1)
+ // if r2 and g2 are high then g1 is either low or 
+ // enabled to become low - note that this allows
+ // for both early-release and late-release protocols
+ r2&amp;g2 ⇒ ~nxt(g1)
+ // the symmetric properties for nxt(g2):
+ r2&amp;~g1 ⇒ nxt(g2)
+ ~r2 ⇒ ~nxt(g2)
+ r1&amp;g1 ⇒ ~nxt(g2)
+ // the mutual exclusion of the critical sections
+ ~( (r1&amp;g1) &amp; (r2&amp;g2) )</pre>
+</div><ul>
 <li class="level"><div class="li">
  <strong>Delay insensitive interface</strong> – If in some reachable marking the <abbr title="Signal Transition Graph">STG</abbr> can fire one input transition after another, then it should be possible to fire these inputs in the reverse order as well, i.e. these inputs should be concurrent. Intuitively, such inputs can be reordered without breaking the circuit.
 </div></li>
@@ -208,7 +223,7 @@ These properties are rather weak – e.g. a circuit accepting all inputs and not
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/verification.txt</bdi> · Last modified: 2018/10/31 13:55 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>help/verification.txt</bdi> · Last modified: 2018/11/12 17:02 by <bdi>victor</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -221,7 +236,7 @@ These properties are rather weak – e.g. a circuit accepting all inputs and not
                             <h3 class="a11y">Page Tools</h3>
                 <div class="tools">
                     <ul>
-                        <li><a href="verification.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="verification.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="verification.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li class="plugin_move_page"><a href="verification.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="verification.html"  class="action siteexport_addpage" title="Export Page (Siteexport)"><span>Export Page</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="verification.html"  class="action siteexport_mapid" title="Show Map-ID"" data-mapid="verification" onclick="copyMapIDToClipBoard.call(this); return false;"><span>Copy Map-ID: <span class="mapID" data-done="Done.">verification</span></span></a></li>                    </ul>
+                        <li><a href="verification.html"  class="action edit" accesskey="e" rel="nofollow" title="Edit this page [E]"><span>Edit this page</span></a></li><li><a href="verification.html"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="verification.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="verification.html"  class="action export_pdf" rel="nofollow" title="Export to PDF"><span>Export to PDF</span></a></li><li class="plugin_move_page"><a href="verification.html"><span>Rename Page</span></a></li><li><a href="#dokuwiki__top"  class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li><li><a href="verification.html"  class="action siteexport_addpage" title="Export Page (Siteexport)"><span>Export Page</span></a></li><li><a href="javascript:void(0);" class="fold_unfold_all" onclick="fold_unfold_all();" rel="nofollow" title="Fold/unfold all"><span>Fold/unfold all</span></a></li><li><a href="verification.html"  class="action siteexport_mapid" title="Show Map-ID"" data-mapid="verification" onclick="copyMapIDToClipBoard.call(this); return false;"><span>Copy Map-ID: <span class="mapID" data-done="Done.">verification</span></span></a></li>                    </ul>
                 </div>
                         </div>
 -->
@@ -245,7 +260,7 @@ These properties are rather weak – e.g. a circuit accepting all inputs and not
             src="lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
     </div>
     <div class="userInfo">
-        Logged in as:: danil    </div>
+        Logged in as:: workcraft    </div>
 -->
 </div></div><!-- /footer -->
 
