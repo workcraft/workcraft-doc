@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://workcraft.org/help/backend/start"/>
 <link rel="stylesheet" type="text/css" href="../lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help:backend';var SIG=' --- //[[support@workcraft.org| ]] 2019/07/30 12:25//';var JSINFO = {"id":"help:backend:start","namespace":"help:backend","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help:backend';var SIG=' --- //[[support@workcraft.org| ]] 2020/06/16 09:40//';var JSINFO = {"id":"help:backend:start","namespace":"help:backend","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:backend:start" /><input type="hidden" name="sectok" value="bc98b4d2dbbac772509001815c8e315c" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:backend:start" /><input type="hidden" name="sectok" value="b8eeb658fc2b34604e7ef6ba2394eb8d" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -213,14 +213,15 @@ Advanced options:
 
 <h2 id="mpsat_command_line_options">MPSat command line options</h2>
 <pre class="code">Usage:
-  mpsat mode [options] inputfilename [outputfilename]
+    mpsat &lt;mode&gt; [&lt;options&gt;] [&lt;in_file&gt;] [&lt;out_file&gt;]
 
-Modes:
-  Reachability-like properties checking modes:
+The &lt;mode&gt; is one of the following:
     -D    Deadlock checking.
-    -F    Find a reachable marking satisfying a given REACH predicate.
-    -Fs   Find a reachable STG state satisfying a given REACH predicate.
+  Reachability-like properties checking modes:
+    -F    Find a configuration satisfying a given REACH predicate.
     -Fa   Check an SVA-like assertion (a global invariant).
+    -Fe   Like -F but assumes an STG unfolding and enabledness via dummies.
+    -Fs   Like -Fe, but considers only configurations without maximal dummies.
   Encoding conflicts detection and resolution modes:
     -C    CSC conflict detection.
     -N    Normalcy property checking mode.
@@ -232,19 +233,20 @@ Modes:
     -S    Derive standard-C implementation.
     -T    Logic decomposition and technology mapping (experimental).
 
-Options:
+The &lt;options&gt; are as follows:
   -! - Disable branching on auxiliary variables.
   -$N - Switch to SAT solver N (0-1).
   -@ - Output configurations rather than traces.
   -a[N] - Compute all solutions (might be slow).
   -b - Generate backward conflict constraints.
-  -c[s|l|COEFF=EXPR] - Specifies the coefficients for the cost function.
+  -c(s|l|COEFF=EXPR) - Specifies the coefficients for the cost function.
   -d string - Specifies additional mode-dependent data.
   -f - Looking for a solution minimising the cost function (might be slow).
   -g[[!][N]] - Specifies gates/latches used for logic decomposition.
   -l[+|-] - Specifies whether to generate inclusion constraints.
   -mN - Using method N (1-9).
   -pN - Controls the use of parallel (concurrent) inserions.
+  -q - Quit early, after checking the predicate syntax.
   -r - Allows to use concurrency reduction for encoding conflict resolution.
   -s - Store the CNF formula for an external SAT solver.
   -t - Perform logic decomposition down to the gate/latch level.
@@ -252,20 +254,28 @@ Options:
   -w[N] - Wait for user input before exiting (prevents the window from closing).
   -x - Saves the results in mpsat.xml.</pre>
 <p><a class="folder" href="#folded_help:backend:start_1">Detailed help </a></p><div class="folded hidden" id="folded_help:backend:start_1"><pre class="code">Usage:
-  mpsat mode [options] inputfilename [outputfilename]
+    mpsat &lt;mode&gt; [&lt;options&gt;] [&lt;in_file&gt;] [&lt;out_file&gt;]
 
-Modes:
-  Reachability-like properties checking modes:
+&lt;in_file&gt; is compulsory unless option -q is given.
+If &lt;out_file&gt; is omitted then stdout is used.
+
+If -h is specified then full help is printed. If no
+command-line parameters are given then brief help is printed.
+
+The &lt;mode&gt; is one of the following:
     -D    Deadlock checking.
-    -F    Find a reachable marking satisfying a given REACH predicate.
-    -Fs   Find a reachable STG state satisfying a given REACH predicate.
+  Reachability-like properties checking modes:
+    -F    Find a configuration satisfying a given REACH predicate.
     -Fa   Check an SVA-like assertion (a global invariant).
-    The -Fs mode differs from -F in the following ways:
-    * only configurations without maximal dummy events are explored;
+    -Fe   Like -F but assumes an STG unfolding and enabledness via dummies.
+    -Fs   Like -Fe, but considers only configurations without maximal dummies.
+    The -Fe mode differs from -F in the following ways:
     * REACH operators referring to STG signals become available;
     * the semantics of REACH operator &#039;@&#039; checking the enabledness status
       of an event/transition/signal changes: in addition to the usual Petri
       net enabledness, an entity can be enabled via a sequence of dummies.
+    The -Fs mode differs from -Fe in the following way:
+    * only configurations without maximal dummy events are explored.
     The -Fa mode differs from -Fs in the following ways:
     * the syntax is SVA-like, i.e. a Boolean formula that can refer only to
       values of STG signals;
@@ -283,17 +293,17 @@ Modes:
     -T    Logic decomposition and technology mapping (experimental).
 At most one the listed modes may be specified.
 
-For the modes -C, -E, -Fs, -Fa, -G, -N, -R, -S, -T, -U the
-file inputfilename must be an STG unfolding. If the
+For the modes -C, -E, -Fa, -Fe, -Fs, -G, -N, -R, -S, -T, -U
+the file &lt;in_file&gt; must be an STG unfolding. If the
 legacy *.mci format is used then transition names must
 carry information about the corresponding signal; the
-format is [prefix.]identifier[+|-][/number], where prefix is
+format is [prefix:]identifier[+|-][/number], where prefix is
 either of O,I,i (for outputs, internal signals, and inputs,
 respectively; dummies have no prefix),
-e.g. O.x-/1, I.csc+/1, i.a-, dum/1, t1. This format is
+e.g. O:x-/1, I:csc+/1, i:a-, dum/1, t1. This format is
 produced by the PUNF tool. Alternatively, PUNF can produce new
 PNML-based format *.pnml or *.pnml.gz, which stores this
-in a more elegant way information, and also fixes other issues.
+information in a more elegant way, and also fixes other issues.
 The original STG must be consistent. Moreover, it should
 satisfy the CSC property for any of the synthesis modes (-E, -G, -S, -T).
 
@@ -316,7 +326,7 @@ Normalcy violation can be caused by the following factors:
     event for which a hypothesis was made, and the other two to
     show the violation of normalcy by definition.
 
-Options:
+The &lt;options&gt; are as follows:
   -! - Disable branching on auxiliary variables.
   Some of the variables in the formula might be functions of
   other variables, so it is possible not to branch on them
@@ -330,9 +340,9 @@ Options:
   This option is available in all modes.
 
   -@ - Output configurations rather than traces.
-  The numbering of events starts from 1.
+  The numbering of events starts from 0.
   This option is available in the following modes:
-  -C, -D, -F, -Fs, -Fa, -N, -U; it is silently ignored in any other mode.
+  -C, -D, -F, -Fa, -Fe, -Fs, -N, -U; it is silently ignored in any other mode.
 
   -a[N] - Compute all solutions (might be slow).
   The search does not stop after the first encountered solution,
@@ -343,7 +353,7 @@ Options:
   is just an approximate value, the actual number of computed
   solutions can slightly differ from N.
   This option is available in the following modes:
-  -C, -D, -F, -Fs, -Fa, -N, -R, -T, -U. It is an error to specify this
+  -C, -D, -F, -Fa, -Fe, -Fs, -N, -R, -T, -U. It is an error to specify this
   option in any other mode. This option must not be specified
   together with the -f option.
 
@@ -354,7 +364,7 @@ Options:
   can in certain cases improve the performance.
   This option is silently ignored if the input file is not a merged process.
 
-  -c[s|l|COEFF=EXPR] - Specifies the coefficients for the cost function.
+  -c(s|l|COEFF=EXPR) - Specifies the coefficients for the cost function.
   This option is valid only in the encoding conflict resolution (-R) and
   logic decomposition and technology mapping (-T) modes and it is silently
   ignored unless also the -f option is specified.
@@ -389,17 +399,16 @@ Options:
     #s - the total number of signals (excluding dummies)
     #p - the number of places
     #t - the number of transitions
-  They must evaluate to non-negative integers; the default expressions are:
-      csc=#s*8, usc=#s*4, del=#s*2, trig=#s*1, seq=#s*4, conc=#s*8, lock=50.
+  They must evaluate to non-negative integers.
   If -cs or -cl is specified then pre-defined mode-dependent expressions are
   used, which heuristically minimise the number of signals/literals.
   If several -c options are specified, they are processed from left to right.
 
   -d string - Specifies additional mode-dependent data.
   This option is available in the following modes:
-    -F[s] (extended reachability analysis) - the string must either
-       contain a REACH proterty the target state should satisfy or be of
-       the form @filename to name the file containing a REACH proterty.
+    -F, -Fa, -Fe, -Fs (extended reachability analysis) - the string must
+       either contain a proterty the target state should satisfy or be
+       of the form @filename to name the file containing a proterty.
     -T (logic decomposition and technology mapping) - the string must
        name the file containing a gate library in the GENLIB format.
   It is an error to specify this option in any other mode.
@@ -409,7 +418,7 @@ Options:
   is minimised, though the criterion is different in the
   normalcy (-N) and encoding conflict resolution (-R) modes.
   This option is available in the following modes:
-  -C, -D, -F, -Fs, -Fa, -N, -R, -T, -U. It is an error to specify this
+  -C, -D, -F, -Fa, -Fe, -Fs, -N, -R, -T, -U. It is an error to specify this
   option in any other mode. This option must not be specified
   together with the -a option.
 
@@ -432,7 +441,7 @@ Options:
   prefixes. If this option is not specified, inclusion
   constraints are generated iff the prefix is conflict-free.
   This option is available in the following modes:
-  -C, -E, -Fs, -Fa, -G, -N, -R, -S, -T, -U. It is an error to specify
+  -C, -E, -Fa, -Fe, -Fs, -G, -N, -R, -S, -T, -U. It is an error to specify
   this option in any other mode.
 
   -mN - Using method N (1-9).
@@ -458,6 +467,14 @@ Options:
   and logic decomposition and technology mapping (-T) modes.
   It is an error to specify this option in any other mode.
   The default is -p0.
+
+  -q - Quit early, after checking the predicate syntax.
+  This option is valid only in the reachability-like properties checking modes
+  (-F, -Fa, -Fe, -Fs). In other modes a warning is issued and this option is
+  ignored. The &lt;in_file&gt; does not have to be supplied if this option is given,
+  but if it is, in addition to checking the predicate syntax, the predicate is
+  also expanded using the unfolding prefix to check the correctness of
+  references in the predicate. The actual verification is not performed.
 
   -r - Allows to use concurrency reduction for encoding conflict resolution.
   This option is valid only in the encoding conflict resolution (-R) mode.
@@ -497,8 +514,6 @@ Options:
 
 <h2 id="punf_command_line_options">Punf command line options</h2>
 <pre class="code">Usage:
-     punf [-h]
-or
      punf [options] [-f=]filename
 
 Options (may be given in any order):
@@ -511,8 +526,8 @@ Options (may be given in any order):
 -$n    Switch to SAT solver n (0-1).
          If n=0 then zChaff is used.
          If n=1 then MiniSAT is used (default).
--@[n]  Using ordering n (0-4).
-         Specifies the ordering on configurations of the unfolding.
+-@[n]  Using adequate order n (0-4).
+         Specifies the adequate order on configurations of the unfolding.
          If n is not specified or -@ is not used then the default
          value n=3 (for prefixes) or n=4 (for merged processes) is used.
          If n=0 then the set inclusion is used.
@@ -541,8 +556,10 @@ Options (may be given in any order):
        Aa an experimental feature, high-level nets are supported.
        For now, only strictly safe nets are allowed, and there are
        some further restrictions, described in the manual.
--L     LTL mode.
-       The input net must be a product of Buechi automaton and a system.
+-L=filename
+       Switches on the LTL-X verification mode. The file must be in
+       the HOA format (http://adl.github.io/hoaf/) and specify a Buechi
+       automaton for an LTL-X property. The adequate order must be -@3.
 -m[=filename]
        Specifies the name of the resulting file, whose extension also
        specifies the format. It can be either the legacy *.mci format
@@ -555,7 +572,28 @@ Options (may be given in any order):
        PNML-based format. If the filename is not specified (i.e. just -m
        is given) then no output file is created.
 -N=n   Specifies the number of working threads (by default, it is equal
-       to the number of processors). (Currently ignored if -M is specified.)</pre>
+       to the number of processors). (Currently ignored if -M is specified.)
+-n=n   Abandon the concurrency relation and switch to a slower algorithm
+       after the specified number of non-cut-off events is generated. The
+       default value is 50000. If your computer has a lot of
+       memory, increase it to improve the performance. If the value is 0, the
+       concurrency relation is not created. (Ignored if -M is specified.)
+-p     Print running statistics as multiple lines (to estimate progress).
+-q     Print running statistics (to estimate progress).
+-r     Replicate places with multiple self-loops, so that each transition
+       reading a particular place gets its own copy of that place. This
+       transformation can significantly reduce the prefix size for nets
+       with many self-loops.
+-s     Print final statistics.
+-t     Print the running time.
+-vN    Verbosity level (0&lt;=N&lt;=9). The default is 0.
+-w[N]  Wait for user input before exiting (prevents the window from closing).
+       The possible values of N:
+         0 - do not wait for user input, exit immediately;
+         1 - wait for user input only if there are errors;
+         2 - wait for user input only if there are errors or warnings;
+         3 - always wait for user input.
+       The default is -w0, and -w is equivalent to -w3.</pre>
 </div>
 <div class="plugin_include_content plugin_include__help:backend:pcomp" id="plugin_include__help__backend__pcomp">
 
@@ -661,7 +699,7 @@ Options:
             src="../lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
     </div>
     <div class="userInfo">
-        Logged in as:: workcraft    </div>
+        Logged in as: workcraft    </div>
 -->
 </div></div><!-- /footer -->
 

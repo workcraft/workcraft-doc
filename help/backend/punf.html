@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://workcraft.org/help/backend/punf"/>
 <link rel="stylesheet" type="text/css" href="../lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help:backend';var SIG=' --- //[[support@workcraft.org| ]] 2019/07/30 12:25//';var JSINFO = {"id":"help:backend:punf","namespace":"help:backend","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help:backend';var SIG=' --- //[[support@workcraft.org| ]] 2020/06/16 09:40//';var JSINFO = {"id":"help:backend:punf","namespace":"help:backend","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:backend:punf" /><input type="hidden" name="sectok" value="d79eb5046e2f2de4d9a4be4cfb948033" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:backend:punf" /><input type="hidden" name="sectok" value="316ccaada595089ff594fccd9de0b4b7" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="punf.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="punf.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="punf.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -89,8 +89,6 @@
 <h1 id="punf_command_line_options">Punf command line options</h1>
 <div class="level1">
 <pre class="code">Usage:
-     punf [-h]
-or
      punf [options] [-f=]filename
 
 Options (may be given in any order):
@@ -103,8 +101,8 @@ Options (may be given in any order):
 -$n    Switch to SAT solver n (0-1).
          If n=0 then zChaff is used.
          If n=1 then MiniSAT is used (default).
--@[n]  Using ordering n (0-4).
-         Specifies the ordering on configurations of the unfolding.
+-@[n]  Using adequate order n (0-4).
+         Specifies the adequate order on configurations of the unfolding.
          If n is not specified or -@ is not used then the default
          value n=3 (for prefixes) or n=4 (for merged processes) is used.
          If n=0 then the set inclusion is used.
@@ -133,8 +131,10 @@ Options (may be given in any order):
        Aa an experimental feature, high-level nets are supported.
        For now, only strictly safe nets are allowed, and there are
        some further restrictions, described in the manual.
--L     LTL mode.
-       The input net must be a product of Buechi automaton and a system.
+-L=filename
+       Switches on the LTL-X verification mode. The file must be in
+       the HOA format (http://adl.github.io/hoaf/) and specify a Buechi
+       automaton for an LTL-X property. The adequate order must be -@3.
 -m[=filename]
        Specifies the name of the resulting file, whose extension also
        specifies the format. It can be either the legacy *.mci format
@@ -147,14 +147,35 @@ Options (may be given in any order):
        PNML-based format. If the filename is not specified (i.e. just -m
        is given) then no output file is created.
 -N=n   Specifies the number of working threads (by default, it is equal
-       to the number of processors). (Currently ignored if -M is specified.)</pre>
+       to the number of processors). (Currently ignored if -M is specified.)
+-n=n   Abandon the concurrency relation and switch to a slower algorithm
+       after the specified number of non-cut-off events is generated. The
+       default value is 50000. If your computer has a lot of
+       memory, increase it to improve the performance. If the value is 0, the
+       concurrency relation is not created. (Ignored if -M is specified.)
+-p     Print running statistics as multiple lines (to estimate progress).
+-q     Print running statistics (to estimate progress).
+-r     Replicate places with multiple self-loops, so that each transition
+       reading a particular place gets its own copy of that place. This
+       transformation can significantly reduce the prefix size for nets
+       with many self-loops.
+-s     Print final statistics.
+-t     Print the running time.
+-vN    Verbosity level (0&lt;=N&lt;=9). The default is 0.
+-w[N]  Wait for user input before exiting (prevents the window from closing).
+       The possible values of N:
+         0 - do not wait for user input, exit immediately;
+         1 - wait for user input only if there are errors;
+         2 - wait for user input only if there are errors or warnings;
+         3 - always wait for user input.
+       The default is -w0, and -w is equivalent to -w3.</pre>
 
 </div>
 
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/backend/punf.txt</bdi> · Last modified: 2018/10/31 13:32 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/backend/punf.txt</bdi> · Last modified: 2020/06/09 18:29 by <bdi>danil</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -191,7 +212,7 @@ Options (may be given in any order):
             src="../lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
     </div>
     <div class="userInfo">
-        Logged in as:: workcraft    </div>
+        Logged in as: workcraft    </div>
 -->
 </div></div><!-- /footer -->
 

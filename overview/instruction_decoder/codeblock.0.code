@@ -1,3 +1,0 @@
- LOAD = PCIU -> IFU + MAU
- ADD  = PCIU -> IFU + ALU
- PUSH = PCIU -> IFU + ALU -> MAU

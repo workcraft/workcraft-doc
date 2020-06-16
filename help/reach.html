@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://workcraft.org/help/reach"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[support@workcraft.org| ]] 2019/07/30 12:25//';var JSINFO = {"id":"help:reach","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[support@workcraft.org| ]] 2020/06/16 09:41//';var JSINFO = {"id":"help:reach","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:reach" /><input type="hidden" name="sectok" value="4b505222591e22a44926686ad290b437" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:reach" /><input type="hidden" name="sectok" value="baf3fa4f8be7084f45dee588c000830c" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="reach.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="reach.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="reach.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -102,6 +102,7 @@
 <li class="level1"><div class="li"><a href="#multi-operand_operators">Multi-operand operators</a></div></li>
 <li class="level1"><div class="li"><a href="#iterators">Iterators</a></div></li>
 <li class="level1"><div class="li"><a href="#name_declaration">Name declaration</a></div></li>
+<li class="level1"><div class="li"><a href="#operator_precedence_and_associativity">Operator precedence and associativity</a></div></li>
 </ul>
 </div>
 </div>
@@ -129,10 +130,13 @@ The language REACH is used for specifying reachability properties. Using a langu
 <p>
 For example, the following alternative REACH predicates express the deadlock property:
 </p>
-<pre class="code reach">forall t in TRANSITIONS { 
-  exists p in pre t { ~$p }
-}</pre>
-<pre class="code reach">forall t in tran EVENTS { ~@t }</pre>
+<pre class="code reach"><span class="co1">// each transition has a place in its preset that is not marked</span>
+<span class="co1">// (and so the transition is not enabled)</span>
+<span class="kw2">forall</span> t <span class="kw2">in</span> <span class="kw3">TRANSITIONS</span> <span class="br0">&#123;</span> 
+  <span class="kw2">exists</span> p <span class="kw2">in</span> <span class="kw1">pre</span> t <span class="br0">&#123;</span> <span class="sy0">~$</span>p <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+<pre class="code reach"><span class="co1">// all transitions are not enabled</span>
+<span class="kw2">forall</span> t <span class="kw2">in</span> <span class="kw3">TRANSITIONS</span> <span class="br0">&#123;</span> <span class="sy0">~@</span>t <span class="br0">&#125;</span></pre>
 
 </div>
 
@@ -274,7 +278,7 @@ Built of English letters, digits and &#039;_&#039;, not starting with a digit, c
 <div class="level2">
 <ul>
 <li class="level"><div class="li">
- <strong>fail</strong> string – creates a special failure expression to report errors; has a complicated semantics
+ <strong>fail</strong> string – Creates a special failure expression to report errors; has a complicated semantics
 </div></li>
 <li class="level"><div class="li">
  <strong>$</strong> event or <strong>$</strong> condition or <strong>$</strong> place or <strong>$</strong> signal – Interpreted on the configuration C to be reached: returns true iff the event is in C, or the condition is in Cut(C), or the place is in Mark(C), or the signal is 1 in Code(C)
@@ -485,7 +489,7 @@ Built of English letters, digits and &#039;_&#039;, not starting with a digit, c
 <p>
 The <strong>s.t.</strong> clause is optional. The <code>var</code> can be replaced by a tuple pattern, e.g.:
 </p>
-<pre class="code reach"><span class="kw2">forall</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>x,<span class="br0">&#41;</span>,,y<span class="br0">&#41;</span> <span class="kw2">in</span> <span class="br0">&#123;</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="nu0">1</span>,<span class="nu0">2</span><span class="br0">&#41;</span>,<span class="nu0">3</span>,<span class="nu0">4</span><span class="br0">&#41;</span>, <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="nu0">5</span>,<span class="nu0">6</span><span class="br0">&#41;</span>,<span class="nu0">7</span>,<span class="nu0">8</span><span class="br0">&#41;</span> <span class="br0">&#125;</span> <span class="br0">&#123;</span> x<span class="sy0">&lt;</span>y <span class="br0">&#125;</span></pre>
+<pre class="code reach"><span class="kw2">forall</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>x,<span class="br0">&#41;</span>,,y<span class="br0">&#41;</span> <span class="kw2">in</span> <span class="br0">&#123;</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="nu0">1</span>,<span class="nu0">2</span><span class="br0">&#41;</span>,<span class="nu0">3</span>,<span class="nu0">4</span><span class="br0">&#41;</span>, <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="nu0">5</span>,<span class="nu0">6</span><span class="br0">&#41;</span>,<span class="nu0">7</span>,<span class="nu0">8</span><span class="br0">&#41;</span> <span class="br0">&#125;</span> <span class="br0">&#123;</span> x<span class="sy0">&lt;</span>y <span class="br0">&#125;</span>  <span class="coMULTI">/* evaluates to true as 1&lt;4 and 5&lt;8 */</span></pre>
 
 <p>
 The identifiers within a tuple pattern must be distinct.
@@ -504,10 +508,58 @@ The identifiers within a tuple pattern must be distinct.
 
 </div>
 
+<h2 id="operator_precedence_and_associativity">Operator precedence and associativity</h2>
+<div class="level2">
+
+<p>
+The precedence of operators in the decreasing order is as follows. The associativity is specified in parentheses wherever relevant. Some binary operators are non-associative, i.e. A <strong>op</strong> B <strong>op</strong> C is a syntax error.
+</p>
+<ul>
+<li class="level"><div class="li">
+ postfix unary operators – these are string and tuple indexing;
+</div></li>
+<li class="level"><div class="li">
+ prefix unary operators;
+</div></li>
+<li class="level"><div class="li">
+ *, /, % (left-associative)
+</div></li>
+<li class="level"><div class="li">
+ +, -, \ (left-associative)
+</div></li>
+<li class="level"><div class="li">
+ <strong>in</strong> (non-associative)
+</div></li>
+<li class="level"><div class="li">
+ =, !=, &gt;, &lt;, &gt;=, &lt;= (non-associative)
+</div></li>
+<li class="level"><div class="li">
+ &amp; (left-associative)
+</div></li>
+<li class="level"><div class="li">
+ ^ (left-associative)
+</div></li>
+<li class="level"><div class="li">
+ | (left-associative)
+</div></li>
+<li class="level"><div class="li">
+ -&gt; (right-associative)
+</div></li>
+<li class="level"><div class="li">
+ &lt;-&gt; (left-associative)
+</div></li>
+<li class="level"><div class="li">
+ ?: (right-associative), i.e. A ? B : C ? D : E is parsed as A ? B : (C ? D : E) rather than (A ? B : C) ? D : E
+</div></li>
+</ul>
+
+
+</div>
+
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/reach.txt</bdi> · Last modified: 2018/12/06 14:35 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>help/reach.txt</bdi> · Last modified: 2019/11/04 11:03 by <bdi>victor</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -544,7 +596,7 @@ The identifiers within a tuple pattern must be distinct.
             src="lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
     </div>
     <div class="userInfo">
-        Logged in as:: workcraft    </div>
+        Logged in as: workcraft    </div>
 -->
 </div></div><!-- /footer -->
 

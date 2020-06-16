@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://workcraft.org/help/core/property_editor"/>
 <link rel="stylesheet" type="text/css" href="../lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help:core';var SIG=' --- //[[support@workcraft.org| ]] 2019/07/30 12:25//';var JSINFO = {"id":"help:core:property_editor","namespace":"help:core","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help:core';var SIG=' --- //[[support@workcraft.org| ]] 2020/06/16 09:41//';var JSINFO = {"id":"help:core:property_editor","namespace":"help:core","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:core:property_editor" /><input type="hidden" name="sectok" value="8883564db38e63574c98c948772b06bf" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:core:property_editor" /><input type="hidden" name="sectok" value="d75f93bf4d387bbe8a12eb65b8139fc4" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="property_editor.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="property_editor.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="property_editor.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -104,20 +104,24 @@
 <div class="level1">
 
 <p>
-The Property editor panel enables displaying and modifying the attributes of a model and its elements. It has four distinctive modes of operation:
+The Property editor panel enables displaying and modifying the attributes of a model and its elements or items. It has four distinctive modes of operation:
 </p>
 <ul>
 <li class="level"><div class="li">
- <strong>Element properties.</strong> When a single element is selected its properties are displayed and are available for editing. This mode is denoted by <strong>[single element]</strong> line in the property editor title.
+ <strong>Item properties</strong><br/>
+When a single item is selected its properties are displayed and are available for editing. This mode is denoted by <strong>[single item]</strong> line in the property editor title.
 </div></li>
 <li class="level"><div class="li">
- <strong>Combined properties.</strong> When a group of elements is selected a “combined” list of their properties is displayed. Those properties which have the same name and class are combined under one editor item and its modification will propagate too all selected components of relevant class. If the initial value of the combined property cannot be agreed between the selected components an empty grey box is shown. This mode is denoted by <strong>[<em>N</em> selected elements]</strong> line in the property editor title, where <em>N</em> is the number of selected elements whose combined properties are displayed.
+ <strong>Combined properties</strong><br/>
+When a group of items is selected a “combined” list of their properties is displayed. Those properties which have the same name and class are combined under one editor item and its modification will propagate too all selected components of relevant class. If the initial value of the combined property cannot be agreed between the selected components an empty grey box is shown. This mode is denoted by <strong>[<em>N</em> selected items]</strong> line in the property editor title, where <em>N</em> is the number of selected items whose combined properties are displayed.
 </div></li>
 <li class="level"><div class="li">
- <strong>Model properties.</strong> When no elements is selected the model-specific properties are displayed. This can be seen in the Policy Net plugin where a list of bundles is shown with a possibility to edit their names, colours and the list of bundled transitions. This mode is denoted by <strong>[model]</strong> line in the property editor title.
+ <strong>Model properties</strong><br/>
+When nothing is selected, the model-specific properties are displayed. This can be seen in the <em>Policy Net</em> plugin where a list of bundles is shown with a possibility to edit their names, colours and the list of bundled transitions. This mode is denoted by <strong>[model]</strong> line in the property editor title.
 </div></li>
 <li class="level"><div class="li">
- <strong>Template properties.</strong> When a node generator or connection tool is activated, their <em>template</em> properties  are displayed and can be modified. All all subsequently created nodes or connections inherent these template properties. To reset the template properties for a particular tool to their default settings just double-activate the tool (i.e. activate the tool while it is already selected). This mode is denoted by <strong>[template]</strong> line in the property editor title.
+ <strong>Template properties</strong><br/>
+When a node generator or connection tool is activated, their <em>template</em> properties  are displayed and can be modified. All all subsequently created nodes or connections inherent these template properties. To reset the template properties for a particular tool to their default settings just double-activate the tool (i.e. activate the tool while it is already selected). This mode is denoted by <strong>[template]</strong> line in the property editor title.
 </div></li>
 </ul>
 
@@ -136,28 +140,31 @@ The base list of properties depends on the element type but may be extended by t
 </p>
 <ul>
 <li class="level"><div class="li">
- <strong>X</strong> and <strong>Y</strong> - coordinates of the node relative to its container (a group or a root of the model)
+ <strong>Name</strong> – unique name of the node
 </div></li>
 <li class="level"><div class="li">
- <strong>Foreground color</strong> - color of the node borders
+ <strong>X</strong> and <strong>Y</strong> – coordinates of the node relative to its container (a group or a root of the model)
 </div></li>
 <li class="level"><div class="li">
- <strong>Fill color</strong> - color of the node background
+ <strong>Color</strong> – color of the node borders
 </div></li>
 <li class="level"><div class="li">
- <strong>Label</strong> - text of the node label
+ <strong>Fill color</strong> – color of the node background
 </div></li>
 <li class="level"><div class="li">
- <strong>Label positioning</strong> - location of the label text relative to the node 
+ <strong>Label</strong> – text of the node label
 </div></li>
 <li class="level"><div class="li">
- <strong>Label color</strong> - color of the label text
+ <strong>Label positioning</strong> – location of the label text relative to the node 
 </div></li>
 <li class="level"><div class="li">
- <strong>Name positioning</strong> - location of the unique ID relative to the node
+ <strong>Label color</strong> – color of the label text
 </div></li>
 <li class="level"><div class="li">
- <strong>Name color</strong> - color of the unique ID text
+ <strong>Name positioning</strong> – location of the unique ID relative to the node
+</div></li>
+<li class="level"><div class="li">
+ <strong>Name color</strong> – color of the unique ID text
 </div></li>
 </ul>
 
@@ -180,19 +187,22 @@ The base list of properties depends on the element type but may be extended by t
 </p>
 <ul>
 <li class="level"><div class="li">
- <strong>Line width</strong> - weight of the connection line
+ <strong>Line width</strong> – weight of the connection line
 </div></li>
 <li class="level"><div class="li">
- <strong>Arrow width</strong> - width of the arrow head
+ <strong>Arrow width</strong> – width of the arrow head
 </div></li>
 <li class="level"><div class="li">
- <strong>Arrow length</strong> - length of the connection arrow (none, small medium, large)
+ <strong>Arrow length</strong> – length of the connection arrow (none, small medium, large)
 </div></li>
 <li class="level"><div class="li">
- <strong>Connection type</strong> - type of connection line (Polyline or Bezier curve)
+ <strong>Connection type</strong> – type of connection line (Polyline or Bezier curve)
 </div></li>
 <li class="level"><div class="li">
- <strong>Scale mode</strong> - the way of scaling connection line when its adjacent nodes are moved (lock anchors, bind to components, proportional, stretched, adaptive)
+ <strong>Scale mode</strong> – the way of scaling connection line when its adjacent nodes are moved (lock anchors, bind to components, proportional, stretched, adaptive)
+</div></li>
+<li class="level"><div class="li">
+ <strong>Color</strong> – color of the node connection line
 </div></li>
 </ul>
 
@@ -207,19 +217,22 @@ The base list of properties depends on the element type but may be extended by t
 </p>
 <ul>
 <li class="level"><div class="li">
- <strong>X</strong> and <strong>Y</strong> - coordinates of the node relative to its container (a group or a root of the model)
+ <strong>X</strong> and <strong>Y</strong> – coordinates of the node relative to its container (a group or a root of the model)
 </div></li>
 <li class="level"><div class="li">
- <strong>Foreground color</strong> - color of the note borders
+ <strong>Color</strong> – color of the note borders
 </div></li>
 <li class="level"><div class="li">
- <strong>Fill color</strong> - color of the note background
+ <strong>Fill color</strong> – color of the note background
 </div></li>
 <li class="level"><div class="li">
- <strong>Label</strong> - text of the note
+ <strong>Label</strong> – text of the note
 </div></li>
 <li class="level"><div class="li">
- <strong>Label color</strong> - color of the text
+ <strong>Label color</strong> – color of the text
+</div></li>
+<li class="level"><div class="li">
+ <strong>Text alignment</strong> – horizontal alignment of the text
 </div></li>
 </ul>
 
@@ -234,7 +247,10 @@ The base list of properties depends on the element type but may be extended by t
 </p>
 <ul>
 <li class="level"><div class="li">
- <strong>X</strong> and <strong>Y</strong> - coordinates of the group relative to its container (a parent group or the graph root)
+ <strong>X</strong> and <strong>Y</strong> – coordinates of the group relative to its container (a parent group or the graph root)
+</div></li>
+<li class="level"><div class="li">
+ <strong>Is collapsed</strong> – collapse state of the group
 </div></li>
 </ul>
 
@@ -244,7 +260,7 @@ The base list of properties depends on the element type but may be extended by t
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/core/property_editor.txt</bdi> · Last modified: 2018/10/31 21:22 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/core/property_editor.txt</bdi> · Last modified: 2020/06/09 16:49 by <bdi>danil</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -281,7 +297,7 @@ The base list of properties depends on the element type but may be extended by t
             src="../lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
     </div>
     <div class="userInfo">
-        Logged in as:: workcraft    </div>
+        Logged in as: workcraft    </div>
 -->
 </div></div><!-- /footer -->
 

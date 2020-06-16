@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://workcraft.org/help/wtg/synthesisable"/>
 <link rel="stylesheet" type="text/css" href="../lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help:wtg';var SIG=' --- //[[support@workcraft.org| ]] 2019/07/30 12:25//';var JSINFO = {"id":"help:wtg:synthesisable","namespace":"help:wtg","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help:wtg';var SIG=' --- //[[support@workcraft.org| ]] 2020/06/16 09:41//';var JSINFO = {"id":"help:wtg:synthesisable","namespace":"help:wtg","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:wtg:synthesisable" /><input type="hidden" name="sectok" value="3245e3c770a87de6a12032e9323f8fa6" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:wtg:synthesisable" /><input type="hidden" name="sectok" value="403b658111d01d39bd1ff26ab2edf818" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="synthesisable.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="synthesisable.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="synthesisable.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -90,7 +90,7 @@
 <div class="level1">
 
 <p>
-Like other models for asynchronous circuit design, <abbr title="Waveform Transition Graph">WTG</abbr> allows to express behaviors that cannot be synthesised without making timing assumptions. For example, it is possible to design a D Flip-Flop by using <abbr title="Waveform Transition Graph">WTG</abbr>, but it is necessary to make timing assumptions in the form of <em>setup</em> and <em>hold</em> times. Having this large expressiveness is valuable to allow the design of a wider range of models, but having timing assumptions precludes the design from being speed-independent (SI). In this page we discuss the main problems that you might encounter while designing <abbr title="Waveform Transition Graph">WTG</abbr> and propose a set of guidelines to avoid designing a model that cannot be synthesised as a SI circuit.
+Like other models for asynchronous circuit design, <abbr title="Waveform Transition Graph">WTG</abbr> allows to express behaviours that cannot be synthesised without making timing assumptions. For example, it is possible to design a D Flip-Flop by using <abbr title="Waveform Transition Graph">WTG</abbr>, but it is necessary to make timing assumptions in the form of <em>setup</em> and <em>hold</em> times. Having this large expressiveness is valuable to allow the design of a wider range of models, but having timing assumptions precludes the design from being speed-independent (SI). In this page we discuss the main problems that you might encounter while designing <abbr title="Waveform Transition Graph">WTG</abbr> and propose a set of guidelines to avoid designing a model that cannot be synthesised as a SI circuit.
 </p>
 
 </div>
@@ -103,7 +103,7 @@ An irreducible conflict is a conflict between two states of the model that canno
 </p>
 
 <p>
-<img src="wtg-irreducible_conflict.svg" width="127" height="67" class="svgscaleinsert mediacenter" alt="wtg-irreducible_conflict.svg">
+<img src="wtg-irreducible_conflict.svg" width="127" height="67" class="svgscaleinsert mediacenter" alt="help:wtg:wtg-irreducible_conflict.svg">
 </p>
 
 <p>
@@ -119,7 +119,7 @@ Indeed, adding a timing assumption solves the problem. The following figure show
 </p>
 
 <p>
-<img src="wtg-timing_assumption.svg" width="149" height="90" class="svgscaleinsert mediacenter" alt="wtg-timing_assumption.svg">
+<img src="wtg-timing_assumption.svg" width="149" height="90" class="svgscaleinsert mediacenter" alt="help:wtg:wtg-timing_assumption.svg">
 </p>
 
 <p>
@@ -144,7 +144,7 @@ Following the previous rule prevents most irreducible conflicts, but those can s
 </p>
 
 <p>
-<img src="wtg-non_commutativity.svg" width="363" height="196" class="svgscaleinsert mediacenter" alt="wtg-non_commutativity.svg">
+<img src="wtg-non_commutativity.svg" width="363" height="196" class="svgscaleinsert mediacenter" alt="help:wtg:wtg-non_commutativity.svg">
 </p>
 
 <p>
@@ -169,7 +169,7 @@ The last type of irreducible conflicts that we discuss here are also related to 
 </p>
 
 <p>
-<img src="wtg-non_output_determinate.svg" width="363" height="196" class="svgscaleinsert mediacenter" alt="wtg-non_output_determinate.svg">
+<img src="wtg-non_output_determinate.svg" width="363" height="196" class="svgscaleinsert mediacenter" alt="help:wtg:wtg-non_output_determinate.svg">
 </p>
 
 <p>
@@ -185,7 +185,7 @@ Having these conflicts typically signals an error in the design itself. Avoid th
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/wtg/synthesisable.txt</bdi> · Last modified: 2018/11/13 16:02 by <bdi>danil</bdi></div>
+                                    <div class="docInfo"><bdi>help/wtg/synthesisable.txt</bdi> · Last modified: 2019/07/30 13:29 by <bdi>danil</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -222,7 +222,7 @@ Having these conflicts typically signals an error in the design itself. Avoid th
             src="../lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
     </div>
     <div class="userInfo">
-        Logged in as:: workcraft    </div>
+        Logged in as: workcraft    </div>
 -->
 </div></div><!-- /footer -->
 

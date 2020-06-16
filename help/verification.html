@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://workcraft.org/help/verification"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[support@workcraft.org| ]] 2019/07/30 12:25//';var JSINFO = {"id":"help:verification","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help';var SIG=' --- //[[support@workcraft.org| ]] 2020/06/16 09:41//';var JSINFO = {"id":"help:verification","namespace":"help","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:verification" /><input type="hidden" name="sectok" value="975eba28886346d0383959389f072ebf" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:verification" /><input type="hidden" name="sectok" value="a14c7199d4b883fe240a4592824419f1" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="verification.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="verification.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="verification.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -117,32 +117,32 @@ Most STGs should satisfy the following properties (can be checked via <em>Verifi
 
 <ul>
 <li class="level"><div class="li">
- <strong>Output persistency</strong> – a local signal must not be disabled by any other signal (such disabling would cause a hazard on the output of the gate producing this local signal). This property can currently be verified only for STGs without dummy transitions. The notable exceptions are MUTEX and WAIT – they violate output persistency. It is possible to model them by “factoring out” them into the environment, turning these violations into input/input conflicts which are ok; however, the preferred way in Workcraft is to use Mutex places, see below.
+ <strong>Output persistency</strong> – a local (i.e. output or internal) signal must not be disabled by any other signal (such disabling would cause a hazard on the output of the gate producing this local signal). This property can currently be verified only for STGs without dummy transitions. The notable exceptions are MUTEX and WAIT – they violate output persistency. It is possible to model them by “factoring out” them into the environment, turning these violations into input/input conflicts which are ok; however, the preferred way in Workcraft is to use Mutex places, see below.
 </div></li>
 </ul>
 
 <ul>
 <li class="level"><div class="li">
- <strong>Mutex place implementability</strong> – surrounding signals of an <em>arbitrating choice</em> place that is tagged as a <em>mutex</em> must follow the MUTEX protocol. (In this case the place can be implemented by a MUTEX that can correctly handle the metastable behaviour associated with arbitration.) Essentially, Worckcraft looks at the transitions around a mutex place, and tries to work out which signals are the grants and which signals are the requests. Then it tries to verify whether the grants can be correctly implemented by a mutex taking the requests (and no other signals!) as inputs. E.g. suppose the tool speculates that the requests are r1 and r2 and the grants are g1 and g2. Then it formally verifies the following properties, where ⇒ is logic implication and <code>nxt</code> is the next-state function of a signal, i.e. <code>nxt(g1) = g1 xor enabled(g1)</code>:
+ <strong>Mutex place implementability</strong> – surrounding signals of an <em>arbitrating choice</em> place that is tagged as a <em>mutex</em> must follow the MUTEX protocol. (In this case the place can be implemented by a MUTEX that can correctly handle the metastable behaviour associated with arbitration.) Essentially, Worckcraft looks at the transitions around a mutex place, and tries to work out which signals are the grants and which signals are the requests. Then it tries to verify whether the grants can be correctly implemented by a mutex taking the requests (and no other signals!) as inputs. E.g. suppose the tool speculates that the requests are r1 and r2 and the grants are g1 and g2. Then it formally verifies the following properties, where ⇒ is logic implication and <code>nxt</code> is the next-state function of a signal, i.e. <code>nxt(g1) = g1 xor enabled(g1)</code>:<pre class="code">// if r1 is high and g2 is low than g1 is either
+// already high or enabled to become high
+r1&amp;~g2 ⇒ nxt(g1)
+// if r1 is low then g1 is either low or enabled to become low
+~r1 ⇒ ~nxt(g1)
+// if r2 and g2 are high then g1 is either low or 
+// enabled to become low - note that this allows
+// for both early-release and late-release protocols
+r2&amp;g2 ⇒ ~nxt(g1)
+// the symmetric properties for nxt(g2):
+r2&amp;~g1 ⇒ nxt(g2)
+~r2 ⇒ ~nxt(g2)
+r1&amp;g1 ⇒ ~nxt(g2)
+// the mutual exclusion of the critical sections
+~( (r1&amp;g1) &amp; (r2&amp;g2) )</pre>
+
 </div></li>
 </ul>
 
-<div class="wrap_center wrap_round wrap_box plugin_wrap" style="width: 90%;"><pre class="code"> // if r1 is high and g2 is low than g1 is either
- // already high or enabled to become high
- r1&amp;~g2 ⇒ nxt(g1)
- // if r1 is low then g1 is either low or enabled to become low
- ~r1 ⇒ ~nxt(g1)
- // if r2 and g2 are high then g1 is either low or 
- // enabled to become low - note that this allows
- // for both early-release and late-release protocols
- r2&amp;g2 ⇒ ~nxt(g1)
- // the symmetric properties for nxt(g2):
- r2&amp;~g1 ⇒ nxt(g2)
- ~r2 ⇒ ~nxt(g2)
- r1&amp;g1 ⇒ ~nxt(g2)
- // the mutual exclusion of the critical sections
- ~( (r1&amp;g1) &amp; (r2&amp;g2) )</pre>
-</div><ul>
+<ul>
 <li class="level"><div class="li">
  <strong>Delay insensitive interface</strong> – If in some reachable marking the <abbr title="Signal Transition Graph">STG</abbr> can fire one input transition after another, then it should be possible to fire these inputs in the reverse order as well, i.e. these inputs should be concurrent. Intuitively, such inputs can be reordered without breaking the circuit.
 </div></li>
@@ -168,13 +168,13 @@ Most STGs should satisfy the following properties (can be checked via <em>Verifi
 
 <ul>
 <li class="level"><div class="li">
- <strong>N-way conformation</strong> – If several STGs sharing signals represent a decomposition of a system into components, this property ensures that no component can produce an output that another component (that has it as an input) does not expect. In other words, if there is a reachable state in the overall system where some component can fire a transition labelled by some output <code><span style='color:blue; '>o</span></code>, but some other component that has this signal as an input <code><span style='color:blue; '>o</span></code> does not enable any transition labelled by <code><span style='color:red; '>o</span></code> then this property is violated.
+ <strong>N-way conformation</strong> – If several STGs sharing signals represent a decomposition of a system into components, this property ensures that no component can produce an output that another component (that has it as an input) does not expect. In other words, if there is a reachable state in the overall system where some component can fire a transition labelled by some output <code><span style='color:blue; '>o</span></code>, but some other component that has this signal as an input <code><span style='color:red; '>o</span></code> does not enable any transition labelled by <code><span style='color:red; '>o</span></code> then this property is violated.
 </div></li>
 </ul>
 
 <ul>
 <li class="level"><div class="li">
- <strong>Custom properties</strong> – The user can specify custom properties using <a href="reach.html" class="wikilink1" title="help:reach">REACH language</a>. For example, a custom property that PMOS and NMOS are never ON at the same time is specified and verified in <a href="tutorial/synthesis/buck/start.html#formal_verification" class="wikilink1" title="tutorial:synthesis:buck:start">buck tutorial</a>.
+ <strong>Custom properties</strong> – The user can specify custom properties using <a href="reach.html" class="wikilink1" title="help:reach">REACH language</a>. For example, a custom property that PMOS and NMOS are never ON at the same time is specified and verified in <a href="tutorial/design/basic_buck/start.html#formal_verification" class="wikilink1" title="tutorial:design:basic_buck:start">buck tutorial</a>.
 </div></li>
 </ul>
 
@@ -223,7 +223,7 @@ These properties are rather weak – e.g. a circuit accepting all inputs and not
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/verification.txt</bdi> · Last modified: 2018/11/12 17:02 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>help/verification.txt</bdi> · Last modified: 2020/06/09 18:35 by <bdi>danil</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -260,7 +260,7 @@ These properties are rather weak – e.g. a circuit accepting all inputs and not
             src="lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
     </div>
     <div class="userInfo">
-        Logged in as:: workcraft    </div>
+        Logged in as: workcraft    </div>
 -->
 </div></div><!-- /footer -->
 

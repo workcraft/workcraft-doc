@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://workcraft.org/help/wtg/start"/>
 <link rel="stylesheet" type="text/css" href="../lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='help:wtg';var SIG=' --- //[[support@workcraft.org| ]] 2019/07/30 12:25//';var JSINFO = {"id":"help:wtg:start","namespace":"help:wtg","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='help:wtg';var SIG=' --- //[[support@workcraft.org| ]] 2020/06/16 09:41//';var JSINFO = {"id":"help:wtg:start","namespace":"help:wtg","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="../lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="../lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:wtg:start" /><input type="hidden" name="sectok" value="4e7371037cd84142900a46fce2b10cf7" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="..//doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="help:wtg:start" /><input type="hidden" name="sectok" value="54b990cbfe0dc3bdd4ce488f88b80d61" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="start.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="start.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="start.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -125,10 +125,6 @@ This plugin is intended for capturing, simulation and verification of <a href=".
 
 <p>
 In order to create a <abbr title="Waveform Transition Graph">WTG</abbr> model choose <em>File→Create work…</em> menu item and in the <em>New work</em> dialogue select <em>Waveform Transition Graph</em> as the model type.
-</p>
-
-<p>
-<img src="new_work.png" class="mediacenter" title="New work of Waveform Transition Graph type" alt="New work of Waveform Transition Graph type" />
 </p>
 
 <p>
@@ -206,7 +202,7 @@ When designing WTGs, you will often have a set of signals that appear in differe
 </p>
 
 <p>
-<img src="../core/property_editor-signal_declaration.png" class="mediacenter" title=" Signal declaration in the property editor" alt=" Signal declaration in the property editor" />
+<img src="property_editor-signal_declaration.png" class="mediacenter" title=" Signal declaration in the property editor" alt=" Signal declaration in the property editor" />
 </p>
 <div class="wrap_info plugin_wrap">
 <h4 id="initial_state_inference">Initial state inference</h4>
@@ -232,24 +228,24 @@ There are three types of supported signals; <em>input</em>, <em>output</em> and 
 The initial state of a newly created signal is, by default, <code>low</code>. This can be changed (in the property editor) into one of the four supported states:
 </p>
 <ul>
-<li class="level1"><div class="li"> <code>low</code>: Represented by a continuous lower line. <img src="initial_state-low.png" class="medialeft" title=" low (0)" alt=" low (0)" width="50" /> </div>
+<li class="level1"><div class="li"> <code>low</code>: Represented by a continuous lower line. <img src="initial_state-low.png" class="medialeft" title=" low (0)" alt=" low (0)" /> </div>
 </li>
 </ul>
 <ul>
 <li class="level"><div class="li">
- <code>high</code>: Represented by a continuous upper line.    <img src="initial_state-high.png" class="medialeft" title=" high (1)" alt=" high (1)" width="50" /> 
+ <code>high</code>: Represented by a continuous upper line.    <img src="initial_state-high.png" class="medialeft" title=" high (1)" alt=" high (1)" /> 
 </div></li>
 </ul>
 
 <ul>
 <li class="level"><div class="li">
- <code>stable</code>: Represented by a continuous middle line. <img src="initial_state-stable.png" class="medialeft" title=" stable (?)" alt=" stable (?)" width="50" /> 
+ <code>stable</code>: Represented by a continuous middle line. <img src="initial_state-stable.png" class="medialeft" title=" stable (?)" alt=" stable (?)" /> 
 </div></li>
 </ul>
 
 <ul>
 <li class="level"><div class="li">
- <code>unsable</code>: Represented by a dashed middle line.    <img src="initial_state-unstable.png" class="medialeft" title=" stable (*)" alt=" stable (*)" width="50" /> 
+ <code>unsable</code>: Represented by a dashed middle line.    <img src="initial_state-unstable.png" class="medialeft" title=" stable (*)" alt=" stable (*)" /> 
 </div></li>
 </ul>
 
@@ -259,16 +255,16 @@ You can add transitions by double clicking on a signal. The transition added wil
 </p>
 <ul>
 <li class="level"><div class="li">
- <img src="transition-rise.png" class="medialeft" title=" rise (+)" alt=" rise (+)" width="50" /> <code>rise</code>: Represented by a vertical arrow pointing upwards, sets the signal state into <code>high</code>. This transition can be introduced in a signal at state <code>low</code>, by double clicking, or in a signal at state <code>unstable</code>, by holding <kbd class="__keyboard">Ctrl</kbd> while double clicking. 
+ <img src="transition-rise.png" class="medialeft" title=" rise (+)" alt=" rise (+)" /> <code>rise</code>: Represented by a vertical arrow pointing upwards, sets the signal state into <code>high</code>. This transition can be introduced in a signal at state <code>low</code>, by double clicking, or in a signal at state <code>unstable</code>, by holding <kbd class="__keyboard">Ctrl</kbd> while double clicking. 
 </div></li>
 <li class="level"><div class="li">
- <img src="transition-fall.png" class="medialeft" title=" fall (-)" alt=" fall (-)" width="50" /> <code>fall</code>: Represented by a vertical arrow pointing downwards, sets the signal state into <code>low</code>. This transition can be introduced in a signal at state <code>high</code>, by double clicking, or in a signal at state <code>unstable</code>, by holding <kbd class="__keyboard">Shift</kbd> while double clicking. 
+ <img src="transition-fall.png" class="medialeft" title=" fall (-)" alt=" fall (-)" /> <code>fall</code>: Represented by a vertical arrow pointing downwards, sets the signal state into <code>low</code>. This transition can be introduced in a signal at state <code>high</code>, by double clicking, or in a signal at state <code>unstable</code>, by holding <kbd class="__keyboard">Shift</kbd> while double clicking. 
 </div></li>
 <li class="level"><div class="li">
- <img src="transition-stabilise.png" class="medialeft" title=" stabilise (?)" alt=" stabilise (?)" width="50" /> <code>stabilise</code>: Represented by two vertical arrows pointing outwards, sets the signal state into <code>stable</code>.  This transition can be created from an <code>unstable</code> state by double clicking. 
+ <img src="transition-stabilise.png" class="medialeft" title=" stabilise (?)" alt=" stabilise (?)" /> <code>stabilise</code>: Represented by two vertical arrows pointing outwards, sets the signal state into <code>stable</code>.  This transition can be created from an <code>unstable</code> state by double clicking. 
 </div></li>
 <li class="level"><div class="li">
- <img src="transition-destabilise.png" class="medialeft" title=" destabilise (*)" alt=" destabilise (*)" width="50" />  <code>destabilise</code>: Represented by two vertical arrows pointing inwards, sets the signal state into <code>unstable</code>. This transition can be created from a <code>low</code> or <code>high</code> state by holding <kbd class="__keyboard">Ctrl</kbd> and <kbd class="__keyboard">Shift</kbd> while double clicking. 
+ <img src="transition-destabilise.png" class="medialeft" title=" destabilise (*)" alt=" destabilise (*)" />  <code>destabilise</code>: Represented by two vertical arrows pointing inwards, sets the signal state into <code>unstable</code>. This transition can be created from a <code>low</code> or <code>high</code> state by holding <kbd class="__keyboard">Ctrl</kbd> and <kbd class="__keyboard">Shift</kbd> while double clicking. 
 </div></li>
 </ul>
 
@@ -357,7 +353,7 @@ The <em>Verification</em> menu allows to verify the following <abbr title="Wavef
  <em>Soundness and consistency</em> - verify that the model is consistent and well constructed. A <abbr title="Waveform Transition Graph">WTG</abbr> that passes this check can be transformed into an <abbr title="Signal Transition Graph">STG</abbr>.
 </div></li>
 <li class="level"><div class="li">
- <em>Synthesis Guidelines</em> - check whether an output always fires between two transitions of the same input signal. See <a href="synthesisable.html#irreducible_conflicts" class="wikilink1" title="synthesisable"> Irreducible conflicts</a> for more information.
+ <em>Synthesis Guidelines</em> - check whether an output always fires between two transitions of the same input signal. See <a href="synthesisable.html#irreducible_conflicts" class="wikilink1" title="help:wtg:synthesisable"> Irreducible conflicts</a> for more information.
 </div></li>
 </ul>
 
@@ -371,7 +367,7 @@ If one of the properties is violated, a hint of the cause is reported. Currently
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>help/wtg/start.txt</bdi> · Last modified: 2018/11/13 12:25 by <bdi>albertomv</bdi></div>
+                                    <div class="docInfo"><bdi>help/wtg/start.txt</bdi> · Last modified: 2020/06/09 18:40 by <bdi>danil</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -408,7 +404,7 @@ If one of the properties is violated, a hint of the cause is reported. Currently
             src="../lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
     </div>
     <div class="userInfo">
-        Logged in as:: workcraft    </div>
+        Logged in as: workcraft    </div>
 -->
 </div></div><!-- /footer -->
 

@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://workcraft.org/overview/backend_tools"/>
 <link rel="stylesheet" type="text/css" href="lib/exe/css.php.t.dokuwiki-light-export.css"/>
 <!--[if gte IE 9]><!-->
-<script type="text/javascript">/*<![CDATA[*/var NS='overview';var SIG=' --- //[[support@workcraft.org| ]] 2019/07/30 12:26//';var JSINFO = {"id":"overview:backend_tools","namespace":"overview","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"act":"show","ajax":"ajax","move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
+<script type="text/javascript">/*<![CDATA[*/var NS='overview';var SIG=' --- //[[support@workcraft.org| ]] 2020/06/16 09:45//';var JSINFO = {"id":"overview:backend_tools","namespace":"overview","fastwiki":{"secedit":1,"preview":1,"fastpages":1,"save":0,"fastshow":0,"fastshow_same_ns":1,"fastshow_include":"","fastshow_exclude":"","preload":false,"preload_head":"====47hsjwycv782nwncv8b920m8bv72jmdm3929bno3b3====","preload_batchsize":false,"preload_per_page":false,"locktime":840,"usedraft":1,"text_btn_show":"Show page","templatename":"dokuwiki-light-export"},"move_renameokay":true,"plugin_folded":{"hide":"hide","reveal":"reveal"}};
 /*!]]>*/</script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/jquery.php.t.dokuwiki-light-export.js"></script>
 <script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.dokuwiki-light-export.js"></script>
@@ -59,7 +59,7 @@
         <div id="dokuwiki__sitetools">
             <h3 class="a11y">Site Tools</h3>
                             <div class="mobileTools">
-                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="overview:backend_tools" /><input type="hidden" name="sectok" value="28c0a078d625aa9b7c62250e8b7b968b" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
+                    <form action="/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="overview:backend_tools" /><input type="hidden" name="sectok" value="6e60e070534f95a4ae498ec4f5cb9ce4" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Edit this page</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Changes</option><option value="media">Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="logout">Log Out</option><option value="profile">Profile</option><option value="admin">Admin</option></optgroup></select><button type="submit">&gt;</button></div></form>                </div>
                 <ul>
                     <li><a href="backend_tools.html"  class="action recent" accesskey="r" rel="nofollow" title="Changes [R]">Changes</a></li><li><a href="backend_tools.html"  class="action media" rel="nofollow" title="Manager">Manager</a></li><li><a href="backend_tools.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                </ul>
                     </div>
@@ -96,6 +96,7 @@
 <li class="level1"><div class="li"><a href="#pgminer">PGMiner</a></div></li>
 <li class="level1"><div class="li"><a href="#scenco">ScEnco</a></div></li>
 <li class="level1"><div class="li"><a href="#graphviz">GraphViz</a></div></li>
+<li class="level1"><div class="li"><a href="#spot">Spot</a></div></li>
 </ul>
 </div>
 </div>
@@ -114,11 +115,11 @@ A number of plug-ins included in Workcraft depend on third-party tools and some 
 <div class="level2">
 
 <p>
-Unfolding Tools (PUnf, MPSat, and PComp) by Victor Khomenko provide an extensive set of functions for composition  and verification of Petri nets and STGs, and for synthesis of electronic circuits from STGs. They serve as the primary verification back-end of Workcraft and also parallel the synthesis capabilities of Petrify, but are based on Petri net unfoldings rather than BDDs and so often more efficient.
+Unfolding Tools (PUNF, MPSAT, and PCOMP) by Victor Khomenko provide an extensive set of functions for composition and verification of Petri nets and STGs, and for synthesis of electronic circuits from STGs. They serve as the primary verification back-end of Workcraft and also parallel the synthesis capabilities of Petrify, but are based on Petri net unfoldings rather than BDDs and so often more efficient.
 </p>
 
 <p>
-<a href="http://homepages.cs.ncl.ac.uk/victor.khomenko/home.formal/tools/UnfoldingTools/current/" class="urlextern" title="http://homepages.cs.ncl.ac.uk/victor.khomenko/home.formal/tools/UnfoldingTools/current/" rel="nofollow">Unfolding Tools - download page for the current version</a>
+<a href="http://homepages.cs.ncl.ac.uk/victor.khomenko/home.formal/tools/UnfoldingTools/" class="urlextern" title="http://homepages.cs.ncl.ac.uk/victor.khomenko/home.formal/tools/UnfoldingTools/" rel="nofollow">Unfolding Tools homepage</a>
 </p>
 
 </div>
@@ -175,10 +176,23 @@ Graphviz (short for Graph Visualization Software) is a package of open-source to
 
 </div>
 
+<h2 id="spot">Spot</h2>
+<div class="level2">
+
+<p>
+Spot is a platform for LTL and ω-automata manipulation.
+</p>
+
+<p>
+<a href="https://spot.lrde.epita.fr/" class="urlextern" title="https://spot.lrde.epita.fr/" rel="nofollow">Spot homepage</a>
+</p>
+
+</div>
+
                     <!-- wikipage stop -->
                                     </div>
 <!--
-                                    <div class="docInfo"><bdi>overview/backend_tools.txt</bdi> · Last modified: 2019/05/13 09:37 by <bdi>victor</bdi></div>
+                                    <div class="docInfo"><bdi>overview/backend_tools.txt</bdi> · Last modified: 2020/02/25 15:51 by <bdi>danil</bdi></div>
                 -->
 
                             </div></div><!-- /content -->
@@ -215,7 +229,7 @@ Graphviz (short for Graph Visualization Software) is a package of open-source to
             src="lib/tpl/dokuwiki-light-export/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
     </div>
     <div class="userInfo">
-        Logged in as:: workcraft    </div>
+        Logged in as: workcraft    </div>
 -->
 </div></div><!-- /footer -->
 
